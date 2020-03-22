@@ -7,13 +7,21 @@ using UnityEngine.UI;
 
 public class _levelManager : MonoBehaviour
 {
+    [SerializeField] private Button SettingsButton;
+    
+    private GameObject _settingsMenu;
+    
     private GameObject[] _buttonPool;
-    private GameObject _backToSelectMenu;
+
+    private void Awake()
+    {
+        _settingsMenu = GameObject.FindGameObjectWithTag("Settings");
+    }
 
     private void Start()
-    {    
-        _backToSelectMenu = GameObject.FindWithTag("back");
-        _backToSelectMenu.GetComponent<Button>().onClick.AddListener(()=>BackToMenu());
+    {
+        SettingsButton.GetComponent<Button>().onClick.AddListener(() => OpenSettings());
+        
         _buttonPool = GameObject.FindGameObjectsWithTag("level_tag");
         foreach (var t in _buttonPool)
         {
@@ -35,5 +43,10 @@ public class _levelManager : MonoBehaviour
     {
         String levelName = _choosenLevel.name;
         SceneManager.LoadScene("_level_" + levelName);
+    }
+
+    private void OpenSettings()
+    {
+        _settingsMenu.SetActive(true);
     }
 }
