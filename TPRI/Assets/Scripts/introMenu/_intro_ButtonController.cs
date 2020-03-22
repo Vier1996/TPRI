@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class _itro_ButtonController : MonoBehaviour
+public class _intro_ButtonController : MonoBehaviour
 {
   [SerializeField] private Button _Start, _Contitue, _Settings;
    private GameObject _settingsMenu;
@@ -14,7 +14,6 @@ public class _itro_ButtonController : MonoBehaviour
   private void Awake()
   {
     _settingsMenu = GameObject.FindGameObjectWithTag("Settings");
-    _settingsMenu.SetActive(false);
   }
 
   private void Start()

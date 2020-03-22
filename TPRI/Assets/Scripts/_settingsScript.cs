@@ -6,12 +6,15 @@ using UnityEngine.UI;
 
 public class _settingsScript : MonoBehaviour
 {
-    private GameObject close;
+    public GameObject close;
 
     private void Awake()
     {
-        close = GameObject.FindGameObjectWithTag("CloseButton");
-        
+        gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
         close.GetComponent<Button>().onClick.AddListener(() => ShutDown());
     }
 
