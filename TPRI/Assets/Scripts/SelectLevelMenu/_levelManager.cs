@@ -10,12 +10,15 @@ public class _levelManager : MonoBehaviour
     [SerializeField] private Button SettingsButton;
     
     private GameObject _settingsMenu;
+
+    private GameObject _backToMainMenu;
     
     private GameObject[] _buttonPool;
 
     private void Awake()
     {
-        _settingsMenu = GameObject.FindGameObjectWithTag("Settings");
+        _backToMainMenu = GameObject.FindWithTag("back");
+        _settingsMenu = GameObject.FindGameObjectWithTag("sett");
     }
 
     private void Start()
@@ -27,6 +30,8 @@ public class _levelManager : MonoBehaviour
         {
             t.GetComponent<Button>().onClick.AddListener(()=> ChooseLevel(t.GetComponent<Button>()));
         }
+        
+        _backToMainMenu.GetComponent<Button>().onClick.AddListener(()=> BackToMenu());
     }
 
     void BackToMenu()
