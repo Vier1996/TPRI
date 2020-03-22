@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Settings
   - CloseButton
+  - level_tag
+  - back
   layers:
   - Default
   - TransparentFX
