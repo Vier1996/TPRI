@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public class Dialogs : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class Dialogs : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("WhereD").GetComponent<TextMeshProUGUI>().text = "Ты откуда?";
             GameObject.FindGameObjectWithTag("WhereD").GetComponent<TextMeshProUGUI>().color = Color.red;
+
         });
         
         _problems.onClick.AddListener(() =>
