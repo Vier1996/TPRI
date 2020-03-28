@@ -13,6 +13,7 @@
         <e p="Scripts" t="Include">
           <e p="_dialogContainer.cs" t="Include" />
           <e p="_equipmentScript.cs" t="Include" />
+          <e p="_GameController.cs" t="Include" />
           <e p="_peopleState.cs" t="Include" />
           <e p="_settingsScript.cs" t="Include" />
           <e p="Dialogs.cs" t="Include" />
