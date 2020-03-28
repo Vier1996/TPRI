@@ -9,6 +9,15 @@ TagManager:
   - level_tag
   - back
   - sett
+  - Dialogs
+  - dialogPanel
+  - peolpleDialog
+  - WhereD
+  - ProblemsD
+  - VisitD
+  - WhereAnswer
+  - ProblemsAnswer
+  - VisitAnswer
   layers:
   - Default
   - TransparentFX
