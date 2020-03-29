@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class _intro_ButtonController : MonoBehaviour
 {
-  [SerializeField] private Button _Start, _Contitue, _Settings;
+  [SerializeField] private Button _Start, _Contitue, _Settings, _Upgrade;
    private GameObject _settingsMenu;
 
   private void Awake()
@@ -18,23 +18,14 @@ public class _intro_ButtonController : MonoBehaviour
 
   private void Start()
   {
-    _Start.onClick.AddListener(() => StartGame());
+    _Start.onClick.AddListener(() => { SceneManager.LoadScene("_selectLevelMenu"); });
     _Contitue.onClick.AddListener(() => ContinueGame());
-    _Settings.onClick.AddListener(() => OpenSettings());
+    _Upgrade.onClick.AddListener(() => { SceneManager.LoadScene("DiscoverMenu"); });
+    _Settings.onClick.AddListener(() => { _settingsMenu.SetActive(true); });
   }
-
-  private void StartGame()
-  {
-    SceneManager.LoadScene("_selectLevelMenu");
-  }
-
+  
   private void ContinueGame()
   {
     // override PlayerPrefs
-  }
-
-  private void OpenSettings()
-  {
-    _settingsMenu.SetActive(true);
   }
 }
