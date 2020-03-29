@@ -37,8 +37,5 @@ public class _dialogContainer : MonoBehaviour
         VisitDialogs[0] = "Ну это... да, ну ты понял.";
         VisitDialogs[1] = "...";
         VisitDialogs[2] = "";
-        
     }
-
-  
 }
