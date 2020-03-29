@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class _discoverMenu : MonoBehaviour
@@ -11,6 +12,7 @@ public class _discoverMenu : MonoBehaviour
     [SerializeField] Button Butcher;
     [SerializeField] Button Suit;
     [SerializeField] Button Boots;
+    [SerializeField] Button Back;
 
     [SerializeField] private GameObject HelmetMenu;
     [SerializeField] private GameObject MaskMenu;
@@ -114,6 +116,8 @@ public class _discoverMenu : MonoBehaviour
                 showedMenu = 6;
             }
         });
+        
+        Back.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
     }
 
     private void Deact()
