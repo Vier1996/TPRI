@@ -7,7 +7,7 @@ public class _PeopleIssues : MonoBehaviour
 {
     private string _issueName;
 
-    private List<string> _symptoms;
+    public List<string> _symptoms;
 
     private void Awake()
     {
