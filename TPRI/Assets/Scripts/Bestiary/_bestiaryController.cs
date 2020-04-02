@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
+using Slider = UnityEngine.UI.Slider;
 
 public class _bestiaryController : MonoBehaviour
 {
@@ -17,11 +18,14 @@ public class _bestiaryController : MonoBehaviour
     private Image _contentContainerForViruses;
     private Dictionary<string, string> _listViruses;
     private Dictionary<string, List<string>> _listSymptoms;
+    private Dictionary<string, int> _valueOfInfection;
     private GameObject _virusModel;
+    private GameObject _virusModelGameObject;
+    private GameObject _infectionDegreeSlider;
+    private GameObject _nameVirus;
 
     private void Awake()
     {
-
         _contentContainerForViruses = GameObject.Find("ListContent").GetComponent<Image>();
         //_viruses = new GameObject[_contentContainer.transform.childCount];
         _viruses = new List<GameObject>();
@@ -30,24 +34,27 @@ public class _bestiaryController : MonoBehaviour
 
         setViruses();
         setSymptoms();
+        setValueInfection();
         for (int i = 0; i < _contentContainerForViruses.transform.childCount; i++)
         {
-            _viruses.Add(GameObject.Find("Virus" + (i+1)));
+            _viruses.Add(GameObject.Find("Virus" + (i + 1)));
         }
 
         for (int i = 0; i < _viruses.Count; i++)
         {
             var i1 = i;
-            _viruses[i].GetComponent<Button>().onClick.AddListener(()=>getInfoAboutVirus(i1));
+            _viruses[i].GetComponent<Button>().onClick.AddListener(() => getInfoAboutVirus(i1));
         }
 
-        _virusModel = GameObject.Find("Вирус2");
-
+        _infectionDegreeSlider = GameObject.Find("degreeOfInfection");
     }
 
     private void Update()
     {
-        _virusModel.transform.Rotate(10.0f*Time.deltaTime, 10.0f*Time.deltaTime,0);
+        if (_virusModelGameObject != null)
+        {
+            _virusModelGameObject.transform.Rotate(10.0f * Time.deltaTime, 10.0f * Time.deltaTime, 0);
+        }
     }
 
     private void setViruses()
@@ -73,32 +80,65 @@ public class _bestiaryController : MonoBehaviour
     private void setSymptoms()
     {
         _listSymptoms = new Dictionary<string, List<string>>();
-        _listSymptoms.Add("1", new List<string>(){"1: First", "1: Second"});
-        _listSymptoms.Add("2", new List<string>(){"2: First", "2: Second"});
-        _listSymptoms.Add("3", new List<string>(){"3: First", "3: Second"});
-        _listSymptoms.Add("4", new List<string>(){"4: First", "4: Second"});
-        _listSymptoms.Add("5", new List<string>(){"5: First", "5: Second"});
-        _listSymptoms.Add("6", new List<string>(){"6: First", "6: Second"});
-        _listSymptoms.Add("7", new List<string>(){"7: First", "7: Second"});
-        _listSymptoms.Add("8", new List<string>(){"8: First", "8: Second"});
-        _listSymptoms.Add("9", new List<string>(){"9: First", "9: Second"});
-        _listSymptoms.Add("10", new List<string>(){"10: First", "10: Second"});
-        _listSymptoms.Add("11", new List<string>(){"11: First", "11: Second"});
-        _listSymptoms.Add("12", new List<string>(){"12: First", "12: Second"});
-        _listSymptoms.Add("13", new List<string>(){"13: First", "13: Second"});
-        _listSymptoms.Add("14", new List<string>(){"14: First", "14: Second"});
-        _listSymptoms.Add("15", new List<string>(){"15: First", "15: Second"});
+        _listSymptoms.Add("1", new List<string>() {"1: First", "1: Second"});
+        _listSymptoms.Add("2", new List<string>() {"2: First", "2: Second"});
+        _listSymptoms.Add("3", new List<string>() {"3: First", "3: Second"});
+        _listSymptoms.Add("4", new List<string>() {"4: First", "4: Second"});
+        _listSymptoms.Add("5", new List<string>() {"5: First", "5: Second"});
+        _listSymptoms.Add("6", new List<string>() {"6: First", "6: Second"});
+        _listSymptoms.Add("7", new List<string>() {"7: First", "7: Second"});
+        _listSymptoms.Add("8", new List<string>() {"8: First", "8: Second"});
+        _listSymptoms.Add("9", new List<string>() {"9: First", "9: Second"});
+        _listSymptoms.Add("10", new List<string>() {"10: First", "10: Second"});
+        _listSymptoms.Add("11", new List<string>() {"11: First", "11: Second"});
+        _listSymptoms.Add("12", new List<string>() {"12: First", "12: Second"});
+        _listSymptoms.Add("13", new List<string>() {"13: First", "13: Second"});
+        _listSymptoms.Add("14", new List<string>() {"14: First", "14: Second"});
+        _listSymptoms.Add("15", new List<string>() {"15: First", "15: Second"});
     }
-    
-    
+
+    private void setValueInfection()
+    {
+        _valueOfInfection = new Dictionary<string, int>();
+        _valueOfInfection.Add("1", 32);
+        _valueOfInfection.Add("2", 25);
+        _valueOfInfection.Add("3", 40);
+        _valueOfInfection.Add("4", 37);
+        _valueOfInfection.Add("5", 51);
+        _valueOfInfection.Add("6", 44);
+        _valueOfInfection.Add("7", 60);
+        _valueOfInfection.Add("8", 55);
+        _valueOfInfection.Add("9", 20);
+        _valueOfInfection.Add("10", 10);
+        _valueOfInfection.Add("11", 80);
+        _valueOfInfection.Add("12", 77);
+        _valueOfInfection.Add("13", 69);
+        _valueOfInfection.Add("14", 88);
+        _valueOfInfection.Add("15", 90);
+    }
+
     private void getInfoAboutVirus(int position)
     {
+        _virusModelGameObject = GameObject.FindWithTag("VirusModel");
+        _nameVirus = GameObject.Find("NameVirus");
+        if (_virusModelGameObject != null)
+        {
+            Destroy(_virusModelGameObject);
+        }
+
+        _virusModel = Resources.Load<GameObject>("3dPrefabs/Вирус" + position);
+        if (_virusModel != null)
+        {
+            _virusModelGameObject = Instantiate(_virusModel);
+        }
         string nameVirus = _viruses[position].GetComponent<TextMeshProUGUI>().text;
         string story = _listViruses[nameVirus];
         List<string> symptoms = _listSymptoms[nameVirus];
         string symptomsToString = getSymptoms(symptoms);
         _storyVirus.GetComponent<TextMeshProUGUI>().text = story;
         _symptoms.GetComponent<TextMeshProUGUI>().text = symptomsToString;
+        _nameVirus.GetComponent<TextMeshProUGUI>().text = nameVirus;
+        _infectionDegreeSlider.GetComponent<Slider>().value = _valueOfInfection[nameVirus];
     }
 
     private string getSymptoms(List<string> symptoms)

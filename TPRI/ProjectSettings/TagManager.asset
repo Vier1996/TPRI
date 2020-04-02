@@ -18,6 +18,7 @@ TagManager:
   - WhereAnswer
   - ProblemsAnswer
   - VisitAnswer
+  - VirusModel
   layers:
   - Default
   - TransparentFX
