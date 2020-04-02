@@ -37,6 +37,7 @@
           <e p="_WorldController.cs" t="Include" />
           <e p="Bestiary" t="Include">
             <e p="_bestiaryController.cs" t="Include" />
+            <e p="InfoAboutIlnesses.cs" t="Include" />
           </e>
           <e p="Dialogs.cs" t="Include" />
           <e p="introMenu" t="Include">

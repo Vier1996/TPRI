@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.UI;
 
 public class _GameController : MonoBehaviour
@@ -14,6 +15,7 @@ public class _GameController : MonoBehaviour
     private Button _expel; // не пропускать
     private List<string> _issues;
     private GameObject _camera;
+    private int countNPC = 1;
 
     private void Awake()
     {
@@ -33,6 +35,7 @@ public class _GameController : MonoBehaviour
         _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
         _issues = issuesScript.getSymptoms();
     }
+    
 
     private void Heal()
     {
@@ -49,16 +52,32 @@ public class _GameController : MonoBehaviour
         }
 
         _issues = bufList;
+        Debug.Log(_issues[0] + "   " + _issues[1]);
     }
 
     private void Passing()
     {
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
         _camera.GetComponent<_WorldController>().setPassingIllnesses(1, issues.getIssueName(), _issues.Count);
+        Destroy(_NPC);
+        Invoke(nameof(InitNPC), 3);
     }
 
     private void Expel()
     {
         Debug.Log("Пидуй науй");
+        Destroy(_NPC);
+        Invoke(nameof(InitNPC), 3);
+    }
+
+    private void InitNPC()
+    {
+        GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
+        _NPC = Instantiate(npc);
+        countNPC++;
+        if (countNPC == 3)
+        {
+            countNPC = 0;
+        }
     }
 }

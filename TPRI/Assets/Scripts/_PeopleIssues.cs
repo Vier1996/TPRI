@@ -1,28 +1,29 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bestiary;
 using UnityEngine;
 
 public class _PeopleIssues : MonoBehaviour
 {
-    private string _issueName;
+    public string _issueName = "";
 
     public List<string> _symptoms;
+    private InfoAboutIlnesses _illnesses;
 
     private void Awake()
     {
-        _issueName = "Грипп";
+        _illnesses = new InfoAboutIlnesses();
+        _symptoms = new List<string>();
         setSymptoms();
     }
 
     private void setSymptoms()
     {
-        _symptoms = new List<string>();
-        _symptoms.Add("Кашель");
-        _symptoms.Add("Потливость");
-        _symptoms.Add("Насморк");
-        _symptoms.Add("Озноб");
-        _symptoms.Add("Температура");
+        if (!_issueName.Equals(""))
+        {
+            _symptoms = _illnesses.getSymptoms()[_issueName];
+        }
     }
 
     public List<string> getSymptoms()
