@@ -11,6 +11,7 @@ public class _peopleState : _dialogContainer
     private bool _whereD;
     private bool _problemsD;
     private bool _visitD;
+    private int t;
     
     
     void Start()
