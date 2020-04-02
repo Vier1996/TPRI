@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class _GameController : MonoBehaviour
 {
     private Button _grassMedicine;
     private GameObject _NPC;
+    [SerializeField] private GameObject spawnForPeople; 
     private int _numberNotHealedIssues = 0;
     private Button _passingPeople;
     private Button _expel; // не пропускать
@@ -22,8 +23,8 @@ public class _GameController : MonoBehaviour
         _grassMedicine = GameObject.Find("Grass").GetComponent<Button>();
         _grassMedicine.onClick.AddListener(()=> Heal());
         
-        _NPC = GameObject.FindWithTag("Player");
-        
+        InitNPC();
+
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(()=> Passing());
 
@@ -73,7 +74,7 @@ public class _GameController : MonoBehaviour
     private void InitNPC()
     {
         GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
-        _NPC = Instantiate(npc);
+        _NPC = Instantiate(npc, spawnForPeople.transform);
         countNPC++;
         if (countNPC == 3)
         {

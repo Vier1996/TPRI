@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class _equipmentScript : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class _equipmentScript : MonoBehaviour
     [SerializeField] private GameObject DialogMenu;
     [SerializeField] private GameObject DeathMenu;
     [SerializeField] private GameObject DialogWithPeople;
-    
+    private bool _showDialogs = false;
+    [SerializeField] private GameObject hideDialog;
+    [SerializeField] private GameObject showDialog;
     
     [SerializeField] private Button ResearchButton;
     [SerializeField] private Button HealthButton;
@@ -27,7 +30,8 @@ public class _equipmentScript : MonoBehaviour
         HealthMenu.SetActive(false);
         DialogMenu.SetActive(false);
         DeathMenu.SetActive(false);
-        DialogWithPeople.SetActive(false);
+        
+        DialogWithPeople.transform.DOMove(hideDialog.transform.position, 0);
         
         ResearchButton.onClick.AddListener(() =>
         {
@@ -59,11 +63,15 @@ public class _equipmentScript : MonoBehaviour
         
         DialogWithPeopleButton.onClick.AddListener(() =>
         {
-            if(DialogWithPeople.activeSelf)
-                DialogWithPeople.SetActive(false);
+            if (!_showDialogs)
+            {
+                DialogWithPeople.transform.DOMove(showDialog.transform.position, 2);
+                _showDialogs = true;
+            }
             else
             {
-                DialogWithPeople.SetActive(true);
+                DialogWithPeople.transform.DOMove(hideDialog.transform.position, 2);
+                _showDialogs = false;
             }
         });
     }
