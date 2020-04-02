@@ -76,7 +76,7 @@ public class _GameController : MonoBehaviour
 
     private void InitNPC()
     {
-        GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate" + countNPC);
+        GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
         _NPC = Instantiate(npc, spawnForPeople.transform);
         resetDialog();
         countNPC++;
