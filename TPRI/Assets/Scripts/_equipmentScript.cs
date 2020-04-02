@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class _equipmentScript : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class _equipmentScript : MonoBehaviour
         HealthMenu.SetActive(false);
         DialogMenu.SetActive(false);
         DeathMenu.SetActive(false);
-        DialogWithPeople.SetActive(false);
+        DialogWithPeople.GetComponent<Image>().DOColor(Color.clear, 0);
         
         ResearchButton.onClick.AddListener(() =>
         {
@@ -58,14 +59,14 @@ public class _equipmentScript : MonoBehaviour
         });
         
         DialogWithPeopleButton.onClick.AddListener(() =>
-        {
-            if(DialogWithPeople.activeSelf)
-                DialogWithPeople.SetActive(false);
-            else
             {
-                DialogWithPeople.SetActive(true);
-            }
-        });
+                if(DialogWithPeople.GetComponent<Image>().color.a != 0)
+                    DialogWithPeople.GetComponent<Image>().DOColor(new Color(0, 0, 0, 0), 2);
+                else
+                {
+                    DialogWithPeople.GetComponent<Image>().DOColor(new Color(0.254717f, 0.254717f, 0.254717f, 0.6588235f), 2);
+                }
+            });
     }
 
     private void Deact()

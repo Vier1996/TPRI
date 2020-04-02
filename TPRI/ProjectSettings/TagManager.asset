@@ -19,6 +19,7 @@ TagManager:
   - ProblemsAnswer
   - VisitAnswer
   - VirusModel
+  - DP
   layers:
   - Default
   - TransparentFX

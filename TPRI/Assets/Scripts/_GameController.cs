@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
+
 using UnityEngine.UI;
 
 public class _GameController : MonoBehaviour
@@ -17,11 +17,14 @@ public class _GameController : MonoBehaviour
     private GameObject _camera;
     private int countNPC = 1;
 
+    [SerializeField] private Transform placeToSpawn;
+
     private void Awake()
     {
         _grassMedicine = GameObject.Find("Grass").GetComponent<Button>();
         _grassMedicine.onClick.AddListener(()=> Heal());
         
+        InitNPC();
         _NPC = GameObject.FindWithTag("Player");
         
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
@@ -73,7 +76,8 @@ public class _GameController : MonoBehaviour
     private void InitNPC()
     {
         GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
-        _NPC = Instantiate(npc);
+        Instantiate(npc, placeToSpawn.transform);
+        _NPC = GameObject.FindWithTag("Player");
         countNPC++;
         if (countNPC == 3)
         {
