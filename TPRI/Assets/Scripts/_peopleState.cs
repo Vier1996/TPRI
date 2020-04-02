@@ -12,9 +12,10 @@ public class _peopleState : _dialogContainer
     private bool _problemsD;
     private bool _visitD;
     
+    
     void Start()
     {
-        toSpeak = GameObject.FindGameObjectWithTag("dialogPanel").GetComponent<TextMeshProUGUI>();
+        toSpeak = GameObject.FindWithTag("dialogPanel").GetComponent<TextMeshProUGUI>();
         toSpeak.text = BaseDialogs[0];
         _whereD = _problemsD = _visitD = false;
     }
