@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,9 +11,13 @@ public class _miniBestiarii : MonoBehaviour
     [SerializeField] private Button toBestiarii;
     [SerializeField] private Button toBack;
     [SerializeField] private Button toNext;
+    [SerializeField] private GameObject spawnVirusObject;
 
     private GameObject _CurrentPage;
     private int CurrentPage = 0;
+    private GameObject _modelVirus;
+    private GameObject _modelForLoadVirus;
+
     void Start()
     {
         toBestiarii.onClick.AddListener(() => { SceneManager.LoadScene("_bestiariy"); });
@@ -44,6 +49,8 @@ public class _miniBestiarii : MonoBehaviour
         });
         
         _CurrentPage = Instantiate(pages[0], transform);
+        _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/Вирус1");
+        _modelVirus = Instantiate(_modelForLoadVirus, spawnVirusObject.transform);
     }
 
     // Update is called once per frame
