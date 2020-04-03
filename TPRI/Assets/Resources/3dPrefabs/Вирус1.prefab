@@ -34404,6 +34404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1341204223773143990}
+  - component: {fileID: -5514693878390569808}
   m_Layer: 0
   m_Name: "\u0412\u0438\u0440\u0443\u04411"
   m_TagString: VirusModel
@@ -34663,6 +34664,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5514693878390569808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976777636408623868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c42de0ea90f0142a1695cc94bf5759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Scale: 0.0362106
 --- !u!1 &2977137926319773943
 GameObject:
   m_ObjectHideFlags: 0
