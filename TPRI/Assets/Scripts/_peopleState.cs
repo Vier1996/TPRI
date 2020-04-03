@@ -14,15 +14,18 @@ public class _peopleState : _dialogContainer
     private int t;
     
     
-    void Start()
+    private void Start()
     {
         toSpeak = GameObject.FindWithTag("dialogPanel").GetComponent<TextMeshProUGUI>();
         toSpeak.text = BaseDialogs[0];
         _whereD = _problemsD = _visitD = false;
+        
+        Analisys _analisys = new Analisys();
+        // 
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         try
         {
@@ -48,5 +51,42 @@ public class _peopleState : _dialogContainer
         catch (NullReferenceException)
         {
         }
+    }
+}
+
+class Analisys
+{
+    public string Blood = "отрицательный";
+    public string Pee = "отрицательный";
+    public string Smear = "отрицательный";
+    public string Sputum = "отрицательный";
+    public string Saliva = "отрицательный";
+    public string Shit = "отрицательный";
+    public GameObject AnalysController;
+
+    public Analisys()
+    {
+        AnalysController = GameObject.FindGameObjectWithTag("Analysis");
+    }
+
+    public Analisys(string _blood, string _pee, string _smear, string _sputum, string _saliva, string _shit)
+    {
+        if (_blood.Equals("+"))
+            _blood = "положительный";
+        
+        if (_pee.Equals("+"))
+            _pee = "положительный";
+        
+        if (_smear.Equals("+"))
+            _smear = "положительный";
+        
+        if (_sputum.Equals("+"))
+            _sputum = "положительный";
+        
+        if (_saliva.Equals("+"))
+            _saliva = "положительный";
+        
+        if (_shit.Equals("+"))
+            _shit = "положительный";
     }
 }

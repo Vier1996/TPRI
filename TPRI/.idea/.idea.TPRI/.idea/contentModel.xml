@@ -30,6 +30,7 @@
           <e p="_discoverMenu.cs" t="Include" />
           <e p="_equipmentScript.cs" t="Include" />
           <e p="_GameController.cs" t="Include" />
+          <e p="_issues.cs" t="Include" />
           <e p="_miniBestiarii.cs" t="Include" />
           <e p="_PeopleIssues.cs" t="Include" />
           <e p="_peopleState.cs" t="Include" />
