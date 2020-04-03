@@ -51,6 +51,7 @@ public class _miniBestiarii : MonoBehaviour
         _CurrentPage = Instantiate(pages[0], transform);
         _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/Вирус1");
         _modelVirus = Instantiate(_modelForLoadVirus, spawnVirusObject.transform);
+        _modelVirus.GetComponent<_scaler>()._Scale = 1;
     }
 
     // Update is called once per frame

@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using Bestiary;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
@@ -25,6 +26,8 @@ public class _bestiaryController : MonoBehaviour
     private GameObject _nameVirus;
     private InfoAboutIlnesses _info;
 
+    [SerializeField] private Button backToMenu;
+
     private void Awake()
     {
         _contentContainerForViruses = GameObject.Find("ListContent").GetComponent<Image>();
@@ -44,11 +47,13 @@ public class _bestiaryController : MonoBehaviour
 
         for (int i = 0; i < _viruses.Count; i++)
         {
-            var i1 = i;
+            var i1 = i+1;
             _viruses[i].GetComponent<Button>().onClick.AddListener(() => getInfoAboutVirus(i1));
         }
 
         _infectionDegreeSlider = GameObject.Find("degreeOfInfection");
+        
+        backToMenu.onClick.AddListener(() => { SceneManager.LoadScene("_level_1");});
     }
 
     private void Update()
@@ -75,7 +80,7 @@ public class _bestiaryController : MonoBehaviour
         {
             _virusModelGameObject = Instantiate(_virusModel);
         }
-        string nameVirus = _viruses[position].GetComponent<TextMeshProUGUI>().text;
+        string nameVirus = _viruses[position-1].GetComponent<TextMeshProUGUI>().text;
         string story = _listViruses[nameVirus];
         List<string> symptoms = _listSymptoms[nameVirus];
         string symptomsToString = getSymptoms(symptoms);

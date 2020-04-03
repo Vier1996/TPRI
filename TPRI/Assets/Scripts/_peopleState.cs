@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class _peopleState : _dialogContainer
 {
     [SerializeField] string theDialog;
+    [SerializeField] private Button[] analysisButtons;
     private TextMeshProUGUI toSpeak;
     private bool _whereD;
     private bool _problemsD;
@@ -20,7 +22,7 @@ public class _peopleState : _dialogContainer
         toSpeak.text = BaseDialogs[0];
         _whereD = _problemsD = _visitD = false;
         
-        Analisys _analisys = new Analisys();
+        Analisys _analisys = new Analisys(analysisButtons);
         // 
     }
 
@@ -58,17 +60,28 @@ class Analisys
 {
     public string Blood = "отрицательный";
     public string Pee = "отрицательный";
-    public string Smear = "отрицательный";
-    public string Sputum = "отрицательный";
-    public string Saliva = "отрицательный";
+    public string Smear = "отрицательный"; // мазок
+    public string Sputum = "отрицательный"; // мокрота
+    public string Saliva = "отрицательный"; // слюна
     public string Shit = "отрицательный";
     public GameObject AnalysController;
+    private Button[] analysisButtons;
 
-    public Analisys()
+    public Analisys(Button[] analyses)
     {
         AnalysController = GameObject.FindGameObjectWithTag("Analysis");
+        analysisButtons = analyses;
+        setListenersOnButtonsAnalysis();
     }
 
+    public void setListenersOnButtonsAnalysis()
+    {
+        for (int i = 0; i < analysisButtons.Length; i++)
+        {
+            //analysisButtons[i].onClick.AddListener();
+        }
+    }
+    
     public Analisys(string _blood, string _pee, string _smear, string _sputum, string _saliva, string _shit)
     {
         if (_blood.Equals("+"))
