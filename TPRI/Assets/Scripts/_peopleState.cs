@@ -8,20 +8,15 @@ public class _peopleState : _dialogContainer
 {
     [SerializeField] string theDialog;
     private TextMeshProUGUI toSpeak;
-    private GameObject dialogPanel;
-    
     private bool _whereD;
     private bool _problemsD;
     private bool _visitD;
-
-    private void Awake()
-    {
-        dialogPanel = GameObject.FindGameObjectWithTag("DP");
-        toSpeak = dialogPanel.GetComponent<TextMeshProUGUI>();
-    }
-
+    private int t;
+    
+    
     void Start()
     {
+        toSpeak = GameObject.FindWithTag("dialogPanel").GetComponent<TextMeshProUGUI>();
         toSpeak.text = BaseDialogs[0];
         _whereD = _problemsD = _visitD = false;
     }

@@ -13,7 +13,9 @@ public class _equipmentScript : MonoBehaviour
     [SerializeField] private GameObject DialogMenu;
     [SerializeField] private GameObject DeathMenu;
     [SerializeField] private GameObject DialogWithPeople;
-    
+    private bool _showDialogs = false;
+    [SerializeField] private GameObject hideDialog;
+    [SerializeField] private GameObject showDialog;
     
     [SerializeField] private Button ResearchButton;
     [SerializeField] private Button HealthButton;
@@ -28,7 +30,8 @@ public class _equipmentScript : MonoBehaviour
         HealthMenu.SetActive(false);
         DialogMenu.SetActive(false);
         DeathMenu.SetActive(false);
-        DialogWithPeople.GetComponent<Image>().DOColor(Color.clear, 0);
+        
+        DialogWithPeople.transform.DOMove(hideDialog.transform.position, 0);
         
         ResearchButton.onClick.AddListener(() =>
         {
@@ -59,14 +62,18 @@ public class _equipmentScript : MonoBehaviour
         });
         
         DialogWithPeopleButton.onClick.AddListener(() =>
+        {
+            if (!_showDialogs)
             {
-                if(DialogWithPeople.GetComponent<Image>().color.a != 0)
-                    DialogWithPeople.GetComponent<Image>().DOColor(new Color(0, 0, 0, 0), 2);
-                else
-                {
-                    DialogWithPeople.GetComponent<Image>().DOColor(new Color(0.254717f, 0.254717f, 0.254717f, 0.6588235f), 2);
-                }
-            });
+                DialogWithPeople.transform.DOMove(showDialog.transform.position, 2);
+                _showDialogs = true;
+            }
+            else
+            {
+                DialogWithPeople.transform.DOMove(hideDialog.transform.position, 2);
+                _showDialogs = false;
+            }
+        });
     }
 
     private void Deact()
