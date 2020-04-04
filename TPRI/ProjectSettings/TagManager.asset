@@ -20,6 +20,8 @@ TagManager:
   - VisitAnswer
   - VirusModel
   - Analysis
+  - _SklsDlg
+  - store
   layers:
   - Default
   - TransparentFX
