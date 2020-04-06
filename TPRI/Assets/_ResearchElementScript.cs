@@ -8,7 +8,7 @@ public class _ResearchElementScript : MonoBehaviour
 {
     [SerializeField] private int Koef;
     [SerializeField] private TextMeshProUGUI amount;
-    public int IntegerAmount = 0;
+    public int IntegerAmount;
 
     void Start()
     {

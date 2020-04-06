@@ -85,9 +85,6 @@ public class _bestiaryController : MonoBehaviour
         VirusInformaiton = _virusModelGameObject.GetComponent<Information>();
         
         string nameVirus = _viruses[position-1].GetComponent<TextMeshProUGUI>().text;
-        string story = _listViruses[nameVirus];
-        List<string> symptoms = _listSymptoms[nameVirus];
-        string symptomsToString = getSymptoms(symptoms);
         _storyVirus.GetComponent<TextMeshProUGUI>().text = VirusInformaiton.Description;
         _symptoms.GetComponent<TextMeshProUGUI>().text = "Симптомы: (" + VirusInformaiton.Symptoms + ")";
         _nameVirus.GetComponent<TextMeshProUGUI>().text = VirusInformaiton.Name;

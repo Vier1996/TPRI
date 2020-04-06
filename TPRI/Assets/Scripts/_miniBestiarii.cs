@@ -11,7 +11,6 @@ public class _miniBestiarii : MonoBehaviour
     [SerializeField] private Button toBestiarii;
     [SerializeField] private Button toBack;
     [SerializeField] private Button toNext;
-    [SerializeField] private GameObject spawnVirusObject;
 
     private GameObject _CurrentPage;
     private int CurrentPage = 0;
