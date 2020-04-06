@@ -19,23 +19,17 @@ public class _PopUpAnalyses : MonoBehaviour
         _NPC = GameObject.FindWithTag("Player");
         gameObject.GetComponent<Button>().onClick.AddListener(() =>
         {
-            if (GetComponent<_ResearchElementScript>().IntegerAmount > 0)
-            {
-                resultOfAnalysis.SetActive(true);
-                //patient.text += " " + _NPC.GetComponent<_peopleState>().Name;
-                nameOfAnalysis.text += " " + gameObject.name.ToLower();
-                //result.text += " " + _NPC.GetComponent<_peopleState>().getAnalysis().getResultOfAnalysis(name);
-            }
+            resultOfAnalysis.SetActive(true);
+            patient.text += " " + _NPC.GetComponent<_peopleState>().nameOfPatient;
+            nameOfAnalysis.text += " " + gameObject.name.ToLower();
+            result.text += " " + _NPC.GetComponent<_peopleState>().getAnalysis().getResultOfAnalysis(name);
         });
         close.onClick.AddListener(() =>
         {
-            if (GetComponent<_ResearchElementScript>().IntegerAmount > 0)
-            {
-                patient.text = PATIENT;
-                nameOfAnalysis.text = ANALYSIS;
-                result.text = RESULT;
-                resultOfAnalysis.SetActive(false);
-            }
+            patient.text = PATIENT;
+            nameOfAnalysis.text = ANALYSIS;
+            result.text = RESULT;
+            resultOfAnalysis.SetActive(false);
         });
     }
 

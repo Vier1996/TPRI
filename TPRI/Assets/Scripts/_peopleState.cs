@@ -8,21 +8,23 @@ using UnityEngine.UI;
 public class _peopleState : _dialogContainer
 {
     [SerializeField] string theDialog;
-    [SerializeField] private Button[] analysisButtons;
+    [SerializeField] private string[] analysis;
+
+    public string nameOfPatient;
+    
     private TextMeshProUGUI toSpeak;
     private bool _whereD;
     private bool _problemsD;
     private bool _visitD;
-    private int t;
-    
-    
+    private Analisys _analisys;
+
+
     private void Start()
     {
         toSpeak = GameObject.FindWithTag("dialogPanel").GetComponent<TextMeshProUGUI>();
         toSpeak.text = BaseDialogs[0];
         _whereD = _problemsD = _visitD = false;
-        
-        Analisys _analisys = new Analisys(analysisButtons);
+        _analisys = new Analisys(analysis);
         // 
     }
 
@@ -54,52 +56,43 @@ public class _peopleState : _dialogContainer
         {
         }
     }
+
+    public Analisys getAnalysis()
+    {
+        return _analisys;
+    }
 }
 
-class Analisys
+public class Analisys
 {
-    public string Blood = "отрицательный";
+    /*public string Blood = "отрицательный";
     public string Pee = "отрицательный";
     public string Smear = "отрицательный"; // мазок
     public string Sputum = "отрицательный"; // мокрота
     public string Saliva = "отрицательный"; // слюна
     public string Shit = "отрицательный";
-    public GameObject AnalysController;
-    private Button[] analysisButtons;
+    public GameObject AnalysController;*/
+    private Dictionary<string, string> _availableAnalysis;
 
-    public Analisys(Button[] analyses)
+    public Analisys(string[] analyses)
     {
-        AnalysController = GameObject.FindGameObjectWithTag("Analysis");
-        analysisButtons = analyses;
-        setListenersOnButtonsAnalysis();
+        //AnalysController = GameObject.FindGameObjectWithTag("Analysis");
+        _availableAnalysis = new Dictionary<string, string>();
+        setAvailableResult(analyses);
     }
 
-    public void setListenersOnButtonsAnalysis()
+    private void setAvailableResult(string[] analysis)
     {
-        for (int i = 0; i < analysisButtons.Length; i++)
-        {
-            //analysisButtons[i].onClick.AddListener();
-        }
+        _availableAnalysis.Add("Blood", analysis[0]);
+        _availableAnalysis.Add("Pee", analysis[1]);
+        _availableAnalysis.Add("Smear", analysis[2]);
+        _availableAnalysis.Add("Sputum", analysis[3]);
+        _availableAnalysis.Add("Saliva", analysis[4]);
+        _availableAnalysis.Add("Shit", analysis[5]);
     }
-    
-    public Analisys(string _blood, string _pee, string _smear, string _sputum, string _saliva, string _shit)
+
+    public string getResultOfAnalysis(string name)
     {
-        if (_blood.Equals("+"))
-            _blood = "положительный";
-        
-        if (_pee.Equals("+"))
-            _pee = "положительный";
-        
-        if (_smear.Equals("+"))
-            _smear = "положительный";
-        
-        if (_sputum.Equals("+"))
-            _sputum = "положительный";
-        
-        if (_saliva.Equals("+"))
-            _saliva = "положительный";
-        
-        if (_shit.Equals("+"))
-            _shit = "положительный";
+        return _availableAnalysis[name];
     }
 }

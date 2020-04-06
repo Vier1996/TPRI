@@ -88,13 +88,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialog: 
-  analysisButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  analysis:
+  - negative
+  - positive
+  - negative
+  - negative
+  - positive
+  - negative
+  nameOfPatient: Troll
 --- !u!114 &4987473921039140648
 MonoBehaviour:
   m_ObjectHideFlags: 0

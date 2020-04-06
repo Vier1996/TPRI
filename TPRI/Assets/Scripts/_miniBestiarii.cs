@@ -17,6 +17,7 @@ public class _miniBestiarii : MonoBehaviour
     private int CurrentPage = 0;
     private GameObject _modelVirus;
     private GameObject _modelForLoadVirus;
+    private const float ModelX = 12.5f, ModelY = 2.9f, ModelZ = 80.75f;
 
     void Start()
     {
@@ -24,39 +25,65 @@ public class _miniBestiarii : MonoBehaviour
         toBack.onClick.AddListener(() =>
         {
             Destroy(_CurrentPage);
+            Destroy(_modelVirus);
             if (CurrentPage == 0)
             {
                 CurrentPage = pages.Length - 1;
                 _CurrentPage = Instantiate(pages[CurrentPage], transform);
+                InstantiateModelVirus(CurrentPage);
             }
             else
             {
                 _CurrentPage = Instantiate(pages[--CurrentPage], transform);
+                InstantiateModelVirus(CurrentPage);
             }
         });
         toNext.onClick.AddListener(() =>
         {
             Destroy(_CurrentPage);
+            Destroy(_modelVirus);
             if (CurrentPage == pages.Length - 1)
             {
                 CurrentPage = 0;
                 _CurrentPage = Instantiate(pages[CurrentPage], transform);
+                InstantiateModelVirus(CurrentPage);
             }
             else
             {
                 _CurrentPage = Instantiate(pages[++CurrentPage], transform);
+                InstantiateModelVirus(CurrentPage);
             }
         });
         
         _CurrentPage = Instantiate(pages[0], transform);
         _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/Вирус1");
-        _modelVirus = Instantiate(_modelForLoadVirus, spawnVirusObject.transform);
-        _modelVirus.GetComponent<_scaler>()._Scale = 1;
+        _modelVirus = Instantiate(_modelForLoadVirus);
+        _modelVirus.transform.position = new Vector3(ModelX, ModelY, ModelZ);
+        _modelVirus.GetComponent<_scaler>()._Scale = 1.5f;
     }
 
+    private void InstantiateModelVirus(int index)
+    {
+        _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/Вирус" + (index+1));
+        _modelVirus = Instantiate(_modelForLoadVirus);
+        _modelVirus.transform.position = new Vector3(ModelX, ModelY, ModelZ);
+        if (index + 1 == 3)
+        {
+            _modelVirus.GetComponent<_scaler>()._Scale = 0.3f;
+        }
+        else
+        {
+            _modelVirus.GetComponent<_scaler>()._Scale = 1.5f;
+        }
+        
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        
+        if (_modelVirus != null)
+        {
+            _modelVirus.transform.Rotate(10.0f * Time.deltaTime, 10.0f * Time.deltaTime, 0);
+        }
     }
 }
