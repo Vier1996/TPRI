@@ -23,6 +23,7 @@ TagManager:
   - _SklsDlg
   - store
   - All_keys
+  - where
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,12 @@ using TMPro;
 
 public class _GameController : MonoBehaviour
 {
+    public GameObject[] people;
+    [SerializeField] private int CountPuppets;
+    [SerializeField] private Transform spawnPlace;
+    private static int Ctr = 0;
+    
+    
     private Button _grassMedicine;
     private GameObject _NPC;
     [SerializeField] private GameObject spawnForPeople; 
@@ -38,7 +44,21 @@ public class _GameController : MonoBehaviour
         _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
         _issues = issuesScript.getSymptoms();
     }
-    
+
+    private void Start()
+    {
+        Invoke(nameof(SpawnPuppets), 1f);
+        Invoke(nameof(SpawnPuppets), 2f);
+        Invoke(nameof(SpawnPuppets), 3f);
+        Invoke(nameof(SpawnPuppets), 4f);
+        Invoke(nameof(SpawnPuppets), 5f);
+    }
+
+    private void SpawnPuppets()
+    {
+        Instantiate(people[Ctr], spawnPlace);
+        Ctr++;
+    }
 
     private void Heal()
     {
@@ -62,6 +82,9 @@ public class _GameController : MonoBehaviour
     {
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
         _camera.GetComponent<_WorldController>().setPassingIllnesses(1, issues.getIssueName(), _issues.Count);
+        people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
+        CountPuppets--;
+        
         Destroy(_NPC);
         Invoke(nameof(InitNPC), 3);
     }
