@@ -26,6 +26,7 @@ public class _bestiaryController : MonoBehaviour
     private GameObject _nameVirus;
     private InfoAboutIlnesses _info;
 
+    private Information VirusInformaiton;
     [SerializeField] private Button backToMenu;
 
     private void Awake()
@@ -80,13 +81,16 @@ public class _bestiaryController : MonoBehaviour
         {
             _virusModelGameObject = Instantiate(_virusModel);
         }
+
+        VirusInformaiton = _virusModelGameObject.GetComponent<Information>();
+        
         string nameVirus = _viruses[position-1].GetComponent<TextMeshProUGUI>().text;
         string story = _listViruses[nameVirus];
         List<string> symptoms = _listSymptoms[nameVirus];
         string symptomsToString = getSymptoms(symptoms);
-        _storyVirus.GetComponent<TextMeshProUGUI>().text = story;
-        _symptoms.GetComponent<TextMeshProUGUI>().text = symptomsToString;
-        _nameVirus.GetComponent<TextMeshProUGUI>().text = nameVirus;
+        _storyVirus.GetComponent<TextMeshProUGUI>().text = VirusInformaiton.Description;
+        _symptoms.GetComponent<TextMeshProUGUI>().text = "Симптомы: (" + VirusInformaiton.Symptoms + ")";
+        _nameVirus.GetComponent<TextMeshProUGUI>().text = VirusInformaiton.Name;
         _infectionDegreeSlider.GetComponent<Slider>().value = _valueOfInfection[nameVirus];
     }
 

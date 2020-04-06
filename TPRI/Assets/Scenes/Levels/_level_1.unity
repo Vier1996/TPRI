@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 118105217}
   - component: {fileID: 118105216}
   - component: {fileID: 118105220}
+  - component: {fileID: 118105221}
   m_Layer: 5
   m_Name: Shit
   m_TagString: Untagged
@@ -467,7 +468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b171742a1b02ebb4a8890a59f19766f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7bc2bd476fec85742b7f3c3a0e3a2973, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -523,6 +524,21 @@ MonoBehaviour:
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
   table: {fileID: 0}
+--- !u!114 &118105221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118105215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011b61c6ff9ff4b49950441a683bb149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Koef: 2
+  amount: {fileID: 256759388}
+  IntegerAmount: 0
 --- !u!1 &127551254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8da1eaf098a92c8419892812ffb9b3f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 04359e9550b81e243b168835eac9203e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2317,7 +2333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 45.774963, y: -84.54498}
+  m_AnchoredPosition: {x: 45.774902, y: -84.54492}
   m_SizeDelta: {x: -1100, y: -500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407425287
@@ -3491,7 +3507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1dab9aae6c6c1764d8023ce481d0c1e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77df240cd627cf84d9024c1246e157db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3522,6 +3538,7 @@ GameObject:
   - component: {fileID: 784802642}
   - component: {fileID: 784802644}
   - component: {fileID: 784802645}
+  - component: {fileID: 784802646}
   m_Layer: 5
   m_Name: Pee
   m_TagString: Untagged
@@ -3647,6 +3664,21 @@ MonoBehaviour:
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
   table: {fileID: 0}
+--- !u!114 &784802646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784802640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011b61c6ff9ff4b49950441a683bb149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Koef: 0
+  amount: {fileID: 699229276}
+  IntegerAmount: 0
 --- !u!1 &799192413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4991,6 +5023,7 @@ GameObject:
   - component: {fileID: 1121771224}
   - component: {fileID: 1121771223}
   - component: {fileID: 1121771226}
+  - component: {fileID: 1121771227}
   m_Layer: 5
   m_Name: Blood
   m_TagString: Untagged
@@ -5079,7 +5112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 992bb063f26a3f546863a7dc5bf79da0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07cff581ee87a864fa43d67dd3975c8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5115,6 +5148,21 @@ MonoBehaviour:
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
   table: {fileID: 0}
+--- !u!114 &1121771227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121771221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011b61c6ff9ff4b49950441a683bb149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Koef: 1
+  amount: {fileID: 1452481820}
+  IntegerAmount: 0
 --- !u!1 &1173931516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5555,6 +5603,7 @@ GameObject:
   - component: {fileID: 1281824185}
   - component: {fileID: 1281824187}
   - component: {fileID: 1281824188}
+  - component: {fileID: 1281824189}
   m_Layer: 5
   m_Name: Saliva
   m_TagString: Untagged
@@ -5680,6 +5729,21 @@ MonoBehaviour:
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
   table: {fileID: 0}
+--- !u!114 &1281824189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281824183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011b61c6ff9ff4b49950441a683bb149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Koef: 1
+  amount: {fileID: 1529314957}
+  IntegerAmount: 0
 --- !u!1 &1287374175
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,6 +5912,7 @@ GameObject:
   - component: {fileID: 1321444240}
   - component: {fileID: 1321444242}
   - component: {fileID: 1321444243}
+  - component: {fileID: 1321444244}
   m_Layer: 5
   m_Name: Smear
   m_TagString: Untagged
@@ -5973,6 +6038,21 @@ MonoBehaviour:
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
   table: {fileID: 0}
+--- !u!114 &1321444244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321444238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011b61c6ff9ff4b49950441a683bb149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Koef: 1
+  amount: {fileID: 1067334542}
+  IntegerAmount: 0
 --- !u!1 &1380294941
 GameObject:
   m_ObjectHideFlags: 0
@@ -6875,8 +6955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255, y: 239}
-  m_SizeDelta: {x: 87.2, y: 50}
+  m_AnchoredPosition: {x: -257, y: 187}
+  m_SizeDelta: {x: 104.9, y: 60.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516123530
 MonoBehaviour:
@@ -6934,12 +7014,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8431373, g: 0.62352943, b: 0.427451, a: 1}
+  m_Color: {r: 1, g: 0.9077964, b: 0.8254717, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 93fc19b61fc51fe41895d27bfef2f1e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f76bab3159de39149912134a7ff23eaf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7560,7 +7640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ceb6e359a81b954999d3550db69b6d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3388947d689ad7b41ab2da4e4a4b44b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9813,6 +9893,7 @@ GameObject:
   - component: {fileID: 2085405794}
   - component: {fileID: 2085405796}
   - component: {fileID: 2085405797}
+  - component: {fileID: 2085405798}
   m_Layer: 5
   m_Name: Sputum
   m_TagString: Untagged
@@ -9938,3 +10019,18 @@ MonoBehaviour:
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
   table: {fileID: 0}
+--- !u!114 &2085405798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085405792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011b61c6ff9ff4b49950441a683bb149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Koef: 2
+  amount: {fileID: 275060689}
+  IntegerAmount: 0
