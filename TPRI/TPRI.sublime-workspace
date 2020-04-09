@@ -1,0 +1,353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mi",
+				"minute"
+			],
+			[
+				"G",
+				"GetComponent"
+			],
+			[
+				"Sc",
+				"ScoreNeeded"
+			],
+			[
+				"Vi",
+				"Victory"
+			],
+			[
+				"s",
+				"sure"
+			],
+			[
+				"Se",
+				"SetActive"
+			],
+			[
+				"T",
+				"ToString"
+			],
+			[
+				"to",
+				"total"
+			],
+			[
+				"c",
+				"Cmpt"
+			],
+			[
+				"C",
+				"Cmpt"
+			],
+			[
+				"sta",
+				"Start"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			],
+			[
+				"io",
+				"iostream\tstandard header"
+			],
+			[
+				"A",
+				"algorithm\tstandard header"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "using System;\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.UI;\n\npublic class _storeIMGcontroller : MonoBehaviour\n{\n    private const string key = \"DWEQ\";\n    \n    [SerializeField] private string _Name;\n    [SerializeField] private string _Description;\n\n    private _DescriptionController info;\n    \n    private void Start()\n    {\n        info = GameObject.FindGameObjectWithTag(\"store\").GetComponent<_DescriptionController>();\n        \n        GetComponent<Button>().onClick.AddListener(() =>\n        {\n            info.setName(_Name);\n            info.setDescription(_Description);\n        });\n    }\n}\n",
+			"file": "Assets/_storeIMGcontroller.cs",
+			"file_size": 684,
+			"file_write_time": 132305075753343908,
+			"settings":
+			{
+				"buffer_size": 655,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Python",
+				"Set Syntax: Python"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/Scripts"
+	],
+	"file_history":
+	[
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/TPRI.sublime-project",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/submarino",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/_storeIMGcontroller.cs",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/Package Control.sublime-package",
+		"/C/Users/Max/Desktop/лабы/VideoScript.cs",
+		"/C/Users/Max/Desktop/Jonny_Trigger(COPY)/Assets/Plugins/Android/mainTemplate.gradle",
+		"/C/Kurs_DB/DB_1/Kursovoi1_log.ldf",
+		"/C/Users/Max/Desktop/Jonny_Trigger(COPY)/Temp/gradleOut/unityLibrary/build.gradle",
+		"/C/Users/Max/Desktop/TestIronSource/Assets/Plugins/Android/mainTemplate.gradle",
+		"/C/UnityAPK/Test_GameND_Copy/Assets/Plugins/Android/mainTemplate.gradle.meta",
+		"/C/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/GradleTemplates/mainTemplate.gradle",
+		"/C/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/GradleTemplates/settingsTemplate.gradle",
+		"/C/UnityAPK/Test_GameND_Copy/Assets/Plugins/Android/mainTemplate.gradle",
+		"/C/Users/Макс/Downloads/UnityAdsStorage-public-data.json",
+		"/C/Users/Макс/Downloads/backend.json",
+		"/C/Users/Макс/Downloads/account.json",
+		"/C/Users/Макс/Desktop/Kursch_jar/Kursch.jar",
+		"/C/Users/Макс/Downloads/UnityAdsStorage-private-data.json",
+		"/C/Program Files/Unity/Hub/Editor/2019.2.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/GradleTemplates/libTemplate.gradle",
+		"/C/Users/Макс/Desktop/Новый текстовый документ (2).json",
+		"/C/UnityAPK/Test_GameND/Assets/Scripts/Main_Hero.cs",
+		"/C/UnityAPK/Test_GameND/Assets/Scripts/Timer.cs",
+		"/C/UnityAPK/Test_GameND/Assets/Scripts/Settings.cs",
+		"/C/Users/Макс/Desktop/apache-tomcat-9.0.26/webapps/ROOT/index.jsp",
+		"/C/Users/Макс/Desktop/D.py",
+		"/C/Users/Макс/Desktop/SSP.py",
+		"/C/Users/Макс/Documents/NetBeansProjects/GUI/src/gui/GUI.java",
+		"/C/Users/Макс/Desktop/ThisIsTest.py",
+		"/C/Users/Макс/AppData/Roaming/Sublime Text 3/Packages/User/PythonSubText.sublime-build",
+		"/C/Windows/py.exe",
+		"/C/Users/Макс/Desktop/asd.cpp",
+		"/C/Users/Макс/Desktop/Test.py"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"20",
+			"27",
+			"Wait",
+			"n",
+			"k",
+			"F",
+			"s2",
+			"s1",
+			"TeamPlay",
+			"run",
+			"first_str",
+			"val",
+			"index",
+			"ost",
+			"lst",
+			"j"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/_storeIMGcontroller.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								646,
+								646
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 336.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "TPRI.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
