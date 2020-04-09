@@ -8624,13 +8624,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   people:
-  - {fileID: 8887775566629434227, guid: 930e6e10f78a2d34abe53056e2e0f047, type: 3}
-  - {fileID: 8887775566629434227, guid: 930e6e10f78a2d34abe53056e2e0f047, type: 3}
-  - {fileID: 8887775566629434227, guid: 930e6e10f78a2d34abe53056e2e0f047, type: 3}
-  - {fileID: 8887775566629434227, guid: 930e6e10f78a2d34abe53056e2e0f047, type: 3}
-  - {fileID: 8887775566629434227, guid: 930e6e10f78a2d34abe53056e2e0f047, type: 3}
-  CountPuppets: 5
-  spawnPlace: {fileID: 1770504}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CountPuppets: 0
+  spawnPlace: {fileID: 2111500475}
   spawnForPeople: {fileID: 899125876}
 --- !u!114 &1927639123
 MonoBehaviour:

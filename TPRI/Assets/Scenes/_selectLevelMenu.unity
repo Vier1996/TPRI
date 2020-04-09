@@ -608,7 +608,7 @@ Animator:
   m_GameObject: {fileID: 664797877}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &666250621
 GameObject:
@@ -773,7 +773,7 @@ Animator:
   m_GameObject: {fileID: 666250621}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &713868150
 GameObject:
@@ -938,7 +938,7 @@ Animator:
   m_GameObject: {fileID: 713868150}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &843141929
 GameObject:
@@ -1103,7 +1103,7 @@ Animator:
   m_GameObject: {fileID: 843141929}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &978640462
 GameObject:
@@ -1268,7 +1268,7 @@ Animator:
   m_GameObject: {fileID: 978640462}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &982146403
 GameObject:
@@ -1422,7 +1422,7 @@ Animator:
   m_GameObject: {fileID: 982146403}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &1062790961
 GameObject:
@@ -2295,7 +2295,7 @@ Animator:
   m_GameObject: {fileID: 1369490353}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2317,7 +2317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &1370445901
 GameObject:
@@ -2460,7 +2460,7 @@ Animator:
   m_GameObject: {fileID: 1370445901}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2482,7 +2482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &1453794070
 GameObject:
@@ -2974,7 +2974,7 @@ Animator:
   m_GameObject: {fileID: 1643586853}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24346a3e74802e44abeb3c211bc4cf66, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98786ec0c7d63344f983829ffb579fe2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2996,7 +2996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 8, y: -8}
+  m_EffectDistance: {x: 6, y: -6}
   m_UseGraphicAlpha: 1
 --- !u!1 &1775024596
 GameObject:

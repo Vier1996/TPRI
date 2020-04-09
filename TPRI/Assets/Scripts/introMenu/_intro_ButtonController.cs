@@ -10,9 +10,12 @@ public class _intro_ButtonController : MonoBehaviour
 {
   [SerializeField] private Button _Start, _Contitue, _Settings, _Upgrade;
    private GameObject _settingsMenu;
+   private _HeroData _hero;
 
   private void Awake()
   {
+    _hero = _HeroData.getInstance();
+    _hero.setDataFromMemory();
     _settingsMenu = GameObject.FindGameObjectWithTag("Settings");
   }
 
