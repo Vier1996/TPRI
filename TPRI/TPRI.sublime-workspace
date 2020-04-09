@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"_",
+				"_passive"
+			],
+			[
+				"Se",
+				"SerializeField"
+			],
+			[
+				"Death",
+				"DeathMenu\tGameObject"
+			],
+			[
 				"mi",
 				"minute"
 			],
@@ -22,10 +34,6 @@
 			[
 				"s",
 				"sure"
-			],
-			[
-				"Se",
-				"SetActive"
 			],
 			[
 				"T",
@@ -64,13 +72,21 @@
 	"buffers":
 	[
 		{
-			"contents": "using System;\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.UI;\n\npublic class _storeIMGcontroller : MonoBehaviour\n{\n    private const string key = \"DWEQ\";\n    \n    [SerializeField] private string _Name;\n    [SerializeField] private string _Description;\n\n    private _DescriptionController info;\n    \n    private void Start()\n    {\n        info = GameObject.FindGameObjectWithTag(\"store\").GetComponent<_DescriptionController>();\n        \n        GetComponent<Button>().onClick.AddListener(() =>\n        {\n            info.setName(_Name);\n            info.setDescription(_Description);\n        });\n    }\n}\n",
-			"file": "Assets/_storeIMGcontroller.cs",
-			"file_size": 684,
-			"file_write_time": 132305075753343908,
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class _passivSkills : MonoBehaviour\n{\n    \n}\n",
+			"file": "Assets/Scripts/_passivSkills.cs",
+			"file_size": 143,
+			"file_write_time": 132309398531203308,
 			"settings":
 			{
-				"buffer_size": 655,
+				"buffer_size": 132,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/_CommonSkillsController.cs",
+			"settings":
+			{
+				"buffer_size": 370,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -103,6 +119,50 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"omni",
+				"OmniSharpSublime: Restart Server"
+			],
+			[
+				"repo",
+				"git: Repo History"
+			],
+			[
+				"pus",
+				"git: push"
+			],
+			[
+				"stage",
+				"git: quick stage"
+			],
+			[
+				"repos",
+				"git: Repo History"
+			],
+			[
+				"git",
+				"git: commit"
+			],
+			[
+				"gitsa",
+				"Package Control: Install Package"
+			],
+			[
+				"packeg",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"mater",
+				"OmniSharpSublime: Add New Interface"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Control: ",
 				"Package Control: Install Package"
@@ -148,9 +208,16 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/Scripts/_settingsScript.cs",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/_passivSkills.cs",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/_test.cs",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/Scripts/_equipmentScript.cs",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/Scripts/_dialogContainer.cs",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/User/Unity3DReference.sublime-settings",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/_DescriptionController.cs",
+		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/_storeIMGcontroller.cs",
 		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/TPRI.sublime-project",
 		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/submarino",
-		"/C/Users/Max/Desktop/TPRI_KURSCH/TPRI/TPRI/Assets/_storeIMGcontroller.cs",
 		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/Package Control.sublime-package",
 		"/C/Users/Max/Desktop/лабы/VideoScript.cs",
 		"/C/Users/Max/Desktop/Jonny_Trigger(COPY)/Assets/Plugins/Android/mainTemplate.gradle",
@@ -183,7 +250,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 31.0
 	},
 	"find_in_files":
 	{
@@ -197,6 +264,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"    \n",
 			"20",
 			"27",
 			"Wait",
@@ -230,29 +298,63 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/_storeIMGcontroller.cs",
+					"file": "Assets/Scripts/_passivSkills.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 655,
+						"buffer_size": 132,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								646,
-								646
+								129,
+								129
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+							"git_savvy.repo_path": "C:\\Users\\Max\\Desktop\\TPRI_KURSCH\\TPRI",
+							"oops":
+							{
+								"130,131": "Требуется идентификатор."
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/_CommonSkillsController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"git_savvy.repo_path": "C:\\Users\\Max\\Desktop\\TPRI_KURSCH\\TPRI",
+							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -266,11 +368,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 31.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 44.8
 	},
 	"layout":
 	{
@@ -303,11 +405,19 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
+	"output.show_commit_info":
+	{
+		"height": 170.0
+	},
+	"output.variable_get":
+	{
+		"height": 193.0
+	},
+	"pinned_build_system": "Packages/Unity3D Build System/Unity.sublime-build",
 	"project": "TPRI.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":

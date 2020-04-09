@@ -16,7 +16,6 @@ public class _equipmentScript : MonoBehaviour
     private bool _showDialogs = false;
     [SerializeField] private GameObject hideDialog;
     [SerializeField] private GameObject showDialog;
-    
     [SerializeField] private Button ResearchButton;
     [SerializeField] private Button HealthButton;
     [SerializeField] private Button DialogButton;
