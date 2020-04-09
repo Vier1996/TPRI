@@ -22,7 +22,7 @@ public class _bestiaryController : MonoBehaviour
     private Dictionary<string, int> _valueOfInfection;
     private GameObject _virusModel;
     private GameObject _virusModelGameObject;
-    private GameObject _infectionDegreeSlider;
+    private GameObject _infectionDegreeSlider, _fatalityDegreeSlider;
     private GameObject _nameVirus;
     private InfoAboutIlnesses _info;
 
@@ -38,9 +38,9 @@ public class _bestiaryController : MonoBehaviour
         _symptoms = GameObject.Find("Symptoms");
         
         _info = new InfoAboutIlnesses();
-        _listViruses = _info.getViruses();
+        /*_listViruses = _info.getViruses();
         _listSymptoms = _info.getSymptoms();
-        _valueOfInfection = _info.getValueInfection();
+        _valueOfInfection = _info.getValueInfection();*/
         for (int i = 0; i < _contentContainerForViruses.transform.childCount; i++)
         {
             _viruses.Add(GameObject.Find("Virus" + (i + 1)));
@@ -53,6 +53,7 @@ public class _bestiaryController : MonoBehaviour
         }
 
         _infectionDegreeSlider = GameObject.Find("degreeOfInfection");
+        _fatalityDegreeSlider = GameObject.Find("degreeOfFatality");
         
         backToMenu.onClick.AddListener(() => { SceneManager.LoadScene("_level_1");});
     }
@@ -82,13 +83,14 @@ public class _bestiaryController : MonoBehaviour
             _virusModelGameObject = Instantiate(_virusModel);
         }
 
-        VirusInformaiton = _virusModelGameObject.GetComponent<Information>();
+        //VirusInformaiton = _virusModelGameObject.GetComponent<Information>();
         
         string nameVirus = _viruses[position-1].GetComponent<TextMeshProUGUI>().text;
-        _storyVirus.GetComponent<TextMeshProUGUI>().text = VirusInformaiton.Description;
-        _symptoms.GetComponent<TextMeshProUGUI>().text = "Симптомы: (" + VirusInformaiton.Symptoms + ")";
-        _nameVirus.GetComponent<TextMeshProUGUI>().text = VirusInformaiton.Name;
-        _infectionDegreeSlider.GetComponent<Slider>().value = _valueOfInfection[nameVirus];
+        _storyVirus.GetComponent<TextMeshProUGUI>().text = _info.getViruses()[nameVirus];
+        _symptoms.GetComponent<TextMeshProUGUI>().text = "Симптомы:\n" + getSymptoms(_info.getSymptoms()[nameVirus]);
+        _nameVirus.GetComponent<TextMeshProUGUI>().text = nameVirus;
+        _infectionDegreeSlider.GetComponent<Slider>().value = _info.getValueInfection()[nameVirus];
+        _fatalityDegreeSlider.GetComponent<Slider>().value = _info.getValueFatality()[nameVirus];
     }
 
     private string getSymptoms(List<string> symptoms)
