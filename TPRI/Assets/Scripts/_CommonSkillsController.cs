@@ -12,20 +12,29 @@ public class _CommonSkillsController : MonoBehaviour
 
     private void Start() {
         
-        _active.onClick.AddListener(() =>
-        {
-            
-        });
+        _passiveBack.SetActive(false);
+        _active.interactable = false;
+        _passive.interactable = true;
+
+        _active.onClick.AddListener(SetupActiveSkillsMenu);
+        _passive.onClick.AddListener(SetupPassiveSkillsMenu);
     }
 
     private void SetupActiveSkillsMenu()
     {
+        _active.interactable = false;
+        _passive.interactable = true;
         
+        _passiveBack.SetActive(false);
         _activeBack.SetActive(true);
     }
     
     private void SetupPassiveSkillsMenu()
     {
+        _active.interactable = true;
+        _passive.interactable = false;
         
+        _activeBack.SetActive(false);
+        _passiveBack.SetActive(true);
     }
 }
