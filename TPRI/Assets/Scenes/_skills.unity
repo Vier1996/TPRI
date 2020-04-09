@@ -277,7 +277,6 @@ GameObject:
   - component: {fileID: 369243207}
   - component: {fileID: 369243206}
   - component: {fileID: 369243205}
-  - component: {fileID: 369243209}
   m_Layer: 5
   m_Name: pass_4Skill
   m_TagString: Untagged
@@ -359,8 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillsPath: 1_skl
-  SkillsName: Skill1
+  SkillsPath: pass_4_skl
+  SkillsName: pass_Skill4
   SkillsDescription: blablabla
 --- !u!114 &369243207
 MonoBehaviour:
@@ -398,21 +397,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369243203}
   m_CullTransparentMesh: 0
---- !u!114 &369243209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369243203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillsPath: 
-  SkillsName: 
-  SkillsDescription: 
 --- !u!1 &715717004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1074,6 @@ GameObject:
   - component: {fileID: 1117586119}
   - component: {fileID: 1117586118}
   - component: {fileID: 1117586117}
-  - component: {fileID: 1117586121}
   m_Layer: 5
   m_Name: pass_5Skill
   m_TagString: Untagged
@@ -1172,8 +1155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillsPath: 1_skl
-  SkillsName: Skill1
+  SkillsPath: pass_5_skl
+  SkillsName: pass_Skill5
   SkillsDescription: blablabla
 --- !u!114 &1117586119
 MonoBehaviour:
@@ -1211,21 +1194,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117586115}
   m_CullTransparentMesh: 0
---- !u!114 &1117586121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117586115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillsPath: 
-  SkillsName: 
-  SkillsDescription: 
 --- !u!1 &1175795852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1428,6 @@ GameObject:
   - component: {fileID: 1384755682}
   - component: {fileID: 1384755681}
   - component: {fileID: 1384755680}
-  - component: {fileID: 1384755684}
   m_Layer: 5
   m_Name: pass_2Skill
   m_TagString: Untagged
@@ -1542,8 +1509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillsPath: 1_skl
-  SkillsName: Skill1
+  SkillsPath: pass_2_skl
+  SkillsName: pass_Skill2
   SkillsDescription: blablabla
 --- !u!114 &1384755682
 MonoBehaviour:
@@ -1581,21 +1548,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384755678}
   m_CullTransparentMesh: 0
---- !u!114 &1384755684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384755678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillsPath: 
-  SkillsName: 
-  SkillsDescription: 
 --- !u!1 &1447968955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1694,6 @@ GameObject:
   - component: {fileID: 1493830260}
   - component: {fileID: 1493830259}
   - component: {fileID: 1493830258}
-  - component: {fileID: 1493830262}
   m_Layer: 5
   m_Name: pass_3Skill
   m_TagString: Untagged
@@ -1824,8 +1775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillsPath: 1_skl
-  SkillsName: Skill1
+  SkillsPath: pass_3_skl
+  SkillsName: pass_Skill3
   SkillsDescription: blablabla
 --- !u!114 &1493830260
 MonoBehaviour:
@@ -1863,21 +1814,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493830256}
   m_CullTransparentMesh: 0
---- !u!114 &1493830262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493830256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillsPath: 
-  SkillsName: 
-  SkillsDescription: 
 --- !u!1 &1529921074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2415,8 @@ GameObject:
   - component: {fileID: 1711987867}
   - component: {fileID: 1711987866}
   - component: {fileID: 1711987869}
+  - component: {fileID: 1711987870}
+  - component: {fileID: 1711987871}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2572,6 +2510,37 @@ MonoBehaviour:
   Layout7: {fileID: 1926940500}
   Layout8: {fileID: 743344071}
   Layout9: {fileID: 1447968955}
+--- !u!114 &1711987870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711987865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0841f538770d445b11b8c595e95cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _active: {fileID: 796696555}
+  _passive: {fileID: 846529283}
+  _activeBack: {fileID: 953687903}
+  _passiveBack: {fileID: 715717004}
+--- !u!114 &1711987871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711987865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e173d5434b201bd459beb8a37eff7cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Layout2: {fileID: 1384755678}
+  Layout3: {fileID: 1493830256}
+  Layout5: {fileID: 1117586115}
 --- !u!1 &1779117875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,7 +3139,6 @@ GameObject:
   - component: {fileID: 1975490741}
   - component: {fileID: 1975490740}
   - component: {fileID: 1975490739}
-  - component: {fileID: 1975490743}
   m_Layer: 5
   m_Name: pass_1Skill
   m_TagString: Untagged
@@ -3252,8 +3220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillsPath: 1_skl
-  SkillsName: Skill1
+  SkillsPath: pass_1_skl
+  SkillsName: pass_Skill1
   SkillsDescription: blablabla
 --- !u!114 &1975490741
 MonoBehaviour:
@@ -3291,21 +3259,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975490737}
   m_CullTransparentMesh: 0
---- !u!114 &1975490743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975490737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillsPath: 
-  SkillsName: 
-  SkillsDescription: 
 --- !u!1 &2002509302
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,7 +3427,6 @@ GameObject:
   - component: {fileID: 2067726400}
   - component: {fileID: 2067726399}
   - component: {fileID: 2067726398}
-  - component: {fileID: 2067726402}
   m_Layer: 5
   m_Name: pass_6Skill
   m_TagString: Untagged
@@ -3556,8 +3508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillsPath: 1_skl
-  SkillsName: Skill1
+  SkillsPath: pass_6_skl
+  SkillsName: pass_Skill6
   SkillsDescription: blablabla
 --- !u!114 &2067726400
 MonoBehaviour:
@@ -3595,21 +3547,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067726396}
   m_CullTransparentMesh: 0
---- !u!114 &2067726402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067726396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852ef58b8e0d38b439c9ef78f2b307c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkillsPath: 
-  SkillsName: 
-  SkillsDescription: 
 --- !u!222 &5329344505961372242
 CanvasRenderer:
   m_ObjectHideFlags: 0
