@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class _skillContext : MonoBehaviour
 {
-   private void Awake()
+  /* private void Awake()
    {
       PlayerPrefs.SetInt("1_skl", 0);
       PlayerPrefs.SetInt("2_skl", 0);
@@ -23,5 +23,5 @@ public class _skillContext : MonoBehaviour
       PlayerPrefs.SetInt("pass_4_skl", 0);
       PlayerPrefs.SetInt("pass_5_skl", 0);
       PlayerPrefs.SetInt("pass_6_skl", 0);
-   }
+   }*/
 }

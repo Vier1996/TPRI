@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\37525\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\37525\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TPRI.459677499.00" t="ExcludeRecursive" />
-    <e p="C:\Users\37525\Desktop\crsch\TPRI\TPRI" t="IncludeRecursive">
+    <e p="C:\Users\Max\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Max\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TPRI.-1001528648.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Max\Desktop\TPRI_KURSCH\TPRI\TPRI" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_DescriptionController.cs" t="Include" />
         <e p="_dialogPool.cs" t="Include" />
+        <e p="_eventController.cs" t="Include" />
+        <e p="_ISSUESKEY.cs" t="Include" />
         <e p="_levelItemController.cs" t="Include" />
         <e p="_queueController.cs" t="Include" />
         <e p="_queuePeopleController.cs" t="Include" />
@@ -20,6 +22,7 @@
         <e p="_skillLayoutController.cs" t="Include" />
         <e p="_storeController.cs" t="Include" />
         <e p="_storeIMGcontroller.cs" t="Include" />
+        <e p="_SYMPTOMESKEY.cs" t="Include" />
         <e p="_test.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">

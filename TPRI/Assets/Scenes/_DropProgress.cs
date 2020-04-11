@@ -24,5 +24,29 @@ public class _DropProgress
         PlayerPrefs.SetInt(_ResourceKeys.Ginger_root, 0);
         PlayerPrefs.SetInt(_ResourceKeys.Liver_eel, 0);
     }
+
+    public static void DropSkills()
+    {
+        PlayerPrefs.SetInt("1_skl", 0);
+        PlayerPrefs.SetInt("2_skl", 0);
+        PlayerPrefs.SetInt("3_skl", 0);
+        PlayerPrefs.SetInt("4_skl", 0);
+        PlayerPrefs.SetInt("5_skl", 0);
+        PlayerPrefs.SetInt("6_skl", 0);
+        PlayerPrefs.SetInt("7_skl", 0);
+        PlayerPrefs.SetInt("8_skl", 0);
+        PlayerPrefs.SetInt("9_skl", 0);
+
+        PlayerPrefs.SetInt("pass_1_skl", 0);
+        PlayerPrefs.SetInt("pass_2_skl", 0);
+        PlayerPrefs.SetInt("pass_3_skl", 0);
+        PlayerPrefs.SetInt("pass_4_skl", 0);
+        PlayerPrefs.SetInt("pass_5_skl", 0);
+        PlayerPrefs.SetInt("pass_6_skl", 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Defense, 0);
+        PlayerPrefs.SetInt(_ResourceKeys.CityImunity, 0);
+        PlayerPrefs.SetInt(_ResourceKeys.Shoots, 0);
+    }
 }
 

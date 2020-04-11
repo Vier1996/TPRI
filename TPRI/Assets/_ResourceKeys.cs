@@ -8,6 +8,9 @@ public class _ResourceKeys : MonoBehaviour
     
     public const string CharacterLevel = "CharacterLevel";
     public const string Money = "Key_Money";
+    public const string Defense = "Key_Defense";
+    public const string CityImunity = "Key_CityImunity";
+    public const string Shoots = "Key_Shoots";
     public const string skills = "Ket_avaialble_skills";
     public const string Town_HealthPeople = "Town_HealthPeople";
 

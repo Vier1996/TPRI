@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 369243206}
   - component: {fileID: 369243205}
   m_Layer: 5
-  m_Name: pass_4Skill
+  m_Name: Warning1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,8 +359,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: pass_4_skl
-  SkillsName: pass_Skill4
-  SkillsDescription: blablabla
+  SkillsName: Warning 1 lvl
+  SkillsDescription: After passing issue people may notificate you with 15%
+  reserched: 0
 --- !u!114 &369243207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +491,7 @@ GameObject:
   - component: {fileID: 743344075}
   - component: {fileID: 743344076}
   m_Layer: 5
-  m_Name: 9_skill
+  m_Name: LifeCity2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,8 +608,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 9_skl
-  SkillsName: Skill9
-  SkillsDescription: dfasfasfasd
+  SkillsName: Life City 2lvl
+  SkillsDescription: Increase imunity of city on 15%
+  reserched: 0
 --- !u!1 &785000861
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +625,7 @@ GameObject:
   - component: {fileID: 785000865}
   - component: {fileID: 785000866}
   m_Layer: 5
-  m_Name: 7_skill
+  m_Name: Healing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +643,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 953687904}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -740,8 +742,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 7_skl
-  SkillsName: Skill7
-  SkillsDescription: vbcvbxzcasd
+  SkillsName: Healing 2lvl
+  SkillsDescription: May heal one poeple issue after passing with 20%
+  reserched: 0
 --- !u!1 &796696553
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +758,7 @@ GameObject:
   - component: {fileID: 796696556}
   - component: {fileID: 796696555}
   m_Layer: 5
-  m_Name: Actv
+  m_Name: General
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,7 +876,7 @@ GameObject:
   - component: {fileID: 846529284}
   - component: {fileID: 846529283}
   m_Layer: 5
-  m_Name: Pass
+  m_Name: HighLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,11 +1012,11 @@ RectTransform:
   m_Children:
   - {fileID: 1567142426}
   - {fileID: 1624560335}
-  - {fileID: 1598417651}
   - {fileID: 1789327762}
+  - {fileID: 785000862}
+  - {fileID: 1598417651}
   - {fileID: 1779117876}
   - {fileID: 1957717983}
-  - {fileID: 785000862}
   - {fileID: 1926940501}
   - {fileID: 743344072}
   - {fileID: 1447968956}
@@ -1061,6 +1064,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953687903}
   m_CullTransparentMesh: 0
+--- !u!1 &993780637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993780638}
+  - component: {fileID: 993780641}
+  - component: {fileID: 993780640}
+  - component: {fileID: 993780639}
+  m_Layer: 5
+  m_Name: return
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &993780638
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993780637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1529921075}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -355.2, y: 182.9}
+  m_SizeDelta: {x: 93.63, y: 38.47}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &993780639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993780637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 993780640}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &993780640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993780637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &993780641
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993780637}
+  m_CullTransparentMesh: 0
 --- !u!1 &1117586115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1195,7 @@ GameObject:
   - component: {fileID: 1117586118}
   - component: {fileID: 1117586117}
   m_Layer: 5
-  m_Name: pass_5Skill
+  m_Name: Warning2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1156,8 +1276,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: pass_5_skl
-  SkillsName: pass_Skill5
-  SkillsDescription: blablabla
+  SkillsName: Warning 2 lvl
+  SkillsDescription: After passing issue people may notificate you with 35%
+  reserched: 0
 --- !u!114 &1117586119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,7 +1370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Passive
+  m_text: Nedd > 15lvl
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1277,10 +1398,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24
+  m_fontSize: 18.35
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1318,12 +1439,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1175795854}
-    characterCount: 7
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 2
+    wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1429,7 +1550,7 @@ GameObject:
   - component: {fileID: 1384755681}
   - component: {fileID: 1384755680}
   m_Layer: 5
-  m_Name: pass_2Skill
+  m_Name: AdditionShoot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1510,8 +1631,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: pass_2_skl
-  SkillsName: pass_Skill2
-  SkillsDescription: blablabla
+  SkillsName: Addition Shoot 2lvl
+  SkillsDescription: Give you one addition shoot
+  reserched: 0
 --- !u!114 &1384755682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1562,7 +1684,7 @@ GameObject:
   - component: {fileID: 1447968959}
   - component: {fileID: 1447968960}
   m_Layer: 5
-  m_Name: 10_skill
+  m_Name: Supreme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1679,8 +1801,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 10_skl
-  SkillsName: 10Skill
-  SkillsDescription: QWERTY
+  SkillsName: Supreme
+  SkillsDescription: Show you all issue people in queue
+  reserched: 0
 --- !u!1 &1493830256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1818,7 @@ GameObject:
   - component: {fileID: 1493830259}
   - component: {fileID: 1493830258}
   m_Layer: 5
-  m_Name: pass_3Skill
+  m_Name: AdditionShoot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1776,8 +1899,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: pass_3_skl
-  SkillsName: pass_Skill3
-  SkillsDescription: blablabla
+  SkillsName: Addition Shoot 3lvl
+  SkillsDescription: Give you one addition shoot
+  reserched: 0
 --- !u!114 &1493830260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1848,6 +1972,7 @@ RectTransform:
   - {fileID: 1900712027}
   - {fileID: 796696554}
   - {fileID: 846529282}
+  - {fileID: 993780638}
   m_Father: {fileID: 1676245880}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1906,7 +2031,7 @@ GameObject:
   - component: {fileID: 1567142429}
   - component: {fileID: 1567142430}
   m_Layer: 5
-  m_Name: 1_skill
+  m_Name: Defense1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1980,8 +2105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 1_skl
-  SkillsName: Skill1
-  SkillsDescription: blablabla
+  SkillsName: Defense 1lvl
+  SkillsDescription: Your character protection +1.
+  reserched: 0
 --- !u!114 &1567142430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2039,7 +2165,7 @@ GameObject:
   - component: {fileID: 1598417654}
   - component: {fileID: 1598417655}
   m_Layer: 5
-  m_Name: 3_skill
+  m_Name: Detiction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2057,7 +2183,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 953687904}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2156,8 +2282,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 3_skl
-  SkillsName: Skill3
-  SkillsDescription: hjghjghjghjghj
+  SkillsName: Detection
+  SkillsDescription: May you show one poeple issue with 10%
+  reserched: 0
 --- !u!1 &1624560334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2299,7 @@ GameObject:
   - component: {fileID: 1624560338}
   - component: {fileID: 1624560339}
   m_Layer: 5
-  m_Name: 2_skill
+  m_Name: Defense2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2289,8 +2416,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 2_skl
-  SkillsName: Skill2
-  SkillsDescription: dyudytudy
+  SkillsName: Defense 2lvl
+  SkillsDescription: Your character protection +2.
+  reserched: 0
 --- !u!1 &1676245876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2526,6 +2654,16 @@ MonoBehaviour:
   _passive: {fileID: 846529283}
   _activeBack: {fileID: 953687903}
   _passiveBack: {fileID: 715717004}
+  _return: {fileID: 993780639}
+  Defense_1: {fileID: 1567142429}
+  Defense_2: {fileID: 1624560339}
+  LifeCity_1: {fileID: 1926940505}
+  LifeCity_2: {fileID: 743344076}
+  AddShoot_1: {fileID: 1975490740}
+  AddShoot_2: {fileID: 1384755681}
+  AddShoot_3: {fileID: 1493830259}
+  Warning_1: {fileID: 369243206}
+  Warning_2: {fileID: 1117586118}
 --- !u!114 &1711987871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2555,7 +2693,7 @@ GameObject:
   - component: {fileID: 1779117879}
   - component: {fileID: 1779117880}
   m_Layer: 5
-  m_Name: 5_skill
+  m_Name: Researcher1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2573,7 +2711,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 953687904}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2672,8 +2810,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 5_skl
-  SkillsName: Skill5
-  SkillsDescription: qwertty
+  SkillsName: Researcher 1lvl
+  SkillsDescription: Open unique resource "Panacea"
+  reserched: 0
 --- !u!1 &1789327761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,7 +2827,7 @@ GameObject:
   - component: {fileID: 1789327765}
   - component: {fileID: 1789327766}
   m_Layer: 5
-  m_Name: 4_skill
+  m_Name: Healing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2706,7 +2845,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 953687904}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2805,8 +2944,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 4_skl
-  SkillsName: Skill4
-  SkillsDescription: qweqwrqwrqwr
+  SkillsName: Healing 1lvl
+  SkillsDescription: May heal one poeple issue after passing with 10%
+  reserched: 0
 --- !u!1 &1900712026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,7 +3014,7 @@ GameObject:
   - component: {fileID: 1926940504}
   - component: {fileID: 1926940505}
   m_Layer: 5
-  m_Name: 8_skill
+  m_Name: LifeCity1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2991,8 +3131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 8_skl
-  SkillsName: Skill9
-  SkillsDescription: asssfrr
+  SkillsName: Life City 1lvl
+  SkillsDescription: Increase imunity of city on 15%
+  reserched: 0
 --- !u!1 &1957717982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3007,7 +3148,7 @@ GameObject:
   - component: {fileID: 1957717986}
   - component: {fileID: 1957717987}
   m_Layer: 5
-  m_Name: 6_skill
+  m_Name: Researcher2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3025,7 +3166,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 953687904}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3124,8 +3265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: 6_skl
-  SkillsName: Skill6
-  SkillsDescription: eeeeeeeeeeeeeeeee
+  SkillsName: Researcher 2lvl
+  SkillsDescription: Open unique resource "*"
+  reserched: 0
 --- !u!1 &1975490737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,7 +3282,7 @@ GameObject:
   - component: {fileID: 1975490740}
   - component: {fileID: 1975490739}
   m_Layer: 5
-  m_Name: pass_1Skill
+  m_Name: AdditionShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3221,8 +3363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: pass_1_skl
-  SkillsName: pass_Skill1
-  SkillsDescription: blablabla
+  SkillsName: Addition Shoot 1lvl
+  SkillsDescription: Give you one addition shoot
+  reserched: 0
 --- !u!114 &1975490741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3314,7 +3457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Active
+  m_text: General
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3383,7 +3526,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2002509304}
-    characterCount: 6
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3428,7 +3571,7 @@ GameObject:
   - component: {fileID: 2067726399}
   - component: {fileID: 2067726398}
   m_Layer: 5
-  m_Name: pass_6Skill
+  m_Name: FullHealing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3509,8 +3652,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillsPath: pass_6_skl
-  SkillsName: pass_Skill6
-  SkillsDescription: blablabla
+  SkillsName: Full healing
+  SkillsDescription: You may heal all people issue with 5%
+  reserched: 0
 --- !u!114 &2067726400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3683,7 +3827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: asdasd
+  m_text: Defense 1lvl
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3711,7 +3855,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 38.65
+  m_fontSize: 33.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3752,12 +3896,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5329344506423678324}
-    characterCount: 6
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -3839,7 +3983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "N\u0437\u0443\u0447\u0438\u0442\u044C"
+  m_text: GET
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -3867,7 +4011,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39.6
+  m_fontSize: 40.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3908,7 +4052,7 @@ MonoBehaviour:
   m_margin: {x: 8.870468, y: 3.7081184, z: 8.343277, w: 4.635147}
   m_textInfo:
     textComponent: {fileID: 5329344507172375164}
-    characterCount: 7
+    characterCount: 3
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -4033,8 +4177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u042B\u0431\u0435\u0440\u0438\u0442\u0435 \u043D\u0430\u0432\u044B\u043A
-    \u0434\u043B\u044F \u043E\u0437\u043D\u043E\u043A\u0430\u043C\u043B\u0435\u043D\u0438\u044F"
+  m_text: Your character protection +1.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4062,7 +4205,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 26.05
+  m_fontSize: 30.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4103,14 +4246,14 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5329344507458885278}
-    characterCount: 31
+    characterCount: 29
     spriteCount: 0
     spaceCount: 3
-    wordCount: 5
+    wordCount: 4
     linkCount: 0
-    lineCount: 3
+    lineCount: 4
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
