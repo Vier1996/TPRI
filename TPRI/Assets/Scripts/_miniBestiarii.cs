@@ -70,6 +70,10 @@ public class _miniBestiarii : MonoBehaviour
         {
             _modelVirus.GetComponent<_scaler>()._Scale = 0.3f;
         }
+        else if (index + 1 == 5 || index + 1 == 6)
+        {
+            _modelVirus.GetComponent<_scaler>()._Scale = 5.43f;
+        }
         else
         {
             _modelVirus.GetComponent<_scaler>()._Scale = 1.5f;

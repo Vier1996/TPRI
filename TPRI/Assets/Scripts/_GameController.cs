@@ -76,7 +76,7 @@ public class _GameController : MonoBehaviour
         {
             passIlls += 1;
             _infectedAndDeadCounter.setNPC(issues.getFatality());
-            _infectedAndDeadCounter.countInfectedPeople(issues.getInfection(), Population, false);
+           _infectedAndDeadCounter.countInfectedPeople(issues.getInfection(), Population, false);
             //_infectedAndDeadCounter.countDeadPeople(issues.getFatality(), Population);
         }
         else
@@ -113,8 +113,9 @@ public class _GameController : MonoBehaviour
             _levelEndController.setCountPatient(countNPC);
             _levelEndController.setCountPassIlls(passIlls);
             _levelEndController.setCountInfected(_infectedAndDeadCounter.getInfected());
-            _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
-            panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo(Population);
+            _levelEndController.setCountDead(_infectedAndDeadCounter.getDead()); 
+            _levelEndController.setPanelWinInfo();
+            //panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo(Population);
         }
     }
 
