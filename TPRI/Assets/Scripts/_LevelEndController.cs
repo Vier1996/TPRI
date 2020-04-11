@@ -53,14 +53,14 @@ public class _LevelEndController : MonoBehaviour
         
     }
 
-    public void setPanelWinInfo(int population)
+    public void setPanelWinInfo()
     {
         gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text += " " + _countPatient;
         gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text += " " + _countPassingIlls;
         gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text += " " + _countHealingIllnesses;
         gameObject.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text += " " + _countInfected;
         gameObject.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text += " " + _countDead;
-        gameObject.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text += " " + population;
+        gameObject.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text += " " + _GameController.Population;
         gameObject.transform.GetChild(6).GetComponent<TextMeshProUGUI>().text += " " + _countSkillPoints;
         gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + _countMoney;
         
