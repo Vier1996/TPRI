@@ -58,6 +58,7 @@
           <e p="_equipmentScript.cs" t="Include" />
           <e p="_GameController.cs" t="Include" />
           <e p="_HeroData.cs" t="Include" />
+          <e p="_Infected_And_Dead_Counter.cs" t="Include" />
           <e p="_issues.cs" t="Include" />
           <e p="_LevelEndController.cs" t="Include" />
           <e p="_miniBestiarii.cs" t="Include" />

@@ -10,15 +10,17 @@ public class _PeopleIssues : MonoBehaviour
 
     public List<string> _symptoms;
     private InfoAboutIlnesses _illnesses;
+    private int _infection, _fatality;
 
     private void Awake()
     {
         _illnesses = new InfoAboutIlnesses();
         _symptoms = new List<string>();
-        setSymptoms();
+        setSymptomsFromDictinary();
+        setInfectionAndFatality();
     }
 
-    private void setSymptoms()
+    private void setSymptomsFromDictinary()
     {
         if (!_issueName.Equals(""))
         {
@@ -34,5 +36,26 @@ public class _PeopleIssues : MonoBehaviour
     public string getIssueName()
     {
         return _issueName;
+    }
+
+    public void setSymptoms(List<string> sympt)
+    {
+        _symptoms = sympt;
+    }
+
+    private void setInfectionAndFatality()
+    {
+        _infection = _illnesses.getValueInfection()[_issueName];
+        _fatality = _illnesses.getValueFatality()[_issueName];
+    }
+
+    public int getInfection()
+    {
+        return _infection;
+    }
+
+    public int getFatality()
+    {
+        return _fatality;
     }
 }
