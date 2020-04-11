@@ -24,6 +24,7 @@ TagManager:
   - store
   - All_keys
   - where
+  - EndLevelPanel
   layers:
   - Default
   - TransparentFX
