@@ -7,6 +7,8 @@ public class _ResourceKeys : MonoBehaviour
     private static _ResourceKeys instance;
     
     public const string CharacterLevel = "CharacterLevel";
+    public const string Money = "Key_Money";
+    public const string skills = "Ket_avaialble_skills";
     public const string Town_HealthPeople = "Town_HealthPeople";
 
     public const string Defense_1 = "Key_Defense_1";
@@ -35,7 +37,7 @@ public class _ResourceKeys : MonoBehaviour
     public const string Orchid_Leaf = "Key_Orchid_Leaf";
     public const string Gargoyle_saliva = "Key_Gargoyle_saliva";
     public const string Ginger_root = "Key_Ginger_root";
-    public const string Liver_eel = "Key_Mixture";
+    public const string Liver_eel = "Liver_eel";
     
     
     

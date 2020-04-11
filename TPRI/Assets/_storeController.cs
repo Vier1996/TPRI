@@ -9,14 +9,25 @@ using UnityEngine.UI;
 public class _storeController : MonoBehaviour
 {
     [SerializeField] private Button Get;
-    [SerializeField] private TextMeshProUGUI amount;
+    [SerializeField] private Text amount;
+    [SerializeField] private TextMeshProUGUI moneyCounter;
+    [SerializeField] private TextMeshProUGUI item;
+
+    private void Awake()
+    {
+        _DropProgress.Drop();
+       // _DropProgress.DropResources();
+    }
 
     private void Start()
     {
+        moneyCounter.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
+        
         Get.onClick.AddListener(() =>
         {
-            int _amount = Int32.Parse(amount.text);
-            Debug.Log("Buyed: " + _amount);
+            PlayerPrefs.SetInt("Key_" + item.text, Convert.ToInt32(amount.text));
+            Debug.Log("Buyed - " + item.text + " -" + Convert.ToInt32(amount.text));
+            Debug.Log(PlayerPrefs.GetInt("Key_" + item.text));
         });
     }
 }
