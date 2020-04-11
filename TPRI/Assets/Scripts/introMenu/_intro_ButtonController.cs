@@ -14,8 +14,6 @@ public class _intro_ButtonController : MonoBehaviour
 
   private void Awake()
   {
-    _hero = _HeroData.getInstance();
-    _hero.setDataFromMemory();
     _settingsMenu = GameObject.FindGameObjectWithTag("Settings");
   }
 

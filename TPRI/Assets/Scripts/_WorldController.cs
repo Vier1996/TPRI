@@ -18,10 +18,6 @@ public class _WorldController : MonoBehaviour
 
     public void setPassingIllnesses(int count, string illness, int countSymptoms)
     {
-        _numPassingIllnesses = count;
-        _numPassingSymptoms = countSymptoms;
-        _listPassingIllnesses.Add(illness);
-        Debug.Log("Count symptoms: " + _numPassingSymptoms + "\nCount illnesses: " + _numPassingIllnesses);
-        Debug.Log("Illnesses: " + illness);
+        
     }
 }

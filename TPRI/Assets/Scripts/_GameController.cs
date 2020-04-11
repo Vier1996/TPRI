@@ -13,34 +13,35 @@ public class _GameController : MonoBehaviour
     [SerializeField] private int CountPuppets;
     [SerializeField] private Transform spawnPlace;
     private static int Ctr = 0;
-    
-    
+
+
     private Button _grassMedicine;
     private GameObject _NPC;
-    [SerializeField] private GameObject spawnForPeople; 
+    [SerializeField] private GameObject spawnForPeople;
+    [SerializeField] private GameObject panelWin;
     private int _numberNotHealedIssues = 0;
     private Button _passingPeople;
     private Button _expel; // не пропускать
     private List<string> _issues;
     private GameObject _camera;
     private GameObject _dialogPanel;
-    private int countNPC = 1;
+    private int countNPC = 0;
 
     private void Awake()
     {
         _grassMedicine = GameObject.Find("Grass").GetComponent<Button>();
-        _grassMedicine.onClick.AddListener(()=> Heal());
-        
+        _grassMedicine.onClick.AddListener(() => Heal());
+
         InitNPC();
 
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
-        _passingPeople.onClick.AddListener(()=> Passing());
+        _passingPeople.onClick.AddListener(() => Passing());
 
         _expel = GameObject.Find("No").GetComponent<Button>();
-        _expel.onClick.AddListener(()=>Expel());
-        
+        _expel.onClick.AddListener(() => Expel());
+
         _camera = GameObject.FindWithTag("MainCamera");
-        
+
         _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
         _issues = issuesScript.getSymptoms();
     }
@@ -62,10 +63,9 @@ public class _GameController : MonoBehaviour
 
     private void Heal()
     {
-        
         Medicines medicines = _grassMedicine.GetComponent<Medicines>();
         List<string> curableSymptoms = medicines.getCurableSymptoms();
-        List<string> bufList = new List<string>( _issues);
+        List<string> bufList = new List<string>(_issues);
         for (int i = 0; i < _issues.Count; i++)
         {
             if (curableSymptoms.Contains(_issues[i]))
@@ -81,10 +81,10 @@ public class _GameController : MonoBehaviour
     private void Passing()
     {
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
-        _camera.GetComponent<_WorldController>().setPassingIllnesses(1, issues.getIssueName(), _issues.Count);
-        people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
-        CountPuppets--;
         
+        //people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
+        //CountPuppets--;
+
         Destroy(_NPC);
         Invoke(nameof(InitNPC), 3);
     }
@@ -99,13 +99,18 @@ public class _GameController : MonoBehaviour
 
     private void InitNPC()
     {
-        GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
-        _NPC = Instantiate(npc, spawnForPeople.transform);
-        resetDialog();
-        countNPC++;
-        if (countNPC == 3)
+        if (countNPC < 3)
         {
-            countNPC = 0;
+            GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
+            _NPC = Instantiate(npc, spawnForPeople.transform);
+            resetDialog();
+            countNPC++;
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            panelWin.SetActive(true);
+            panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
         }
     }
 

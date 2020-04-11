@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _HeroData
+public class _HeroData : MonoBehaviour
 {
     private static _HeroData _instance;
     private int _availableLevel, _defence, _numOfSkillPoints, _money;
@@ -16,14 +17,17 @@ public class _HeroData
         _skiils = new List<string>();
     }
 
-    public static _HeroData getInstance()
+    private void Awake()
     {
-        if (_instance == null)
+        if (_instance != null)
         {
-            _instance = new _HeroData();
+            Destroy(gameObject);
         }
-
-        return _instance;
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void setDataFromMemory()

@@ -108,5 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563d3317f3ddfff48bc034816479c4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _issueName: 
+  _issueName: "\u0413\u0435\u043F\u0430\u0442\u0438\u0442"
   _symptoms: []
