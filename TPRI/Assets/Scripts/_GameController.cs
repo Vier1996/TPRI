@@ -118,7 +118,7 @@ public class _GameController : MonoBehaviour
             _levelEndController.setCountPassIlls(passIlls);
             _levelEndController.setCountInfected(_infectedAndDeadCounter.getInfected());
             _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
-            panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo(Population);
+            panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
         }
     }
 
