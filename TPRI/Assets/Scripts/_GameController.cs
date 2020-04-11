@@ -30,6 +30,10 @@ public class _GameController : MonoBehaviour
     private int countNPC = 0;
     private int passIlls = 0, healed = 0;
     private _Infected_And_Dead_Counter _infectedAndDeadCounter;
+    
+    /// <summary>
+    
+    /// </summary>
 
     private void Awake()
     {
@@ -76,7 +80,8 @@ public class _GameController : MonoBehaviour
         {
             passIlls += 1;
             _infectedAndDeadCounter.setNPC(issues.getFatality());
-            _infectedAndDeadCounter.countInfectedPeople(issues.getInfection(), Population, false);
+            _infectedAndDeadCounter.countInfectedPeople(issues.getInfection(), Population);
+            Debug.Log(Population);
             //_infectedAndDeadCounter.countDeadPeople(issues.getFatality(), Population);
         }
         else

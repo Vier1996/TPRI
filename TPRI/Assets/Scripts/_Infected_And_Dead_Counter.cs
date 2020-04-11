@@ -7,6 +7,7 @@ public class _Infected_And_Dead_Counter
     private static _Infected_And_Dead_Counter instance;
     private int countDead, countInfected, _currentIllInfected;
     private int fatality;
+    private int LivePeople;
 
     private _Infected_And_Dead_Counter()
     {
@@ -33,39 +34,37 @@ public class _Infected_And_Dead_Counter
         countInfected += infected;
     }
 
-    public void countDeadPeople(int fatality, int population)
+    public void countInfectedPeople(int infection, int population)
     {
-        int buf = _currentIllInfected - (_currentIllInfected*(fatality / 100));
-        population -= buf;
-        _GameController.Population -= population;
-        countInfected -= buf;
-        setCountDead(buf);
-    }
-
-    public void countInfectedPeople(int infection, int population, bool cycle)
-    {
-        int rate = 0;
+        int rate = 0, infected = 0;
         for (int i = 0; i < population; i++)
         {
             rate = Random.Range(0, 101);
             if (rate <= infection)
             {
-                countInfected++;
+                infected++;
+            }
+        }
+        
+        CountDead(fatality, infected);
+
+        countInfected += infected;
+    }
+
+    public void CountDead(int fatal, int infected)
+    {
+        int rate = 0, dead = 0;
+        for (int i = 0; i < infected; i++)
+        {
+            rate = Random.Range(0, 101);
+            if (rate <= fatal)
+            {
+                dead++;
             }
         }
 
-        if (!cycle)
-        {
-            countInfectedPeople(fatality, countInfected, true);
-        }
-
-        if (cycle)
-        {
-            population -= countInfected;
-            _GameController.Population = population;
-            countInfected = 0;
-        }
-        //countDeadPeople();
+        countDead += dead;
+        _GameController.Population -= dead;
     }
 
     public int getInfected()
@@ -76,6 +75,11 @@ public class _Infected_And_Dead_Counter
     public int getDead()
     {
         return countDead;
+    }
+
+    public int getPopulation()
+    {
+        return 1;
     }
 
     public void setNPC(int fatality)
