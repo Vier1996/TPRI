@@ -29,9 +29,6 @@ public class _GameController : MonoBehaviour
 
     private void Awake()
     {
-        _grassMedicine = GameObject.Find("Grass").GetComponent<Button>();
-        _grassMedicine.onClick.AddListener(() => Heal());
-
         InitNPC();
 
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
