@@ -13,12 +13,14 @@ public class _GameController : MonoBehaviour
     [SerializeField] private int CountPuppets;
     [SerializeField] private Transform spawnPlace;
     private static int Ctr = 0;
+    public static int Population = 348;
 
 
     private Button _grassMedicine;
     private GameObject _NPC;
     [SerializeField] private GameObject spawnForPeople;
     [SerializeField] private GameObject panelWin;
+    private _LevelEndController _levelEndController;
     private int _numberNotHealedIssues = 0;
     private Button _passingPeople;
     private Button _expel; // не пропускать
@@ -26,6 +28,8 @@ public class _GameController : MonoBehaviour
     private GameObject _camera;
     private GameObject _dialogPanel;
     private int countNPC = 0;
+    private int passIlls = 0, healed = 0;
+    private _Infected_And_Dead_Counter _infectedAndDeadCounter;
 
     private void Awake()
     {
@@ -41,6 +45,9 @@ public class _GameController : MonoBehaviour
 
         _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
         _issues = issuesScript.getSymptoms();
+
+        _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
+        _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
     }
 
     private void Start()
@@ -58,30 +65,25 @@ public class _GameController : MonoBehaviour
         Ctr++;
     }
 
-    private void Heal()
-    {
-        Medicines medicines = _grassMedicine.GetComponent<Medicines>();
-        List<string> curableSymptoms = medicines.getCurableSymptoms();
-        List<string> bufList = new List<string>(_issues);
-        for (int i = 0; i < _issues.Count; i++)
-        {
-            if (curableSymptoms.Contains(_issues[i]))
-            {
-                bufList.Remove(_issues[i]);
-            }
-        }
-
-        _issues = bufList;
-        Debug.Log(_issues[0] + "   " + _issues[1]);
-    }
-
     private void Passing()
     {
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
         
         //people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
         //CountPuppets--;
-
+        _levelEndController.setCountPatient(1);
+        if (issues.getSymptoms().Count != 0)
+        {
+            passIlls += 1;
+            _infectedAndDeadCounter.setNPC(issues.getFatality());
+            _infectedAndDeadCounter.countInfectedPeople(issues.getInfection(), Population, false);
+            //_infectedAndDeadCounter.countDeadPeople(issues.getFatality(), Population);
+        }
+        else
+        {
+            healed += 1;
+        }
+        
         Destroy(_NPC);
         Invoke(nameof(InitNPC), 3);
     }
@@ -107,7 +109,12 @@ public class _GameController : MonoBehaviour
         {
             Time.timeScale = 0f;
             panelWin.SetActive(true);
-            panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
+            _levelEndController.setCountHealed(healed);
+            _levelEndController.setCountPatient(countNPC);
+            _levelEndController.setCountPassIlls(passIlls);
+            _levelEndController.setCountInfected(_infectedAndDeadCounter.getInfected());
+            _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
+            panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo(Population);
         }
     }
 

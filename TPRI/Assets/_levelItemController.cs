@@ -9,6 +9,9 @@ public class _levelItemController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI counter;
     [SerializeField] private string key;
     [SerializeField] private Button get;
+    [SerializeField] private List<string> curableSymptoms;
+    private GameObject _NPC;
+    private List<string> _peopleIllness;
     private int amount;
 
     void Start()
@@ -30,6 +33,9 @@ public class _levelItemController : MonoBehaviour
                 }
             });
         }
+        _NPC = GameObject.FindWithTag("Player");
+        _peopleIllness = _NPC.GetComponent<_PeopleIssues>().getSymptoms();
+        gameObject.GetComponent<Button>().onClick.AddListener(() => Heal());
     }
 
     private void Empty()
@@ -39,6 +45,26 @@ public class _levelItemController : MonoBehaviour
 
     void Update()
     {
+        if (_NPC == null)
+        {
+            _NPC = GameObject.FindWithTag("Player");
+            _peopleIllness = _NPC.GetComponent<_PeopleIssues>().getSymptoms();
+        }
+    }
+
+    private void Heal()
+    {
+        int index_cur_sympt = 0;
+        for (int i = 0; i < curableSymptoms.Count; i++)
+        {
+            if (_peopleIllness.Contains(curableSymptoms[i]))
+            {
+                _peopleIllness.Remove(curableSymptoms[i]);
+            }
+
+            index_cur_sympt++;
+        }
         
+        _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
     }
 }
