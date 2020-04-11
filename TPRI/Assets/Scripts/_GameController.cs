@@ -81,7 +81,6 @@ public class _GameController : MonoBehaviour
             passIlls += 1;
             _infectedAndDeadCounter.setNPC(issues.getFatality());
             _infectedAndDeadCounter.countInfectedPeople(issues.getInfection(), Population);
-            Debug.Log(Population);
             //_infectedAndDeadCounter.countDeadPeople(issues.getFatality(), Population);
         }
         else
