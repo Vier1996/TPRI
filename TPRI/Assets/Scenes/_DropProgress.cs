@@ -56,7 +56,7 @@ public class _DropProgress
         PlayerPrefs.SetInt(_ISSUESKEY.мигрень, Open);
         PlayerPrefs.SetInt(_ISSUESKEY.гастрит, Open);
         PlayerPrefs.SetInt(_ISSUESKEY.гепатит, Open);
-        PlayerPrefs.SetInt(_ISSUESKEY.грирр, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.грипп, Open);
         PlayerPrefs.SetInt(_ISSUESKEY.тубиркулез, Open);
         PlayerPrefs.SetInt(_ISSUESKEY.корь, Open);
         PlayerPrefs.SetInt(_ISSUESKEY.бронхит, Open);
