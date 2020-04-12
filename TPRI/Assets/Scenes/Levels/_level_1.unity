@@ -317,6 +317,7 @@ MonoBehaviour:
   key: Liver_eel
   get: {fileID: 10054634}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &18284009
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +683,7 @@ MonoBehaviour:
   key: Key_Healing_salve
   get: {fileID: 84506588}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &87754916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6920,6 +6922,7 @@ MonoBehaviour:
   key: Key_Bunch_of_rosemary
   get: {fileID: 699890822}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &713930773
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,6 +8834,7 @@ MonoBehaviour:
   key: Key_Ginger_root
   get: {fileID: 904276830}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &911286259
 GameObject:
   m_ObjectHideFlags: 0
@@ -9329,6 +9333,7 @@ MonoBehaviour:
   key: Key_Panacea
   get: {fileID: 959945812}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &1005203443
 GameObject:
   m_ObjectHideFlags: 0
@@ -9465,6 +9470,7 @@ MonoBehaviour:
   key: Key_Candy
   get: {fileID: 1005203445}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &1028517303
 GameObject:
   m_ObjectHideFlags: 0
@@ -14620,6 +14626,7 @@ MonoBehaviour:
   key: Key_Orchid_Leaf
   get: {fileID: 1529092209}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &1529314955
 GameObject:
   m_ObjectHideFlags: 0
@@ -17032,6 +17039,7 @@ MonoBehaviour:
   key: Key_Tincture
   get: {fileID: 1837675215}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &1849551000
 GameObject:
   m_ObjectHideFlags: 0
@@ -17323,6 +17331,7 @@ MonoBehaviour:
   key: Key_Gargoyle_saliva
   get: {fileID: 1853575593}
   curableSymptoms: []
+  sanya: {fileID: 0}
 --- !u!1 &1856880889
 GameObject:
   m_ObjectHideFlags: 0
@@ -19464,6 +19473,7 @@ GameObject:
   - component: {fileID: 2129296746}
   - component: {fileID: 2129296745}
   - component: {fileID: 2129296748}
+  - component: {fileID: 2129296749}
   m_Layer: 5
   m_Name: item
   m_TagString: Untagged
@@ -19590,3 +19600,100 @@ MonoBehaviour:
   - "\u041D\u0430\u0441\u043C\u043E\u0440\u043A"
   - "\u041F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435"
   - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  sanya: {fileID: 2129296749}
+--- !u!82 &2129296749
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129296743}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9f06ac4e411632d4899b29221b060c25, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

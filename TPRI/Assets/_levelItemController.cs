@@ -11,12 +11,14 @@ public class _levelItemController : MonoBehaviour
     [SerializeField] private string key;
     [SerializeField] private Button get;
     [SerializeField] private List<string> curableSymptoms;
+    [SerializeField] private AudioSource sanya;
     private GameObject _NPC;
     private List<string> _peopleIllness;
     private int amount;
 
     void Start()
     {
+        sanya.Stop();
         amount = PlayerPrefs.GetInt(key);
         counter.text = amount.ToString();
         if(amount <= 0)
@@ -55,6 +57,9 @@ public class _levelItemController : MonoBehaviour
 
     private void Heal()
     {
+        sanya.Play();
+        Invoke(nameof(stopper), 1.8f);
+        
         int index_cur_sympt = 0;
         for (int i = 0; i < curableSymptoms.Count; i++)
         {
@@ -68,5 +73,10 @@ public class _levelItemController : MonoBehaviour
         }
         
         _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
+    }
+
+    private void stopper()
+    {
+        sanya.Stop();
     }
 }

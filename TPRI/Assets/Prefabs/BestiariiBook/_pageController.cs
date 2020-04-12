@@ -16,8 +16,8 @@ public class _pageController : MonoBehaviour
 
     private void Awake()
     {
-        _DropProgress.DporBestiarii(0);
-        _DropProgress.DropSymptomys(0);
+        //_DropProgress.DporBestiarii(0);
+        //_DropProgress.DropSymptomys(0);
         
         oldSymptomesname = new string[symptones.Length];
         oldName = name.text;
