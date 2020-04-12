@@ -24,20 +24,11 @@ public class _Infected_And_Dead_Counter
         return instance;
     }
 
-    /*private void setCountDead(int dead)
-    {
-        countDead += dead;
-    }
-
-    private void setCountInfected(int infected)
-    {
-        countInfected += infected;
-    }*/
-
     public void countInfectedPeople(int infection, int population)
     {
         int rate = 0, infected = 0;
-        for (int i = 0; i < population; i++)
+        int people = population - countInfected;
+        for (int i = 0; i < people; i++)
         {
             rate = Random.Range(0, 101);
             if (rate <= infection)

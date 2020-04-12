@@ -13,7 +13,7 @@ public class _equipmentScript : MonoBehaviour
     [SerializeField] private GameObject DialogMenu;
     [SerializeField] private GameObject DeathMenu;
     [SerializeField] private GameObject DialogWithPeople;
-    private bool _showDialogs = false;
+    public static bool _showDialogs = false;
     [SerializeField] private GameObject hideDialog;
     [SerializeField] private GameObject showDialog;
     [SerializeField] private Button ResearchButton;
@@ -21,7 +21,11 @@ public class _equipmentScript : MonoBehaviour
     [SerializeField] private Button DialogButton;
     [SerializeField] private Button DeathButton;
     [SerializeField] private Button DialogWithPeopleButton;
-
+    [SerializeField] private Button whereQuestion;
+    [SerializeField] private Button problemsQuestion;
+    [SerializeField] private Button visitQuestion;
+    [SerializeField] private GameObject deactQuestionPanel;
+    
     private int showedMenu = 0;
     void Start()
     {
@@ -32,9 +36,14 @@ public class _equipmentScript : MonoBehaviour
         
         DialogWithPeople.transform.DOMove(hideDialog.transform.position, 0);
         
+        /*whereQuestion.interactable = false;
+        problemsQuestion.interactable = false;
+        visitQuestion.interactable = false;*/
+        
         ResearchButton.onClick.AddListener(() =>
         {
             Deact();
+            //deactQuestionPanel.SetActive(false);
             ResearchMenu.SetActive(true);
             showedMenu = 1;
         });
@@ -42,6 +51,7 @@ public class _equipmentScript : MonoBehaviour
         HealthButton.onClick.AddListener(() =>
         {
             Deact();
+            //deactQuestionPanel.SetActive(false);
             HealthMenu.SetActive(true);
             showedMenu = 2;
         });
@@ -50,26 +60,29 @@ public class _equipmentScript : MonoBehaviour
         {
             Deact();
             DialogMenu.SetActive(true);
+            //deactQuestionPanel.SetActive(true);
             showedMenu = 3;
         });
         
         DeathButton.onClick.AddListener(() =>
         {
-            Deact();
+            Deact(); 
+            //deactQuestionPanel.SetActive(false);
             DeathMenu.SetActive(true);
             showedMenu = 4;
         });
         
         DialogWithPeopleButton.onClick.AddListener(() =>
         {
+            //deactQuestionPanel.SetActive(false);
             if (!_showDialogs)
             {
-                DialogWithPeople.transform.DOMove(showDialog.transform.position, 2);
+                DialogWithPeople.transform.DOMove(showDialog.transform.position, 5);
                 _showDialogs = true;
             }
             else
             {
-                DialogWithPeople.transform.DOMove(hideDialog.transform.position, 2);
+                DialogWithPeople.transform.DOMove(hideDialog.transform.position, 5);
                 _showDialogs = false;
             }
         });
