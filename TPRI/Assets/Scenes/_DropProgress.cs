@@ -48,5 +48,59 @@ public class _DropProgress
         PlayerPrefs.SetInt(_ResourceKeys.CityImunity, 0);
         PlayerPrefs.SetInt(_ResourceKeys.Shoots, 0);
     }
+
+    public static void DporBestiarii(int Open)
+    {
+        PlayerPrefs.SetInt(_ISSUESKEY.простуда, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.чесотка, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.мигрень, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.гастрит, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.гепатит, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.грирр, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.тубиркулез, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.корь, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.бронхит, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.язва, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.менингит, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.коронавирус, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.пневмония, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.рак, Open);
+        PlayerPrefs.SetInt(_ISSUESKEY.цинга, Open);
+    }
+
+    public static void DropSymptomys(int Open)
+    {
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.боль_в_глазах, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.боль_в_животе, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.боль_в_теле, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.боль_в_ушах, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.выпадение_зубов, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.головная_боль, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.голодные_боли_в_животе, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.голодные_боли_в_животе, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.горечь_во_рту, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.длительный_кашель, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.зуд, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.изжога, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.кашель, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.кровоточивость_десен, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.лающий_кашель, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.насморк, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.отсутсвие_аппетита, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.отсутсвие_обоняния, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.першение_в_горле, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.потеря_веса, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.рвота, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.сильная_головная_боль, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.сильная_слабость, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.слабость, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.сыпь, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.температура, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.тошнота, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.утомаляемость, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.характерная_сыпь, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.сильная_боль_в_животе, Open);
+        PlayerPrefs.SetInt(_SYMPTOMESKEY.боль_в_горле, Open);
+    }
 }
 

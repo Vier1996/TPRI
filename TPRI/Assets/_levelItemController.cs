@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -60,6 +61,7 @@ public class _levelItemController : MonoBehaviour
             if (_peopleIllness.Contains(curableSymptoms[i]))
             {
                 _peopleIllness.Remove(curableSymptoms[i]);
+                PlayerPrefs.SetInt("Key_" + curableSymptoms[i], 1);
             }
 
             index_cur_sympt++;

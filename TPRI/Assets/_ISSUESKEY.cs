@@ -20,7 +20,7 @@ public class _ISSUESKEY : MonoBehaviour
     // рак 
     // цинга
     
-    public const string простуда = "Key_Простуда";
+    public const string простуда = "Key_простуда";
     public const string чесотка = "Key_чесотка";
     public const string мигрень = "Key_мигрень";
     public const string гастрит = "Key_гастрит";
