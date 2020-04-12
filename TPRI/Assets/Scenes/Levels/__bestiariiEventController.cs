@@ -8,6 +8,18 @@ public class __bestiariiEventController : MonoBehaviour
 {
     private static __bestiariiEventController instance;
     
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     void Update()
     {
         if (PlayerPrefs.GetInt(_SYMPTOMESKEY.насморк) == 1 && 
