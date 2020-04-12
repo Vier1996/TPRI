@@ -53,7 +53,7 @@ public class __bestiariiEventController : MonoBehaviour
             PlayerPrefs.GetInt(_SYMPTOMESKEY.утомаляемость) == 1 &&
             PlayerPrefs.GetInt(_SYMPTOMESKEY.боль_в_теле) == 1)
         {
-            PlayerPrefs.SetInt(_ISSUESKEY.грирр, 1);
+            PlayerPrefs.SetInt(_ISSUESKEY.грипп, 1);
         }
         
         if (PlayerPrefs.GetInt(_SYMPTOMESKEY.слабость) == 1 && 
