@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bestiary;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,7 +31,7 @@ public class _GameController : MonoBehaviour
     private int countNPC = 0;
     private int passIlls = 0, healed = 0;
     private _Infected_And_Dead_Counter _infectedAndDeadCounter;
-    
+
     /// <summary>
     
     /// </summary>
@@ -72,15 +73,16 @@ public class _GameController : MonoBehaviour
     private void Passing()
     {
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
-        
+        InfoAboutIlnesses info = new InfoAboutIlnesses();
+        int num_of_symptoms = info.getSymptoms()[issues._issueName].Count;
         //people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
         //CountPuppets--;
         _levelEndController.setCountPatient(1);
         if (issues.getSymptoms().Count != 0)
         {
             passIlls += 1;
-            _infectedAndDeadCounter.setNPC(issues.getFatality());
-            _infectedAndDeadCounter.countInfectedPeople(issues.getInfection(), Population);
+            _infectedAndDeadCounter.setFatality(issues.getFatality()*(issues.getSymptoms().Count/num_of_symptoms));
+            _infectedAndDeadCounter.countInfectedPeople(issues.getInfection()*(issues.getSymptoms().Count/num_of_symptoms), Population);
             //_infectedAndDeadCounter.countDeadPeople(issues.getFatality(), Population);
         }
         else
@@ -102,7 +104,7 @@ public class _GameController : MonoBehaviour
 
     private void InitNPC()
     {
-        if (countNPC < 3)
+        if (countNPC < 5)
         {
             GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
             _NPC = Instantiate(npc, spawnForPeople.transform);

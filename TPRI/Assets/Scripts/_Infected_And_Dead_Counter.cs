@@ -24,7 +24,7 @@ public class _Infected_And_Dead_Counter
         return instance;
     }
 
-    private void setCountDead(int dead)
+    /*private void setCountDead(int dead)
     {
         countDead += dead;
     }
@@ -32,7 +32,7 @@ public class _Infected_And_Dead_Counter
     private void setCountInfected(int infected)
     {
         countInfected += infected;
-    }
+    }*/
 
     public void countInfectedPeople(int infection, int population)
     {
@@ -82,7 +82,7 @@ public class _Infected_And_Dead_Counter
         return 1;
     }
 
-    public void setNPC(int fatality)
+    public void setFatality(int fatality)
     {
         this.fatality = fatality;
     }
