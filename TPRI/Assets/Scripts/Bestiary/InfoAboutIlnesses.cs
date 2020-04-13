@@ -8,6 +8,7 @@ namespace Bestiary
         private Dictionary<string, List<string>> _listSymptoms;
         private Dictionary<string, int> _valueOfInfection;
         private Dictionary<string, int> _valueOfFatality;
+        private List<string> _nameOfViruses;
 
         public InfoAboutIlnesses()
         {
@@ -15,6 +16,7 @@ namespace Bestiary
             setSymptoms();
             setValueInfection();
             setValueOfFatality();
+            setNameIssues();
         }
         
         private void setViruses()
@@ -44,7 +46,7 @@ namespace Bestiary
             _listViruses.Add("Бронхит", "Бронхит – это воспаление слизистой оболочки бронхов, т.е. дыхательных путей, по которым воздух при вдохе поступает в легкие, а при выдохе обратно во внешнюю среду. " +
                                         "Бронхит обычно сопровождается кашлем с выделением густой мокроты, которая может быть бесцветной, окрашенной или содержать прожилки крови. " +
                                         "Бронхит может быть острым или хроническим.");
-            _listViruses.Add("Язва желудка", "Язва желудка — локальный дефект слизистой оболочки желудка (иногда с захватом подслизистого слоя), образующийся под действием соляной кислоты, пепсина и желчи и вызывающий на этом участке трофические нарушения.");
+            _listViruses.Add("Язва", "Язва желудка — локальный дефект слизистой оболочки желудка (иногда с захватом подслизистого слоя), образующийся под действием соляной кислоты, пепсина и желчи и вызывающий на этом участке трофические нарушения.");
             _listViruses.Add("Менингит", "Менингит – это воспаление мягкой мозговой оболочки, покрывающей головной и спинной мозг человека. " +
                                          "Если вовремя выявить недуг, то его лечение пройдет относительно быстро и без последствий. " +
                                          "Однако, если же лечение запустить, то это может иметь даже летальный исход.");
@@ -52,7 +54,7 @@ namespace Bestiary
                                             "Коронавирус является зоонозной инфекцией по происхождению.");
             _listViruses.Add("Пневмония", "Пневмония представляет собой воспаление легочной ткани, имеющее инфекционную этиологию и сопровождающееся совокупностью патологических процессов, развивающихся в ней. " +
                                           "Поразить она может абсолютно любого человека независимо от его пола и возраста.");
-            _listViruses.Add("Рак желудка", "Рак желудка — это злокачественная опухоль, растущая из слизистой оболочки – самого внутреннего слоя стенки желудка. " +
+            _listViruses.Add("Рак", "Рак желудка — это злокачественная опухоль, растущая из слизистой оболочки – самого внутреннего слоя стенки желудка. " +
                                              "Именно этот слой контактирует с пищей и желудочным соком.");
             _listViruses.Add("Цинга", "Цинга – заболевание, причиной которого является полное отсутствие или недостаточное поступление в организм человека витамина С (аскорбиновой кислоты). " +
                                       "Аскорбиновая кислота относится к водорастворимым витаминам и богата массой полезных свойств. " +
@@ -72,11 +74,11 @@ namespace Bestiary
             _listSymptoms.Add("Туберкулез", new List<string>() {"Слабость", "Длительный кашель", "Температура"});
             _listSymptoms.Add("Корь", new List<string>() {"Слабость", "Температура", "Характерная сыпь"});
             _listSymptoms.Add("Бронхит", new List<string>() {"Лающий кашель", "Температура", "Слабость"});
-            _listSymptoms.Add("Язва желудка", new List<string>() {"Сильная боль в животе", "Изжога", "Голодные боли в животе"});
+            _listSymptoms.Add("Язва", new List<string>() {"Сильная боль в животе", "Изжога", "Голодные боли в животе"});
             _listSymptoms.Add("Менингит", new List<string>() {"Температура", "Сильная головная боль", "Тошнота", "Рвота"});
             _listSymptoms.Add("Коронавирус", new List<string>() {"Отсутствие обоняния", "Кашель", "Температура", "Боль в горле", "Сильная слабость"});
             _listSymptoms.Add("Пневмония", new List<string>() {"Кашель", "Температура", "Слабость"});
-            _listSymptoms.Add("Рак желудка", new List<string>() {"Боль в животе", "Тошнота", "Рвота", "Отсутствие аппетита", "Потеря веса"});
+            _listSymptoms.Add("Рак", new List<string>() {"Боль в животе", "Тошнота", "Рвота", "Отсутствие аппетита", "Потеря веса"});
             _listSymptoms.Add("Цинга", new List<string>() {"Слабость", "Головная боль", "Кровоточивость десен", "Выпадение зубов"});
         }
 
@@ -92,11 +94,11 @@ namespace Bestiary
             _valueOfInfection.Add("Туберкулез", 78);
             _valueOfInfection.Add("Корь", 50);
             _valueOfInfection.Add("Бронхит", 55);
-            _valueOfInfection.Add("Язва желудка", 10);
+            _valueOfInfection.Add("Язва", 10);
             _valueOfInfection.Add("Менингит", 73);
             _valueOfInfection.Add("Коронавирус", 85);
             _valueOfInfection.Add("Пневмония", 65);
-            _valueOfInfection.Add("Рак желудка", 60);
+            _valueOfInfection.Add("Рак", 60);
             _valueOfInfection.Add("Цинга", 80);
         }
 
@@ -112,11 +114,11 @@ namespace Bestiary
             _valueOfFatality.Add("Туберкулез", 80);
             _valueOfFatality.Add("Корь", 60);
             _valueOfFatality.Add("Бронхит", 35);
-            _valueOfFatality.Add("Язва желудка", 20);
+            _valueOfFatality.Add("Язва", 20);
             _valueOfFatality.Add("Менингит", 71);
             _valueOfFatality.Add("Коронавирус", 90);
             _valueOfFatality.Add("Пневмония", 76);
-            _valueOfFatality.Add("Рак желудка", 85);
+            _valueOfFatality.Add("Рак", 85);
             _valueOfFatality.Add("Цинга", 80);
         }
 
@@ -138,6 +140,31 @@ namespace Bestiary
         public Dictionary<string, int> getValueFatality()
         {
             return _valueOfFatality;
+        }
+
+        public void setNameIssues()
+        {
+            _nameOfViruses = new List<string>();
+            _nameOfViruses.Add("Простуда");
+            _nameOfViruses.Add("Чесотка");
+            _nameOfViruses.Add("Мигрень");
+            _nameOfViruses.Add("Гастрит");
+            _nameOfViruses.Add("Гепатит");
+            _nameOfViruses.Add("Грипп");
+            _nameOfViruses.Add("Туберкулез");
+            _nameOfViruses.Add("Корь");
+            _nameOfViruses.Add("Бронхит");
+            _nameOfViruses.Add("Язва");
+            _nameOfViruses.Add("Менингит");
+            _nameOfViruses.Add("Коронавирус");
+            _nameOfViruses.Add("Пневмония");
+            _nameOfViruses.Add("Рак");
+            _nameOfViruses.Add("Цинга");
+        }
+
+        public string getNameOfVirus(int pos)
+        {
+            return _nameOfViruses[pos];
         }
     }
 }

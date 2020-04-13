@@ -58,6 +58,19 @@ public class _bestiaryController : MonoBehaviour
         backToMenu.onClick.AddListener(() => { SceneManager.LoadScene("_level_1");});
     }
 
+    private void Start()
+    {
+        string name;
+        for (int i = 0; i < _viruses.Count; i++)
+        {
+            name = _info.getNameOfVirus(i).ToLower();
+            if (PlayerPrefs.GetInt("Key_" + name) == 1)
+            {
+                checkOpenIssues(i);
+            }
+        }
+    }
+
     private void Update()
     {
         if (_virusModelGameObject != null)
@@ -70,27 +83,49 @@ public class _bestiaryController : MonoBehaviour
 
     private void getInfoAboutVirus(int position)
     {
+        string name = _viruses[position - 1].GetComponent<TextMeshProUGUI>().text;
+        string nameSomeVirus = _info.getNameOfVirus(position - 1);
         _virusModelGameObject = GameObject.FindWithTag("VirusModel");
-        _nameVirus = GameObject.Find("NameVirus");
         if (_virusModelGameObject != null)
         {
             Destroy(_virusModelGameObject);
         }
+        if (name.Equals(nameSomeVirus))
+        {
+            setOpenIssues(position);
+        }
+        else
+        {
+            setClosedIssues(nameSomeVirus);
+        }
+    }
 
+    private void setClosedIssues(string name)
+    {
+        _nameVirus.GetComponent<TextMeshProUGUI>().text = "???";
+        _infectionDegreeSlider.GetComponent<Slider>().value = 0;
+        _fatalityDegreeSlider.GetComponent<Slider>().value = 0;
+        _storyVirus.GetComponent<TextMeshProUGUI>().text = "Информация о вирусе будет доступа после его открытия!";
+        _symptoms.GetComponent<TextMeshProUGUI>().text = _symptoms.GetComponent<TextMeshProUGUI>().text =
+            "Симптомы:\n" + getSymptoms(_info.getSymptoms()[name]);
+    }
+
+    private void setOpenIssues(int position)
+    {
+        _nameVirus = GameObject.Find("NameVirus");
         _virusModel = Resources.Load<GameObject>("3dPrefabs/Вирус" + position);
         if (_virusModel != null)
         {
             _virusModelGameObject = Instantiate(_virusModel);
         }
 
-        //VirusInformaiton = _virusModelGameObject.GetComponent<Information>();
-        
-        string nameVirus = _viruses[position-1].GetComponent<TextMeshProUGUI>().text;
-        _storyVirus.GetComponent<TextMeshProUGUI>().text = _info.getViruses()[nameVirus];
-        _symptoms.GetComponent<TextMeshProUGUI>().text = "Симптомы:\n" + getSymptoms(_info.getSymptoms()[nameVirus]);
-        _nameVirus.GetComponent<TextMeshProUGUI>().text = nameVirus;
-        _infectionDegreeSlider.GetComponent<Slider>().value = _info.getValueInfection()[nameVirus];
-        _fatalityDegreeSlider.GetComponent<Slider>().value = _info.getValueFatality()[nameVirus];
+        string name = _info.getNameOfVirus(position - 1);
+        _storyVirus.GetComponent<TextMeshProUGUI>().text = _info.getViruses()[name];
+        _symptoms.GetComponent<TextMeshProUGUI>().text =
+            "Симптомы:\n" + getSymptoms(_info.getSymptoms()[name]);
+        _nameVirus.GetComponent<TextMeshProUGUI>().text = name;
+        _infectionDegreeSlider.GetComponent<Slider>().value = _info.getValueInfection()[name];
+        _fatalityDegreeSlider.GetComponent<Slider>().value = _info.getValueFatality()[name];
     }
 
     private string getSymptoms(List<string> symptoms)
@@ -98,15 +133,21 @@ public class _bestiaryController : MonoBehaviour
         string symptom = "";
         for (int i = 0; i < symptoms.Count; i++)
         {
-            
-            symptom += symptoms[i] + "\n";
+            if (PlayerPrefs.GetInt("Key_" + symptoms[i]) == 1)
+            {
+                symptom += symptoms[i] + "\n";
+            }
+            else
+            {
+                symptom += "???\n";
+            }
         }
 
         return symptom;
     }
 
-    public List<string> getSymptomsByNameIllness(String name)
+    private void checkOpenIssues(int position)
     {
-        return _listSymptoms[name];
+        _viruses[position].GetComponent<TextMeshProUGUI>().text = _info.getNameOfVirus(position);
     }
 }

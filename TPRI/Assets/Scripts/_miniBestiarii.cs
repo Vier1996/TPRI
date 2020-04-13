@@ -16,7 +16,7 @@ public class _miniBestiarii : MonoBehaviour
     private int CurrentPage = 0;
     private GameObject _modelVirus;
     private GameObject _modelForLoadVirus;
-    private const float ModelX = 12.5f, ModelY = 2.9f, ModelZ = 80.75f;
+    private const float ModelX = 12.5f, ModelY = 2.48f, ModelZ = 80.75f;
 
     void Start()
     {
@@ -73,6 +73,10 @@ public class _miniBestiarii : MonoBehaviour
         else if (index + 1 == 5 || index + 1 == 6)
         {
             _modelVirus.GetComponent<_scaler>()._Scale = 5.43f;
+        }
+        else if (index + 1 == 2)
+        {
+            _modelVirus.GetComponent<_scaler>()._Scale = 1.3f;
         }
         else
         {

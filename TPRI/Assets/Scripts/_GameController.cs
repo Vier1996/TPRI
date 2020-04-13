@@ -21,6 +21,8 @@ public class _GameController : MonoBehaviour
     private GameObject _NPC;
     [SerializeField] private GameObject spawnForPeople;
     [SerializeField] private GameObject panelWin;
+    [SerializeField] private GameObject alivePeople;
+    [SerializeField] private GameObject infectedPeople;
     private _LevelEndController _levelEndController;
     private int _numberNotHealedIssues = 0;
     private Button _passingPeople;
@@ -57,6 +59,8 @@ public class _GameController : MonoBehaviour
 
     private void Start()
     {
+        alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
+        infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
         Invoke(nameof(SpawnPuppets), 1f);
         Invoke(nameof(SpawnPuppets), 2f);
         Invoke(nameof(SpawnPuppets), 3f);
@@ -83,7 +87,8 @@ public class _GameController : MonoBehaviour
             passIlls += 1;
             _infectedAndDeadCounter.setFatality(issues.getFatality()*(issues.getSymptoms().Count/num_of_symptoms));
             _infectedAndDeadCounter.countInfectedPeople(issues.getInfection()*(issues.getSymptoms().Count/num_of_symptoms), Population);
-            //_infectedAndDeadCounter.countDeadPeople(issues.getFatality(), Population);
+            infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
+            alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
         }
         else
         {
