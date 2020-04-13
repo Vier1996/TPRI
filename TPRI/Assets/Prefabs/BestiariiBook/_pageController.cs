@@ -11,7 +11,7 @@ public class _pageController : MonoBehaviour
     private string[] oldSymptomesname;
 
     private string closed = "???";
-    private string empty = " ";
+    private string empty = "???";
     private string oldName;
 
     private void Awake()

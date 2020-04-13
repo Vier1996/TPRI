@@ -30,6 +30,7 @@ public class _ResourceKeys : MonoBehaviour
     public const string SupremeEye = "Key_SupremeEye";
     public const string FullHealing = "Key_FullHealing";
     
+    // Олег, еще твои 5 нужны.
     public const string Mixture = "Key_Mixture";
     public const string Tincture = "Key_Tincture";
     public const string Healing_salve = "Key_Healing_salve";

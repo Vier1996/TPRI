@@ -98,6 +98,7 @@ public class _bestiaryController : MonoBehaviour
         string symptom = "";
         for (int i = 0; i < symptoms.Count; i++)
         {
+            
             symptom += symptoms[i] + "\n";
         }
 
