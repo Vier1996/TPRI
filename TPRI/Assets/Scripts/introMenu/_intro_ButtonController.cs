@@ -27,6 +27,6 @@ public class _intro_ButtonController : MonoBehaviour
   
   private void ContinueGame()
   {
-    // override PlayerPrefs
+    SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
   }
 }

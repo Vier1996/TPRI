@@ -19,8 +19,7 @@ public class _skillController : MonoBehaviour
    private void Start()
    {
       if(PlayerPrefs.GetInt(SkillsPath) == 0)
-         GetComponent<Image>().color = new Color(1, 1, 1, 0.3f);
-      
+         GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
       GetComponent<Button>().onClick.AddListener(() =>
       {
          Initialize();

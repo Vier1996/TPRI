@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class _GameController : MonoBehaviour
 {
@@ -40,7 +41,9 @@ public class _GameController : MonoBehaviour
 
     private void Awake()
     {
+        countNPC = LoadPeopleState();
         InitNPC();
+
 
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
@@ -55,12 +58,20 @@ public class _GameController : MonoBehaviour
 
         _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
         _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
+        
+        Population = PlayerPrefs.GetInt("AlivePeople");
+        
+        if (LoadPeopleState() == 0)
+            Population = 348;
+        
+        _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
     }
 
     private void Start()
     {
         alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
         infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
+        
         Invoke(nameof(SpawnPuppets), 1f);
         Invoke(nameof(SpawnPuppets), 2f);
         Invoke(nameof(SpawnPuppets), 3f);
@@ -109,6 +120,7 @@ public class _GameController : MonoBehaviour
 
     private void InitNPC()
     {
+        Debug.Log(countNPC);
         if (countNPC < 5)
         {
             GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
@@ -137,5 +149,32 @@ public class _GameController : MonoBehaviour
         {
             _dialogPanel.transform.GetChild(i).GetComponent<TextMeshProUGUI>().text = "";
         }
+    }
+
+    public void SavePeopleState()
+    {
+        PlayerPrefs.SetInt("AlivePeople", Population);
+        PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
+        PlayerPrefs.SetInt("PEOPLE", countNPC - 1);
+    }
+
+    public int LoadPeopleState()
+    {
+        return PlayerPrefs.GetInt("PEOPLE");
+    }
+
+    public void SetNPCcount(int C)
+    {
+        Debug.Log("drop");
+        PlayerPrefs.SetInt("PEOPLE", C);
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetInt("AlivePeople", Population);
+        PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
+        
+        SavePeopleState();
     }
 }

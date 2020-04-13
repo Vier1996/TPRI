@@ -7633,6 +7633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 863d2954f7f42c848bc2a946e014e93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _game: {fileID: 1927639122}
 --- !u!4 &799192415
 Transform:
   m_ObjectHideFlags: 0
@@ -9295,6 +9296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694c63d9aace53439782392659a4a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _game: {fileID: 1927639122}
   pages:
   - {fileID: 7729323857668789127, guid: 6d997bcaf2b101f4cacbb30d44cf6737, type: 3}
   - {fileID: 2595709663974820535, guid: e59302ed8224fd245bfe11214209c3d7, type: 3}

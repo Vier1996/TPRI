@@ -73,6 +73,10 @@ public class _Infected_And_Dead_Counter
         return 1;
     }
 
+    public void SetInfected(int inf)
+    {
+        countInfected = inf;
+    }
     public void setFatality(int fatality)
     {
         this.fatality = fatality;

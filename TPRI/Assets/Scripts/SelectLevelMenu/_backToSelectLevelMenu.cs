@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class _backToSelectLevelMenu : MonoBehaviour
 {
+    [SerializeField] private _GameController _game;
     private GameObject _backToSelect;
 
     private void Awake()
@@ -21,6 +22,7 @@ public class _backToSelectLevelMenu : MonoBehaviour
 
     private void BackToSelect()
     {
+        _game.SetNPCcount(0);
         SceneManager.LoadScene("_selectLevelMenu");
     }
 }

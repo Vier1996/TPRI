@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class _miniBestiarii : MonoBehaviour
 {
+    [SerializeField] private _GameController _game;
+    
     [SerializeField] private GameObject[] pages;
     [SerializeField] private Button toBestiarii;
     [SerializeField] private Button toBack;
@@ -20,7 +22,13 @@ public class _miniBestiarii : MonoBehaviour
 
     void Start()
     {
-        toBestiarii.onClick.AddListener(() => { SceneManager.LoadScene("_bestiariy"); });
+        toBestiarii.onClick.AddListener(() =>
+        {
+          _game.SavePeopleState();
+          PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
+          SceneManager.LoadScene("_bestiariy");
+
+        });
         toBack.onClick.AddListener(() =>
         {
             Destroy(_CurrentPage);

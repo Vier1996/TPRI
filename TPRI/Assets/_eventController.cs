@@ -9,6 +9,6 @@ public class _eventController : MonoBehaviour
 
    private void Start()
    {
-      Debug.Log(PlayerPrefs.GetInt(_ResourceKeys.Defense));
+      //Debug.Log(PlayerPrefs.GetInt(_ResourceKeys.Defense));
    }
 }

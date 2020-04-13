@@ -55,7 +55,7 @@ public class _bestiaryController : MonoBehaviour
         _infectionDegreeSlider = GameObject.Find("degreeOfInfection");
         _fatalityDegreeSlider = GameObject.Find("degreeOfFatality");
         
-        backToMenu.onClick.AddListener(() => { SceneManager.LoadScene("_level_1");});
+        backToMenu.onClick.AddListener(() => { SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel")); });
     }
 
     private void Start()
