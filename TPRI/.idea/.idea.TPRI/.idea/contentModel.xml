@@ -6,6 +6,7 @@
     <e p="C:\Users\37525\Desktop\crsch\TPRI\TPRI" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_audioController.cs" t="Include" />
         <e p="_DescriptionController.cs" t="Include" />
         <e p="_dialogPool.cs" t="Include" />
         <e p="_eventController.cs" t="Include" />
@@ -39,6 +40,7 @@
           </e>
         </e>
         <e p="Prefabs" t="Include">
+          <e p="_levelSettingsScript.cs" t="Include" />
           <e p="_testS.cs" t="Include" />
           <e p="BestiariiBook" t="Include">
             <e p="_pageController.cs" t="Include" />
@@ -54,6 +56,7 @@
           <e p="_DropProgress.cs" t="Include" />
           <e p="Levels" t="Include">
             <e p="__bestiariiEventController.cs" t="Include" />
+            <e p="_skillsActivator.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">

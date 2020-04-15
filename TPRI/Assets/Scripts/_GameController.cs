@@ -12,12 +12,12 @@ using Random = UnityEngine.Random;
 
 public class _GameController : MonoBehaviour
 {
+    public _skillsActivator _SkillsActivator;
     public GameObject[] people;
     [SerializeField] private int CountPuppets;
     [SerializeField] private Transform spawnPlace;
     private static int Ctr = 0;
     public static int Population = 348;
-
 
     private Button _grassMedicine;
     private GameObject _NPC;
@@ -186,13 +186,19 @@ public class _GameController : MonoBehaviour
 
     private void InitNPC()
     {
-        Debug.Log(countNPC);
         if (countNPC < 5)
         {
             GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
             _NPC = Instantiate(npc, spawnForPeople.transform);
             resetDialog();
             countNPC++;
+            
+            _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
+            if (issues.getSymptoms().Count != 0)
+            {
+                List<string> randomSymptoms = issues.getSymptoms();
+                _SkillsActivator.SkillDetection(randomSymptoms[Random.Range(0, randomSymptoms.Count)]);
+            }
         }
         else
         {
@@ -237,10 +243,12 @@ public class _GameController : MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        SetNPCcount(0);
+    }
+
+    public void SaveCommonState()
+    {
         PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
-        PlayerPrefs.SetInt("AlivePeople", Population);
-        PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
-        
         SavePeopleState();
     }
 }

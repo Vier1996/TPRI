@@ -5415,6 +5415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   close: {fileID: 7914665432281048000}
+  _slider: {fileID: 5489410345111580573}
 --- !u!1 &5489410344928694700
 GameObject:
   m_ObjectHideFlags: 0
