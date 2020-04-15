@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class _GameController : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class _GameController : MonoBehaviour
     private int countNPC = 0;
     private int passIlls = 0, healed = 0;
     private _Infected_And_Dead_Counter _infectedAndDeadCounter;
+    [SerializeField] private int _cityImmunity = 0;
 
     /// <summary>
     
@@ -44,7 +46,7 @@ public class _GameController : MonoBehaviour
         countNPC = LoadPeopleState();
         InitNPC();
 
-
+        //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
 
@@ -58,13 +60,17 @@ public class _GameController : MonoBehaviour
 
         _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
         _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
-        
-        Population = PlayerPrefs.GetInt("AlivePeople");
-        
+
         if (LoadPeopleState() == 0)
+        {
             Population = 348;
-        
-        _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
+            _infectedAndDeadCounter.SetInfected(0);
+        }
+        else
+        {
+            Population = PlayerPrefs.GetInt("AlivePeople");
+            _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
+        }
     }
 
     private void Start()
@@ -93,11 +99,24 @@ public class _GameController : MonoBehaviour
         //people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
         //CountPuppets--;
         _levelEndController.setCountPatient(1);
+        issues.setSymptoms(tryToHealOneSymptom(issues.getSymptoms()));
         if (issues.getSymptoms().Count != 0)
         {
+            int infection = 0;
             passIlls += 1;
-            _infectedAndDeadCounter.setFatality(issues.getFatality()*(issues.getSymptoms().Count/num_of_symptoms));
-            _infectedAndDeadCounter.countInfectedPeople(issues.getInfection()*(issues.getSymptoms().Count/num_of_symptoms), Population);
+            if (PlayerPrefs.GetInt("8_skl") == 1)
+            {
+                _cityImmunity = 15;
+            } 
+            if (PlayerPrefs.GetInt("9_skl") == 1)
+            {
+                _cityImmunity = 30;
+            }
+            Debug.Log("Count sympt: " + issues.getSymptoms().Count);
+            infection = issues.getInfection() * (issues.getSymptoms().Count / num_of_symptoms);
+            
+            _infectedAndDeadCounter.setFatality(issues.getFatality());
+            _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
             infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
             alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
         }
@@ -110,6 +129,53 @@ public class _GameController : MonoBehaviour
         Invoke(nameof(InitNPC), 3);
     }
 
+    private List<string> tryToHealOneSymptom(List<string> symptoms)
+    {
+        int rate = 0, checkHeal = 0;
+        int[] healRandMassHealLvl1 = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9,10};
+        int[] healRandMassHealLvl2 = new[] {1, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        
+        rate = Random.Range(0, 10);
+        
+        
+        /*if (PlayerPrefs.GetInt(_ResourceKeys.Healing_1) == 10)
+        {
+            checkHeal = healRandMassHealLvl1[rate];
+            Debug.Log("Info from PlayerPrefs: " + PlayerPrefs.GetInt(_ResourceKeys.Healing_1));
+        }
+        if (PlayerPrefs.GetInt(_ResourceKeys.Healing_2) == 20)
+        {
+            checkHeal = healRandMassHealLvl2[rate];
+            Debug.Log("Info from PlayerPrefs: " + PlayerPrefs.GetInt(_ResourceKeys.Healing_1));
+        }*/
+
+        if (PlayerPrefs.GetInt("4_skl") == 1)
+        {
+            Debug.Log("With healing 1");
+            checkHeal = healRandMassHealLvl1[rate];
+            Debug.Log("Info from PlayerPrefs: " + checkHeal);
+        }
+
+        if (PlayerPrefs.GetInt("7_skl") == 1)
+        {
+            Debug.Log("With healing 2");
+            checkHeal = healRandMassHealLvl2[rate];
+            
+            Debug.Log("Info from PlayerPrefs: " + checkHeal);
+        }
+        
+        int length = symptoms.Count, randSymptom;
+        
+        if (checkHeal == 1)
+        {
+            randSymptom = Random.Range(0, length);
+            string symptom = symptoms[randSymptom];
+            Debug.Log(symptom);
+            symptoms.Remove(symptom);
+        }
+        return symptoms;
+    } 
+        
     private void Expel()
     {
         Debug.Log("Пидуй науй");

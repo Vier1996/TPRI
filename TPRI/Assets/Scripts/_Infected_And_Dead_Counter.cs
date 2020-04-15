@@ -24,7 +24,7 @@ public class _Infected_And_Dead_Counter
         return instance;
     }
 
-    public void countInfectedPeople(int infection, int population)
+    public void countInfectedPeople(int infection, int population, double immuntiy)
     {
         int rate = 0, infected = 0;
         int people = population - countInfected;
@@ -36,6 +36,9 @@ public class _Infected_And_Dead_Counter
                 infected++;
             }
         }
+
+        double percentOfInfected = infected * (immuntiy / 100);
+        infected = infected - (int)(percentOfInfected);
         
         CountDead(fatality, infected);
 

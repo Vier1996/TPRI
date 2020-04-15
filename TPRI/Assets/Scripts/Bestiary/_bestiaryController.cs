@@ -36,6 +36,7 @@ public class _bestiaryController : MonoBehaviour
         _viruses = new List<GameObject>();
         _storyVirus = GameObject.Find("StroyOfVirus");
         _symptoms = GameObject.Find("Symptoms");
+        _nameVirus = GameObject.Find("NameVirus");
         
         _info = new InfoAboutIlnesses();
         /*_listViruses = _info.getViruses();
@@ -112,7 +113,6 @@ public class _bestiaryController : MonoBehaviour
 
     private void setOpenIssues(int position)
     {
-        _nameVirus = GameObject.Find("NameVirus");
         _virusModel = Resources.Load<GameObject>("3dPrefabs/Вирус" + position);
         if (_virusModel != null)
         {

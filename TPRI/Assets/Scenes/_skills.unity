@@ -2587,6 +2587,8 @@ MonoBehaviour:
   AddShoot_3: {fileID: 1493830259}
   Warning_1: {fileID: 369243206}
   Warning_2: {fileID: 1117586118}
+  Healing_1: {fileID: 1789327766}
+  Healing_2: {fileID: 785000866}
 --- !u!114 &1711987871
 MonoBehaviour:
   m_ObjectHideFlags: 0

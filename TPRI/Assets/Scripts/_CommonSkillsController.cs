@@ -27,6 +27,9 @@ public class _CommonSkillsController : MonoBehaviour
     [SerializeField] private _skillController Warning_1;
     [SerializeField] private _skillController Warning_2;
 
+    [SerializeField] private _skillController Healing_1;
+    [SerializeField] private _skillController Healing_2;
+
     private void Awake()
     {
         _DropProgress.DropSkills();
@@ -105,6 +108,14 @@ public class _CommonSkillsController : MonoBehaviour
         if (Warning_2.reserched)
         {
             PlayerPrefs.SetInt(_ResourceKeys.Shoots, 30); 
+        }
+        if (Healing_1.reserched)
+        {
+            PlayerPrefs.SetInt(_ResourceKeys.Healing_1, 10); 
+        }
+        if (Healing_2.reserched)
+        {
+            PlayerPrefs.SetInt(_ResourceKeys.Healing_2, 20); 
         }
     }
 }
