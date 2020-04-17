@@ -46,7 +46,7 @@ public class _CommonSkillsController : MonoBehaviour
         _return.onClick.AddListener(() =>
         {
             preset();
-            SceneManager.LoadScene("_introMenu");
+            SceneManager.LoadScene("_home");
         });
     }
 

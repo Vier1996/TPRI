@@ -117,7 +117,7 @@ public class _discoverMenu : MonoBehaviour
             }
         });
         
-        Back.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
+        Back.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });
     }
 
     private void Deact()

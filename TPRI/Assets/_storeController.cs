@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class _storeController : MonoBehaviour
 {
     [SerializeField] private Button Get;
+    [SerializeField] private Button Return;
     [SerializeField] private Text amount;
     [SerializeField] private TextMeshProUGUI moneyCounter;
     [SerializeField] private TextMeshProUGUI item;
@@ -29,5 +31,7 @@ public class _storeController : MonoBehaviour
             Debug.Log("Buyed - " + item.text + " -" + Convert.ToInt32(amount.text));
             Debug.Log(PlayerPrefs.GetInt("Key_" + item.text));
         });
+        
+        Return.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });
     }
 }

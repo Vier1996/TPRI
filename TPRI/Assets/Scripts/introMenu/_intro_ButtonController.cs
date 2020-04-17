@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class _intro_ButtonController : MonoBehaviour
 {
-  [SerializeField] private Button _Start, _Contitue, _Settings, _Upgrade;
+  [SerializeField] private Button _Start, _Contitue, _Settings, _Home;
    private GameObject _settingsMenu;
    private _HeroData _hero;
 
@@ -21,7 +21,7 @@ public class _intro_ButtonController : MonoBehaviour
   {
     _Start.onClick.AddListener(() => { SceneManager.LoadScene("_selectLevelMenu"); });
     _Contitue.onClick.AddListener(() => ContinueGame());
-    _Upgrade.onClick.AddListener(() => { SceneManager.LoadScene("DiscoverMenu"); });
+    _Home.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });
     _Settings.onClick.AddListener(() => { _settingsMenu.SetActive(true); });
   }
   

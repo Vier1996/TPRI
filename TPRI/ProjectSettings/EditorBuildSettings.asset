@@ -38,4 +38,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/_bestiariy.unity
     guid: fff91bbd3f69f5f42b74b682b2b13c02
+  - enabled: 1
+    path: Assets/Scenes/_home.unity
+    guid: 4edb8cfa373441a4f937c085f874369d
+  - enabled: 1
+    path: Assets/Scenes/_store.unity
+    guid: 7169ae2a96f38aa498fbf1d6aaecc6a1
+  - enabled: 1
+    path: Assets/Scenes/_skills.unity
+    guid: 79f2ee65fdee48049a81d4a7516b4c43
   m_configObjects: {}

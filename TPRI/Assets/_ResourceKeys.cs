@@ -13,6 +13,7 @@ public class _ResourceKeys : MonoBehaviour
     public const string Shoots = "Key_Shoots";
     public const string skills = "Ket_avaialble_skills";
     public const string Town_HealthPeople = "Town_HealthPeople";
+    public const string OurDeath = "Key_OurDeath";
 
     public const string Defense_1 = "Key_Defense_1";
     public const string Defense_2 = "Key_Defense_2";
