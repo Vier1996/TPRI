@@ -20,7 +20,7 @@ public class _WorldController : MonoBehaviour
         
         Dialogs[0] = "Шот хуево...";
         Dialogs[1] = "Чуствую что скоро сдохну";
-        Dialogs[3] = "ОТЪЕБИТЕСЬ! Я В ПОРЯДКЕ";
+        Dialogs[2] = "ОТЪЕБИТЕСЬ! Я В ПОРЯДКЕ";
         
         if (PlayerPrefs.GetInt(_ResourceKeys.OurDeath) == 1)
            if(endDays == 0) 

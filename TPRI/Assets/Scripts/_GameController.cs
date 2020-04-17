@@ -48,7 +48,7 @@ public class _GameController : MonoBehaviour
     {
         countNPC = LoadPeopleState();
         InitNPC();
-        
+        setAdditonalShoot();
         //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
@@ -77,13 +77,33 @@ public class _GameController : MonoBehaviour
         
         b_killHim.GetComponent<Button>().onClick.AddListener(() =>
         {
-            
+            if (_additionalShoot != 0)
+            {
+                if (_NPC != null)
+                {
+                    Destroy(_NPC);
+                    Invoke(nameof(InitNPC), 3);
+                    _additionalShoot--;
+                }
+            }
         });
     }
 
     private void setAdditonalShoot()
     {
-        
+        if (PlayerPrefs.GetInt("pass_1_skl") == 1)
+        {
+            _additionalShoot = 1;
+        }
+        else if (PlayerPrefs.GetInt("pass_2_skl") == 1)
+        {
+            _additionalShoot = 2;
+        }
+        else if (PlayerPrefs.GetInt("pass_3_skl") == 1)
+        {
+            _additionalShoot = 3;
+        }
+        else _additionalShoot = 0;
     }
     
     private void Start()
@@ -163,18 +183,6 @@ public class _GameController : MonoBehaviour
         int[] healRandMassHealLvl2 = new[] {1, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         
         rate = Random.Range(0, 10);
-        
-        
-        /*if (PlayerPrefs.GetInt(_ResourceKeys.Healing_1) == 10)
-        {
-            checkHeal = healRandMassHealLvl1[rate];
-            Debug.Log("Info from PlayerPrefs: " + PlayerPrefs.GetInt(_ResourceKeys.Healing_1));
-        }
-        if (PlayerPrefs.GetInt(_ResourceKeys.Healing_2) == 20)
-        {
-            checkHeal = healRandMassHealLvl2[rate];
-            Debug.Log("Info from PlayerPrefs: " + PlayerPrefs.GetInt(_ResourceKeys.Healing_1));
-        }*/
 
         if (PlayerPrefs.GetInt("4_skl") == 1)
         {

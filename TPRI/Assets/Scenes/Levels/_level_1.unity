@@ -7877,7 +7877,7 @@ RectTransform:
   m_Children:
   - {fileID: 466914345}
   m_Father: {fileID: 110818711}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21778,6 +21778,7 @@ MonoBehaviour:
   panelWin: {fileID: 23095638}
   alivePeople: {fileID: 2074859927}
   infectedPeople: {fileID: 2044372175}
+  b_killHim: {fileID: 1052108354}
   _cityImmunity: 0
   panelDefeat: {fileID: 459959939}
 --- !u!114 &1927639123
