@@ -16,6 +16,8 @@ public class _WorldController : MonoBehaviour
 
     private void Awake()
     {
+        endDays = PlayerPrefs.GetInt("DEATHDAYS");
+        
         Dialogs[0] = "Шот хуево...";
         Dialogs[1] = "Чуствую что скоро сдохну";
         Dialogs[3] = "ОТЪЕБИТЕСЬ! Я В ПОРЯДКЕ";
@@ -29,6 +31,7 @@ public class _WorldController : MonoBehaviour
                {
                    Debug.Log("пизда");
                    PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
+                   PlayerPrefs.SetInt("DEATHDAYS", endDays);
                }
                else
                {
@@ -62,5 +65,10 @@ public class _WorldController : MonoBehaviour
     public int GetDays()
     {
         return endDays;
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("DEATHDAYS", endDays);
     }
 }
