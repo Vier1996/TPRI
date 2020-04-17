@@ -25,6 +25,7 @@ public class _GameController : MonoBehaviour
     [SerializeField] private GameObject panelWin;
     [SerializeField] private GameObject alivePeople;
     [SerializeField] private GameObject infectedPeople;
+    [SerializeField] private GameObject b_killHim;
     private _LevelEndController _levelEndController;
     private int _numberNotHealedIssues = 0;
     private Button _passingPeople;
@@ -36,6 +37,8 @@ public class _GameController : MonoBehaviour
     private int passIlls = 0, healed = 0;
     private _Infected_And_Dead_Counter _infectedAndDeadCounter;
     [SerializeField] private int _cityImmunity = 0;
+    [SerializeField] private GameObject panelDefeat;
+    private int _additionalShoot;
 
     /// <summary>
     
@@ -45,7 +48,7 @@ public class _GameController : MonoBehaviour
     {
         countNPC = LoadPeopleState();
         InitNPC();
-
+        
         //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
@@ -71,8 +74,18 @@ public class _GameController : MonoBehaviour
             Population = PlayerPrefs.GetInt("AlivePeople");
             _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
         }
+        
+        b_killHim.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            
+        });
     }
 
+    private void setAdditonalShoot()
+    {
+        
+    }
+    
     private void Start()
     {
         alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
@@ -84,7 +97,7 @@ public class _GameController : MonoBehaviour
         Invoke(nameof(SpawnPuppets), 4f);
         Invoke(nameof(SpawnPuppets), 5f);
     }
-
+    
     private void SpawnPuppets()
     {
         Instantiate(people[Ctr], spawnPlace);
@@ -95,7 +108,7 @@ public class _GameController : MonoBehaviour
     {
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
         InfoAboutIlnesses info = new InfoAboutIlnesses();
-        int num_of_symptoms = info.getSymptoms()[issues._issueName].Count;
+        int numOfSymptoms = info.getSymptoms()[issues._issueName].Count;
         //people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
         //CountPuppets--;
         _levelEndController.setCountPatient(1);
@@ -107,18 +120,32 @@ public class _GameController : MonoBehaviour
             if (PlayerPrefs.GetInt("8_skl") == 1)
             {
                 _cityImmunity = 15;
-            } 
+            }
+
             if (PlayerPrefs.GetInt("9_skl") == 1)
             {
                 _cityImmunity = 30;
             }
+
             Debug.Log("Count sympt: " + issues.getSymptoms().Count);
-            infection = issues.getInfection() * (issues.getSymptoms().Count / num_of_symptoms);
+            double changeInfection = (double)issues.getSymptoms().Count / numOfSymptoms;
+            Debug.Log("Infection before changes: " + issues.getInfection());
+            infection = (int)(issues.getInfection() * changeInfection);
+            Debug.Log("After changes: " + infection);
             
             _infectedAndDeadCounter.setFatality(issues.getFatality());
             _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
             infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
             alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
+            if (_infectedAndDeadCounter.getInfected() == 0)
+            {
+                Time.timeScale = 0;
+                panelDefeat.SetActive(true);
+                _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
+                _levelEndController.setCountPatient(countNPC);
+                _levelEndController.setCountPassIlls(passIlls);
+                _levelEndController.setPanelDefeat();
+            }
         }
         else
         {
@@ -209,6 +236,9 @@ public class _GameController : MonoBehaviour
             _levelEndController.setCountPassIlls(passIlls);
             _levelEndController.setCountInfected(_infectedAndDeadCounter.getInfected());
             _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
+            _levelEndController.setPopulation(Population + _infectedAndDeadCounter.getInfected());
+            _levelEndController.setMoney();
+            _levelEndController.setCountSkillPoints();
             panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
         }
     }

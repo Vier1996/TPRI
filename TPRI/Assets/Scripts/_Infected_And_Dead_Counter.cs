@@ -26,9 +26,36 @@ public class _Infected_And_Dead_Counter
 
     public void countInfectedPeople(int infection, int population, double immuntiy)
     {
-        int rate = 0, infected = 0;
-        int people = population - countInfected;
-        for (int i = 0; i < people; i++)
+        int rate = 0, infected = 0, people = 0;
+
+        if (population != 0)
+        {
+            people = population;
+            for (int i = 0; i < people; i++)
+            {
+                rate = Random.Range(0, 101);
+                if (rate <= infection)
+                {
+                    infected++;
+                }
+            }
+            
+            double percentOfInfected = infected * (immuntiy / 100);
+            infected = infected - (int) (percentOfInfected);
+
+            CountDead(fatality, infected);
+            countInfected += infected;
+            _GameController.Population -= infected;
+        }
+        else
+        {
+            people = countInfected;
+            infection += 50;
+            fatality += 50;
+            CountDead(fatality, people);
+        }
+
+        /*for (int i = 0; i < people; i++)
         {
             rate = Random.Range(0, 101);
             if (rate <= infection)
@@ -37,12 +64,17 @@ public class _Infected_And_Dead_Counter
             }
         }
 
-        double percentOfInfected = infected * (immuntiy / 100);
-        infected = infected - (int)(percentOfInfected);
-        
-        CountDead(fatality, infected);
+        if (population != 0)
+        {
+            double percentOfInfected = infected * (immuntiy / 100);
+            infected = infected - (int) (percentOfInfected);
 
-        countInfected += infected;
+            CountDead(fatality, infected);
+            countInfected += infected;
+            _GameController.Population -= infected;
+        }
+        */
+
     }
 
     public void CountDead(int fatal, int infected)
@@ -57,8 +89,16 @@ public class _Infected_And_Dead_Counter
             }
         }
 
+        countInfected -= dead;
         countDead += dead;
-        _GameController.Population -= dead;
+        /*countInfected -= dead;
+        countDead += dead;
+        //_GameController.Population -= dead;
+        if (_GameController.Population != 0)
+        {
+            _GameController.Population -= dead;
+            countDead += dead;
+        }*/
     }
 
     public int getInfected()
@@ -80,6 +120,7 @@ public class _Infected_And_Dead_Counter
     {
         countInfected = inf;
     }
+
     public void setFatality(int fatality)
     {
         this.fatality = fatality;

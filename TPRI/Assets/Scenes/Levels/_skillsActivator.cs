@@ -11,11 +11,12 @@ public class _skillsActivator : MonoBehaviour
     [SerializeField] private GameObject _skill_Detection;
     [SerializeField] private TextMeshProUGUI symptom;
 
-        private void Awake()
+    private void Awake()
     {
         _skill_Detection.SetActive(false);
     }
-        public void SkillDetection(string symptom)
+
+    public void SkillDetection(string symptom)
     {
         if (PlayerPrefs.GetInt("3_skl") != 0)
         {
@@ -25,7 +26,7 @@ public class _skillsActivator : MonoBehaviour
                 this.symptom.text = symptom;
                 _skill_Detection.SetActive(true);
             }
-            
+
             Invoke(nameof(SkillDetectionDeactivated), 2f);
         }
     }
