@@ -199,6 +199,8 @@ public class _GameController : MonoBehaviour
                 List<string> randomSymptoms = issues.getSymptoms();
                 _SkillsActivator.SkillDetection(randomSymptoms[Random.Range(0, randomSymptoms.Count)]);
             }
+
+            MaybeIDie(_NPC.GetComponent<_PeopleIssues>().getInfection());
         }
         else
         {
@@ -210,6 +212,9 @@ public class _GameController : MonoBehaviour
             _levelEndController.setCountInfected(_infectedAndDeadCounter.getInfected());
             _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
             panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
+            
+            if(GetComponent<_WorldController>().GetDays() > 0)
+                GetComponent<_WorldController>().SetDays(GetComponent<_WorldController>().GetDays() - 1);
         }
     }
 
@@ -250,5 +255,17 @@ public class _GameController : MonoBehaviour
     {
         PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
         SavePeopleState();
+    }
+
+    private void MaybeIDie(int infection)
+    {
+        int _defaultProtection = (int) (infection * (0.3 + PlayerPrefs.GetInt(_ResourceKeys.Defense)/100));
+        int rate = infection - _defaultProtection;
+        int Chance = Random.Range(1, 101);
+
+        Debug.Log(rate);
+        
+        if(Chance <= rate)
+            PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 1);
     }
 }

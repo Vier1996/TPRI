@@ -28,6 +28,7 @@ public class _Infected_And_Dead_Counter
     {
         int rate = 0, infected = 0;
         int people = population - countInfected;
+        
         for (int i = 0; i < people; i++)
         {
             rate = Random.Range(0, 101);
