@@ -26,6 +26,7 @@ public class _GameController : MonoBehaviour
     [SerializeField] private GameObject alivePeople;
     [SerializeField] private GameObject infectedPeople;
     [SerializeField] private GameObject b_killHim;
+    [SerializeField] private GameObject notificationPanel;
     private _LevelEndController _levelEndController;
     private int _numberNotHealedIssues = 0;
     private Button _passingPeople;
@@ -40,6 +41,7 @@ public class _GameController : MonoBehaviour
     [SerializeField] private GameObject panelDefeat;
     private int _additionalShoot;
     private float patientX = -11f, patientY = -14f, patientZ = 86f;
+    public static int countHealedSymptomes = 0;
 
     [SerializeField] private Button endMenu;
     [SerializeField] private Button endNextLevel;
@@ -53,6 +55,7 @@ public class _GameController : MonoBehaviour
         countNPC = LoadPeopleState();
         InitNPC();
         setAdditonalShoot();
+        PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
         //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
@@ -148,6 +151,7 @@ public class _GameController : MonoBehaviour
         {
             int infection = 0;
             passIlls += 1;
+            Warnings();
             if (PlayerPrefs.GetInt("8_skl") == 1)
             {
                 _cityImmunity = 15;
@@ -187,6 +191,35 @@ public class _GameController : MonoBehaviour
         Invoke(nameof(InitNPC), 3);
     }
 
+    private void Warnings()
+    {
+        int range, percent = 0;
+        if (PlayerPrefs.GetInt("pass_4_skl") == 1)
+        {
+            percent = 99;
+        }
+
+        if (PlayerPrefs.GetInt("pass_5_skl") == 1)
+        {
+            percent = 99;
+        }
+        range = Random.Range(0, 101);
+        if (range <= percent)
+        {
+            notificationPanel.SetActive(true);
+            string nameIssue = _NPC.GetComponent<_PeopleIssues>()._issueName.ToLower();
+            notificationPanel.transform.GetChild(0)
+                    .GetComponent<TextMeshProUGUI>().text = "Была пропущена болезнь - " 
+                                                            + (PlayerPrefs.GetInt("Key_" + nameIssue)==1 ? nameIssue : "???");
+            Invoke(nameof(DisableNotification), 13f);
+        }
+    }
+
+    private void DisableNotification()
+    {
+        notificationPanel.SetActive(false);
+    }
+    
     private List<string> tryToHealOneSymptom(List<string> symptoms)
     {
         int rate = 0, checkHeal = 0;
@@ -218,6 +251,7 @@ public class _GameController : MonoBehaviour
             string symptom = symptoms[randSymptom];
             Debug.Log(symptom);
             symptoms.Remove(symptom);
+            countHealedSymptomes++;
         }
         return symptoms;
     } 
@@ -228,6 +262,7 @@ public class _GameController : MonoBehaviour
         Destroy(_NPC);
         resetDialog();
         Invoke(nameof(InitNPC), 3);
+        _levelEndController.incrementExpelPeople();
     }
 
     private void InitNPC()
@@ -268,25 +303,6 @@ public class _GameController : MonoBehaviour
         }
     }
 
-    private void setScalePatient()
-    {
-        List<int> indexPatients1 = new List<int>() {0, 1, 4, 6, 7, 8, 10};
-        List<int> indexPatients2 = new List<int>() {2, 5, 9, 11, 12, 13};
-        float scale = 0f;
-        if (indexPatients1.Contains(countNPC))
-        {
-            scale = 441.5f;
-        }
-
-        if (indexPatients2.Contains(countNPC))
-        {
-            scale = 15;
-        }
-
-        if (countNPC == 3) scale = 400f;
-        _NPC.GetComponent<_scaler>()._Scale = scale;
-    }
-    
     private void resetDialog()
     {
         _dialogPanel = GameObject.Find("dialogsPanel");

@@ -14,6 +14,7 @@ public class _ResourceKeys : MonoBehaviour
     public const string skills = "Ket_avaialble_skills";
     public const string Town_HealthPeople = "Town_HealthPeople";
     public const string OurDeath = "Key_OurDeath";
+    public const string HealCity = "Key_HealCity";
 
     public const string Defense_1 = "Key_Defense_1";
     public const string Defense_2 = "Key_Defense_2";
@@ -30,7 +31,7 @@ public class _ResourceKeys : MonoBehaviour
     public const string LifeCity_2 = "Key_LifeCity_2";
     public const string SupremeEye = "Key_SupremeEye";
     public const string FullHealing = "Key_FullHealing";
-    
+
     // Олег, еще твои 5 нужны.
     public const string Mixture = "Key_Mixture";
     public const string Tincture = "Key_Tincture";

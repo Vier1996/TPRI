@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class _LevelEndController : MonoBehaviour
 {
@@ -12,14 +13,16 @@ public class _LevelEndController : MonoBehaviour
     private int _countMoney;
     private int _countHealingIllnesses;
     private int _population;
-    private int POPULATION;
+    private int countExpel = 0;
     [SerializeField] private GameObject panelDefeat;
+    [SerializeField] private Slider levelPointsSlider;
 
     private void Awake()
     {
         _countDead = _countInfected =
-            _countMoney = _countPatient = _countHealingIllnesses = _countSkillPoints = _countPassingIlls = _population =0;
-        POPULATION = _GameController.Population;
+            _countMoney = _countPatient = 
+                _countHealingIllnesses = _countSkillPoints = 
+                    _countPassingIlls = _population =0;
     }
 
     public void setCountPatient(int patients)
@@ -32,6 +35,11 @@ public class _LevelEndController : MonoBehaviour
         _countPassingIlls = passIlls;
     }
 
+    public void incrementExpelPeople()
+    {
+        countExpel++;
+    }
+    
     public void setCountInfected(int infected)
     {
         _countInfected = infected;
@@ -44,9 +52,7 @@ public class _LevelEndController : MonoBehaviour
 
     public void setMoney()
     {
-        int moneyHealedIlls = _countHealingIllnesses - _countPassingIlls + 10;
-        int moneyPercentPopulation = (POPULATION - _countDead) / 30;
-        _countMoney = moneyHealedIlls + moneyPercentPopulation + 10;
+        _countMoney = (int)(10 + _GameController.countHealedSymptomes * 0.6 - countExpel * 0.4);
  
         // базовые 10 + количество вылеченых симптомов * 0.6 - количество выгнаных людей * 0.4;
         
@@ -72,17 +78,25 @@ public class _LevelEndController : MonoBehaviour
         _population = population;
     }
 
+    private int setLevelPointsSlider()
+    {
+        return (int)((10 + _GameController.countHealedSymptomes * 0.6 - countExpel * 0.4) + _countHealingIllnesses*2);
+    }
+    
     public void setPanelWinInfo()
     {
-        gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text += " " + _countPatient;
-        gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text += " " + _countPassingIlls;
-        gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text += " " + _countHealingIllnesses;
-        gameObject.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text += " " + _countInfected;
-        gameObject.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text += " " + _countDead;
-        gameObject.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text += " " + _population;
-        gameObject.transform.GetChild(6).GetComponent<TextMeshProUGUI>().text += " " + (_countSkillPoints+1);
-        gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + _countMoney;
-        
+        gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
+        gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text += " " + _countPatient;
+        gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text += " " + _countPassingIlls;
+        gameObject.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text += " " + _countHealingIllnesses;
+        gameObject.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text += " " + _countInfected;
+        gameObject.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text += " " + _countDead;
+        gameObject.transform.GetChild(6).GetComponent<TextMeshProUGUI>().text += " " + _population;
+        gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + (_countSkillPoints+1);
+        gameObject.transform.GetChild(8).GetComponent<TextMeshProUGUI>().text += " " + _countMoney;
+        Debug.Log("Slider     " + setLevelPointsSlider());
+        levelPointsSlider.value = setLevelPointsSlider();
+
     }
 
     public void setPanelDefeat()

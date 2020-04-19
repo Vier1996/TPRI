@@ -15,6 +15,8 @@ public class _levelItemController : MonoBehaviour
     private GameObject _NPC;
     private List<string> _peopleIllness;
     private int amount;
+    private int index = 0;
+    private bool _fullHealing;
 
     void Start()
     {
@@ -47,10 +49,11 @@ public class _levelItemController : MonoBehaviour
 
     void Update()
     {
-        if (_NPC == null)
+        if (_NPC == null && index < 5)
         {
             _NPC = GameObject.FindWithTag("Player");
             _peopleIllness = _NPC.GetComponent<_PeopleIssues>().getSymptoms();
+            index++;
         }
     }
 
@@ -59,21 +62,43 @@ public class _levelItemController : MonoBehaviour
         sanya.Play();
         Invoke(nameof(stopper), 1.8f);
         
-        int index_cur_sympt = 0;
-        for (int i = 0; i < curableSymptoms.Count; i++)
+        tryToHealFull();
+        if (!_fullHealing)
         {
-            if (_peopleIllness.Contains(curableSymptoms[i]))
+            int index_cur_sympt = 0;
+            for (int i = 0; i < curableSymptoms.Count; i++)
             {
-                _peopleIllness.Remove(curableSymptoms[i]);
-                PlayerPrefs.SetInt("Key_" + curableSymptoms[i], 1);
+                if (_peopleIllness.Contains(curableSymptoms[i]))
+                {
+                    _peopleIllness.Remove(curableSymptoms[i]);
+                    PlayerPrefs.SetInt("Key_" + curableSymptoms[i], 1);
+                    _GameController.countHealedSymptomes++;
+                }
+                index_cur_sympt++;
             }
-
-            index_cur_sympt++;
+            _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
         }
-        
-        _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
     }
 
+    private void tryToHealFull()
+    {
+        if (PlayerPrefs.GetInt("pass_6_skl") == 1)
+        {
+            int range = Random.Range(0, 101);
+            if (range <= 50)
+            {
+                _GameController.countHealedSymptomes += _peopleIllness.Count;
+                _peopleIllness.Clear();
+                _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
+                _fullHealing = true;
+            }
+            else
+            {
+                _fullHealing = false;
+            }
+        }
+    }
+    
     private void stopper()
     {
         sanya.Stop();
