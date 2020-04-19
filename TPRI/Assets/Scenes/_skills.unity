@@ -2923,7 +2923,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: ea38085df6ccef54e9e8e5d2ccdee097, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!212 &1900712029
@@ -3960,6 +3960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68bd03c687104344b7142ae41c07366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultDialogAnimation: {fileID: 1900712028}
   Name: {fileID: 5329344506423678324}
   Descritption: {fileID: 5329344507458885278}
   Get: {fileID: 5329344505961372244}

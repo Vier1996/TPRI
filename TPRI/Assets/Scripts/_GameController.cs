@@ -41,6 +41,9 @@ public class _GameController : MonoBehaviour
     private int _additionalShoot;
     private float patientX = -11f, patientY = -14f, patientZ = 86f;
 
+    [SerializeField] private Button endMenu;
+    [SerializeField] private Button endNextLevel;
+
     /// <summary>
     
     /// </summary>
@@ -88,6 +91,9 @@ public class _GameController : MonoBehaviour
                 }
             }
         });
+        
+        endMenu.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
+        endNextLevel.onClick.AddListener(() => { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }); //пофиксить для 7го левла
     }
 
     private void setAdditonalShoot()

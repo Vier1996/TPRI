@@ -17,7 +17,7 @@ public class _storeController : MonoBehaviour
 
     private void Awake()
     {
-        _DropProgress.Drop();
+        //_DropProgress.Drop();
        // _DropProgress.DropResources();
     }
 

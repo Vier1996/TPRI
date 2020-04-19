@@ -23,7 +23,10 @@ public class _discoverMenu : MonoBehaviour
     
     private int showedMenu = 0;
     
-    // Start is called before the first frame update
+    /*
+     в зависимости от нашего лвла, будут открыватся различные вариации экиперовок, + покупка их
+     */
+    
     void Start()
     {
         HelmetMenu.SetActive(false);

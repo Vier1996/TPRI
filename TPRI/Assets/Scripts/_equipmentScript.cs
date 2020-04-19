@@ -42,6 +42,11 @@ public class _equipmentScript : MonoBehaviour
         
         ResearchButton.onClick.AddListener(() =>
         {
+            ResearchButton.interactable = false;
+            HealthButton.interactable = true;
+            DialogButton.interactable = true;
+            DeathButton.interactable = true;
+            
             Deact();
             //deactQuestionPanel.SetActive(false);
             ResearchMenu.SetActive(true);
@@ -50,6 +55,11 @@ public class _equipmentScript : MonoBehaviour
         
         HealthButton.onClick.AddListener(() =>
         {
+            ResearchButton.interactable = true;
+            HealthButton.interactable = false;
+            DialogButton.interactable = true;
+            DeathButton.interactable = true;
+            
             Deact();
             //deactQuestionPanel.SetActive(false);
             HealthMenu.SetActive(true);
@@ -58,6 +68,11 @@ public class _equipmentScript : MonoBehaviour
         
         DialogButton.onClick.AddListener(() =>
         {
+            ResearchButton.interactable = true;
+            HealthButton.interactable = true;
+            DialogButton.interactable = false;
+            DeathButton.interactable = true;
+            
             Deact();
             DialogMenu.SetActive(true);
             //deactQuestionPanel.SetActive(true);
@@ -66,6 +81,11 @@ public class _equipmentScript : MonoBehaviour
         
         DeathButton.onClick.AddListener(() =>
         {
+            ResearchButton.interactable = true;
+            HealthButton.interactable = true;
+            DialogButton.interactable = true;
+            DeathButton.interactable = false;
+            
             Deact(); 
             //deactQuestionPanel.SetActive(false);
             DeathMenu.SetActive(true);
@@ -77,12 +97,12 @@ public class _equipmentScript : MonoBehaviour
             //deactQuestionPanel.SetActive(false);
             if (!_showDialogs)
             {
-                DialogWithPeople.transform.DOMove(showDialog.transform.position, 5);
+                DialogWithPeople.transform.DOMove(showDialog.transform.position, 2);
                 _showDialogs = true;
             }
             else
             {
-                DialogWithPeople.transform.DOMove(hideDialog.transform.position, 5);
+                DialogWithPeople.transform.DOMove(hideDialog.transform.position, 2);
                 _showDialogs = false;
             }
         });

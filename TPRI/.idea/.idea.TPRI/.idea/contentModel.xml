@@ -13,6 +13,8 @@
         <e p="_HomeController.cs" t="Include" />
         <e p="_ISSUESKEY.cs" t="Include" />
         <e p="_levelItemController.cs" t="Include" />
+        <e p="_LocalizedMap.cs" t="Include" />
+        <e p="_LocalizedText.cs" t="Include" />
         <e p="_queueController.cs" t="Include" />
         <e p="_queuePeopleController.cs" t="Include" />
         <e p="_ResearchElementScript.cs" t="Include" />

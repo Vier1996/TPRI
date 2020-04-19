@@ -47,6 +47,14 @@ public class _LevelEndController : MonoBehaviour
         int moneyHealedIlls = _countHealingIllnesses - _countPassingIlls + 10;
         int moneyPercentPopulation = (POPULATION - _countDead) / 30;
         _countMoney = moneyHealedIlls + moneyPercentPopulation + 10;
+ 
+        // базовые 10 + количество вылеченых симптомов * 0.6 - количество выгнаных людей * 0.4;
+        
+        int oldMoneyCounter = PlayerPrefs.GetInt(_ResourceKeys.Money);
+        Debug.Log(oldMoneyCounter);
+        Debug.Log(_countMoney);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Money, oldMoneyCounter + _countMoney);
     }
 
     public void setCountHealed(int healed)

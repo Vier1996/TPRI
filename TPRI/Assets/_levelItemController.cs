@@ -18,7 +18,6 @@ public class _levelItemController : MonoBehaviour
 
     void Start()
     {
-        sanya.Stop();
         amount = PlayerPrefs.GetInt(key);
         counter.text = amount.ToString();
         if(amount <= 0)

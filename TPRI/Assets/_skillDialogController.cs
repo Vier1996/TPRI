@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,9 +7,16 @@ using UnityEngine.UI;
 
 public class _skillDialogController : MonoBehaviour
 {
+    [SerializeField] private Animation defaultDialogAnimation;
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private TextMeshProUGUI Descritption;
     [SerializeField] private Button Get;
+
+    private void Start()
+    {
+        Debug.Log("Animation");
+        defaultDialogAnimation.Play();
+    }
 
     public void setName(string _Name)
     {
