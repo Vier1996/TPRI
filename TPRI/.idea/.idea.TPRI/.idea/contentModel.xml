@@ -58,6 +58,7 @@
           </e>
         </e>
         <e p="Scenes" t="Include">
+          <e p="_achiveSceneController.cs" t="Include" />
           <e p="_DropProgress.cs" t="Include" />
           <e p="Levels" t="Include">
             <e p="__bestiariiEventController.cs" t="Include" />
