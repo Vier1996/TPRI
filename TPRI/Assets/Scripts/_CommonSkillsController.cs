@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -29,9 +30,13 @@ public class _CommonSkillsController : MonoBehaviour
 
     [SerializeField] private _skillController Healing_1;
     [SerializeField] private _skillController Healing_2;
+    
+    
+    [SerializeField] private TextMeshProUGUI _amount;
 
     private void Awake()
     {
+        _amount.text = PlayerPrefs.GetInt(_ResourceKeys.skills).ToString();
         _DropProgress.DropSkills();
     }
 
@@ -48,6 +53,11 @@ public class _CommonSkillsController : MonoBehaviour
             preset();
             SceneManager.LoadScene("_home");
         });
+    }
+
+    private void Update()
+    {
+        _amount.text = PlayerPrefs.GetInt(_ResourceKeys.skills).ToString();
     }
 
     private void SetupActiveSkillsMenu()

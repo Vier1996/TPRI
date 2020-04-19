@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_skills.unity
     guid: 79f2ee65fdee48049a81d4a7516b4c43
+  - enabled: 1
+    path: Assets/Scenes/_achivements.unity
+    guid: ee49f7eaf48ba5c4d98304bd4ff85575
   m_configObjects: {}

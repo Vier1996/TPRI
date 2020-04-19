@@ -10,6 +10,7 @@ public class _skillDialogController : MonoBehaviour
     [SerializeField] private Animation defaultDialogAnimation;
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private TextMeshProUGUI Descritption;
+    [SerializeField] private TextMeshProUGUI price;
     [SerializeField] private Button Get;
 
     private void Start()
@@ -32,7 +33,12 @@ public class _skillDialogController : MonoBehaviour
     {
         Descritption.text = _Desc;
     }
-
+    
+    public void setPrice(string _price)
+    {
+        price.text = _price;
+    }
+    
     public Button GetButton()
     {
         return Get;

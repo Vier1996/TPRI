@@ -102,5 +102,32 @@ public class _DropProgress
         PlayerPrefs.SetInt(_SYMPTOMESKEY.сильная_боль_в_животе, Open);
         PlayerPrefs.SetInt(_SYMPTOMESKEY.боль_в_горле, Open);
     }
+
+    public static void DropEquipments()
+    {
+        PlayerPrefs.SetInt("Helmet_upg1", 0);
+        PlayerPrefs.SetInt("Helmet_upg2", 0);
+        PlayerPrefs.SetInt("Helmet_upg3", 0);
+        
+        PlayerPrefs.SetInt("Mask_upg1", 0);
+        PlayerPrefs.SetInt("Mask_upg2", 0);
+        PlayerPrefs.SetInt("Mask_upg3", 0);
+        
+        PlayerPrefs.SetInt("Gloves_upg1", 0);
+        PlayerPrefs.SetInt("Gloves_upg2", 0);
+        PlayerPrefs.SetInt("Gloves_upg3", 0);
+        
+        PlayerPrefs.SetInt("Butcher_upg1", 0);
+        PlayerPrefs.SetInt("Butcher_upg2", 0);
+        PlayerPrefs.SetInt("Butcher_upg3", 0);
+        
+        PlayerPrefs.SetInt("Suit_upg1", 0);
+        PlayerPrefs.SetInt("Suit_upg2", 0);
+        PlayerPrefs.SetInt("Suit_upg3", 0);
+        
+        PlayerPrefs.SetInt("Boots_upg1", 0);
+        PlayerPrefs.SetInt("Boots_upg2", 0);
+        PlayerPrefs.SetInt("Boots_upg3", 0);
+    }
 }
 
