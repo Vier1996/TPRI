@@ -10,6 +10,7 @@ public class _skillController : MonoBehaviour
    [SerializeField] private string SkillsPath;
    [SerializeField] private string SkillsName;
    [SerializeField] private string SkillsDescription;
+   [SerializeField] private string SkillPrice;
    private Button acceptBrn;
 
    public bool reserched = false;
@@ -31,6 +32,7 @@ public class _skillController : MonoBehaviour
       _skillDialog = GameObject.FindGameObjectWithTag("_SklsDlg");
       _skillDialog.GetComponent<_skillDialogController>().setName(SkillsName);
       _skillDialog.GetComponent<_skillDialogController>().setDescription(SkillsDescription);
+      _skillDialog.GetComponent<_skillDialogController>().setPrice(SkillPrice);
       acceptBrn = _skillDialog.GetComponent<_skillDialogController>().GetButton();
       
       acceptBrn.onClick.AddListener(() =>
@@ -39,10 +41,14 @@ public class _skillController : MonoBehaviour
          {
             if (PlayerPrefs.GetInt(SkillsPath) != 1)
             {
-               Debug.Log(SkillsName);
-               PlayerPrefs.SetInt(SkillsPath, 1);
-               GetComponent<Image>().DOColor(new Color(1, 1, 1, 1), 2);
-               reserched = true;
+               if (PlayerPrefs.GetInt(_ResourceKeys.skills) >= Int32.Parse(SkillPrice))
+               {
+                  Debug.Log(SkillsName);
+                  PlayerPrefs.SetInt(SkillsPath, 1);
+                  GetComponent<Image>().DOColor(new Color(1, 1, 1, 1), 2);
+                  reserched = true;
+                  PlayerPrefs.SetInt(_ResourceKeys.skills, PlayerPrefs.GetInt(_ResourceKeys.skills) - Int32.Parse(SkillPrice));
+               }
             }
          }
       });

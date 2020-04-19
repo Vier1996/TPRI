@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,14 +23,26 @@ public class _discoverMenu : MonoBehaviour
     [SerializeField] private GameObject SuitMenu;
     [SerializeField] private GameObject BootsMenu;
     
+    [SerializeField] private GameObject BuyMenu;
+
+    [SerializeField] private TextMeshProUGUI money;
+    [SerializeField] private TextMeshProUGUI defense;
+    
     private int showedMenu = 0;
     
     /*
      в зависимости от нашего лвла, будут открыватся различные вариации экиперовок, + покупка их
      */
-    
+
+    private void Awake()
+    {
+        PlayerPrefs.SetInt(_ResourceKeys.Money, 500);
+        money.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
+    }
+
     void Start()
     {
+        defense.text = DefenseEquipmentsHelper.GetEqupmentDefense().ToString();
         HelmetMenu.SetActive(false);
         MaskMenu.SetActive(false);
         GlovesMenu.SetActive(false);
@@ -45,6 +59,7 @@ public class _discoverMenu : MonoBehaviour
             else
             {
                 Deact();
+                BuyMenu.SetActive(false);
                 HelmetMenu.SetActive(true);
                 showedMenu = 1;
             }
@@ -59,6 +74,7 @@ public class _discoverMenu : MonoBehaviour
             else
             {
                 Deact();
+                BuyMenu.SetActive(false);
                 MaskMenu.SetActive(true);
                 showedMenu = 2;
             }
@@ -73,6 +89,7 @@ public class _discoverMenu : MonoBehaviour
             else
             {
                 Deact();
+                BuyMenu.SetActive(false);
                 GlovesMenu.SetActive(true);
                 showedMenu = 3;
             }
@@ -87,6 +104,7 @@ public class _discoverMenu : MonoBehaviour
             else
             {
                 Deact();
+                BuyMenu.SetActive(false);
                 ButcherMenu.SetActive(true);
                 showedMenu = 4;
             }
@@ -101,6 +119,7 @@ public class _discoverMenu : MonoBehaviour
             else
             {
                 Deact();
+                BuyMenu.SetActive(false);
                 SuitMenu.SetActive(true);
                 showedMenu = 5;
             }
@@ -115,12 +134,19 @@ public class _discoverMenu : MonoBehaviour
             else
             {
                 Deact();
+                BuyMenu.SetActive(false);
                 BootsMenu.SetActive(true);
                 showedMenu = 6;
             }
         });
         
         Back.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });
+    }
+
+    private void Update()
+    {
+        money.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
+        defense.text = DefenseEquipmentsHelper.GetEqupmentDefense().ToString();
     }
 
     private void Deact()

@@ -44,7 +44,49 @@ public class _ResourceKeys : MonoBehaviour
     public const string Ginger_root = "Key_Ginger_root";
     public const string Liver_eel = "Liver_eel";
     
+    // Достижения
+
+    public const string Начинающий = "Начинающий";
+    public const string _Начинающий = "Начинающий_buyed";
     
+    public const string Первые_шаги = "Первые шаги";
+    public const string _Первые_шаги = "Первые шаги_buyed";
+    
+    public const string Первопроходец = "Первопроходец";
+    public const string _Первопроходец = "Первопроходец_buyed";
+    
+    public const string Неудачник = "Неудачник";
+    public const string _Неудачник = "Неудачник_buyed";
+    
+    public const string  Врач_от_бога = "Врач от бога";
+    public const string _Врач_от_бога = "Врач от бога_buyed";
+    
+    public const string Продовольствие = "Продовольствие";
+    public const string _Продовольствие = "Продовольствие_buyed";
+    
+    public const string Крепкий_имунитет = "Крепкий имунитет";
+    public const string _Крепкий_имунитет = "Крепкий имунитет_buyed";
+    
+    public const string Геноцид = "Геноцид";
+    public const string _Геноцид = "Геноцид_buyed";
+    
+    public const string Всезнайка = "Всезнайка";
+    public const string _Всезнайка = "Всезнайка_buyed";
+    
+    public const string Золотые_руки = "Золотые руки";
+    public const string _Золотые_руки = "Золотые руки_buyed";
+    
+    public const string Телепат = "Телепат";
+    public const string _Телепат = "Телепат_buyed";
+    
+    public const string Лучший_гардероб = "Лучший гардероб";
+    public const string _Лучший_гардероб = "Лучший гардероб_buyed";
+    
+    public const string Решимость = "Решимость";
+    public const string _Решимость = "Решимость_buyed";
+    
+    public const string Подгончик = "Подгончик";
+    public const string _Подгончик = "Подгончик_buyed";
     
     private void Awake()
     {

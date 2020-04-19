@@ -25,6 +25,8 @@ public class _LocalizedMap : MonoBehaviour
         
         // Настройки
         _CommonMap.Add("Settings_title", "Настройки_Settings");
+        _CommonMap.Add("Settings_sounds", "Звуки_Sounds");
+        _CommonMap.Add("Settings_music", "Музыка_Music");
         
     }
     
