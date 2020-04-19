@@ -10,6 +10,7 @@ public class _storeIMGcontroller : MonoBehaviour
     
     [SerializeField] private string _Name;
     [SerializeField] private string _Description;
+    [SerializeField] private string _refToAnalysis;
 
     private _DescriptionController info;
     
@@ -21,6 +22,7 @@ public class _storeIMGcontroller : MonoBehaviour
         {
             info.setName(_Name);
             info.setDescription(_Description);
+            info.setRefToAnalysis(_refToAnalysis);
         });
     }
 }

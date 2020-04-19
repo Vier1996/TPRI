@@ -39,6 +39,7 @@ public class _GameController : MonoBehaviour
     [SerializeField] private int _cityImmunity = 0;
     [SerializeField] private GameObject panelDefeat;
     private int _additionalShoot;
+    private float patientX = -11f, patientY = -14f, patientZ = 86f;
 
     /// <summary>
     
@@ -91,19 +92,23 @@ public class _GameController : MonoBehaviour
 
     private void setAdditonalShoot()
     {
+        bool checkShoot = false;
         if (PlayerPrefs.GetInt("pass_1_skl") == 1)
         {
             _additionalShoot = 1;
+            checkShoot = true;
         }
-        else if (PlayerPrefs.GetInt("pass_2_skl") == 1)
+        if (PlayerPrefs.GetInt("pass_2_skl") == 1)
         {
             _additionalShoot = 2;
+            checkShoot = true;
         }
-        else if (PlayerPrefs.GetInt("pass_3_skl") == 1)
+        if (PlayerPrefs.GetInt("pass_3_skl") == 1)
         {
             _additionalShoot = 3;
+            checkShoot = true;
         }
-        else _additionalShoot = 0;
+        if(!checkShoot) _additionalShoot = 0;
     }
     
     private void Start()
@@ -223,8 +228,9 @@ public class _GameController : MonoBehaviour
     {
         if (countNPC < 5)
         {
-            GameObject npc = Resources.Load<GameObject>("Peolple/PeopleTemplate " + countNPC);
-            _NPC = Instantiate(npc, spawnForPeople.transform);
+            GameObject npc = Resources.Load<GameObject>("Peolple/Patient" + countNPC);
+            _NPC = Instantiate(npc);
+            _NPC.transform.position = new Vector3(patientX, patientY, patientZ);
             resetDialog();
             countNPC++;
             
@@ -256,6 +262,25 @@ public class _GameController : MonoBehaviour
         }
     }
 
+    private void setScalePatient()
+    {
+        List<int> indexPatients1 = new List<int>() {0, 1, 4, 6, 7, 8, 10};
+        List<int> indexPatients2 = new List<int>() {2, 5, 9, 11, 12, 13};
+        float scale = 0f;
+        if (indexPatients1.Contains(countNPC))
+        {
+            scale = 441.5f;
+        }
+
+        if (indexPatients2.Contains(countNPC))
+        {
+            scale = 15;
+        }
+
+        if (countNPC == 3) scale = 400f;
+        _NPC.GetComponent<_scaler>()._Scale = scale;
+    }
+    
     private void resetDialog()
     {
         _dialogPanel = GameObject.Find("dialogsPanel");
