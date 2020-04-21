@@ -13,7 +13,6 @@ using Random = UnityEngine.Random;
 public class _GameController : MonoBehaviour
 {
     public _skillsActivator _SkillsActivator;
-    public GameObject[] people;
     [SerializeField] private int CountPuppets;
     [SerializeField] private Transform spawnPlace;
     private static int Ctr = 0;
@@ -45,6 +44,8 @@ public class _GameController : MonoBehaviour
 
     [SerializeField] private Button endMenu;
     [SerializeField] private Button endNextLevel;
+
+    [SerializeField] private QUEUE _queue;
 
     /// <summary>
     
@@ -124,22 +125,20 @@ public class _GameController : MonoBehaviour
     {
         alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
         infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
-        
-        Invoke(nameof(SpawnPuppets), 1f);
-        Invoke(nameof(SpawnPuppets), 2f);
-        Invoke(nameof(SpawnPuppets), 3f);
-        Invoke(nameof(SpawnPuppets), 4f);
-        Invoke(nameof(SpawnPuppets), 5f);
     }
-    
-    private void SpawnPuppets()
+
+    private void stopper()
     {
-        Instantiate(people[Ctr], spawnPlace);
-        Ctr++;
+        _passingPeople.interactable = true;
     }
 
     private void Passing()
     {
+        _queue.PsholVon();
+        _passingPeople.interactable = false;
+        Invoke(nameof(stopper), 3f);
+        
+        
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
         InfoAboutIlnesses info = new InfoAboutIlnesses();
         int numOfSymptoms = info.getSymptoms()[issues._issueName].Count;

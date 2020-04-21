@@ -7,6 +7,9 @@ public class _ResourceKeys : MonoBehaviour
     private static _ResourceKeys instance;
     
     public const string CharacterLevel = "CharacterLevel";
+    public const string NeddedScore = "NeddedScore";
+    public const string CurrentScore = "CurrentScore";
+
     public const string Money = "Key_Money";
     public const string Defense = "Key_Defense";
     public const string CityImunity = "Key_CityImunity";
@@ -101,5 +104,13 @@ public class _ResourceKeys : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    public static void LevelUp()
+    {
+        PlayerPrefs.SetInt(CharacterLevel, PlayerPrefs.GetInt(CharacterLevel) + 1);
+        float multiplicator = Random.Range(1.5f, 1.9f);
+        PlayerPrefs.SetFloat(NeddedScore, PlayerPrefs.GetFloat(NeddedScore) + multiplicator);
+        PlayerPrefs.SetInt(CurrentScore, 0);
     }
 }
