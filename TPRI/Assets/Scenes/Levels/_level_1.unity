@@ -964,7 +964,12 @@ MonoBehaviour:
   counter: {fileID: 18284011}
   key: Key_Healing_salve
   get: {fileID: 84506588}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
+  - "\u0413\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
   sanya: {fileID: 2129296749}
 --- !u!1 &87754916
 GameObject:
@@ -10968,8 +10973,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10994,10 +11000,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -12205,7 +12211,12 @@ MonoBehaviour:
   counter: {fileID: 1276954428}
   key: Key_Panacea
   get: {fileID: 959945812}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u043E\u0431\u043E\u043D\u044F\u043D\u0438\u044F"
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0433\u043E\u0440\u043B\u0435"
   sanya: {fileID: 2129296749}
 --- !u!1001 &964296729
 PrefabInstance:
@@ -12493,7 +12504,10 @@ MonoBehaviour:
   counter: {fileID: 596023426}
   key: Key_Candy
   get: {fileID: 1005203445}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u041B\u0430\u044E\u0449\u0438\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   sanya: {fileID: 2129296749}
 --- !u!1 &1028517303
 GameObject:
@@ -14535,8 +14549,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14561,10 +14576,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -16437,8 +16452,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16463,10 +16479,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -20327,8 +20343,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20353,10 +20370,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -20678,8 +20695,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20704,10 +20722,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -22411,7 +22429,10 @@ MonoBehaviour:
   counter: {fileID: 147624324}
   key: Key_Tincture
   get: {fileID: 1837675215}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u0411\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
+  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
   sanya: {fileID: 2129296749}
 --- !u!1 &1849551000
 GameObject:
@@ -22470,8 +22491,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22496,10 +22518,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -24567,8 +24589,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24593,10 +24616,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

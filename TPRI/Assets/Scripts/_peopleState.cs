@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class _peopleState : _dialogContainer
 {
@@ -17,12 +18,14 @@ public class _peopleState : _dialogContainer
     private bool _problemsD;
     private bool _visitD;
     private Analisys _analisys;
+    private string issue;
 
 
     private void Start()
     {
+        issue = gameObject.GetComponent<_PeopleIssues>()._issueName;
         toSpeak = GameObject.FindWithTag("dialogPanel").GetComponent<TextMeshProUGUI>();
-        toSpeak.text = BaseDialogs[0];
+        toSpeak.text = BaseDialogs[issue] + nameOfPatient;
         _whereD = _problemsD = _visitD = false;
         _analisys = new Analisys(analysis);
         // 
@@ -35,20 +38,20 @@ public class _peopleState : _dialogContainer
         {
             if (GameObject.FindGameObjectWithTag("WhereD").GetComponent<TextMeshProUGUI>().text != "" && !_whereD)
             {
-                GameObject.FindGameObjectWithTag("WhereAnswer").GetComponent<TextMeshProUGUI>().text += WhereDialogs[0];
+                GameObject.FindGameObjectWithTag("WhereAnswer").GetComponent<TextMeshProUGUI>().text += WhereDialogs[issue];
                 _whereD = true;
             }
 
             if (GameObject.FindGameObjectWithTag("ProblemsD").GetComponent<TextMeshProUGUI>().text != "" && !_problemsD)
             {
                 GameObject.FindGameObjectWithTag("ProblemsAnswer").GetComponent<TextMeshProUGUI>().text +=
-                    ProblemsDialogs[0];
+                    ProblemsDialogs[issue];
                 _problemsD = true;
             }
 
             if (GameObject.FindGameObjectWithTag("VisitD").GetComponent<TextMeshProUGUI>().text != "" && !_visitD)
             {
-                GameObject.FindGameObjectWithTag("VisitAnswer").GetComponent<TextMeshProUGUI>().text += VisitDialogs[0];
+                GameObject.FindGameObjectWithTag("VisitAnswer").GetComponent<TextMeshProUGUI>().text += VisitDialogs[Random.Range(0, VisitDialogs.Count)];
                 _visitD = true;
             }
         }
@@ -65,18 +68,10 @@ public class _peopleState : _dialogContainer
 
 public class Analisys
 {
-    /*public string Blood = "отрицательный";
-    public string Pee = "отрицательный";
-    public string Smear = "отрицательный"; // мазок
-    public string Sputum = "отрицательный"; // мокрота
-    public string Saliva = "отрицательный"; // слюна
-    public string Shit = "отрицательный";
-    public GameObject AnalysController;*/
     private Dictionary<string, string> _availableAnalysis;
 
     public Analisys(string[] analyses)
     {
-        //AnalysController = GameObject.FindGameObjectWithTag("Analysis");
         _availableAnalysis = new Dictionary<string, string>();
         setAvailableResult(analyses);
     }

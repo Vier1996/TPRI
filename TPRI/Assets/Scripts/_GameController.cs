@@ -92,6 +92,12 @@ public class _GameController : MonoBehaviour
                     Destroy(_NPC);
                     Invoke(nameof(InitNPC), 3);
                     _additionalShoot--;
+                    int count = PlayerPrefs.GetInt(_ResourceKeys.Count_Killed) + 1;
+                    if (count == 50)
+                    {
+                        PlayerPrefs.SetInt(_ResourceKeys.Геноцид, 1);
+                    }
+                    PlayerPrefs.SetInt(_ResourceKeys.Count_Killed, count);
                 }
             }
         });
@@ -184,6 +190,12 @@ public class _GameController : MonoBehaviour
         else
         {
             healed += 1;
+            int count = PlayerPrefs.GetInt(_ResourceKeys.Count_healed_People) + 1;
+            if (count >= 20)
+            {
+                PlayerPrefs.SetInt(_ResourceKeys.Врач_от_бога, 1);
+            }
+            PlayerPrefs.SetInt(_ResourceKeys.Count_healed_People, count);
         }
         
         Destroy(_NPC);

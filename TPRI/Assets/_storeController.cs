@@ -30,6 +30,11 @@ public class _storeController : MonoBehaviour
             PlayerPrefs.SetInt("Key_" + item.text, Convert.ToInt32(amount.text));
             Debug.Log("Buyed - " + item.text + " -" + Convert.ToInt32(amount.text));
             Debug.Log(PlayerPrefs.GetInt("Key_" + item.text));
+            PlayerPrefs.SetInt(_ResourceKeys.Buyed_items_count, PlayerPrefs.GetInt(_ResourceKeys.Buyed_items_count) + Convert.ToInt32(amount.text));
+            if (PlayerPrefs.GetInt(_ResourceKeys.Buyed_items_count) >= 50)
+            {
+                PlayerPrefs.SetInt(_ResourceKeys.Продовольствие, 1);
+            }
         });
         
         Return.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });

@@ -91,6 +91,11 @@ public class _ResourceKeys : MonoBehaviour
     
     public const string Подгончик = "Подгончик";
     public const string _Подгончик = "Подгончик_buyed";
+
+
+    public const string Buyed_items_count = "Buyed_items_count";
+    public const string Count_healed_People = "Count_healed_people";
+    public const string Count_Killed = "Killed";
     
     private void Awake()
     {

@@ -33,9 +33,9 @@ RectTransform:
   m_Father: {fileID: 4743289420873129750}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 119.4, y: -77}
   m_SizeDelta: {x: 234.3, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1788421268881401100
@@ -261,9 +261,9 @@ RectTransform:
   m_Father: {fileID: 284244827386073714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30.975, y: -76}
   m_SizeDelta: {x: 61.95, y: 49.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3722073415357563479
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5109710845457811838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
@@ -754,9 +754,9 @@ RectTransform:
   m_Father: {fileID: 4743289420873129750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 119.4, y: -25}
   m_SizeDelta: {x: 234.3, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4661731941171241909
@@ -910,9 +910,9 @@ RectTransform:
   m_Father: {fileID: 284244827386073714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30.975, y: -24.84}
   m_SizeDelta: {x: 61.95, y: 49.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7272109264529589294
@@ -996,7 +996,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8888494116930071513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 

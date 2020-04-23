@@ -15,20 +15,24 @@ public class _achivementsController : MonoBehaviour
 
     void Awake()
     {
-        if (PlayerPrefs.GetInt(Key) == 1 || PlayerPrefs.GetInt(Key + "_buyed") == 1)
+        if (PlayerPrefs.GetInt(Key + "_buyed") == 1)
         {
             _get.interactable = false;
             sprite.GetComponent<Image>().sprite = Toggle;
+        }
+        else if (PlayerPrefs.GetInt(Key) == 0)
+        {
+            _get.interactable = false;
         }
         else
         {
             _get.onClick.AddListener(() =>
             {
                 PlayerPrefs.SetInt(_ResourceKeys.skills, PlayerPrefs.GetInt(_ResourceKeys.skills) + _count);
-                
-                PlayerPrefs.SetInt(Key, 1);
+
+                //PlayerPrefs.SetInt(Key, 1);
                 PlayerPrefs.SetInt(Key + "_buyed", 1);
-                
+
                 sprite.GetComponent<Image>().sprite = Toggle;
                 _get.interactable = false;
             });

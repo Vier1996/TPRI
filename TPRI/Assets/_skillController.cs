@@ -44,6 +44,10 @@ public class _skillController : MonoBehaviour
                if (PlayerPrefs.GetInt(_ResourceKeys.skills) >= Int32.Parse(SkillPrice))
                {
                   Debug.Log(SkillsName);
+                  if (SkillsName.Equals("Supreme"))
+                  {
+                     PlayerPrefs.SetInt(_ResourceKeys.Золотые_руки, 1);
+                  }
                   PlayerPrefs.SetInt(SkillsPath, 1);
                   GetComponent<Image>().DOColor(new Color(1, 1, 1, 1), 2);
                   reserched = true;

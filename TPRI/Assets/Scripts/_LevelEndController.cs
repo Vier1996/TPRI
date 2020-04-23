@@ -85,6 +85,7 @@ public class _LevelEndController : MonoBehaviour
     
     public void setPanelWinInfo()
     {
+        PlayerPrefs.SetInt(_ResourceKeys.Начинающий, 1);
         gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
         gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text += " " + _countPatient;
         gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text += " " + _countPassingIlls;

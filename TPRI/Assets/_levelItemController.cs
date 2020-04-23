@@ -77,6 +77,10 @@ public class _levelItemController : MonoBehaviour
                 index_cur_sympt++;
             }
             _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
+            if (_GameController.countHealedSymptomes == 3)
+            {
+                PlayerPrefs.SetInt(_ResourceKeys.Первые_шаги, 1);
+            }
         }
     }
 

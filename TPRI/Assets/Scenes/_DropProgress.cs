@@ -129,5 +129,50 @@ public class _DropProgress
         PlayerPrefs.SetInt("Boots_upg2", 0);
         PlayerPrefs.SetInt("Boots_upg3", 0);
     }
+
+    public static void DropAchive()
+    {
+        PlayerPrefs.SetInt(_ResourceKeys.Начинающий, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Начинающий, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Первые_шаги, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Первые_шаги, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Первопроходец, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Первопроходец, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Неудачник, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Неудачник, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Врач_от_бога, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Врач_от_бога, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Продовольствие, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Продовольствие, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Крепкий_имунитет, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Крепкий_имунитет, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Геноцид, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Геноцид, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Всезнайка, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Всезнайка, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Золотые_руки, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Золотые_руки, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Телепат, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Телепат, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Лучший_гардероб, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Лучший_гардероб, 0);
+        
+        PlayerPrefs.SetInt(_ResourceKeys.Решимость, 0);
+        PlayerPrefs.SetInt(_ResourceKeys._Решимость, 0);
+
+        PlayerPrefs.SetInt(_ResourceKeys.Подгончик, 1);
+        PlayerPrefs.SetInt(_ResourceKeys._Подгончик, 0);
+    }
 }
 
