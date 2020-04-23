@@ -10950,8 +10950,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70.03, y: -359.75}
-  m_SizeDelta: {x: 140.05, y: 59.23}
+  m_AnchoredPosition: {x: 92.02502, y: -357.58}
+  m_SizeDelta: {x: 184.05, y: 59.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873427980
 MonoBehaviour:
@@ -10982,7 +10982,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11007,7 +11007,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 258
+  m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -14526,7 +14526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210.07999, y: -199.4}
+  m_AnchoredPosition: {x: 210.07999, y: -192}
   m_SizeDelta: {x: 140.05, y: 48.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173931518
@@ -16429,8 +16429,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70.03, y: -142}
-  m_SizeDelta: {x: 140.05, y: 49.07}
+  m_AnchoredPosition: {x: 92.025, y: -141.61}
+  m_SizeDelta: {x: 184.05, y: 49.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287374177
 MonoBehaviour:
@@ -16461,7 +16461,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16486,7 +16486,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 258
+  m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -20320,8 +20320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70.02, y: -259.8}
-  m_SizeDelta: {x: 140.05, y: 49.12}
+  m_AnchoredPosition: {x: 92, y: -251.6}
+  m_SizeDelta: {x: 184.1, y: 52.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685735287
 MonoBehaviour:
@@ -20352,7 +20352,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20377,7 +20377,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 258
+  m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -20408,7 +20408,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.000033860288, w: 0}
   m_textInfo:
     textComponent: {fileID: 1685735287}
     characterCount: 0
@@ -20672,7 +20672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210.08, y: -310.51}
+  m_AnchoredPosition: {x: 210.08, y: -312}
   m_SizeDelta: {x: 140.05, y: 31.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1730025557
@@ -22468,7 +22468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210.07999, y: -85.1}
+  m_AnchoredPosition: {x: 210.08, y: -93}
   m_SizeDelta: {x: 140.05, y: 48.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849551002
@@ -24598,7 +24598,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.6784314}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

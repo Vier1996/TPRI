@@ -14,11 +14,10 @@ public class _queueController : MonoBehaviour
     
     void Start()
     {
-        PlayerPrefs.SetInt("Supreme", 1);
         InfoAboutIlnesses info = new InfoAboutIlnesses();
         int numOfSymptoms = info.getSymptoms()[ourPeople.GetComponent<_PeopleIssues>()._issueName].Count;
 
-        if (PlayerPrefs.GetInt("Supreme") == 1 && numOfSymptoms > 1)
+        if (PlayerPrefs.GetInt("10_skl") == 1 && numOfSymptoms > 1)
         {
             GetComponent<Image>().color = Color.red;
         }

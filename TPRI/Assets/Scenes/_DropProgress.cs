@@ -36,6 +36,7 @@ public class _DropProgress
         PlayerPrefs.SetInt("7_skl", 0);
         PlayerPrefs.SetInt("8_skl", 0);
         PlayerPrefs.SetInt("9_skl", 0);
+        PlayerPrefs.SetInt("10_skl", 0);
 
         PlayerPrefs.SetInt("pass_1_skl", 0);
         PlayerPrefs.SetInt("pass_2_skl", 0);
