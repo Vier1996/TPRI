@@ -6,11 +6,10 @@ using UnityEngine.UI;
 
 public class _storeIMGcontroller : MonoBehaviour
 {
-    private const string key = "DWEQ";
-    
     [SerializeField] private string _Name;
     [SerializeField] private string _Description;
     [SerializeField] private string _refToAnalysis;
+    [SerializeField] private int prcie;
 
     private _DescriptionController info;
     
@@ -21,6 +20,7 @@ public class _storeIMGcontroller : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(() =>
         {
             info.setName(_Name);
+            info.setPrice(prcie);
             info.setDescription(_Description);
             info.setRefToAnalysis(_refToAnalysis);
         });

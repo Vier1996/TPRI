@@ -8,15 +8,22 @@ public class _DescriptionController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private TextMeshProUGUI Descritption;
     [SerializeField] private TextMeshProUGUI refToAnalysis;
+    [SerializeField] private TextMeshProUGUI Price;
+    private int _Price = 0;
     
     public void setName(string _Name)
     {
         Name.text = _Name;
     }
 
-    public string GetName()
+    public void setPrice(int _price)
     {
-        return Name.text;
+        _Price = _price;
+        Price.text = _price.ToString();
+    }
+    public int GetPrice()
+    {
+        return _Price;
     }
 
     public void setDescription(string _Desc)
