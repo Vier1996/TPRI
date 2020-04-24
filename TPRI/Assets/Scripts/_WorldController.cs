@@ -16,36 +16,40 @@ public class _WorldController : MonoBehaviour
 
     private void Awake()
     {
+        //PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
         endDays = PlayerPrefs.GetInt("DEATHDAYS");
-        
+
         Dialogs[0] = "Шот хуево...";
         Dialogs[1] = "Чуствую что скоро сдохну";
         Dialogs[2] = "ОТЪЕБИТЕСЬ! Я В ПОРЯДКЕ";
-        
-        if (PlayerPrefs.GetInt(_ResourceKeys.OurDeath) == 1)
-           if(endDays == 0) 
-               endDays = Random.Range(1, 3);
-           else
-           {
-               if (endDays == 0)
-               {
-                   Debug.Log("пизда");
-                   PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
-                   PlayerPrefs.SetInt("DEATHDAYS", endDays);
-               }
-               else
-               {
-                   ShowIssueScene();
-               }
-           }
 
+        if (PlayerPrefs.GetInt(_ResourceKeys.OurDeath) == 1)
+        {
+            if (endDays == 0)
+            {
+                endDays = Random.Range(1, 3);
+            }
+            else
+            {
+                if (endDays == 0)
+                {
+                    Debug.Log("пизда");
+                    PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
+                    PlayerPrefs.SetInt("DEATHDAYS", endDays);
+                }
+                else
+                {
+                    ShowIssueScene();
+                }
+            }
+        }
     }
 
     private void ShowIssueScene()
     {
         int _d = Random.Range(0, Dialogs.Length);
         text.GetComponent<TextMeshProUGUI>().text = Dialogs[_d];
-        
+
         scene.SetActive(true);
         scene.GetComponent<Animation>().Play();
         text.GetComponent<Animation>().Play();
