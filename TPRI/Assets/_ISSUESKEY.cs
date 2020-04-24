@@ -26,7 +26,7 @@ public class _ISSUESKEY : MonoBehaviour
     public const string гастрит = "Key_гастрит";
     public const string гепатит = "Key_гепатит";
     public const string грипп = "Key_грипп";
-    public const string тубиркулез = "Key_тубиркулез";
+    public const string тубиркулез = "Key_туберкулез";
     public const string корь = "Key_корь";
     public const string бронхит = "Key_бронхит";
     public const string язва = "Key_язва";

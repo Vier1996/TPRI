@@ -80,15 +80,24 @@ public class _CommonSkillsController : MonoBehaviour
 
     private void preset()
     {
+        int defense = DefenseEquipmentsHelper.GetEqupmentDefense();
         if (Defense_1.reserched)
         {
             int oldDefense = PlayerPrefs.GetInt(_ResourceKeys.Defense);
-            PlayerPrefs.SetInt(_ResourceKeys.Defense, oldDefense + 1); 
+            PlayerPrefs.SetInt(_ResourceKeys.Defense, oldDefense + 1);
+            if (defense + (oldDefense + 1) >= 25)
+            {
+                PlayerPrefs.SetInt(_ResourceKeys.Крепкий_имунитет, 1);
+            }
         }
         if (Defense_2.reserched)
         {
             int oldDefense = PlayerPrefs.GetInt(_ResourceKeys.Defense);
             PlayerPrefs.SetInt(_ResourceKeys.Defense, oldDefense + 2); 
+            if (defense + (oldDefense + 2) >= 25)
+            {
+                PlayerPrefs.SetInt(_ResourceKeys.Крепкий_имунитет, 1);
+            }
         }
         if (LifeCity_1.reserched)
         {

@@ -115,7 +115,7 @@ public class _ResourceKeys : MonoBehaviour
     {
         PlayerPrefs.SetInt(CharacterLevel, PlayerPrefs.GetInt(CharacterLevel) + 1);
         float multiplicator = Random.Range(1.5f, 1.9f);
-        PlayerPrefs.SetFloat(NeddedScore, PlayerPrefs.GetFloat(NeddedScore) + multiplicator);
+        PlayerPrefs.SetFloat(NeddedScore, PlayerPrefs.GetFloat(NeddedScore)*multiplicator);
         PlayerPrefs.SetInt(CurrentScore, 0);
     }
 }

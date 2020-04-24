@@ -1336,7 +1336,6 @@ GameObject:
   - component: {fileID: 229148982}
   - component: {fileID: 229148981}
   - component: {fileID: 229148983}
-  - component: {fileID: 229148984}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1426,19 +1425,6 @@ MonoBehaviour:
   _price: {fileID: 750389970}
   price: 20
   BuyMenu: {fileID: 332927411}
---- !u!114 &229148984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229148979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2032b0c15f882d4ebaedb8788e4b4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Gloves_upg
 --- !u!1 &254051800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1645,6 @@ GameObject:
   - component: {fileID: 326989053}
   - component: {fileID: 326989052}
   - component: {fileID: 326989054}
-  - component: {fileID: 326989055}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1749,19 +1734,6 @@ MonoBehaviour:
   _price: {fileID: 750389970}
   price: 40
   BuyMenu: {fileID: 332927411}
---- !u!114 &326989055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326989050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2032b0c15f882d4ebaedb8788e4b4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Boots_upg
 --- !u!1 &332927411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,7 +2300,6 @@ GameObject:
   - component: {fileID: 411432147}
   - component: {fileID: 411432146}
   - component: {fileID: 411432148}
-  - component: {fileID: 411432149}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -2418,19 +2389,6 @@ MonoBehaviour:
   _price: {fileID: 750389970}
   price: 35
   BuyMenu: {fileID: 332927411}
---- !u!114 &411432149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411432144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2032b0c15f882d4ebaedb8788e4b4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Mask_upg
 --- !u!1 &412386020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,7 +2519,6 @@ GameObject:
   - component: {fileID: 426356187}
   - component: {fileID: 426356186}
   - component: {fileID: 426356188}
-  - component: {fileID: 426356189}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -2651,19 +2608,6 @@ MonoBehaviour:
   _price: {fileID: 750389970}
   price: 45
   BuyMenu: {fileID: 332927411}
---- !u!114 &426356189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426356184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2032b0c15f882d4ebaedb8788e4b4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Butcher_upg
 --- !u!1 &438328755
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,7 +6250,6 @@ GameObject:
   - component: {fileID: 1374504197}
   - component: {fileID: 1374504196}
   - component: {fileID: 1374504198}
-  - component: {fileID: 1374504199}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -6395,19 +6338,6 @@ MonoBehaviour:
   _price: {fileID: 750389970}
   price: 30
   BuyMenu: {fileID: 332927411}
---- !u!114 &1374504199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374504194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2032b0c15f882d4ebaedb8788e4b4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Helmet_upg
 --- !u!1 &1374771170
 GameObject:
   m_ObjectHideFlags: 0
@@ -9758,7 +9688,6 @@ GameObject:
   - component: {fileID: 2023149118}
   - component: {fileID: 2023149117}
   - component: {fileID: 2023149119}
-  - component: {fileID: 2023149120}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -9848,19 +9777,6 @@ MonoBehaviour:
   _price: {fileID: 750389970}
   price: 65
   BuyMenu: {fileID: 332927411}
---- !u!114 &2023149120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023149115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2032b0c15f882d4ebaedb8788e4b4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Suit_upg
 --- !u!1 &2032699901
 GameObject:
   m_ObjectHideFlags: 0

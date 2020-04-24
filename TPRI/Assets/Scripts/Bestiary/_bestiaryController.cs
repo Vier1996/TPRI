@@ -62,6 +62,7 @@ public class _bestiaryController : MonoBehaviour
     private void Start()
     {
         string name;
+        bool check = false;
         for (int i = 0; i < _viruses.Count; i++)
         {
             name = _info.getNameOfVirus(i).ToLower();
@@ -69,6 +70,15 @@ public class _bestiaryController : MonoBehaviour
             {
                 checkOpenIssues(i);
             }
+            else
+            {
+                check = true;
+            }
+        }
+
+        if (!check)
+        {
+            PlayerPrefs.SetInt(_ResourceKeys.Всезнайка, 1);
         }
     }
 

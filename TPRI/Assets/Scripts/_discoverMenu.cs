@@ -36,7 +36,7 @@ public class _discoverMenu : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetInt(_ResourceKeys.Money, 500);
+        PlayerPrefs.SetInt(_ResourceKeys.Money, 2000);
         money.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
     }
 
@@ -147,6 +147,15 @@ public class _discoverMenu : MonoBehaviour
     {
         money.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
         defense.text = DefenseEquipmentsHelper.GetEqupmentDefense().ToString();
+        if(defense.text.Equals("54"))
+        {
+            PlayerPrefs.SetInt(_ResourceKeys.Лучший_гардероб, 1);
+        }
+
+        if (Convert.ToInt32(defense.text) + PlayerPrefs.GetInt(_ResourceKeys.Defense) >= 25)
+        {
+            PlayerPrefs.SetInt(_ResourceKeys.Крепкий_имунитет, 1);
+        }
     }
 
     private void Deact()

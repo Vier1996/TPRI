@@ -24,7 +24,8 @@ public class _intro_ButtonController : MonoBehaviour
     PlayerPrefs.SetInt(_ResourceKeys.Count_healed_People, 0);
     PlayerPrefs.SetInt(_ResourceKeys.Count_Killed, 0);
     _DropProgress.DporBestiarii(0);
-    _DropProgress.DropSymptomys(0);
+    //_DropProgress.DropSymptomys(0);
+    //_DropProgress.InitBestiary();
     _settingsMenu = GameObject.FindGameObjectWithTag("Settings");
   }
 

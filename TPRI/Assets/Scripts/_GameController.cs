@@ -355,7 +355,8 @@ public class _GameController : MonoBehaviour
 
     private void MaybeIDie(int infection)
     {
-        int _defaultProtection = (int) (infection * (0.3 + PlayerPrefs.GetInt(_ResourceKeys.Defense)/100));
+        int defense = PlayerPrefs.GetInt(_ResourceKeys.Defense) + DefenseEquipmentsHelper.GetEqupmentDefense();
+        int _defaultProtection = (int) (infection * (0.3 + defense/100));
         int rate = infection - _defaultProtection;
         int Chance = Random.Range(1, 101);
 

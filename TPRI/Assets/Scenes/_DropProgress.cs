@@ -175,5 +175,24 @@ public class _DropProgress
         PlayerPrefs.SetInt(_ResourceKeys.Подгончик, 1);
         PlayerPrefs.SetInt(_ResourceKeys._Подгончик, 0);
     }
+
+    public static void InitBestiary()
+    {
+        PlayerPrefs.SetInt(_ISSUESKEY.простуда, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.чесотка, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.мигрень, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.гастрит, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.гепатит, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.грипп, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.тубиркулез, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.корь, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.бронхит, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.язва, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.менингит, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.коронавирус, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.пневмония, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.рак, 1);
+        PlayerPrefs.SetInt(_ISSUESKEY.цинга, 1);
+    }
 }
 
