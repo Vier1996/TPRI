@@ -360,8 +360,12 @@ public class _GameController : MonoBehaviour
         int Chance = Random.Range(1, 101);
 
         Debug.Log(rate);
-        
-        if(Chance <= rate)
+
+        if (Chance <= rate)
+        {
+            if(PlayerPrefs.GetInt(_ResourceKeys.TheFirstLevel) == 0)
+                PlayerPrefs.SetInt(_ResourceKeys.Неудачник, 1);
             PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 1);
+        }
     }
 }

@@ -9,7 +9,7 @@ public class _levelManager : MonoBehaviour
 {
     [SerializeField] private Button SettingsButton;
     
-    private GameObject _settingsMenu;
+    [SerializeField] private GameObject _settingsMenu;
 
     private GameObject _backToMainMenu;
     

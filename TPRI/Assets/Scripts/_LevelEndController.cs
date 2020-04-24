@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class _LevelEndController : MonoBehaviour
@@ -86,6 +87,7 @@ public class _LevelEndController : MonoBehaviour
     public void setPanelWinInfo()
     {
         PlayerPrefs.SetInt(_ResourceKeys.Начинающий, 1);
+        PlayerPrefs.SetInt(_ResourceKeys.TheFirstLevel, 1);
         gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
         gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text += " " + _countPatient;
         gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text += " " + _countPassingIlls;
@@ -98,6 +100,8 @@ public class _LevelEndController : MonoBehaviour
         Debug.Log("Slider     " + setLevelPointsSlider());
         levelPointsSlider.value = setLevelPointsSlider();
 
+        if(SceneManager.GetActiveScene().buildIndex == 8)
+            PlayerPrefs.SetInt(_ResourceKeys.Первопроходец, 1);
     }
 
     public void setPanelDefeat()
