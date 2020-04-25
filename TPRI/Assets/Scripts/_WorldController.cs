@@ -39,7 +39,10 @@ public class _WorldController : MonoBehaviour
                 }
                 else
                 {
-                    ShowIssueScene();
+                    if (PlayerPrefs.GetInt("BesiariiCome") == 1)
+                        PlayerPrefs.SetInt("BesiariiCome", 0);
+                    else
+                        ShowIssueScene();
                 }
             }
         }

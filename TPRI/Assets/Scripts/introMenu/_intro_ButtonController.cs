@@ -9,11 +9,8 @@ using UnityEngine.UI;
 public class _intro_ButtonController : MonoBehaviour
 {
   [SerializeField] private Button _Start, _Contitue, _Settings, _Home;
-
-  [SerializeField] private Button RUS, ENG;
-  
-   private GameObject _settingsMenu;
-   private _HeroData _hero;
+  [SerializeField] private GameObject _settingsMenu;
+  private _HeroData _hero;
 
   private void Awake()
   {
@@ -24,7 +21,6 @@ public class _intro_ButtonController : MonoBehaviour
     _DropProgress.DporBestiarii(0);
     //_DropProgress.DropSymptomys(0);
     //_DropProgress.InitBestiary();
-    _settingsMenu = GameObject.FindGameObjectWithTag("Settings");
   }
 
   private void Start()
@@ -34,18 +30,14 @@ public class _intro_ButtonController : MonoBehaviour
     _Home.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });
     _Settings.onClick.AddListener(() => { _settingsMenu.SetActive(true); });
     
-    RUS.onClick.AddListener(() =>
-    {
-      PlayerPrefs.SetInt("LOCALIZED", 0);
-    });
-    ENG.onClick.AddListener(() =>
-    {
-      PlayerPrefs.SetInt("LOCALIZED", 1);
-    });
   }
   
   private void ContinueGame()
   {
     SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
   }
+}
+
+internal class SeriliazeFieldAttribute : Attribute
+{
 }

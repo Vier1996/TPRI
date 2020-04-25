@@ -9,6 +9,7 @@ public class _settingsScript : MonoBehaviour
     public GameObject close;
     [SerializeField] private Slider _slider;
     private _audioController audio;
+    [SerializeField] private Button RUS, ENG;
 
     private void Awake()
     {
@@ -20,6 +21,15 @@ public class _settingsScript : MonoBehaviour
     private void Start()
     {
         close.GetComponent<Button>().onClick.AddListener(() => ShutDown());
+        
+        RUS.onClick.AddListener(() =>
+        {
+            PlayerPrefs.SetInt("LOCALIZED", 0);
+        });
+        ENG.onClick.AddListener(() =>
+        {
+            PlayerPrefs.SetInt("LOCALIZED", 1);
+        });
     }
 
     private void Update()

@@ -41,7 +41,14 @@ public class _audioController : MonoBehaviour
     
     public void SetVolume(float _volume)
     {
-        Music.volume = _volume;
-        lastValue = _volume;
+        try
+        {
+            Music.volume = _volume;
+            lastValue = _volume;
+        }
+        catch (NullReferenceException)
+        {
+        }
+        
     }
 }

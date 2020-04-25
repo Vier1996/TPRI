@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -508,6 +507,75 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KEY: Settings_day5
+--- !u!1001 &512701298
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 303416847656494142, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_Name
+      value: LocalizedMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 735.74274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 169.22379
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -117.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869584507797905514, guid: 3d4a58817b2871c45a18df9fcf3ee067,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d4a58817b2871c45a18df9fcf3ee067, type: 3}
 --- !u!1 &664797877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,7 +3231,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278557149
+    rgba: 4278556893
   m_fontColor: {r: 0.8679245, g: 0.5981583, b: 0.020469915, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3266,7 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15a88e7de894884fab5c7fc3140aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KEY: 
+  KEY: Settings_back
 --- !u!1 &1883462482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4844,6 +4912,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   close: {fileID: 4192262534220458328}
   _slider: {fileID: 2005561200665273605}
+  RUS: {fileID: 2005561201601584015}
+  ENG: {fileID: 2005561199734395364}
 --- !u!1 &2005561200474790708
 GameObject:
   m_ObjectHideFlags: 0

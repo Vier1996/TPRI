@@ -83,6 +83,9 @@ public class _GameController : MonoBehaviour
             _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
         }
         
+        alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
+        infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
+        
         b_killHim.GetComponent<Button>().onClick.AddListener(() =>
         {
             if (_additionalShoot != 0)
@@ -126,13 +129,6 @@ public class _GameController : MonoBehaviour
         }
         if(!checkShoot) _additionalShoot = 0;
     }
-    
-    private void Start()
-    {
-        alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
-        infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
-    }
-
     private void stopper()
     {
         _passingPeople.interactable = true;
