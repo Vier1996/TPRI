@@ -94,7 +94,7 @@ public class _storeController : MonoBehaviour
             else
             {
                 PlayerPrefs.SetInt(_ResourceKeys.Money, PlayerPrefs.GetInt(_ResourceKeys.Money) - multiplicator * info.GetPrice());
-                PlayerPrefs.SetInt("Key_" + info.getKey(), multiplicator);
+                PlayerPrefs.SetInt("Key_" + info.getKey(), PlayerPrefs.GetInt("Key_" + info.getKey()) + multiplicator);
             
                 Debug.Log("Buyed - " + item.text + " -" + multiplicator);
                 Debug.Log(PlayerPrefs.GetInt("Key_" + info.getKey()));

@@ -108,6 +108,7 @@ public class _GameController : MonoBehaviour
         endMenu.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
         endNextLevel.onClick.AddListener(() =>
         {
+            SaveStateToNextLevel();
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }); //пофиксить для 7го левла
@@ -335,6 +336,13 @@ public class _GameController : MonoBehaviour
         PlayerPrefs.SetInt("AlivePeople", Population);
         PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
         PlayerPrefs.SetInt("PEOPLE", countNPC - 1);
+    }
+
+    public void SaveStateToNextLevel()
+    {
+         PlayerPrefs.SetInt("AlivePeople", Population);
+         PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
+         SetNPCcount(0);
     }
 
     public int LoadPeopleState()
