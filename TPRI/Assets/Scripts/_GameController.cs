@@ -106,7 +106,11 @@ public class _GameController : MonoBehaviour
         });
         
         endMenu.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
-        endNextLevel.onClick.AddListener(() => { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }); //пофиксить для 7го левла
+        endNextLevel.onClick.AddListener(() =>
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }); //пофиксить для 7го левла
     }
 
     private void setAdditonalShoot()
@@ -147,7 +151,11 @@ public class _GameController : MonoBehaviour
         //people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
         //CountPuppets--;
         _levelEndController.setCountPatient(1);
-        issues.setSymptoms(tryToHealOneSymptom(issues.getSymptoms()));
+        if (issues.getSymptoms().Count != 0)
+        {
+            issues.setSymptoms(tryToHealOneSymptom(issues.getSymptoms()));
+        }
+
         if (issues.getSymptoms().Count != 0)
         {
             int infection = 0;
@@ -173,7 +181,7 @@ public class _GameController : MonoBehaviour
             _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
             infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
             alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
-            if (_infectedAndDeadCounter.getInfected() == 0)
+            if (_infectedAndDeadCounter.getInfected() == 0 && Population == 0)
             {
                 Time.timeScale = 0;
                 panelDefeat.SetActive(true);
@@ -304,6 +312,8 @@ public class _GameController : MonoBehaviour
             _levelEndController.setMoney();
             _levelEndController.setCountSkillPoints();
             panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
+            PlayerPrefs.SetInt("AlivePeople", Population);
+            PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
             
             if(GetComponent<_WorldController>().GetDays() > 0)
                 GetComponent<_WorldController>().SetDays(GetComponent<_WorldController>().GetDays() - 1);

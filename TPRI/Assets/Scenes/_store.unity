@@ -669,6 +669,8 @@ GameObject:
   - component: {fileID: 324346704}
   - component: {fileID: 324346706}
   - component: {fileID: 324346705}
+  - component: {fileID: 324346707}
+  - component: {fileID: 324346708}
   m_Layer: 5
   m_Name: Image (10)
   m_TagString: Untagged
@@ -731,6 +733,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324346703}
   m_CullTransparentMesh: 0
+--- !u!114 &324346707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324346703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Name: "\u0414\u0443\u0440\u0438\u0430\u043D"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435
+    \u043E\u0431\u043E\u043D\u044F\u043D\u0438\u044F, \u0431\u043E\u043B\u044C \u0432
+    \u0443\u0448\u0430\u0445, \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430,
+    \u043A\u0440\u043E\u0432\u044C"
+  prcie: 87
+  key: Durian
+--- !u!114 &324346708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324346703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 324346705}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &329734793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1425,8 @@ GameObject:
   - component: {fileID: 475464557}
   - component: {fileID: 475464559}
   - component: {fileID: 475464558}
+  - component: {fileID: 475464560}
+  - component: {fileID: 475464561}
   m_Layer: 5
   m_Name: Image (14)
   m_TagString: Untagged
@@ -1422,6 +1489,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475464556}
   m_CullTransparentMesh: 0
+--- !u!114 &475464560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475464556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Name: "\u041B\u043E\u0442\u0443\u0441"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430,
+    \u0440\u0432\u043E\u0442\u0430, \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435
+    \u0430\u043F\u043F\u0435\u0442\u0438\u0442\u0430"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430,
+    \u043A\u0430\u043B\u043B"
+  prcie: 0
+  key: Lotus
+--- !u!114 &475464561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475464556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 475464558}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &519647342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,10 +1745,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Tincture
-  _Description: a
-  _refToAnalysis: Can help with negative analysis of shit
+  _Name: "\u041D\u0430\u0441\u0442\u043E\u0439\u043A\u0430"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F
+    \u0431\u043E\u043B\u044C, \u0433\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443,
+    \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043C\u0430\u0437\u043A\u0438,
+    \u043A\u0440\u043E\u0432\u044C"
   prcie: 5
+  key: Tincture
 --- !u!114 &570787479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,10 +1904,10 @@ RectTransform:
   m_Father: {fileID: 1564239486}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.30400002}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000015258789, y: -0.5}
+  m_SizeDelta: {x: -0.000030517578, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622374049
 MonoBehaviour:
@@ -1962,8 +2096,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.100006, y: -0.0000038146973}
+  m_SizeDelta: {x: 55.7, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844580731
 MonoBehaviour:
@@ -2286,10 +2420,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Ginger_root
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u0421\u0432\u044F\u0442\u0430\u044F \u0432\u043E\u0434\u0430"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0441
+    \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u043E\u0441\u0442\u044C\u044E 35%"
+  _refToAnalysis: "\u041F\u0440\u0438 \u043B\u044E\u0431\u044B\u0445 \u043E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0445
+    \u0430\u043D\u0430\u043B\u0438\u0437\u0430\u0445"
   prcie: 100
+  key: Saint_water
 --- !u!1 &989597721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,10 +2557,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Panacea
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u041F\u0430\u043D\u0430\u0446\u0435\u044F"
+  _Description: "\u041F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u0432\u044B\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442
+    \u043B\u044E\u0431\u043E\u0435 \u0437\u0430\u0431\u043E\u043B\u0435\u0432\u0430\u043D\u0438\u0435
+    (\u0440\u0435\u0434\u043A\u043E\u0435 \u043B\u0435\u043A\u0430\u0440\u0441\u0442\u0432\u043E)"
+  _refToAnalysis: "\u041F\u0440\u0438 \u043B\u044E\u0431\u043E\u043C \u043E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u043C
+    \u0430\u043D\u0430\u043B\u0438\u0437\u0435"
   prcie: 54
+  key: Panacea
 --- !u!1 &1016148315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,8 +2718,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3000102, y: -67.7}
-  m_SizeDelta: {x: 200, y: 43.5}
+  m_AnchoredPosition: {x: 0.801, y: -54}
+  m_SizeDelta: {x: 335.2, y: 43.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032641687
 MonoBehaviour:
@@ -2600,15 +2741,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2626,10 +2768,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2664,7 +2806,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -36.389053, y: -1.615507, z: -51.141357, w: -3.305292}
+  m_margin: {x: -31.889023, y: -0.5626223, z: -42.14124, w: -2.252445}
   m_textInfo:
     textComponent: {fileID: 1032641687}
     characterCount: 0
@@ -2733,8 +2875,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3000102, y: -0.0000076293945}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0.8, y: 21}
+  m_SizeDelta: {x: 335.2, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090327843
 MonoBehaviour:
@@ -2756,15 +2898,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2782,10 +2925,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2820,7 +2963,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -36.389053, y: 0, z: -51.141357, w: -27.537659}
+  m_margin: {x: -34.665436, y: 0, z: -30.141006, w: -0.32986638}
   m_textInfo:
     textComponent: {fileID: 1090327843}
     characterCount: 0
@@ -3179,10 +3322,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Healing_salve
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u041B\u0435\u0447\u0435\u0431\u043D\u0430\u044F \u043C\u0430\u0437\u044C"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u043F\u0440\u0438
+    \u0440\u0430\u0437\u043D\u043E\u0433\u043E \u0440\u043E\u0434\u0430 \u0432\u044B\u0441\u044B\u043F\u0430\u043D\u0438\u0439
+    \u0438 \u0437\u0443\u0434\u0430, \u043D\u0430\u0441\u043C\u043E\u0440\u043A, \u0432\u044B\u043F\u0430\u0434\u0435\u043D\u0438\u0435
+    \u0437\u0443\u0431\u043E\u0432"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043C\u0430\u0437\u043A\u0438"
   prcie: 15
+  key: Healing_salve
 --- !u!1 &1214490161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3431,10 +3578,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Bunch_of_rosemary
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u041E\u0440\u0435\u0445\u0438"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0442\u043E\u0448\u043D\u043E\u0442\u0430,
+    \u0443\u0442\u043E\u043C\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C, \u043F\u043E\u0442\u0435\u0440\u044F
+    \u0432\u0435\u0441\u0430 "
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043A\u0440\u043E\u0432\u044C,
+    \u043A\u0430\u043B\u043B"
   prcie: 77
+  key: Nuts
 --- !u!1 &1288395024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,11 +3766,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Mixture
-  _Description: "\u041C\u043E\u0436\u0435\u0442 \u0438\u0437\u043B\u0435\u0447\u0438\u0442\u044C
-    \u043D\u0430\u0441\u043C\u043E\u0440\u043A, \u043A\u0430\u0448\u0435\u043B\u044C"
-  _refToAnalysis: Can help with negative analysis of blood
+  _Name: "\u041C\u0438\u043A\u0441\u0442\u0443\u0440\u0430"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u043A\u0430\u0448\u0435\u043B\u044C,
+    \u043F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435,
+    \u0438\u0437\u0436\u043E\u0433\u0430, \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043C\u0430\u0437\u043A\u0438,
+    \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430, \u0444\u043E\u043D\u0435\u043D\u0434\u043E\u0441\u043A\u043E\u043F"
   prcie: 10
+  key: Mixture
 --- !u!114 &1299535263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4407,8 +4561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3, y: 68}
-  m_SizeDelta: {x: 260.4, y: 52.6}
+  m_AnchoredPosition: {x: -4, y: 81}
+  m_SizeDelta: {x: 287.15, y: 52.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564239487
 MonoBehaviour:
@@ -4430,15 +4584,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 31ba23ed41ff97e40bf85e79e00db42d, type: 2}
+  m_sharedMaterial: {fileID: -4690623592027829049, guid: 31ba23ed41ff97e40bf85e79e00db42d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.6901961}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4456,8 +4611,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4494,7 +4649,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 11.760358}
   m_textInfo:
     textComponent: {fileID: 1564239487}
     characterCount: 0
@@ -4816,10 +4971,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Orchid_Leaf
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u041B\u0438\u0441\u0442 \u043E\u0440\u0445\u0438\u0434\u0435\u0438"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u043B\u0430\u044E\u0449\u0438\u0439
+    \u043A\u0430\u0448\u0435\u043B\u044C, \u0441\u0438\u043B\u044C\u043D\u0430\u044F
+    \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C, \u0440\u0432\u043E\u0442\u0430"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043A\u0440\u043E\u0432\u044C,
+    \u043C\u043E\u0447\u0430, \u0444\u043E\u043D\u0435\u043D\u0434\u043E\u0441\u043A\u043E\u043F"
   prcie: 12
+  key: Orchid_Leaf
 --- !u!1 &1731858690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,10 +5145,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Liver_eel
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u041A\u0440\u043E\u0432\u044C \u0437\u043C\u0435\u0438"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0433\u043E\u043B\u043E\u0434\u043D\u044B\u0435
+    \u0431\u043E\u043B\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435, \u043A\u0440\u043E\u0432\u043E\u0442\u043E\u0447\u0438\u0432\u043E\u0441\u0442\u044C
+    \u0434\u0435\u0441\u0435\u043D, \u0438\u0437\u0436\u043E\u0433\u0430"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043C\u0430\u0437\u043A\u0438,
+    \u043A\u0430\u043B\u043B"
   prcie: 24
+  key: Snake_blood
 --- !u!1 &1840591165
 GameObject:
   m_ObjectHideFlags: 0
@@ -5072,7 +5235,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 86891681}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.4096472
+  m_Size: 0.40964717
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5124,6 +5287,8 @@ GameObject:
   - component: {fileID: 1864562504}
   - component: {fileID: 1864562506}
   - component: {fileID: 1864562505}
+  - component: {fileID: 1864562507}
+  - component: {fileID: 1864562508}
   m_Layer: 5
   m_Name: Image (13)
   m_TagString: Untagged
@@ -5186,6 +5351,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864562503}
   m_CullTransparentMesh: 0
+--- !u!114 &1864562507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864562503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Name: "\u041A\u0440\u0435\u0441\u0442"
+  _Description: "\u0420\u0435\u0434\u043A\u0438\u0439 \u043F\u0440\u0435\u0434\u043C\u0435\u0442.
+    \u041C\u043E\u0436\u0435\u0442 \u0438\u0437\u043B\u0435\u0447\u0438\u0442\u044C
+    \u0433\u0435\u0440\u043E\u044F."
+  _refToAnalysis: 
+  prcie: 0
+  key: Key_Cross
+--- !u!114 &1864562508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864562503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1864562505}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1906769736
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,6 +5634,8 @@ GameObject:
   - component: {fileID: 1972250633}
   - component: {fileID: 1972250635}
   - component: {fileID: 1972250634}
+  - component: {fileID: 1972250636}
+  - component: {fileID: 1972250637}
   m_Layer: 5
   m_Name: Image (12)
   m_TagString: Untagged
@@ -5469,6 +5698,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972250632}
   m_CullTransparentMesh: 0
+--- !u!114 &1972250636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972250632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Name: "\u041B\u0443\u043A"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0431\u043E\u043B\u044C
+    \u0432 \u0433\u043B\u0430\u0437\u0430\u0445, \u0431\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435,
+    \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C, \u0434\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+    \u043A\u0430\u0448\u0435\u043B\u044C"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043C\u0430\u0437\u043A\u0438,
+    \u0444\u043E\u043D\u0435\u043D\u0434\u043E\u0441\u043A\u043E\u043F"
+  prcie: 0
+  key: Onion
+--- !u!114 &1972250637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972250632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1972250634}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1984242467
 GameObject:
   m_ObjectHideFlags: 0
@@ -5599,10 +5892,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Gargoyle_saliva
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u041F\u0443\u0447\u043E\u043A \u0438\u0437 \u0440\u043E\u043C\u0430\u0448\u043A\u0438
+    \u0438 \u043C\u044F\u0442\u044B"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C,
+    \u0441\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C,
+    \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430."
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430,
+    \u043A\u0440\u043E\u0432\u044C"
   prcie: 60
+  key: Chamomile_and_mint
 --- !u!1 &1995527020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5614,6 +5912,8 @@ GameObject:
   - component: {fileID: 1995527021}
   - component: {fileID: 1995527023}
   - component: {fileID: 1995527022}
+  - component: {fileID: 1995527024}
+  - component: {fileID: 1995527025}
   m_Layer: 5
   m_Name: Image (11)
   m_TagString: Untagged
@@ -5676,6 +5976,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995527020}
   m_CullTransparentMesh: 0
+--- !u!114 &1995527024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995527020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Name: "\u041E\u0442\u0432\u0430\u0440 \u0438\u0437 \u043A\u043B\u0435\u043D\u043E\u0432\u044B\u0445
+    \u043B\u0438\u0441\u0442\u044C\u0435\u0432"
+  _Description: "\u0418\u0437\u0434\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0442\u043E\u0448\u043D\u043E\u0442\u0430,
+    \u0441\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435,
+    \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043A\u0440\u043E\u0432\u044C,
+    \u043A\u0430\u043B\u043B"
+  prcie: 0
+  key: Maple_leaves
+--- !u!114 &1995527025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995527020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1995527022}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2002852801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5717,7 +6081,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 2002852803}
   m_TextComponent: {fileID: 2063106115}
   m_materialReferenceIndex: 1
@@ -6188,7 +6552,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115986d5a837871439e978684d65fd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: Candy
-  _Description: 
-  _refToAnalysis: 
+  _Name: "\u041B\u0435\u0434\u0435\u043D\u0435\u0446"
+  _Description: "\u0418\u0437\u043B\u0435\u0447\u0438\u0432\u0430\u0435\u0442: \u0431\u043E\u043B\u0438
+    \u0432 \u0433\u043E\u0440\u043B\u0435, \u043A\u0430\u0448\u0435\u043B\u044C, \u0431\u043E\u043B\u0438
+    \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  _refToAnalysis: "\u0410\u043D\u0430\u043B\u0438\u0437\u044B: \u043A\u0430\u043B\u043B,
+    \u043C\u043E\u0447\u0430, \u0444\u043E\u043D\u0435\u043D\u0434\u043E\u0441\u043A\u043E\u043F"
   prcie: 25
+  key: Candy

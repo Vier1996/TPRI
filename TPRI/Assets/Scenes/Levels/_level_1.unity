@@ -447,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 488e1589d7001224e9e5ee49b025d139, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1897966585}
-  key: Liver_eel
+  key: Key_Cross
   get: {fileID: 10054634}
   curableSymptoms: []
   sanya: {fileID: 2129296749}
@@ -868,7 +868,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 111.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84506588
 MonoBehaviour:
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 20d60b495eed12f4780d46839fab19d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -965,11 +965,11 @@ MonoBehaviour:
   key: Key_Healing_salve
   get: {fileID: 84506588}
   curableSymptoms:
-  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
-  - "\u0418\u0437\u0436\u043E\u0433\u0430"
-  - "\u0413\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443"
-  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
-  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0417\u0443\u0434"
+  - "\u0421\u044B\u043F\u044C"
+  - "\u0425\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0430\u044F \u0441\u044B\u043F\u044C"
+  - "\u041D\u0430\u0441\u043C\u043E\u0440\u043A"
+  - "\u0412\u044B\u043F\u0430\u0434\u0435\u043D\u0438\u0435 \u0437\u0443\u0431\u043E\u0432"
   sanya: {fileID: 2129296749}
 --- !u!1 &87754916
 GameObject:
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mixture
+  m_text: Saint water
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 6
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1095,12 +1095,12 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 87754918}
-    characterCount: 7
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2249,6 +2249,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153567510}
+  m_CullTransparentMesh: 0
+--- !u!1 &165469925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165469926}
+  - component: {fileID: 165469928}
+  - component: {fileID: 165469927}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [LiberationSans SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &165469926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165469925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 911286260}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &165469927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165469925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 165469928}
+  m_TextComponent: {fileID: 911286261}
+  m_materialReferenceIndex: 1
+--- !u!222 &165469928
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165469925}
   m_CullTransparentMesh: 0
 --- !u!1 &176967798
 GameObject:
@@ -3521,7 +3593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mixture
+  m_text: Chamomile and mint
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3566,7 +3638,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 6
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3590,12 +3662,12 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 231480524}
-    characterCount: 7
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 1
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4253,7 +4325,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1742616456}
   m_Father: {fileID: 904276829}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4280,7 +4353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ginger root
+  m_text: Nuts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4325,7 +4398,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 7
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4349,12 +4422,12 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 292620964}
-    characterCount: 11
+    characterCount: 4
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4363,7 +4436,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1742616457}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -5195,6 +5268,7 @@ GameObject:
   - component: {fileID: 378251673}
   - component: {fileID: 378251672}
   - component: {fileID: 378251671}
+  - component: {fileID: 378251674}
   m_Layer: 5
   m_Name: item (1)
   m_TagString: Untagged
@@ -5284,7 +5358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b4575886bb0cf4844aa7c3f9a046df80, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5302,6 +5376,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378251669}
   m_CullTransparentMesh: 0
+--- !u!114 &378251674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378251669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb9deea066dfa54aab408133b1fa719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: {fileID: 807238215}
+  key: Key_Maple_leaves
+  get: {fileID: 378251671}
+  curableSymptoms:
+  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  sanya: {fileID: 2129296749}
 --- !u!1001 &380015636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6783,7 +6877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gargoyle saliva
+  m_text: Snake blood
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6828,7 +6922,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 9
+  m_firstOverflowCharacterIndex: 6
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -6852,7 +6946,7 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 514387584}
-    characterCount: 15
+    characterCount: 11
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -7274,6 +7368,7 @@ GameObject:
   - component: {fileID: 575167096}
   - component: {fileID: 575167095}
   - component: {fileID: 575167094}
+  - component: {fileID: 575167097}
   m_Layer: 5
   m_Name: item (2)
   m_TagString: Untagged
@@ -7363,7 +7458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1f0611325601ad74a95ed9abe3ee0a3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7381,6 +7476,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575167092}
   m_CullTransparentMesh: 0
+--- !u!114 &575167097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575167092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb9deea066dfa54aab408133b1fa719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: {fileID: 1672417220}
+  key: Key_Saint_water
+  get: {fileID: 575167094}
+  curableSymptoms: []
+  sanya: {fileID: 2129296749}
 --- !u!1 &585780156
 GameObject:
   m_ObjectHideFlags: 0
@@ -8993,7 +9105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a6b1587e05080434a9d702c2056e9bd2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9024,9 +9136,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 645004930}
-  key: Key_Bunch_of_rosemary
+  key: Key_Lotus
   get: {fileID: 699890822}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0420\u0432\u043E\u0442\u0430"
+  - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0430\u043F\u043F\u0435\u0442\u0438\u0442\u0430"
   sanya: {fileID: 2129296749}
 --- !u!1 &713930773
 GameObject:
@@ -10220,7 +10335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mixture
+  m_text: Onion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10289,7 +10404,7 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 826049783}
-    characterCount: 7
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -10596,7 +10711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mixture
+  m_text: Maple leaves
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10641,7 +10756,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 6
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -10665,12 +10780,12 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 842694835}
-    characterCount: 7
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -11449,7 +11564,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 104dd05e40589004581189f06545a90e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11480,9 +11595,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 468371564}
-  key: Key_Ginger_root
+  key: Key_Nuts
   get: {fileID: 904276830}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
+  - "\u0423\u0442\u043E\u043C\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C"
+  - "\u041F\u043E\u0442\u0435\u0440\u044F \u0432\u0435\u0441\u0430"
   sanya: {fileID: 2129296749}
 --- !u!1 &905301644
 GameObject:
@@ -11741,7 +11859,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 165469926}
   m_Father: {fileID: 699890821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11768,7 +11887,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bunch of rosemary
+  m_text: Lotus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11813,7 +11932,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 9
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -11837,12 +11956,12 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 911286261}
-    characterCount: 17
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -11851,7 +11970,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 165469927}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -12178,7 +12297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ecb0e9a1f1a948d40bb2802515d10d92, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12471,7 +12590,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5a7732fb28e56cc4ca9813f4b85acdf3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12505,9 +12624,9 @@ MonoBehaviour:
   key: Key_Candy
   get: {fileID: 1005203445}
   curableSymptoms:
-  - "\u041B\u0430\u044E\u0449\u0438\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
-  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
-  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0411\u043E\u043B\u0438 \u0432 \u0433\u043E\u0440\u043B\u0435"
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0411\u043E\u043B\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
   sanya: {fileID: 2129296749}
 --- !u!1 &1028517303
 GameObject:
@@ -13066,7 +13185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mixture
+  m_text: Durian
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13135,7 +13254,7 @@ MonoBehaviour:
   m_margin: {x: 50.16469, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1073837037}
-    characterCount: 7
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -15402,6 +15521,7 @@ GameObject:
   - component: {fileID: 1241581507}
   - component: {fileID: 1241581506}
   - component: {fileID: 1241581505}
+  - component: {fileID: 1241581508}
   m_Layer: 5
   m_Name: item (1)
   m_TagString: Untagged
@@ -15491,7 +15611,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d9e85aa1323948b4f8e5bd26905275ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15509,6 +15629,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241581503}
   m_CullTransparentMesh: 0
+--- !u!114 &1241581508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241581503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb9deea066dfa54aab408133b1fa719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: {fileID: 1082441010}
+  key: Key_Chamomile_and_mint
+  get: {fileID: 1241581505}
+  curableSymptoms:
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  sanya: {fileID: 2129296749}
 --- !u!1 &1243385204
 GameObject:
   m_ObjectHideFlags: 0
@@ -15665,6 +15805,7 @@ GameObject:
   - component: {fileID: 1273507039}
   - component: {fileID: 1273507038}
   - component: {fileID: 1273507037}
+  - component: {fileID: 1273507040}
   m_Layer: 5
   m_Name: item (2)
   m_TagString: Untagged
@@ -15754,7 +15895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0b9ff0b6bdeff8b40b3a4116cf40f3c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15772,6 +15913,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273507035}
   m_CullTransparentMesh: 0
+--- !u!114 &1273507040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273507035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb9deea066dfa54aab408133b1fa719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: {fileID: 102018175}
+  key: Key_Onion
+  get: {fileID: 1273507037}
+  curableSymptoms:
+  - "\u0411\u043E\u043B\u044C \u0432 \u0433\u043B\u0430\u0437\u0430\u0445"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435"
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  - "\u0414\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  sanya: {fileID: 2129296749}
 --- !u!1 &1273851920
 GameObject:
   m_ObjectHideFlags: 0
@@ -18890,7 +19052,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3cb7c99e4d94e3b4bb9abc74dcb5a59e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18923,7 +19085,11 @@ MonoBehaviour:
   counter: {fileID: 698515559}
   key: Key_Orchid_Leaf
   get: {fileID: 1529092209}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u041B\u0430\u044E\u0449\u0438\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F
+    \u0431\u043E\u043B\u044C"
+  - "\u0420\u0432\u043E\u0442\u0430"
   sanya: {fileID: 2129296749}
 --- !u!1 &1529314955
 GameObject:
@@ -20952,6 +21118,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734129425}
   m_CullTransparentMesh: 0
+--- !u!1 &1742616455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742616456}
+  - component: {fileID: 1742616458}
+  - component: {fileID: 1742616457}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [LiberationSans SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1742616456
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742616455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 292620963}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1742616457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742616455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 1742616458}
+  m_TextComponent: {fileID: 292620964}
+  m_materialReferenceIndex: 1
+--- !u!222 &1742616458
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742616455}
+  m_CullTransparentMesh: 0
 --- !u!1 &1759693284
 GameObject:
   m_ObjectHideFlags: 0
@@ -22333,7 +22571,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 114.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837675215
 MonoBehaviour:
@@ -22396,7 +22634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d0b4b40a33c9bf345b5ccbc72fd9a3fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22430,9 +22668,9 @@ MonoBehaviour:
   key: Key_Tincture
   get: {fileID: 1837675215}
   curableSymptoms:
-  - "\u0411\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
-  - "\u0418\u0437\u0436\u043E\u0433\u0430"
-  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  - "\u0413\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   sanya: {fileID: 2129296749}
 --- !u!1 &1849551000
 GameObject:
@@ -22692,7 +22930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 14dba69026894cb41a379256f10806a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22723,9 +22961,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1918361260}
-  key: Key_Gargoyle_saliva
+  key: Key_Snake_blood
   get: {fileID: 1853575593}
-  curableSymptoms: []
+  curableSymptoms:
+  - "\u0413\u043E\u043B\u043E\u0434\u043D\u044B\u0435 \u0431\u043E\u043B\u0438 \u0432
+    \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u041A\u0440\u043E\u0432\u043E\u0442\u043E\u0447\u0438\u0432\u043E\u0441\u0442\u044C
+    \u0434\u0435\u0441\u0435\u043D"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
   sanya: {fileID: 2129296749}
 --- !u!1 &1856880889
 GameObject:
@@ -22775,6 +23018,7 @@ GameObject:
   - component: {fileID: 1863530491}
   - component: {fileID: 1863530490}
   - component: {fileID: 1863530489}
+  - component: {fileID: 1863530492}
   m_Layer: 5
   m_Name: item
   m_TagString: Untagged
@@ -22864,7 +23108,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 72d9d21134579ed4f9f76fc4ec3f85d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22882,6 +23126,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863530487}
   m_CullTransparentMesh: 0
+--- !u!114 &1863530492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863530487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb9deea066dfa54aab408133b1fa719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: {fileID: 1062199413}
+  key: Key_Durian
+  get: {fileID: 1863530489}
+  curableSymptoms:
+  - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u043E\u0431\u043E\u043D\u044F\u043D\u0438\u044F"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0443\u0448\u0430\u0445"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  sanya: {fileID: 2129296749}
 --- !u!1 &1884844027
 GameObject:
   m_ObjectHideFlags: 0
@@ -23758,8 +24022,8 @@ MonoBehaviour:
   notificationPanel: {fileID: 747030295}
   _cityImmunity: 0
   panelDefeat: {fileID: 459959939}
-  endMenu: {fileID: 0}
-  endNextLevel: {fileID: 0}
+  endMenu: {fileID: 2116581154}
+  endNextLevel: {fileID: 462219336}
   _queue: {fileID: 1770505}
 --- !u!114 &1927639123
 MonoBehaviour:
@@ -25923,7 +26187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1ced00fa01f5adb45bd4f2aadf1c540e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25957,9 +26221,10 @@ MonoBehaviour:
   key: Key_Mixture
   get: {fileID: 2129296745}
   curableSymptoms:
-  - "\u041D\u0430\u0441\u043C\u043E\u0440\u043A"
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
   - "\u041F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435"
-  - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
   sanya: {fileID: 2129296749}
 --- !u!82 &2129296749
 AudioSource:

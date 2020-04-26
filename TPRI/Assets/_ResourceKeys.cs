@@ -44,11 +44,17 @@ public class _ResourceKeys : MonoBehaviour
     public const string Candy = "Key_Candy";
     public const string Panacea = "Key_Panacea";
     
-    public const string Bunch_of_rosemary = "Key_Bunch_of_rosemary";
+    public const string Bunch_of_rosemary = "Key_Lotus";
     public const string Orchid_Leaf = "Key_Orchid_Leaf";
-    public const string Gargoyle_saliva = "Key_Gargoyle_saliva";
-    public const string Ginger_root = "Key_Ginger_root";
-    public const string Liver_eel = "Liver_eel";
+    public const string Gargoyle_saliva = "Key_Snake_blood";
+    public const string Ginger_root = "Key_Nuts";
+    public const string Liver_eel = "Key_Cross";
+
+    public const string Chamomile_Mint = "Key_Chamomile_and_mint";
+    public const string Saint_water = "Key_Saint_water";
+    public const string Durian = "Key_Durian";
+    public const string Maple_leaves = "Key_Maple_leaves";
+    public const string Onion = "Key_Onion";
     
     // Достижения
 

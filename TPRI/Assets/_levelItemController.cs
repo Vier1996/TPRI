@@ -4,6 +4,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class _levelItemController : MonoBehaviour
 {
@@ -65,25 +66,57 @@ public class _levelItemController : MonoBehaviour
         tryToHealFull();
         if (!_fullHealing)
         {
-            int index_cur_sympt = 0;
-            for (int i = 0; i < curableSymptoms.Count; i++)
+            if(key.Equals("Key_Panacea"))
             {
-                if (_peopleIllness.Contains(curableSymptoms[i]))
-                {
-                    _peopleIllness.Remove(curableSymptoms[i]);
-                    PlayerPrefs.SetInt("Key_" + curableSymptoms[i], 1);
-                    _GameController.countHealedSymptomes++;
-                }
-                index_cur_sympt++;
+                Healling();
             }
-            _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
-            if (_GameController.countHealedSymptomes == 3)
+            else if (key.Equals("Key_Saint_water"))
             {
-                PlayerPrefs.SetInt(_ResourceKeys.Первые_шаги, 1);
+                int rate = Random.Range(0, 101);
+                if (rate <= 95)
+                {
+                    Healling();
+                }
+            }
+            else if (key.Equals("Key_Cross"))
+            {
+                PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
+            }
+            else
+            {
+                int index_cur_sympt = 0;
+                for (int i = 0; i < curableSymptoms.Count; i++)
+                {
+                    if (_peopleIllness.Contains(curableSymptoms[i]))
+                    {
+                        _peopleIllness.Remove(curableSymptoms[i]);
+                        PlayerPrefs.SetInt("Key_" + curableSymptoms[i], 1);
+                        _GameController.countHealedSymptomes++;
+                    }
+
+                    index_cur_sympt++;
+                }
+
+                _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
+                if (_GameController.countHealedSymptomes == 3)
+                {
+                    PlayerPrefs.SetInt(_ResourceKeys.Первые_шаги, 1);
+                }
             }
         }
     }
 
+    private void Healling()
+    {
+        List<string> ills = new List<string>(_peopleIllness);
+        for (int i = 0; i < ills.Count; i++)
+        {
+            PlayerPrefs.SetInt("Key_" + ills[i], 1);
+            _GameController.countHealedSymptomes++;
+            _peopleIllness.Remove(ills[i]);
+        }
+    }
+    
     private void tryToHealFull()
     {
         if (PlayerPrefs.GetInt("pass_6_skl") == 1)
@@ -100,6 +133,10 @@ public class _levelItemController : MonoBehaviour
             {
                 _fullHealing = false;
             }
+        }
+        else
+        {
+            _fullHealing = false;
         }
     }
     

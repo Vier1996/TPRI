@@ -94,10 +94,10 @@ public class _storeController : MonoBehaviour
             else
             {
                 PlayerPrefs.SetInt(_ResourceKeys.Money, PlayerPrefs.GetInt(_ResourceKeys.Money) - multiplicator * info.GetPrice());
-                PlayerPrefs.SetInt("Key_" + item.text, multiplicator);
+                PlayerPrefs.SetInt("Key_" + info.getKey(), multiplicator);
             
                 Debug.Log("Buyed - " + item.text + " -" + multiplicator);
-                Debug.Log(PlayerPrefs.GetInt("Key_" + item.text));
+                Debug.Log(PlayerPrefs.GetInt("Key_" + info.getKey()));
             
                 PlayerPrefs.SetInt(_ResourceKeys.Buyed_items_count, PlayerPrefs.GetInt(_ResourceKeys.Buyed_items_count) + multiplicator);
                 if (PlayerPrefs.GetInt(_ResourceKeys.Buyed_items_count) >= 50)
