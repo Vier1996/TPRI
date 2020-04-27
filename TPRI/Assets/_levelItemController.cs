@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
@@ -50,12 +51,16 @@ public class _levelItemController : MonoBehaviour
 
     void Update()
     {
-        if (_NPC == null && index < 5)
+        try
         {
-            _NPC = GameObject.FindWithTag("Player");
-            _peopleIllness = _NPC.GetComponent<_PeopleIssues>().getSymptoms();
-            index++;
+            if (_NPC == null && index < 5)
+            {
+                _NPC = GameObject.FindWithTag("Player");
+                _peopleIllness = _NPC.GetComponent<_PeopleIssues>().getSymptoms();
+                index++;
+            }
         }
+        catch(NullReferenceException){}
     }
 
     private void Heal()

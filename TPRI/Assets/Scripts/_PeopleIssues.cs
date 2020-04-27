@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Bestiary;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class _PeopleIssues : MonoBehaviour
 {
-    public string _issueName = "";
+    public string _issueName;
 
-    public List<string> _symptoms;
+    private List<string> _symptoms;
     private InfoAboutIlnesses _illnesses;
     private int _infection, _fatality;
 
@@ -16,6 +17,7 @@ public class _PeopleIssues : MonoBehaviour
     {
         _illnesses = new InfoAboutIlnesses();
         _symptoms = new List<string>();
+        _issueName = _IssuesPeopleAccordingScene.getIssue(_GameController.countNPC, SceneManager.GetActiveScene().name);
         setSymptomsFromDictinary();
         setInfectionAndFatality();
     }
@@ -31,11 +33,6 @@ public class _PeopleIssues : MonoBehaviour
     public List<string> getSymptoms()
     {
         return _symptoms;
-    }
-
-    public string getIssueName()
-    {
-        return _issueName;
     }
 
     public void setSymptoms(List<string> sympt)

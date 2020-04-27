@@ -33,7 +33,7 @@ public class _GameController : MonoBehaviour
     private List<string> _issues;
     private GameObject _camera;
     private GameObject _dialogPanel;
-    private int countNPC = 0;
+    public static int countNPC = 0;
     private int passIlls = 0, healed = 0;
     private _Infected_And_Dead_Counter _infectedAndDeadCounter;
     [SerializeField] private int _cityImmunity = 0;
@@ -41,6 +41,7 @@ public class _GameController : MonoBehaviour
     private int _additionalShoot;
     private float patientX = -11f, patientY = -14f, patientZ = 86f;
     public static int countHealedSymptomes = 0;
+    private int _countNPCAccrodingLevel = 0;
 
     [SerializeField] private Button endMenu;
     [SerializeField] private Button endNextLevel;
@@ -58,6 +59,7 @@ public class _GameController : MonoBehaviour
 
     private void Awake()
     {
+        _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
         countNPC = LoadPeopleState();
         InitNPC();
         setAdditonalShoot();
@@ -298,7 +300,7 @@ public class _GameController : MonoBehaviour
 
     private void InitNPC()
     {
-        if (countNPC < 5)
+        if (countNPC < _countNPCAccrodingLevel)
         {
             GameObject npc = Resources.Load<GameObject>("Peolple/Patient" + countNPC);
             _NPC = Instantiate(npc);
