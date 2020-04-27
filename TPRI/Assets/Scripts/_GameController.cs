@@ -46,6 +46,11 @@ public class _GameController : MonoBehaviour
     [SerializeField] private Button endNextLevel;
 
     [SerializeField] private QUEUE _queue;
+    
+    
+    [SerializeField] private Animation BIGDOOR;
+    
+    [SerializeField] private GameObject[] Particles;
 
     /// <summary>
     
@@ -112,6 +117,12 @@ public class _GameController : MonoBehaviour
             Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }); //пофиксить для 7го левла
+
+
+        foreach (var Part in Particles)
+        {
+            Part.SetActive(false);
+        }
     }
 
     private void setAdditonalShoot()
@@ -204,6 +215,8 @@ public class _GameController : MonoBehaviour
         }
         
         Destroy(_NPC);
+        if(countNPC != 0)
+            BIGDOOR.Play("BIGDOOR");
         Invoke(nameof(InitNPC), 3);
     }
 
@@ -277,6 +290,8 @@ public class _GameController : MonoBehaviour
         Debug.Log("Пидуй науй");
         Destroy(_NPC);
         resetDialog();
+        if(countNPC != 0)
+            BIGDOOR.Play("BIGDOOR");
         Invoke(nameof(InitNPC), 3);
         _levelEndController.incrementExpelPeople();
     }
@@ -295,6 +310,9 @@ public class _GameController : MonoBehaviour
             if (issues.getSymptoms().Count != 0)
             {
                 List<string> randomSymptoms = issues.getSymptoms();
+                
+                ParticleHelper(randomSymptoms);
+                
                 _SkillsActivator.SkillDetection(randomSymptoms[Random.Range(0, randomSymptoms.Count)]);
             }
 
@@ -347,13 +365,13 @@ public class _GameController : MonoBehaviour
 
     public int LoadPeopleState()
     {
-        return PlayerPrefs.GetInt("PEOPLE");
+        return PlayerPrefs.GetInt("AlivePeople");
     }
 
     public void SetNPCcount(int C)
     {
         Debug.Log("drop");
-        PlayerPrefs.SetInt("PEOPLE", C);
+        PlayerPrefs.SetInt("AlivePeople", C);
     }
 
     private void OnApplicationQuit()
@@ -382,5 +400,47 @@ public class _GameController : MonoBehaviour
                 PlayerPrefs.SetInt(_ResourceKeys.Неудачник, 1);
             PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 1);
         }
+    }
+
+    private void ParticleHelper(List<string> sympt)
+    {
+        foreach (var s in sympt)
+        {
+            if (s.Equals("Рвота") || s.Equals("Тошнота"))
+            {
+                Particles[0].SetActive(false);
+                Particles[1].SetActive(true);
+                Particles[2].SetActive(false);
+                break;
+            }
+            else
+            {
+
+                if (s.Equals("Кашель") || s.Equals("Длительный кашель") || s.Equals("Лающий кашель"))
+                {
+                    Particles[0].SetActive(true);
+                    Particles[1].SetActive(false);
+                    Particles[2].SetActive(false);
+                    break;
+                }
+                else
+                {
+                    if (s.Equals("Температура"))
+                    {
+                        Particles[0].SetActive(false);
+                        Particles[1].SetActive(false);
+                        Particles[2].SetActive(true);
+                        break;
+                    }
+                    else
+                    {
+                        Particles[0].SetActive(false);
+                        Particles[1].SetActive(false);
+                        Particles[2].SetActive(false);
+                    }
+                }
+            }
+        }
+
     }
 }

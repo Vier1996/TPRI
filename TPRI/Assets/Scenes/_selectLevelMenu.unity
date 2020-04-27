@@ -2296,7 +2296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15a88e7de894884fab5c7fc3140aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KEY: Settings_back
+  KEY: Settings_day7
 --- !u!1 &1369490353
 GameObject:
   m_ObjectHideFlags: 0

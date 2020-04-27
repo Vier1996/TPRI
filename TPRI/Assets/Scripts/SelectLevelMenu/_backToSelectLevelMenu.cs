@@ -9,19 +9,18 @@ public class _backToSelectLevelMenu : MonoBehaviour
 {
     [SerializeField] private _GameController _game;
     [SerializeField] private GameObject settings;
+    [SerializeField] private Button back;
     
     private GameObject _backToSelect;
 
     private void Awake()
     {
-        _backToSelect = GameObject.FindWithTag("back");
         settings.SetActive(false);
     }
 
     private void Start()
     {
-        
-        _backToSelect.GetComponent<Button>().onClick.AddListener(()=> Settings());
+        back.onClick.AddListener(Settings);
     }
 
     private void Settings()

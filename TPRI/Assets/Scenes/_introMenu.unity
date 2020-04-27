@@ -1374,6 +1374,7 @@ GameObject:
   - component: {fileID: 1932175066}
   - component: {fileID: 1932175065}
   - component: {fileID: 1932175069}
+  - component: {fileID: 1932175070}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1483,6 +1484,22 @@ MonoBehaviour:
   _Settings: {fileID: 615437420}
   _Home: {fileID: 640094817}
   _settingsMenu: {fileID: 2447926133460029027}
+--- !u!111 &1932175070
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932175064}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a6852106f38697445a16b9bdcd961ac5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a6852106f38697445a16b9bdcd961ac5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2039048054
 GameObject:
   m_ObjectHideFlags: 0
