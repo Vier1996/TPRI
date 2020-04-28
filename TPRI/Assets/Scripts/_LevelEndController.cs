@@ -98,6 +98,8 @@ public class _LevelEndController : MonoBehaviour
         gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + (_countSkillPoints+1);
         gameObject.transform.GetChild(8).GetComponent<TextMeshProUGUI>().text += " " + _countMoney;
         Debug.Log("Slider     " + setLevelPointsSlider());
+        int levelPoints = PlayerPrefs.GetInt(_ResourceKeys.CurrentScore) + setLevelPointsSlider();
+        if(levelPoints >= PlayerPrefs.GetInt(_ResourceKeys.NeddedScore))
         levelPointsSlider.value = setLevelPointsSlider();
 
         if(SceneManager.GetActiveScene().buildIndex == 8)
