@@ -59,8 +59,10 @@ public class _GameController : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
+        
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
-        countNPC = LoadPeopleState();
+        countNPC = PlayerPrefs.GetInt("PEOPLE");
         InitNPC();
         setAdditonalShoot();
         PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
@@ -78,11 +80,13 @@ public class _GameController : MonoBehaviour
 
         _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
         _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
-
+        
+        
         if (LoadPeopleState() == 0)
         {
             Population = 348;
             _infectedAndDeadCounter.SetInfected(0);
+            countNPC = 0;
         }
         else
         {
@@ -113,6 +117,7 @@ public class _GameController : MonoBehaviour
         });
         
         endMenu.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
+        
         endNextLevel.onClick.AddListener(() =>
         {
             SaveStateToNextLevel();
@@ -156,7 +161,7 @@ public class _GameController : MonoBehaviour
     {
         _queue.PsholVon();
         _passingPeople.interactable = false;
-        Invoke(nameof(stopper), 3f);
+        Invoke(nameof(stopper), 5f);
         
         
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
@@ -195,15 +200,17 @@ public class _GameController : MonoBehaviour
             _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
             infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
             alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
+            
             if (_infectedAndDeadCounter.getInfected() == 0 && Population == 0)
             {
-                Time.timeScale = 0;
-                panelDefeat.SetActive(true);
-                _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
-                _levelEndController.setCountPatient(countNPC);
-                _levelEndController.setCountPassIlls(passIlls);
-                _levelEndController.setPanelDefeat();
+               // panelDefeat.SetActive(true);
+                //_levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
+                //_levelEndController.setCountPatient(countNPC);
+               // _levelEndController.setCountPassIlls(passIlls);
+                //_levelEndController.setPanelDefeat();
+                Instantiate(panelDefeat);
             }
+            
         }
         else
         {
@@ -292,8 +299,14 @@ public class _GameController : MonoBehaviour
         Debug.Log("Пидуй науй");
         Destroy(_NPC);
         resetDialog();
+        
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");
+        
+        _queue.PsholVon();
+        _passingPeople.interactable = false;
+        Invoke(nameof(stopper), 5f);
+        
         Invoke(nameof(InitNPC), 3);
         _levelEndController.incrementExpelPeople();
     }
@@ -333,11 +346,14 @@ public class _GameController : MonoBehaviour
             _levelEndController.setMoney();
             _levelEndController.setCountSkillPoints();
             panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
+            
             PlayerPrefs.SetInt("AlivePeople", Population);
             PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
             
             if(GetComponent<_WorldController>().GetDays() > 0)
                 GetComponent<_WorldController>().SetDays(GetComponent<_WorldController>().GetDays() - 1);
+
+            LevelClearedHelper();
         }
     }
 
@@ -362,7 +378,6 @@ public class _GameController : MonoBehaviour
     {
          PlayerPrefs.SetInt("AlivePeople", Population);
          PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
-         SetNPCcount(0);
     }
 
     public int LoadPeopleState()
@@ -373,12 +388,12 @@ public class _GameController : MonoBehaviour
     public void SetNPCcount(int C)
     {
         Debug.Log("drop");
-        PlayerPrefs.SetInt("AlivePeople", C);
+        PlayerPrefs.SetInt("PEOPLE", C);
     }
 
     private void OnApplicationQuit()
     {
-        SetNPCcount(0);
+        PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
     }
 
     public void SaveCommonState()
@@ -444,5 +459,21 @@ public class _GameController : MonoBehaviour
             }
         }
 
+    }
+
+    private void LevelClearedHelper()
+    {
+        int inx = SceneManager.GetActiveScene().buildIndex;
+
+        switch (inx)
+        {
+            case 2: PlayerPrefs.SetInt("clrd_lvl_1", 1); break;
+            case 3: PlayerPrefs.SetInt("clrd_lvl_2", 1); break;
+            case 4: PlayerPrefs.SetInt("clrd_lvl_3", 1); break;
+            case 5: PlayerPrefs.SetInt("clrd_lvl_4", 1); break;
+            case 6: PlayerPrefs.SetInt("clrd_lvl_5", 1); break;
+            case 7: PlayerPrefs.SetInt("clrd_lvl_6", 1); break;
+            case 8: PlayerPrefs.SetInt("clrd_lvl_7", 1); break;
+        }
     }
 }
