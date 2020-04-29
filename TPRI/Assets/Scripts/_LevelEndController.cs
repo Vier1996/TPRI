@@ -88,7 +88,7 @@ public class _LevelEndController : MonoBehaviour
     {
         PlayerPrefs.SetInt(_ResourceKeys.Начинающий, 1);
         PlayerPrefs.SetInt(_ResourceKeys.TheFirstLevel, 1);
-        gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
+        levelPointsSlider.maxValue = PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
         gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text += " " + _countPatient;
         gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text += " " + _countPassingIlls;
         gameObject.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text += " " + _countHealingIllnesses;
@@ -99,9 +99,22 @@ public class _LevelEndController : MonoBehaviour
         gameObject.transform.GetChild(8).GetComponent<TextMeshProUGUI>().text += " " + _countMoney;
         Debug.Log("Slider     " + setLevelPointsSlider());
         int levelPoints = PlayerPrefs.GetInt(_ResourceKeys.CurrentScore) + setLevelPointsSlider();
-        if(levelPoints >= PlayerPrefs.GetInt(_ResourceKeys.NeddedScore))
-        levelPointsSlider.value = setLevelPointsSlider();
+        if (levelPoints >= PlayerPrefs.GetInt(_ResourceKeys.NeddedScore))
+        {
+            int check = levelPoints - PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
+            //levelPointsSlider.value = levelPoints - PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
+            _ResourceKeys.LevelUp(levelPoints - PlayerPrefs.GetInt(_ResourceKeys.NeddedScore));
+            levelPointsSlider.maxValue = PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
+            levelPointsSlider.value = check;
+        }
+        else
+        {    
+            PlayerPrefs.SetInt(_ResourceKeys.CurrentScore, levelPoints);
+            levelPointsSlider.value = PlayerPrefs.GetInt(_ResourceKeys.CurrentScore);
+        }
 
+        gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
+        
         if(SceneManager.GetActiveScene().buildIndex == 8)
             PlayerPrefs.SetInt(_ResourceKeys.Первопроходец, 1);
     }

@@ -38,6 +38,7 @@ public class _GameController : MonoBehaviour
     private _Infected_And_Dead_Counter _infectedAndDeadCounter;
     [SerializeField] private int _cityImmunity = 0;
     [SerializeField] private GameObject panelDefeat;
+    [SerializeField] private Transform panelDefeat1;
     private int _additionalShoot;
     private float patientX = -11f, patientY = -14f, patientZ = 86f;
     public static int countHealedSymptomes = 0;
@@ -60,27 +61,24 @@ public class _GameController : MonoBehaviour
     private void Awake()
     {
         PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
-        
+        //PlayerPrefs.SetInt("PEOPLE", 0);
+        //PlayerPrefs.SetInt("AlivePeople", 0);
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
         countNPC = PlayerPrefs.GetInt("PEOPLE");
-        InitNPC();
+        
         setAdditonalShoot();
         PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
         //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
 
+        _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
+        _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
+        
         _expel = GameObject.Find("No").GetComponent<Button>();
         _expel.onClick.AddListener(() => Expel());
 
         _camera = GameObject.FindWithTag("MainCamera");
-
-        _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
-        _issues = issuesScript.getSymptoms();
-
-        _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
-        _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
-        
         
         if (LoadPeopleState() == 0)
         {
@@ -116,6 +114,11 @@ public class _GameController : MonoBehaviour
             }
         });
         
+        InitNPC();
+        
+        _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
+        _issues = issuesScript.getSymptoms();
+
         endMenu.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
         
         endNextLevel.onClick.AddListener(() =>
@@ -208,7 +211,7 @@ public class _GameController : MonoBehaviour
                 //_levelEndController.setCountPatient(countNPC);
                // _levelEndController.setCountPassIlls(passIlls);
                 //_levelEndController.setPanelDefeat();
-                Instantiate(panelDefeat);
+                Instantiate(panelDefeat, panelDefeat1);
             }
             
         }
@@ -316,6 +319,7 @@ public class _GameController : MonoBehaviour
         if (countNPC < _countNPCAccrodingLevel)
         {
             GameObject npc = Resources.Load<GameObject>("Peolple/Patient" + countNPC);
+            Debug.Log("           " + countNPC);
             _NPC = Instantiate(npc);
             _NPC.transform.position = new Vector3(patientX, patientY, patientZ);
             resetDialog();

@@ -96,7 +96,7 @@ namespace Bestiary
             _valueOfInfection.Add("Бронхит", 55);
             _valueOfInfection.Add("Язва", 10);
             _valueOfInfection.Add("Менингит", 73);
-            _valueOfInfection.Add("Коронавирус", 85);
+            _valueOfInfection.Add("Коронавирус", 99);
             _valueOfInfection.Add("Пневмония", 65);
             _valueOfInfection.Add("Рак", 60);
             _valueOfInfection.Add("Цинга", 80);

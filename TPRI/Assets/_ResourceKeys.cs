@@ -119,11 +119,11 @@ public class _ResourceKeys : MonoBehaviour
         }
     }
 
-    public static void LevelUp()
+    public static void LevelUp(int score)
     {
         PlayerPrefs.SetInt(CharacterLevel, PlayerPrefs.GetInt(CharacterLevel) + 1);
         float multiplicator = Random.Range(1.5f, 1.9f);
         PlayerPrefs.SetInt(NeddedScore, (int) (PlayerPrefs.GetInt(NeddedScore) * multiplicator));
-        PlayerPrefs.SetInt(CurrentScore, 0);
+        PlayerPrefs.SetInt(CurrentScore, score);
     }
 }

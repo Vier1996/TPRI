@@ -30,13 +30,13 @@ public class _IssuesPeopleAccordingScene
          {
             "_level_2", new List<string>()
             {
-               "Гепатит",
-               "Простуда",
-               "Гастрит",
-               "Бронхит",
-               "Язва",
-               "Туберкулез",
-               "Менингит"
+               "Коронавирус",
+               "Коронавирус",
+               "Коронавирус",
+               "Коронавирус",
+               "Коронавирус",
+               "Коронавирус",
+               "Коронавирус"
             }
          },
          {
@@ -64,7 +64,7 @@ public class _IssuesPeopleAccordingScene
 
    private static void setCountNPC()
    {
-      countNPCAccordingLevel = new Dictionary<string, int> {{"_level_1", 5}, {"_level_2", 10}};
+      countNPCAccordingLevel = new Dictionary<string, int> {{"_level_1", 5}, {"_level_2", 7}};
    }
 
    public static int getCountNPC(string scene)
