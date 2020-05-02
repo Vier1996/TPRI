@@ -30,7 +30,6 @@ public class _storeController : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetInt(_ResourceKeys.Money, 1000);
         moneyCounter.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
         
         x1.onClick.AddListener(() =>

@@ -61,8 +61,8 @@ public class _GameController : MonoBehaviour
     private void Awake()
     {
         PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
-        //PlayerPrefs.SetInt("PEOPLE", 0);
-        //PlayerPrefs.SetInt("AlivePeople", 0);
+        PlayerPrefs.SetInt("PEOPLE", 0);
+        PlayerPrefs.SetInt("AlivePeople", 0);
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
         countNPC = PlayerPrefs.GetInt("PEOPLE");
         
@@ -348,7 +348,6 @@ public class _GameController : MonoBehaviour
             _levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
             _levelEndController.setPopulation(Population + _infectedAndDeadCounter.getInfected());
             _levelEndController.setMoney();
-            _levelEndController.setCountSkillPoints();
             panelWin.transform.GetChild(0).GetComponent<_LevelEndController>().setPanelWinInfo();
             
             PlayerPrefs.SetInt("AlivePeople", Population);

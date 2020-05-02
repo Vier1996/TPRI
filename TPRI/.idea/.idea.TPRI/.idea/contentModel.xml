@@ -51,6 +51,7 @@
           <e p="_testS.cs" t="Include" />
           <e p="BestiariiBook" t="Include">
             <e p="_pageController.cs" t="Include" />
+            <e p="PageItemController.cs" t="Include" />
           </e>
           <e p="Sprites" t="Include">
             <e p="QUEUE.cs" t="Include" />
@@ -98,6 +99,7 @@
           </e>
           <e p="DefenseEquipmentsHelper.cs" t="Include" />
           <e p="Dialogs.cs" t="Include" />
+          <e p="DoctorRotateContr.cs" t="Include" />
           <e p="introMenu" t="Include">
             <e p="_intro_ButtonController.cs" t="Include" />
           </e>

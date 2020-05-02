@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 8637488957559441607}
   - component: {fileID: 3722073415357563479}
   - component: {fileID: 725622529695260218}
+  - component: {fileID: 7362741336742495705}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -294,7 +295,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: e44437544b967e74f90e927b10264781, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -302,6 +303,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7362741336742495705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415455516977585074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405e99a485ca395459b4644de2f26c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  medicine: {fileID: 21300000, guid: 20d60b495eed12f4780d46839fab19d8, type: 3}
+  name: {fileID: 1865095212664879553}
 --- !u!1 &2087865859729961232
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +904,7 @@ GameObject:
   - component: {fileID: 1758830602999089422}
   - component: {fileID: 7272109264529589294}
   - component: {fileID: 2017320700471142498}
+  - component: {fileID: 2810554868839741548}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -943,7 +959,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: ce028576d334f164dad454d88188e4e0, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -951,6 +967,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2810554868839741548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249131054745545021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405e99a485ca395459b4644de2f26c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  medicine: {fileID: 21300000, guid: 20d60b495eed12f4780d46839fab19d8, type: 3}
+  name: {fileID: 8541476315495094405}
 --- !u!1 &8888494116930071513
 GameObject:
   m_ObjectHideFlags: 0

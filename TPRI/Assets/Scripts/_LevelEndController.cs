@@ -69,11 +69,6 @@ public class _LevelEndController : MonoBehaviour
         _countHealingIllnesses = healed;
     }
 
-    public void setCountSkillPoints()
-    {
-        _countSkillPoints = _countHealingIllnesses*2;
-    }
-
     public void setPopulation(int population)
     {
         _population = population;
@@ -95,26 +90,27 @@ public class _LevelEndController : MonoBehaviour
         gameObject.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text += " " + _countInfected;
         gameObject.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text += " " + _countDead;
         gameObject.transform.GetChild(6).GetComponent<TextMeshProUGUI>().text += " " + _population;
-        gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + (_countSkillPoints+1);
+        //gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + (_countSkillPoints+1);
         gameObject.transform.GetChild(8).GetComponent<TextMeshProUGUI>().text += " " + _countMoney;
-        Debug.Log("Slider     " + setLevelPointsSlider());
+        PlayerPrefs.SetInt(_ResourceKeys.Money, PlayerPrefs.GetInt(_ResourceKeys.Money) + _countMoney);
         int levelPoints = PlayerPrefs.GetInt(_ResourceKeys.CurrentScore) + setLevelPointsSlider();
         if (levelPoints >= PlayerPrefs.GetInt(_ResourceKeys.NeddedScore))
         {
             int check = levelPoints - PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
-            //levelPointsSlider.value = levelPoints - PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
-            _ResourceKeys.LevelUp(levelPoints - PlayerPrefs.GetInt(_ResourceKeys.NeddedScore));
+            _ResourceKeys.LevelUp(check);
             levelPointsSlider.maxValue = PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
             levelPointsSlider.value = check;
+            gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + 1;
+            
+            PlayerPrefs.SetInt(_ResourceKeys.skills, PlayerPrefs.GetInt(_ResourceKeys.skills) + 1);
         }
         else
         {    
+            gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + 0;
             PlayerPrefs.SetInt(_ResourceKeys.CurrentScore, levelPoints);
             levelPointsSlider.value = PlayerPrefs.GetInt(_ResourceKeys.CurrentScore);
         }
-
         gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
-        
         if(SceneManager.GetActiveScene().buildIndex == 8)
             PlayerPrefs.SetInt(_ResourceKeys.Первопроходец, 1);
     }

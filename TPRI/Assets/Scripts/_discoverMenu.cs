@@ -36,7 +36,6 @@ public class _discoverMenu : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetInt(_ResourceKeys.Money, 2000);
         money.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
     }
 
