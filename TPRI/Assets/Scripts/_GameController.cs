@@ -64,8 +64,7 @@ public class _GameController : MonoBehaviour
         PlayerPrefs.SetInt("PEOPLE", 0);
         PlayerPrefs.SetInt("AlivePeople", 0);
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
-        countNPC = PlayerPrefs.GetInt("PEOPLE");
-        
+        countNPC = 0;
         setAdditonalShoot();
         PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
         //_DropProgress.DropSkills();
@@ -80,16 +79,19 @@ public class _GameController : MonoBehaviour
 
         _camera = GameObject.FindWithTag("MainCamera");
         
-        if (LoadPeopleState() == 0)
-        {
-            Population = 348;
-            _infectedAndDeadCounter.SetInfected(0);
-            countNPC = 0;
-        }
-        else
+        if (PlayerPrefs.GetInt("GCBesiariiCome") != 1)
         {
             Population = PlayerPrefs.GetInt("AlivePeople");
             _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
+        }
+        else
+        {
+            PlayerPrefs.SetInt("GCBesiariiCome", 0);
+            Population = PlayerPrefs.GetInt("AlivePeople");
+            _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
+            countNPC = PlayerPrefs.GetInt("PEOPLE");
+            _queue.adaptation(countNPC);
+            
         }
         
         alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
@@ -162,7 +164,7 @@ public class _GameController : MonoBehaviour
 
     private void Passing()
     {
-        _queue.PsholVon();
+        _queue.PsholVon(true);
         _passingPeople.interactable = false;
         Invoke(nameof(stopper), 5f);
         
@@ -211,7 +213,15 @@ public class _GameController : MonoBehaviour
                 //_levelEndController.setCountPatient(countNPC);
                // _levelEndController.setCountPassIlls(passIlls);
                 //_levelEndController.setPanelDefeat();
+                Particles[0].SetActive(false);
+                Particles[1].SetActive(false);
+                Particles[2].SetActive(false);
+                
+                PlayerPrefs.SetInt("AlivePeople", 348);
+                PlayerPrefs.SetInt("InfectedPeople", 0);
+                PlayerPrefs.SetInt("PEOPLE", 0);
                 Instantiate(panelDefeat, panelDefeat1);
+               
             }
             
         }
@@ -306,7 +316,7 @@ public class _GameController : MonoBehaviour
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");
         
-        _queue.PsholVon();
+        _queue.PsholVon(true);
         _passingPeople.interactable = false;
         Invoke(nameof(stopper), 5f);
         
@@ -397,6 +407,8 @@ public class _GameController : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetInt("AlivePeople", Population);
+        PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
     }
 
     public void SaveCommonState()

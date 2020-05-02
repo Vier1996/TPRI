@@ -23,11 +23,12 @@ public class _queueController : MonoBehaviour
         }
     }
     
-    public void GoodBye()
+    public void GoodBye(bool anim)
     {
         transform.DOMove(underDoor.position, 2f).OnComplete(() =>
         {
-            door.Play();
+            if(anim)
+                door.Play();
             Invoke(nameof(RealyGoodBye), 1.5f);
         });
     }

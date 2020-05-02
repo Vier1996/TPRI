@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class QUEUE : MonoBehaviour
 {
@@ -20,13 +22,12 @@ public class QUEUE : MonoBehaviour
 
     private void Start()
     {
-        lenght--;
-        //Recycle();
+       
     }
 
-    public void PsholVon()
+    public void PsholVon(bool anim)
     {
-      dodiki[lenght].GetComponent<_queueController>().GoodBye();
+      dodiki[lenght].GetComponent<_queueController>().GoodBye(anim);
       lenght--;
       //Invoke(nameof(QueueMovement), 5f);
     }
@@ -48,5 +49,21 @@ public class QUEUE : MonoBehaviour
         {
             BLYA[i] = dodikiPos[i].position;
         }
+    }
+
+    public void adaptation(int SIZE)
+    {
+        Time.timeScale = 3;
+        if (SIZE > 0)
+        {
+            int Nlength = lenght;
+            for (int i = 0; i < SIZE; i++)
+            {
+                dodiki[Nlength].GetComponent<Image>().color = new Color(0, 0, 0, 0);
+                PsholVon(false);
+                Nlength--;
+            }
+        }
+        Time.timeScale = 1;
     }
 }

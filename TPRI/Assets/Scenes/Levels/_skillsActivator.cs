@@ -20,6 +20,7 @@ public class _skillsActivator : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("3_skl") != 0)
         {
+
             int Rate = Random.Range(0, 101);
             if (Rate <= 10)
             {

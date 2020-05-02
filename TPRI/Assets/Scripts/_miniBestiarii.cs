@@ -28,6 +28,7 @@ public class _miniBestiarii : MonoBehaviour
           PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
           SceneManager.LoadScene("_bestiariy");
           PlayerPrefs.SetInt("BesiariiCome", 1);
+          PlayerPrefs.SetInt("GCBesiariiCome", 1);
         });
         toBack.onClick.AddListener(() =>
         {
