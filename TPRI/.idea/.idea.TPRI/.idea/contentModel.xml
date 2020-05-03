@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Max\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Max\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TPRI.-1001528648.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Max\Desktop\TPRI_KURSCH\TPRI\TPRI" t="IncludeRecursive">
+    <e p="C:\Users\37529\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\37529\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TPRI.-805995957.00" t="ExcludeRecursive" />
+    <e p="C:\Users\37529\Desktop\Курсач\TPRI\TPRI" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_achivementsController.cs" t="Include" />
@@ -110,6 +110,7 @@
           <e p="DoctorRotateContr.cs" t="Include" />
           <e p="introMenu" t="Include">
             <e p="_intro_ButtonController.cs" t="Include" />
+            <e p="VideoContrl.cs" t="Include" />
           </e>
           <e p="Medicines.cs" t="Include" />
           <e p="SelectLevelMenu" t="Include">
