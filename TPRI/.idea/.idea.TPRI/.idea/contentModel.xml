@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\37525\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\37525\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TPRI.459677499.00" t="ExcludeRecursive" />
-    <e p="C:\Users\37525\Desktop\crsch\TPRI\TPRI" t="IncludeRecursive">
+    <e p="C:\Users\Max\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Max\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_TPRI.-1001528648.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Max\Desktop\TPRI_KURSCH\TPRI\TPRI" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_achivementsController.cs" t="Include" />
@@ -29,6 +29,7 @@
         <e p="_storeIMGcontroller.cs" t="Include" />
         <e p="_SYMPTOMESKEY.cs" t="Include" />
         <e p="_test.cs" t="Include" />
+        <e p="AnalysMap.cs" t="Include" />
         <e p="BuyMenuController.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
@@ -54,6 +55,13 @@
             <e p="PageItemController.cs" t="Include" />
           </e>
           <e p="Sprites" t="Include">
+            <e p="3dModels" t="Include">
+              <e p="ГГ" t="Include">
+                <e p="Части" t="Include">
+                  <e p="ClothesController.cs" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="QUEUE.cs" t="Include" />
           </e>
           <e p="Test.cs" t="Include" />
@@ -102,7 +110,6 @@
           <e p="DoctorRotateContr.cs" t="Include" />
           <e p="introMenu" t="Include">
             <e p="_intro_ButtonController.cs" t="Include" />
-            <e p="VideoContrl.cs" t="Include" />
           </e>
           <e p="Medicines.cs" t="Include" />
           <e p="SelectLevelMenu" t="Include">
