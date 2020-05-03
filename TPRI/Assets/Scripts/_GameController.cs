@@ -30,7 +30,7 @@ public class _GameController : MonoBehaviour
     private int _numberNotHealedIssues = 0;
     private Button _passingPeople;
     private Button _expel; // не пропускать
-    private List<string> _issues;
+    public List<string> _issues;
     private GameObject _camera;
     private GameObject _dialogPanel;
     public static int countNPC = 0;

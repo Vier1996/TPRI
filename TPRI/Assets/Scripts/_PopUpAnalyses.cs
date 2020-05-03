@@ -24,7 +24,7 @@ public class _PopUpAnalyses : MonoBehaviour
                 resultOfAnalysis.SetActive(true);
                 patient.text += " " + _NPC.GetComponent<_peopleState>().nameOfPatient;
                 nameOfAnalysis.text += " " + gameObject.name.ToLower();
-                result.text += " " + _NPC.GetComponent<_peopleState>().getAnalysis().getResultOfAnalysis(name);
+                result.text += " " + GetComponent<AnalysMap>()._check();
             }
         });
         close.onClick.AddListener(() =>

@@ -6193,6 +6193,7 @@ GameObject:
   - component: {fileID: 118105216}
   - component: {fileID: 118105220}
   - component: {fileID: 118105221}
+  - component: {fileID: 118105222}
   m_Layer: 5
   m_Name: Shit
   m_TagString: Untagged
@@ -6332,6 +6333,35 @@ MonoBehaviour:
   Koef: 2
   amount: {fileID: 256759388}
   IntegerAmount: 0
+--- !u!114 &118105222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118105215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630975990a4c791419c7ce9d43098a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symptoms:
+  - "\u0411\u043E\u043B\u0438 \u0432 \u0433\u043E\u0440\u043B\u0435"
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0411\u043E\u043B\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
+  - "\u0423\u0442\u043E\u043C\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C"
+  - "\u041F\u043E\u0442\u0435\u0440\u044F \u0432\u0435\u0441\u0430"
+  - "\u0413\u043E\u043B\u043E\u0434\u043D\u044B\u0435 \u0431\u043E\u043B\u0438 \u0432
+    \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u041A\u0440\u043E\u0432\u043E\u0442\u043E\u0447\u0438\u0432\u043E\u0441\u0442\u044C
+    \u0434\u0435\u0441\u0435\u043D"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0420\u0432\u043E\u0442\u0430"
+  obj: {fileID: 1927639122}
 --- !u!1 &124904719
 GameObject:
   m_ObjectHideFlags: 0
@@ -13778,6 +13808,7 @@ GameObject:
   - component: {fileID: 784802644}
   - component: {fileID: 784802645}
   - component: {fileID: 784802646}
+  - component: {fileID: 784802647}
   m_Layer: 5
   m_Name: Pee
   m_TagString: Untagged
@@ -13918,6 +13949,27 @@ MonoBehaviour:
   Koef: 0
   amount: {fileID: 699229276}
   IntegerAmount: 0
+--- !u!114 &784802647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784802640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630975990a4c791419c7ce9d43098a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symptoms:
+  - "\u0411\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0433\u043E\u0440\u043B\u0435"
+  - "\u041B\u0430\u044E\u0449\u0438\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F
+    \u0431\u043E\u043B\u044C"
+  - "\u0420\u0432\u043E\u0442\u0430"
+  obj: {fileID: 1927639122}
 --- !u!1 &799192413
 GameObject:
   m_ObjectHideFlags: 0
@@ -18160,6 +18212,7 @@ GameObject:
   - component: {fileID: 1121771223}
   - component: {fileID: 1121771226}
   - component: {fileID: 1121771227}
+  - component: {fileID: 1121771228}
   m_Layer: 5
   m_Name: Blood
   m_TagString: Untagged
@@ -18299,6 +18352,35 @@ MonoBehaviour:
   Koef: 1
   amount: {fileID: 1452481820}
   IntegerAmount: 0
+--- !u!114 &1121771228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121771221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630975990a4c791419c7ce9d43098a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symptoms:
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  - "\u0413\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
+  - "\u0423\u0442\u043E\u043C\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C"
+  - "\u041F\u043E\u0442\u0435\u0440\u044F \u0432\u0435\u0441\u0430"
+  - "\u041B\u0430\u044E\u0449\u0438\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F
+    \u0431\u043E\u043B\u044C"
+  - "\u0420\u0432\u043E\u0442\u0430"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u043E\u0431\u043E\u043D\u044F\u043D\u0438\u044F"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0443\u0448\u0430\u0445"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  obj: {fileID: 1927639122}
 --- !u!1 &1142842761
 GameObject:
   m_ObjectHideFlags: 0
@@ -24794,6 +24876,7 @@ GameObject:
   - component: {fileID: 1281824187}
   - component: {fileID: 1281824188}
   - component: {fileID: 1281824189}
+  - component: {fileID: 1281824190}
   m_Layer: 5
   m_Name: Saliva
   m_TagString: Untagged
@@ -24934,6 +25017,28 @@ MonoBehaviour:
   Koef: 1
   amount: {fileID: 1529314957}
   IntegerAmount: 0
+--- !u!114 &1281824190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281824183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630975990a4c791419c7ce9d43098a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symptoms:
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
+  - "\u041F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u0420\u0432\u043E\u0442\u0430"
+  - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0430\u043F\u043F\u0435\u0442\u0438\u0442\u0430"
+  obj: {fileID: 1927639122}
 --- !u!1 &1283691133
 GameObject:
   m_ObjectHideFlags: 0
@@ -25341,6 +25446,7 @@ GameObject:
   - component: {fileID: 1321444242}
   - component: {fileID: 1321444243}
   - component: {fileID: 1321444244}
+  - component: {fileID: 1321444245}
   m_Layer: 5
   m_Name: Smear
   m_TagString: Untagged
@@ -25481,6 +25587,37 @@ MonoBehaviour:
   Koef: 1
   amount: {fileID: 1067334542}
   IntegerAmount: 0
+--- !u!114 &1321444245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321444238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630975990a4c791419c7ce9d43098a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symptoms:
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
+  - "\u041F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  - "\u0413\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443"
+  - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
+  - "\u041D\u0430\u0441\u043C\u043E\u0440\u043A"
+  - "\u0412\u044B\u043F\u0430\u0434\u0435\u043D\u0438\u0435 \u0437\u0443\u0431\u043E\u0432"
+  - "\u041A\u0440\u043E\u0432\u043E\u0442\u043E\u0447\u0438\u0432\u043E\u0441\u0442\u044C
+    \u0434\u0435\u0441\u0435\u043D"
+  - "\u0413\u043E\u043B\u043E\u0434\u043D\u044B\u0435 \u0431\u043E\u043B\u0438 \u0432
+    \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0433\u043B\u0430\u0437\u0430\u0445"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435"
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  - "\u0414\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  obj: {fileID: 1927639122}
 --- !u!1 &1325750157
 GameObject:
   m_ObjectHideFlags: 0
@@ -36809,6 +36946,7 @@ MonoBehaviour:
   infectedPeople: {fileID: 2044372175}
   b_killHim: {fileID: 1052108354}
   notificationPanel: {fileID: 747030295}
+  _issues: []
   _cityImmunity: 0
   panelDefeat: {fileID: 6063871324068892387, guid: cc1df338618d1454689c35aa8bcc4e20,
     type: 3}
@@ -38592,6 +38730,7 @@ GameObject:
   - component: {fileID: 2085405796}
   - component: {fileID: 2085405797}
   - component: {fileID: 2085405798}
+  - component: {fileID: 2085405799}
   m_Layer: 5
   m_Name: Sputum
   m_TagString: Untagged
@@ -38732,6 +38871,34 @@ MonoBehaviour:
   Koef: 2
   amount: {fileID: 275060689}
   IntegerAmount: 0
+--- !u!114 &2085405799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085405792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630975990a4c791419c7ce9d43098a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symptoms:
+  - "\u041A\u0430\u0448\u0435\u043B\u044C"
+  - "\u041F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435"
+  - "\u0418\u0437\u0436\u043E\u0433\u0430"
+  - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
+  - "\u0411\u043E\u043B\u0438 \u0432 \u0433\u043E\u0440\u043B\u0435"
+  - "\u0411\u043E\u043B\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
+  - "\u041B\u0430\u044E\u0449\u0438\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F
+    \u0431\u043E\u043B\u044C"
+  - "\u0420\u0432\u043E\u0442\u0430"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0433\u043B\u0430\u0437\u0430\u0445"
+  - "\u0411\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435"
+  - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
+  - "\u0414\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
+  obj: {fileID: 1927639122}
 --- !u!1 &2111500474
 GameObject:
   m_ObjectHideFlags: 0
