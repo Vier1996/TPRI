@@ -53,6 +53,8 @@ public class _GameController : MonoBehaviour
     [SerializeField] private Animation BIGDOOR;
     
     [SerializeField] private GameObject[] Particles;
+    
+    [SerializeField] private Animation pistolAnim;
 
     /// <summary>
     
@@ -65,8 +67,10 @@ public class _GameController : MonoBehaviour
         PlayerPrefs.SetInt("AlivePeople", 0);
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
         countNPC = 0;
+        PlayerPrefs.SetInt("pass_1_skl", 1);
         setAdditonalShoot();
         PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
+        
         //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
@@ -96,13 +100,22 @@ public class _GameController : MonoBehaviour
         
         alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
         infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
-        
+
+        if (_additionalShoot == 0)
+        {
+            b_killHim.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            b_killHim.GetComponent<Button>().interactable = true;
+        }
         b_killHim.GetComponent<Button>().onClick.AddListener(() =>
         {
             if (_additionalShoot != 0)
             {
                 if (_NPC != null)
                 {
+                    pistolAnim.Play();
                     Destroy(_NPC);
                     Invoke(nameof(InitNPC), 3);
                     _additionalShoot--;
@@ -112,6 +125,11 @@ public class _GameController : MonoBehaviour
                         PlayerPrefs.SetInt(_ResourceKeys.Геноцид, 1);
                     }
                     PlayerPrefs.SetInt(_ResourceKeys.Count_Killed, count);
+
+                    if (_additionalShoot == 0)
+                    {
+                        b_killHim.GetComponent<Button>().interactable = false;
+                    }
                 }
             }
         });

@@ -25,7 +25,9 @@ public class _equipmentScript : MonoBehaviour
     [SerializeField] private Button problemsQuestion;
     [SerializeField] private Button visitQuestion;
     [SerializeField] private GameObject deactQuestionPanel;
+    [SerializeField] private GameObject pistol;
     
+
     private int showedMenu = 0;
     void Start()
     {
@@ -33,6 +35,7 @@ public class _equipmentScript : MonoBehaviour
         HealthMenu.SetActive(false);
         DialogMenu.SetActive(false);
         DeathMenu.SetActive(false);
+        //pistol.SetActive(false);
         
         DialogWithPeople.transform.DOMove(hideDialog.transform.position, 0);
         
@@ -46,6 +49,7 @@ public class _equipmentScript : MonoBehaviour
             HealthButton.interactable = true;
             DialogButton.interactable = true;
             DeathButton.interactable = true;
+            //pistol.SetActive(false);
             
             Deact();
             //deactQuestionPanel.SetActive(false);
@@ -59,6 +63,7 @@ public class _equipmentScript : MonoBehaviour
             HealthButton.interactable = false;
             DialogButton.interactable = true;
             DeathButton.interactable = true;
+            //pistol.SetActive(false);
             
             Deact();
             //deactQuestionPanel.SetActive(false);
@@ -72,7 +77,7 @@ public class _equipmentScript : MonoBehaviour
             HealthButton.interactable = true;
             DialogButton.interactable = false;
             DeathButton.interactable = true;
-            
+            //pistol.SetActive(false);
             Deact();
             DialogMenu.SetActive(true);
             //deactQuestionPanel.SetActive(true);
@@ -85,10 +90,11 @@ public class _equipmentScript : MonoBehaviour
             HealthButton.interactable = true;
             DialogButton.interactable = true;
             DeathButton.interactable = false;
-            
+
             Deact(); 
             //deactQuestionPanel.SetActive(false);
             DeathMenu.SetActive(true);
+            //pistol.SetActive(true);
             showedMenu = 4;
         });
         
