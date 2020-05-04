@@ -64,7 +64,7 @@ public class _miniBestiarii : MonoBehaviour
         });
         
         _CurrentPage = Instantiate(pages[0], transform);
-        _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/Вирус1");
+        _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/ВирусыСматериалами/Вирус1");
         _modelVirus = Instantiate(_modelForLoadVirus);
         _modelVirus.transform.position = new Vector3(ModelX, ModelY, ModelZ);
         _modelVirus.GetComponent<_scaler>()._Scale = 1.5f;
@@ -72,7 +72,7 @@ public class _miniBestiarii : MonoBehaviour
 
     private void InstantiateModelVirus(int index)
     {
-        _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/Вирус" + (index+1));
+        _modelForLoadVirus = Resources.Load<GameObject>("3dPrefabs/ВирусыСматериалами/Вирус" + (index+1));
         _modelVirus = Instantiate(_modelForLoadVirus);
         _modelVirus.transform.position = new Vector3(ModelX, ModelY, ModelZ);
         if (index + 1 == 3)

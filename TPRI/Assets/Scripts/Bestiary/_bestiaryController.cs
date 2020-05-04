@@ -123,7 +123,7 @@ public class _bestiaryController : MonoBehaviour
 
     private void setOpenIssues(int position)
     {
-        _virusModel = Resources.Load<GameObject>("3dPrefabs/Вирус" + position);
+        _virusModel = Resources.Load<GameObject>("3dPrefabs/ВирусыСматериалами/Вирус" + position);
         if (_virusModel != null)
         {
             _virusModelGameObject = Instantiate(_virusModel);

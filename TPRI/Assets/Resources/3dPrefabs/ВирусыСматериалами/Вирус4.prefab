@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6611300905070391078}
   - component: {fileID: 8152940606808078958}
   m_Layer: 0
-  m_Name: "\u0412\u0438\u0440\u0443\u04414 1"
+  m_Name: "\u0412\u0438\u0440\u0443\u04414"
   m_TagString: VirusModel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8324508722033454833}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -19.659994, y: -13.54266, z: -3.19}
+  m_LocalPosition: {x: -2.31, y: 1.76, z: -2.25}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}

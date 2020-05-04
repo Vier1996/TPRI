@@ -15,7 +15,7 @@ public class _intro_ButtonController : MonoBehaviour
   private void Awake()
   {
     PlayerPrefs.SetInt(_ResourceKeys.Buyed_items_count, 0);
-    //PlayerPrefs.SetInt(_ResourceKeys.skills, 0);
+    PlayerPrefs.SetInt(_ResourceKeys.skills, 50);
     PlayerPrefs.SetInt(_ResourceKeys.Count_healed_People, 0);
     PlayerPrefs.SetInt(_ResourceKeys.Count_Killed, 0);
     _DropProgress.DporBestiarii(0);

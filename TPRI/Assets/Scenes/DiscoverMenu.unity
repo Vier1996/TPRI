@@ -4225,6 +4225,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 501326771}
+  - component: {fileID: 501326772}
+  - component: {fileID: 501326773}
   m_Layer: 0
   m_Name: Pidor
   m_TagString: Untagged
@@ -4253,6 +4255,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 1.5970001, y: -198.987, z: -0.432}
+--- !u!114 &501326772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501326770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8eab53e1723ee547a4e1d70fcbdbaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &501326773
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501326770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.5017207, z: 1}
+  m_Center: {x: -3.231615e-10, y: 0.7508607, z: -3.4242753e-10}
 --- !u!1 &519447183
 GameObject:
   m_ObjectHideFlags: 0
@@ -12090,17 +12117,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f2a1f9cdd401e2142ae11b6059f6dac6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0498
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f2a1f9cdd401e2142ae11b6059f6dac6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6001
+      value: 1.598
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f2a1f9cdd401e2142ae11b6059f6dac6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.2062
+      value: 0.188
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f2a1f9cdd401e2142ae11b6059f6dac6,
         type: 3}
