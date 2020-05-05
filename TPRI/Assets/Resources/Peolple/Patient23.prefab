@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2300081559305219980
+--- !u!1 &1615259687878097310
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3004145202073345439}
-  - component: {fileID: 6119222674943748009}
-  - component: {fileID: 565010375351884624}
-  - component: {fileID: -8992647646217976087}
-  - component: {fileID: 1317058679823067410}
+  - component: {fileID: 2319872743835536269}
+  - component: {fileID: 6731422696781033915}
+  - component: {fileID: 1033110112650743106}
+  - component: {fileID: 551812510078545894}
+  - component: {fileID: -3980059107269728637}
+  - component: {fileID: -8180974398128738869}
   m_Layer: 0
-  m_Name: Patients0
-  m_TagString: Untagged
+  m_Name: Patient23
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3004145202073345439
+--- !u!4 &2319872743835536269
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300081559305219980}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -11.27, y: -14.88, z: -10}
-  m_LocalScale: {x: 13.239041, y: 13.368479, z: 13.239041}
+  m_GameObject: {fileID: 1615259687878097310}
+  m_LocalRotation: {x: -0.29883638, y: -0.6408563, z: -0.6408563, w: 0.29883638}
+  m_LocalPosition: {x: -11.3, y: -20.6, z: 85.7}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
---- !u!33 &6119222674943748009
+  m_LocalEulerAnglesHint: {x: -90, y: 50, z: -179.99998}
+--- !u!33 &6731422696781033915
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300081559305219980}
-  m_Mesh: {fileID: -8560716666979604392, guid: 27870ae6575721841b8dba75f5b5be6c, type: 3}
---- !u!23 &565010375351884624
+  m_GameObject: {fileID: 1615259687878097310}
+  m_Mesh: {fileID: 6604927694719916108, guid: 5935bcf4948207c4ea44def6599e40dc, type: 3}
+--- !u!23 &1033110112650743106
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300081559305219980}
+  m_GameObject: {fileID: 1615259687878097310}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b1766ea6a0d83a14a8c5f4d5785b6e05, type: 2}
+  - {fileID: 8978865829690287797, guid: 5935bcf4948207c4ea44def6599e40dc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,32 +81,50 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-8992647646217976087
+--- !u!114 &551812510078545894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300081559305219980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563d3317f3ddfff48bc034816479c4fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _issueName: 
-  _symptoms: []
---- !u!114 &1317058679823067410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300081559305219980}
+  m_GameObject: {fileID: 1615259687878097310}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3af8d409f9ad9964d802fac4c31a048d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theDialog: 
-  analysis: []
-  nameOfPatient: 
+  analysis:
+  - negative
+  - positive
+  - negative
+  - positive
+  - negative
+  - negative
+  nameOfPatient: Smith
+--- !u!114 &-3980059107269728637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615259687878097310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563d3317f3ddfff48bc034816479c4fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _issueName: "\u041F\u0440\u043E\u0441\u0442\u0443\u0434\u0430"
+--- !u!114 &-8180974398128738869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615259687878097310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c42de0ea90f0142a1695cc94bf5759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Scale: 15

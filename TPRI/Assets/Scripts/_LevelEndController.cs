@@ -113,6 +113,7 @@ public class _LevelEndController : MonoBehaviour
         gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
         if(SceneManager.GetActiveScene().buildIndex == 8)
             PlayerPrefs.SetInt(_ResourceKeys.Первопроходец, 1);
+        PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
     }
 
     public void setPanelDefeat()

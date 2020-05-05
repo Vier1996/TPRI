@@ -41,8 +41,10 @@ public class _GameController : MonoBehaviour
     [SerializeField] private Transform panelDefeat1;
     private int _additionalShoot;
     private float patientX = -11f, patientY = -14f, patientZ = 86f;
+    private float patientSecX = -11, patientSecY = -5, patientSecZ = 86f;
     public static int countHealedSymptomes = 0;
     private int _countNPCAccrodingLevel = 0;
+    private const string FIRST_TiME = "first time";
 
     [SerializeField] private Button endMenu;
     [SerializeField] private Button endNextLevel;
@@ -62,9 +64,15 @@ public class _GameController : MonoBehaviour
 
     private void Awake()
     {
+        //Time.timeScale = 0;
+        if (PlayerPrefs.GetInt(FIRST_TiME) == 0)
+        {
+            PlayerPrefs.SetInt("AlivePeople", 348);
+            PlayerPrefs.SetInt("InfectedPeople", 0);
+            PlayerPrefs.SetInt("PEOPLE", 0);
+            PlayerPrefs.SetInt(FIRST_TiME, 1);
+        }
         PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
-        PlayerPrefs.SetInt("PEOPLE", 0);
-        PlayerPrefs.SetInt("AlivePeople", 0);
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
         countNPC = 0;
         PlayerPrefs.SetInt("pass_1_skl", 1);
@@ -85,6 +93,9 @@ public class _GameController : MonoBehaviour
         
         if (PlayerPrefs.GetInt("GCBesiariiCome") != 1)
         {
+            /*PlayerPrefs.SetInt("PEOPLE", 0);
+            PlayerPrefs.SetInt("AlivePeople", 348);
+            PlayerPrefs.SetInt("InfectedPeople", 0);*/
             Population = PlayerPrefs.GetInt("AlivePeople");
             _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
         }
@@ -95,7 +106,6 @@ public class _GameController : MonoBehaviour
             _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
             countNPC = PlayerPrefs.GetInt("PEOPLE");
             _queue.adaptation(countNPC);
-            
         }
         
         alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
@@ -139,12 +149,17 @@ public class _GameController : MonoBehaviour
         _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
         _issues = issuesScript.getSymptoms();
 
-        endMenu.onClick.AddListener(() => { SceneManager.LoadScene("_introMenu"); });
+        endMenu.onClick.AddListener(() =>
+        {
+            PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("_introMenu");
+        });
         
         endNextLevel.onClick.AddListener(() =>
         {
             SaveStateToNextLevel();
             Time.timeScale = 1;
+            PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }); //пофиксить для 7го левла
 
@@ -234,7 +249,7 @@ public class _GameController : MonoBehaviour
                 Particles[0].SetActive(false);
                 Particles[1].SetActive(false);
                 Particles[2].SetActive(false);
-                
+                PlayerPrefs.SetInt(FIRST_TiME, 0);
                 PlayerPrefs.SetInt("AlivePeople", 348);
                 PlayerPrefs.SetInt("InfectedPeople", 0);
                 PlayerPrefs.SetInt("PEOPLE", 0);
@@ -349,7 +364,19 @@ public class _GameController : MonoBehaviour
             GameObject npc = Resources.Load<GameObject>("Peolple/Patient" + countNPC);
             Debug.Log("           " + countNPC);
             _NPC = Instantiate(npc);
-            _NPC.transform.position = new Vector3(patientX, patientY, patientZ);
+            if (countNPC == 5 || countNPC == 10 || countNPC>=18)
+            {
+                _NPC.transform.position = new Vector3(patientX, patientY, patientZ);
+            }
+            else if (countNPC == 0)
+            {
+                _NPC.transform.position = new Vector3(-11, -16, 86);
+            }
+            else
+            {
+                _NPC.transform.position = new Vector3(patientSecX, patientSecY, patientSecZ);
+            }
+            
             resetDialog();
             countNPC++;
             
@@ -425,6 +452,7 @@ public class _GameController : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
+        //PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
         PlayerPrefs.SetInt("AlivePeople", Population);
         PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
     }
