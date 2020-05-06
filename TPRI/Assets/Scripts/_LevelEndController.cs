@@ -84,6 +84,7 @@ public class _LevelEndController : MonoBehaviour
         PlayerPrefs.SetInt(_ResourceKeys.Начинающий, 1);
         PlayerPrefs.SetInt(_ResourceKeys.TheFirstLevel, 1);
         levelPointsSlider.maxValue = PlayerPrefs.GetInt(_ResourceKeys.NeddedScore);
+        Debug.Log("Value: " + PlayerPrefs.GetInt(_ResourceKeys.NeddedScore));
         gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text += " " + _countPatient;
         gameObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text += " " + _countPassingIlls;
         gameObject.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text += " " + _countHealingIllnesses;
@@ -92,7 +93,7 @@ public class _LevelEndController : MonoBehaviour
         gameObject.transform.GetChild(6).GetComponent<TextMeshProUGUI>().text += " " + _population;
         //gameObject.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text += " " + (_countSkillPoints+1);
         gameObject.transform.GetChild(8).GetComponent<TextMeshProUGUI>().text += " " + _countMoney;
-        PlayerPrefs.SetInt(_ResourceKeys.Money, PlayerPrefs.GetInt(_ResourceKeys.Money) + _countMoney);
+        //PlayerPrefs.SetInt(_ResourceKeys.Money, PlayerPrefs.GetInt(_ResourceKeys.Money) + _countMoney);
         int levelPoints = PlayerPrefs.GetInt(_ResourceKeys.CurrentScore) + setLevelPointsSlider();
         if (levelPoints >= PlayerPrefs.GetInt(_ResourceKeys.NeddedScore))
         {
@@ -113,7 +114,7 @@ public class _LevelEndController : MonoBehaviour
         gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel).ToString();
         if(SceneManager.GetActiveScene().buildIndex == 8)
             PlayerPrefs.SetInt(_ResourceKeys.Первопроходец, 1);
-        PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
     }
 
     public void setPanelDefeat()
