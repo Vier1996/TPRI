@@ -8,9 +8,11 @@ using UnityEngine.Video;
 public class VideoContrl : MonoBehaviour
 {
     [SerializeField] private VideoPlayer _videoPlayer;
+    [SerializeField] private AudioSource music;
 
     private void Awake()
     {
+        music.Play();
         _videoPlayer.Play();
     }
 
@@ -18,6 +20,7 @@ public class VideoContrl : MonoBehaviour
     {
         if (!_videoPlayer.isPlaying)
         {
+            music.Stop();
             SceneManager.LoadScene("_introMenu");
         }
     }

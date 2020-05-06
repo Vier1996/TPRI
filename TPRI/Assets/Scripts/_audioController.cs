@@ -49,6 +49,10 @@ public class _audioController : MonoBehaviour
         catch (NullReferenceException)
         {
         }
-        
+    }
+
+    public void stop()
+    {
+        Music.Stop();
     }
 }

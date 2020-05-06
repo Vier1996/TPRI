@@ -62,10 +62,11 @@ public class _GameController : MonoBehaviour
     [SerializeField] private AudioSource SwordStrike;
     [SerializeField] private AudioSource endGame;
     [SerializeField] private AudioSource victory;
-    [SerializeField] private AudioSource killMsc;
     [SerializeField] private AudioSource toBeContinue;
     [SerializeField] private AudioSource _DoorSound;
     [SerializeField] private AudioSource WARNING;
+    [SerializeField] private AudioSource backGround;
+    private bool isWarning = false;
 
     /// <summary>
     
@@ -73,6 +74,8 @@ public class _GameController : MonoBehaviour
 
     private void Awake()
     {
+        isWarning = false;
+        backGround.Play();
         //Time.timeScale = 0;
         if (PlayerPrefs.GetInt(FIRST_TiME) == 0)
         {
@@ -137,8 +140,7 @@ public class _GameController : MonoBehaviour
                     pistolAnim.Play();
                     SekiraInam.Play();
                     
-                    killMsc.Play();
-                    Invoke(nameof(osvist), 0.3f);
+                    //Invoke(nameof(osvist), 0.3f);
                     
                     Invoke(nameof(swordStrike), 1f);
                     Destroy(_NPC);
@@ -193,10 +195,10 @@ public class _GameController : MonoBehaviour
         SwordStrike.Play();
     }
 
-    private void osvist()
+    /*private void osvist()
     {
         killMsc.Stop();
-    }
+    }*/
 
     private void setAdditonalShoot()
     {
@@ -282,15 +284,25 @@ public class _GameController : MonoBehaviour
                 PlayerPrefs.SetInt("InfectedPeople", 0);
                 PlayerPrefs.SetInt("PEOPLE", 0);
                 Instantiate(panelDefeat, panelDefeat1);
+                backGround.Stop();
                 endGame.Play();
                
             }
 
-            if (Population <= 75)
+            if (Population <= 75 && !isWarning)
+            {
+                backGround.volume = backGround.volume - 0.5f;
+                isWarning = true;
                 WARNING.Play();
-            
-            if(issues._issueName.Equals("Коронавирус"))
+                Invoke(nameof(stopWarning), 3f);
+            }
+
+            if (issues._issueName.Equals("Коронавирус"))
+            {
+                backGround.volume = backGround.volume - 0.5f;
                 toBeContinue.Play();
+                Invoke(nameof(stopToBeContinue), 8f);
+            }
         }
         else
         {
@@ -306,13 +318,27 @@ public class _GameController : MonoBehaviour
         Destroy(_NPC);
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");
+        backGround.volume = backGround.volume - 0.5f;
         _DoorSound.Play();
         Invoke(nameof(DoorSoundStop), 2f);
         Invoke(nameof(InitNPC), 3);
     }
 
+    private void stopToBeContinue()
+    {
+        backGround.volume = backGround.volume + 0.5f;
+        toBeContinue.Stop();
+    }
+
+    private void stopWarning()
+    {
+        backGround.volume = backGround.volume + 0.5f;
+        WARNING.Stop();
+    }
+    
     private void DoorSoundStop()
     {
+        backGround.volume = backGround.volume + 0.5f;
         _DoorSound.Stop();
     }
 
@@ -437,7 +463,7 @@ public class _GameController : MonoBehaviour
         }
         else
         {
-            
+            backGround.Stop();
             panelWin.SetActive(true);
             victory.Play();
             _levelEndController.setCountHealed(healed);
