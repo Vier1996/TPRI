@@ -57,6 +57,13 @@ public class _GameController : MonoBehaviour
     [SerializeField] private GameObject[] Particles;
     
     [SerializeField] private Animation pistolAnim;
+    [SerializeField] private Animation SekiraInam;
+    
+    [SerializeField] private AudioSource SwordStrike;
+    [SerializeField] private AudioSource endGame;
+    [SerializeField] private AudioSource victory;
+    [SerializeField] private AudioSource killMsc;
+    [SerializeField] private AudioSource toBeContinue;
 
     /// <summary>
     
@@ -126,6 +133,12 @@ public class _GameController : MonoBehaviour
                 if (_NPC != null)
                 {
                     pistolAnim.Play();
+                    SekiraInam.Play();
+                    
+                    killMsc.Play();
+                    Invoke(nameof(osvist), 0.3f);
+                    
+                    Invoke(nameof(swordStrike), 1f);
                     Destroy(_NPC);
                     Invoke(nameof(InitNPC), 3);
                     _additionalShoot--;
@@ -171,6 +184,16 @@ public class _GameController : MonoBehaviour
         {
             Part.SetActive(false);
         }
+    }
+
+    private void swordStrike()
+    {
+        SwordStrike.Play();
+    }
+
+    private void osvist()
+    {
+        killMsc.Stop();
     }
 
     private void setAdditonalShoot()
@@ -257,8 +280,12 @@ public class _GameController : MonoBehaviour
                 PlayerPrefs.SetInt("InfectedPeople", 0);
                 PlayerPrefs.SetInt("PEOPLE", 0);
                 Instantiate(panelDefeat, panelDefeat1);
+                endGame.Play();
+               
             }
             
+            if(issues._issueName.Equals("Коронавирус"))
+                toBeContinue.Play();
         }
         else
         {
@@ -396,8 +423,9 @@ public class _GameController : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
+            
             panelWin.SetActive(true);
+            victory.Play();
             _levelEndController.setCountHealed(healed);
             _levelEndController.setCountPatient(countNPC);
             _levelEndController.setCountPassIlls(passIlls);
