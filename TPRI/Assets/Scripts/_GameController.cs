@@ -151,8 +151,10 @@ public class _GameController : MonoBehaviour
 
         endMenu.onClick.AddListener(() =>
         {
+            Time.timeScale = 1;
             PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene("_introMenu");
+            LevelClearedHelper();
         });
         
         endNextLevel.onClick.AddListener(() =>
@@ -161,6 +163,7 @@ public class _GameController : MonoBehaviour
             Time.timeScale = 1;
             PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            LevelClearedHelper();
         }); //пофиксить для 7го левла
 
 
@@ -254,7 +257,6 @@ public class _GameController : MonoBehaviour
                 PlayerPrefs.SetInt("InfectedPeople", 0);
                 PlayerPrefs.SetInt("PEOPLE", 0);
                 Instantiate(panelDefeat, panelDefeat1);
-               
             }
             
         }
@@ -449,13 +451,13 @@ public class _GameController : MonoBehaviour
         PlayerPrefs.SetInt("PEOPLE", C);
     }
 
-    private void OnApplicationQuit()
+    /*private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
         //PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
         PlayerPrefs.SetInt("AlivePeople", Population);
         PlayerPrefs.SetInt("InfectedPeople", _infectedAndDeadCounter.getInfected());
-    }
+    }*/
 
     public void SaveCommonState()
     {
@@ -528,13 +530,13 @@ public class _GameController : MonoBehaviour
 
         switch (inx)
         {
-            case 2: PlayerPrefs.SetInt("clrd_lvl_1", 1); break;
-            case 3: PlayerPrefs.SetInt("clrd_lvl_2", 1); break;
-            case 4: PlayerPrefs.SetInt("clrd_lvl_3", 1); break;
-            case 5: PlayerPrefs.SetInt("clrd_lvl_4", 1); break;
-            case 6: PlayerPrefs.SetInt("clrd_lvl_5", 1); break;
-            case 7: PlayerPrefs.SetInt("clrd_lvl_6", 1); break;
-            case 8: PlayerPrefs.SetInt("clrd_lvl_7", 1); break;
+            case 3: PlayerPrefs.SetInt("clrd_lvl_1", 1); break;
+            case 4: PlayerPrefs.SetInt("clrd_lvl_2", 1); break;
+            case 5: PlayerPrefs.SetInt("clrd_lvl_3", 1); break;
+            case 6: PlayerPrefs.SetInt("clrd_lvl_4", 1); break;
+            case 7: PlayerPrefs.SetInt("clrd_lvl_5", 1); break;
+            case 8: PlayerPrefs.SetInt("clrd_lvl_6", 1); break;
+            case 9: PlayerPrefs.SetInt("clrd_lvl_7", 1); break;
         }
     }
 }
