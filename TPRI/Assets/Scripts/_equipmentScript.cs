@@ -16,16 +16,20 @@ public class _equipmentScript : MonoBehaviour
     public static bool _showDialogs = false;
     [SerializeField] private GameObject hideDialog;
     [SerializeField] private GameObject showDialog;
+    
     [SerializeField] private Button ResearchButton;
     [SerializeField] private Button HealthButton;
     [SerializeField] private Button DialogButton;
     [SerializeField] private Button DeathButton;
+    
     [SerializeField] private Button DialogWithPeopleButton;
     [SerializeField] private Button whereQuestion;
     [SerializeField] private Button problemsQuestion;
     [SerializeField] private Button visitQuestion;
     [SerializeField] private GameObject deactQuestionPanel;
     [SerializeField] private GameObject pistol;
+    
+    [SerializeField] private AudioSource pick;
     
 
     private int showedMenu = 0;
@@ -55,6 +59,7 @@ public class _equipmentScript : MonoBehaviour
             //deactQuestionPanel.SetActive(false);
             ResearchMenu.SetActive(true);
             showedMenu = 1;
+            pick.Play();
         });
         
         HealthButton.onClick.AddListener(() =>
@@ -69,6 +74,7 @@ public class _equipmentScript : MonoBehaviour
             //deactQuestionPanel.SetActive(false);
             HealthMenu.SetActive(true);
             showedMenu = 2;
+            pick.Play();
         });
         
         DialogButton.onClick.AddListener(() =>
@@ -82,6 +88,7 @@ public class _equipmentScript : MonoBehaviour
             DialogMenu.SetActive(true);
             //deactQuestionPanel.SetActive(true);
             showedMenu = 3;
+            pick.Play();
         });
         
         DeathButton.onClick.AddListener(() =>
@@ -96,6 +103,7 @@ public class _equipmentScript : MonoBehaviour
             DeathMenu.SetActive(true);
             //pistol.SetActive(true);
             showedMenu = 4;
+            pick.Play();
         });
         
         DialogWithPeopleButton.onClick.AddListener(() =>

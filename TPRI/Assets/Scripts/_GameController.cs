@@ -64,6 +64,8 @@ public class _GameController : MonoBehaviour
     [SerializeField] private AudioSource victory;
     [SerializeField] private AudioSource killMsc;
     [SerializeField] private AudioSource toBeContinue;
+    [SerializeField] private AudioSource _DoorSound;
+    [SerializeField] private AudioSource WARNING;
 
     /// <summary>
     
@@ -283,6 +285,9 @@ public class _GameController : MonoBehaviour
                 endGame.Play();
                
             }
+
+            if (Population <= 75)
+                WARNING.Play();
             
             if(issues._issueName.Equals("Коронавирус"))
                 toBeContinue.Play();
@@ -301,7 +306,14 @@ public class _GameController : MonoBehaviour
         Destroy(_NPC);
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");
+        _DoorSound.Play();
+        Invoke(nameof(DoorSoundStop), 2f);
         Invoke(nameof(InitNPC), 3);
+    }
+
+    private void DoorSoundStop()
+    {
+        _DoorSound.Stop();
     }
 
     private void Warnings()
@@ -377,6 +389,8 @@ public class _GameController : MonoBehaviour
         
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");
+        _DoorSound.Play();
+        Invoke(nameof(DoorSoundStop), 2f);
         
         _queue.PsholVon(true);
         _passingPeople.interactable = false;

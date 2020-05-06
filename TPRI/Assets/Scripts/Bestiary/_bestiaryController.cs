@@ -28,6 +28,9 @@ public class _bestiaryController : MonoBehaviour
 
     private Information VirusInformaiton;
     [SerializeField] private Button backToMenu;
+    
+    [SerializeField] private Animation leaf;
+    [SerializeField] private AudioSource _leaf;
 
     private void Awake()
     {
@@ -109,6 +112,15 @@ public class _bestiaryController : MonoBehaviour
         {
             setClosedIssues(nameSomeVirus);
         }
+        _leaf.Play();
+        Invoke(nameof(Stopper), 1f);
+        
+        leaf.Play();
+    }
+    
+    private void Stopper()
+    {
+        _leaf.Stop();
     }
 
     private void setClosedIssues(string name)

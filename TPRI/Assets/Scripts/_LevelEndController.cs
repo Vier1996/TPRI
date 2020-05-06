@@ -23,7 +23,7 @@ public class _LevelEndController : MonoBehaviour
         _countDead = _countInfected =
             _countMoney = _countPatient = 
                 _countHealingIllnesses = _countSkillPoints = 
-                    _countPassingIlls = _population =0;
+                    _countPassingIlls = _population = 0;
     }
 
     public void setCountPatient(int patients)

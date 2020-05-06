@@ -13,6 +13,8 @@ public class _miniBestiarii : MonoBehaviour
     [SerializeField] private Button toBestiarii;
     [SerializeField] private Button toBack;
     [SerializeField] private Button toNext;
+    
+    [SerializeField] private AudioSource bookLeaf;
 
     private GameObject _CurrentPage;
     private int CurrentPage = 0;
@@ -45,6 +47,8 @@ public class _miniBestiarii : MonoBehaviour
                 _CurrentPage = Instantiate(pages[--CurrentPage], transform);
                 InstantiateModelVirus(CurrentPage);
             }
+            bookLeaf.Play();
+            Invoke(nameof(Stopper), 1f);
         });
         toNext.onClick.AddListener(() =>
         {
@@ -61,6 +65,8 @@ public class _miniBestiarii : MonoBehaviour
                 _CurrentPage = Instantiate(pages[++CurrentPage], transform);
                 InstantiateModelVirus(CurrentPage);
             }
+            bookLeaf.Play();
+            Invoke(nameof(Stopper), 1f);
         });
         
         _CurrentPage = Instantiate(pages[0], transform);
@@ -68,6 +74,11 @@ public class _miniBestiarii : MonoBehaviour
         _modelVirus = Instantiate(_modelForLoadVirus);
         _modelVirus.transform.position = new Vector3(ModelX, ModelY, ModelZ);
         _modelVirus.GetComponent<_scaler>()._Scale = 1.5f;
+    }
+
+    private void Stopper()
+    {
+        bookLeaf.Stop();
     }
 
     private void InstantiateModelVirus(int index)

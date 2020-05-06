@@ -10,7 +10,8 @@ public class _PopUpAnalyses : MonoBehaviour
     [SerializeField] private TextMeshProUGUI patient, nameOfAnalysis, result;
     [SerializeField] private Button close;
     [SerializeField] private GameObject resultOfAnalysis, table;
-
+    [SerializeField] private AudioSource click;
+    
     private GameObject _NPC;
     private const string PATIENT = "Patient:", ANALYSIS = "Analysis: ", RESULT = "Result: ";
 
@@ -25,6 +26,7 @@ public class _PopUpAnalyses : MonoBehaviour
                 patient.text += " " + _NPC.GetComponent<_peopleState>().nameOfPatient;
                 nameOfAnalysis.text += " " + gameObject.name.ToLower();
                 result.text += " " + GetComponent<AnalysMap>()._check();
+                click.Play();
             }
         });
         close.onClick.AddListener(() =>
