@@ -6339,7 +6339,6 @@ MonoBehaviour:
   result: {fileID: 1999654741}
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
-  table: {fileID: 0}
   click: {fileID: 1081892098608568570}
 --- !u!114 &118105221
 MonoBehaviour:
@@ -9804,7 +9803,7 @@ PrefabInstance:
     - target: {fileID: 2085574326324468994, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_Name
-      value: People (1)
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -14146,7 +14145,6 @@ MonoBehaviour:
   result: {fileID: 1999654741}
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
-  table: {fileID: 0}
   click: {fileID: 1081892098608568570}
 --- !u!114 &784802646
 MonoBehaviour:
@@ -14698,7 +14696,7 @@ PrefabInstance:
     - target: {fileID: 2085574326324468994, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_Name
-      value: People (3)
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -18440,7 +18438,6 @@ MonoBehaviour:
   result: {fileID: 1999654741}
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
-  table: {fileID: 0}
   click: {fileID: 1081892098608568570}
 --- !u!114 &1121771227
 MonoBehaviour:
@@ -25106,7 +25103,6 @@ MonoBehaviour:
   result: {fileID: 1999654741}
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
-  table: {fileID: 0}
   click: {fileID: 1081892098608568570}
 --- !u!114 &1281824189
 MonoBehaviour:
@@ -25750,7 +25746,6 @@ MonoBehaviour:
   result: {fileID: 1999654741}
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
-  table: {fileID: 0}
   click: {fileID: 1081892098608568570}
 --- !u!114 &1321444244
 MonoBehaviour:
@@ -26233,7 +26228,7 @@ PrefabInstance:
     - target: {fileID: 2085574326324468994, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_Name
-      value: People (2)
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -38479,7 +38474,7 @@ PrefabInstance:
     - target: {fileID: 2085574326324468994, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_Name
-      value: People (4)
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -39283,7 +39278,6 @@ MonoBehaviour:
   result: {fileID: 1999654741}
   close: {fileID: 2062389637}
   resultOfAnalysis: {fileID: 407425285}
-  table: {fileID: 0}
   click: {fileID: 1081892098608568570}
 --- !u!114 &2085405798
 MonoBehaviour:
@@ -40178,7 +40172,7 @@ PrefabInstance:
     - target: {fileID: 2085574326324468994, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_Name
-      value: People
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}

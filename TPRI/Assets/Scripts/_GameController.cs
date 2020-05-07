@@ -76,6 +76,7 @@ public class _GameController : MonoBehaviour
     {
         isWarning = false;
         backGround.Play();
+        PlayerPrefs.SetInt("10_skl", 1);
         //Time.timeScale = 0;
         if (PlayerPrefs.GetInt(FIRST_TiME) == 0)
         {
@@ -234,87 +235,83 @@ public class _GameController : MonoBehaviour
         
         _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
         InfoAboutIlnesses info = new InfoAboutIlnesses();
-        int numOfSymptoms = info.getSymptoms()[issues._issueName].Count;
-        //people[CountPuppets - 1].GetComponent<_queuePeopleController>().Run();
-        //CountPuppets--;
-        _levelEndController.setCountPatient(1);
-        if (issues.getSymptoms().Count != 0)
+        if (!issues._issueName.Equals("HEALTHY"))
         {
-            issues.setSymptoms(tryToHealOneSymptom(issues.getSymptoms()));
+            int numOfSymptoms = info.getSymptoms()[issues._issueName].Count;
+            _levelEndController.setCountPatient(1);
+            if (issues.getSymptoms().Count != 0)
+            {
+                issues.setSymptoms(tryToHealOneSymptom(issues.getSymptoms()));
+            }
+
+            if (issues.getSymptoms().Count != 0)
+            {
+                int infection = 0;
+                passIlls += 1;
+                Warnings();
+                if (PlayerPrefs.GetInt("8_skl") == 1)
+                {
+                    _cityImmunity = 15;
+                }
+
+                if (PlayerPrefs.GetInt("9_skl") == 1)
+                {
+                    _cityImmunity = 30;
+                }
+
+                Debug.Log("Count sympt: " + issues.getSymptoms().Count);
+                double changeInfection = (double) issues.getSymptoms().Count / numOfSymptoms;
+                Debug.Log("Infection before changes: " + issues.getInfection());
+                infection = (int) (issues.getInfection() * changeInfection);
+                Debug.Log("After changes: " + infection);
+
+                _infectedAndDeadCounter.setFatality(issues.getFatality());
+                _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
+                infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
+                alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
+
+                if (_infectedAndDeadCounter.getInfected() == 0 && Population == 0)
+                {
+                    Particles[0].SetActive(false);
+                    Particles[1].SetActive(false);
+                    Particles[2].SetActive(false);
+                    PlayerPrefs.SetInt(FIRST_TiME, 0);
+                    PlayerPrefs.SetInt("AlivePeople", 348);
+                    PlayerPrefs.SetInt("InfectedPeople", 0);
+                    PlayerPrefs.SetInt("PEOPLE", 0);
+                    Instantiate(panelDefeat, panelDefeat1);
+                    backGround.Stop();
+                    endGame.Play();
+                }
+
+                if (Population <= 75 && !isWarning)
+                {
+                    backGround.volume = backGround.volume - 0.5f;
+                    isWarning = true;
+                    WARNING.Play();
+                    Invoke(nameof(stopWarning), 3f);
+                }
+
+                if (issues._issueName.Equals("Коронавирус"))
+                {
+                    backGround.volume = backGround.volume - 0.5f;
+                    toBeContinue.Play();
+                    Invoke(nameof(stopToBeContinue), 8f);
+                }
+            }
+            else
+            {
+                healed += 1;
+                int count = PlayerPrefs.GetInt(_ResourceKeys.Count_healed_People) + 1;
+                if (count >= 20)
+                {
+                    PlayerPrefs.SetInt(_ResourceKeys.Врач_от_бога, 1);
+                }
+
+                PlayerPrefs.SetInt(_ResourceKeys.Count_healed_People, count);
+            }
         }
 
-        if (issues.getSymptoms().Count != 0)
-        {
-            int infection = 0;
-            passIlls += 1;
-            Warnings();
-            if (PlayerPrefs.GetInt("8_skl") == 1)
-            {
-                _cityImmunity = 15;
-            }
-
-            if (PlayerPrefs.GetInt("9_skl") == 1)
-            {
-                _cityImmunity = 30;
-            }
-
-            Debug.Log("Count sympt: " + issues.getSymptoms().Count);
-            double changeInfection = (double)issues.getSymptoms().Count / numOfSymptoms;
-            Debug.Log("Infection before changes: " + issues.getInfection());
-            infection = (int)(issues.getInfection() * changeInfection);
-            Debug.Log("After changes: " + infection);
-            
-            _infectedAndDeadCounter.setFatality(issues.getFatality());
-            _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
-            infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
-            alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
-            
-            if (_infectedAndDeadCounter.getInfected() == 0 && Population == 0)
-            {
-               // panelDefeat.SetActive(true);
-                //_levelEndController.setCountDead(_infectedAndDeadCounter.getDead());
-                //_levelEndController.setCountPatient(countNPC);
-               // _levelEndController.setCountPassIlls(passIlls);
-                //_levelEndController.setPanelDefeat();
-                Particles[0].SetActive(false);
-                Particles[1].SetActive(false);
-                Particles[2].SetActive(false);
-                PlayerPrefs.SetInt(FIRST_TiME, 0);
-                PlayerPrefs.SetInt("AlivePeople", 348);
-                PlayerPrefs.SetInt("InfectedPeople", 0);
-                PlayerPrefs.SetInt("PEOPLE", 0);
-                Instantiate(panelDefeat, panelDefeat1);
-                backGround.Stop();
-                endGame.Play();
-               
-            }
-
-            if (Population <= 75 && !isWarning)
-            {
-                backGround.volume = backGround.volume - 0.5f;
-                isWarning = true;
-                WARNING.Play();
-                Invoke(nameof(stopWarning), 3f);
-            }
-
-            if (issues._issueName.Equals("Коронавирус"))
-            {
-                backGround.volume = backGround.volume - 0.5f;
-                toBeContinue.Play();
-                Invoke(nameof(stopToBeContinue), 8f);
-            }
-        }
-        else
-        {
-            healed += 1;
-            int count = PlayerPrefs.GetInt(_ResourceKeys.Count_healed_People) + 1;
-            if (count >= 20)
-            {
-                PlayerPrefs.SetInt(_ResourceKeys.Врач_от_бога, 1);
-            }
-            PlayerPrefs.SetInt(_ResourceKeys.Count_healed_People, count);
-        }
-        
         Destroy(_NPC);
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");
@@ -450,7 +447,8 @@ public class _GameController : MonoBehaviour
             countNPC++;
             
             _PeopleIssues issues = _NPC.GetComponent<_PeopleIssues>();
-            if (issues.getSymptoms().Count != 0)
+            _issues = _NPC.GetComponent<_PeopleIssues>().getSymptoms();
+            if (issues.getSymptoms() != null && issues.getSymptoms().Count != 0)
             {
                 List<string> randomSymptoms = issues.getSymptoms();
                 

@@ -67,45 +67,48 @@ public class _levelItemController : MonoBehaviour
     {
         sanya.Play();
         Invoke(nameof(stopper), 1.8f);
-        
-        tryToHealFull();
-        if (!_fullHealing)
+
+        if (_peopleIllness != null)
         {
-            if(key.Equals("Key_Panacea"))
+            tryToHealFull();
+            if (!_fullHealing)
             {
-                Healling();
-            }
-            else if (key.Equals("Key_Saint_water"))
-            {
-                int rate = Random.Range(0, 101);
-                if (rate <= 95)
+                if (key.Equals("Key_Panacea"))
                 {
                     Healling();
                 }
-            }
-            else if (key.Equals("Key_Cross"))
-            {
-                PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
-            }
-            else
-            {
-                int index_cur_sympt = 0;
-                for (int i = 0; i < curableSymptoms.Count; i++)
+                else if (key.Equals("Key_Saint_water"))
                 {
-                    if (_peopleIllness.Contains(curableSymptoms[i]))
+                    int rate = Random.Range(0, 101);
+                    if (rate <= 95)
                     {
-                        _peopleIllness.Remove(curableSymptoms[i]);
-                        PlayerPrefs.SetInt("Key_" + curableSymptoms[i], 1);
-                        _GameController.countHealedSymptomes++;
+                        Healling();
+                    }
+                }
+                else if (key.Equals("Key_Cross"))
+                {
+                    PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
+                }
+                else
+                {
+                    int index_cur_sympt = 0;
+                    for (int i = 0; i < curableSymptoms.Count; i++)
+                    {
+                        if (_peopleIllness.Contains(curableSymptoms[i]))
+                        {
+                            _peopleIllness.Remove(curableSymptoms[i]);
+                            PlayerPrefs.SetInt("Key_" + curableSymptoms[i], 1);
+                            _GameController.countHealedSymptomes++;
+                        }
+
+                        index_cur_sympt++;
                     }
 
-                    index_cur_sympt++;
-                }
-
-                _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
-                if (_GameController.countHealedSymptomes == 3)
-                {
-                    PlayerPrefs.SetInt(_ResourceKeys.Первые_шаги, 1);
+                    _NPC.GetComponent<_PeopleIssues>().setSymptoms(_peopleIllness);
+                    if (_GameController.countHealedSymptomes == 3)
+                    {
+                        PlayerPrefs.SetInt(_ResourceKeys.Первые_шаги, 1);
+                    }
                 }
             }
         }

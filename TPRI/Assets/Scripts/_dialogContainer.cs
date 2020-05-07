@@ -31,6 +31,7 @@ public class _dialogContainer : MonoBehaviour
         BaseDialogs.Add("Пневмония", "Здровия! Меня зовут ");
         BaseDialogs.Add("Рак", "Здравие! Звать мяне ");
         BaseDialogs.Add("Цинга", "Здравст...(изо рта кровь). Я - ");
+        BaseDialogs.Add("HEALTHY", "Добрейшего времени суток. Я - ");
     }
     private void WhereDiaolgsInitial() {
         WhereDialogs.Add("Простуда", "Я путник, где только не бывал");
@@ -48,6 +49,7 @@ public class _dialogContainer : MonoBehaviour
         WhereDialogs.Add("Пневмония", "Я не знаю откуда иду");
         WhereDialogs.Add("Рак", "ИСЦЕЛИТЕ МЕНЯ, ХВАТИТ ВОПРОСОВ");
         WhereDialogs.Add("Цинга", "С моря путь держу");
+        WhereDialogs.Add("HEALTH", "В гости пришел");
        
     }
     private void ProblemsDiaolgsInitial() {
@@ -66,7 +68,7 @@ public class _dialogContainer : MonoBehaviour
         ProblemsDialogs.Add("Пневмония", "Знобит мммееееннняя");
         ProblemsDialogs.Add("Рак", "Я ПИЩУ ОТВЕДАТЬ НЕ МОГУ");
         ProblemsDialogs.Add("Цинга", "(выплюнул зуб)");
-        
+        ProblemsDialogs.Add("HEALTHY", "Да я даже не ведаю");
     }
     private void VisitDiaolgsInitial() {
         VisitDialogs.Add("Переночевать ищу место");

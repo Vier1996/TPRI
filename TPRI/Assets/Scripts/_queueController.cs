@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Bestiary;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class _queueController : MonoBehaviour
@@ -17,7 +19,11 @@ public class _queueController : MonoBehaviour
         InfoAboutIlnesses info = new InfoAboutIlnesses();
         int numOfSymptoms = info.getSymptoms()[ourPeople.GetComponent<_PeopleIssues>()._issueName].Count;
 
-        if (PlayerPrefs.GetInt("10_skl") == 1 && numOfSymptoms > 1)
+
+        string issue = _IssuesPeopleAccordingScene
+            .getIssue(Convert.ToInt32(gameObject.name), SceneManager.GetActiveScene().name);
+
+        if (PlayerPrefs.GetInt("10_skl") == 1 && !issue.Equals("HEALTHY"))
         {
             GetComponent<Image>().color = Color.red;
         }

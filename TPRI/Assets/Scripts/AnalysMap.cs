@@ -10,15 +10,17 @@ public class AnalysMap : MonoBehaviour
 
     public string _check()
     {
-        List<string> continer = obj._issues;
+        List<string> container = obj._issues;
         string exp = "negative";
-        
-        foreach (var var in continer)
+        if (container != null)
         {
-            if (symptoms.Contains(var))
+            foreach (var var in container)
             {
-                return "positive";
-                break;
+                if (symptoms.Contains(var))
+                {
+                    return "positive";
+                    break;
+                }
             }
         }
 

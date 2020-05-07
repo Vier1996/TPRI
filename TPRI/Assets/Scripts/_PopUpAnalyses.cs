@@ -9,7 +9,7 @@ public class _PopUpAnalyses : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI patient, nameOfAnalysis, result;
     [SerializeField] private Button close;
-    [SerializeField] private GameObject resultOfAnalysis, table;
+    [SerializeField] private GameObject resultOfAnalysis;
     [SerializeField] private AudioSource click;
     
     private GameObject _NPC;

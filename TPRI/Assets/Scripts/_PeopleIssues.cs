@@ -24,9 +24,13 @@ public class _PeopleIssues : MonoBehaviour
 
     private void setSymptomsFromDictinary()
     {
-        if (!_issueName.Equals(""))
+        if (!_issueName.Equals("HEALTHY"))
         {
             _symptoms = _illnesses.getSymptoms()[_issueName];
+        }
+        else
+        {
+            _symptoms = null;
         }
     }
 
@@ -42,8 +46,15 @@ public class _PeopleIssues : MonoBehaviour
 
     private void setInfectionAndFatality()
     {
-        _infection = _illnesses.getValueInfection()[_issueName];
-        _fatality = _illnesses.getValueFatality()[_issueName];
+        if (!_issueName.Equals("HEALTHY"))
+        {
+            _infection = _illnesses.getValueInfection()[_issueName];
+            _fatality = _illnesses.getValueFatality()[_issueName];
+        }
+        else
+        {
+            _infection = _fatality = 0;
+        }
     }
 
     public int getInfection()
