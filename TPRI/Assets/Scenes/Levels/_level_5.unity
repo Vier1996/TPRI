@@ -26330,18 +26330,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodiki:
+  - {fileID: 1379173507}
+  - {fileID: 1063028389}
+  - {fileID: 1996804132}
+  - {fileID: 2006980268}
+  - {fileID: 895813503}
+  - {fileID: 2030976443}
+  - {fileID: 182638323}
+  - {fileID: 1869902503}
+  - {fileID: 1865198148}
+  - {fileID: 1061315865}
   - {fileID: 1255223708}
   - {fileID: 1724875441}
   - {fileID: 2135456785}
   - {fileID: 174252831}
   - {fileID: 1016430741}
   dodikiPos:
+  - {fileID: 1379173506}
+  - {fileID: 1063028388}
+  - {fileID: 1996804131}
+  - {fileID: 2006980267}
+  - {fileID: 895813502}
+  - {fileID: 2030976442}
+  - {fileID: 182638322}
+  - {fileID: 1869902502}
+  - {fileID: 1865198147}
+  - {fileID: 1061315864}
   - {fileID: 1255223707}
   - {fileID: 1724875440}
   - {fileID: 2135456784}
   - {fileID: 174252830}
   - {fileID: 1016430740}
-  lenght: 4
+  lenght: 14
 --- !u!1 &1223766078
 GameObject:
   m_ObjectHideFlags: 0
