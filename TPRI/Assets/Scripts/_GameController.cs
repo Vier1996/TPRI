@@ -76,7 +76,7 @@ public class _GameController : MonoBehaviour
     {
         isWarning = false;
         backGround.Play();
-        PlayerPrefs.SetInt("10_skl", 1);
+        //PlayerPrefs.SetInt("10_skl", 1);
         //Time.timeScale = 0;
         if (PlayerPrefs.GetInt(FIRST_TiME) == 0)
         {
@@ -85,12 +85,12 @@ public class _GameController : MonoBehaviour
             PlayerPrefs.SetInt("PEOPLE", 0);
             PlayerPrefs.SetInt(FIRST_TiME, 1);
         }
-        PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
+        //PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
         countNPC = 0;
-        PlayerPrefs.SetInt("pass_1_skl", 1);
+        //PlayerPrefs.SetInt("pass_1_skl", 1);
         setAdditonalShoot();
-        PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
+        //PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
         
         //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
