@@ -3249,7 +3249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2455fc218396c2842a3b951c722739bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: clrd_lvl_3
+  path: clrd_lvl_2
 --- !u!1 &1775024596
 GameObject:
   m_ObjectHideFlags: 0
