@@ -20,7 +20,7 @@ public class ClothesController : MonoBehaviour
         if (model2 != null)
             pair = true;
         
-        PlayerPrefs.SetInt(_ResourceKeys.Money, 500);
+        //PlayerPrefs.SetInt(_ResourceKeys.Money, 500);
         obj = model.GetComponent<MeshRenderer>();
         try
         {

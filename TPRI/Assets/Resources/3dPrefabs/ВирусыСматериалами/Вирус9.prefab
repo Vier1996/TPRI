@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 2505358771383880117}
   m_Layer: 0
   m_Name: "\u0412\u0438\u0440\u0443\u04419"
-  m_TagString: Untagged
+  m_TagString: VirusModel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -49,7 +49,7 @@ public class _dialogContainer : MonoBehaviour
         WhereDialogs.Add("Пневмония", "Я не знаю откуда иду");
         WhereDialogs.Add("Рак", "ИСЦЕЛИТЕ МЕНЯ, ХВАТИТ ВОПРОСОВ");
         WhereDialogs.Add("Цинга", "С моря путь держу");
-        WhereDialogs.Add("HEALTH", "В гости пришел");
+        WhereDialogs.Add("HEALTHY", "В гости пришел");
        
     }
     private void ProblemsDiaolgsInitial() {
