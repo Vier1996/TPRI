@@ -12,6 +12,7 @@ using Random = UnityEngine.Random;
 
 public class _GameController : MonoBehaviour
 {
+    [SerializeField] private AnimatedText AT;
     public _skillsActivator _SkillsActivator;
     [SerializeField] private int CountPuppets;
     [SerializeField] private Transform spawnPlace;
@@ -50,15 +51,15 @@ public class _GameController : MonoBehaviour
     [SerializeField] private Button endNextLevel;
 
     [SerializeField] private QUEUE _queue;
-    
-    
+
+
     [SerializeField] private Animation BIGDOOR;
-    
+
     [SerializeField] private GameObject[] Particles;
-    
+
     [SerializeField] private Animation pistolAnim;
     [SerializeField] private Animation SekiraInam;
-    
+
     [SerializeField] private AudioSource SwordStrike;
     [SerializeField] private AudioSource endGame;
     [SerializeField] private AudioSource victory;
@@ -68,8 +69,11 @@ public class _GameController : MonoBehaviour
     [SerializeField] private AudioSource backGround;
     private bool isWarning = false;
 
+
+    private string oldPopulation;
+
     /// <summary>
-    
+
     /// </summary>
 
     private void Awake()
@@ -85,25 +89,26 @@ public class _GameController : MonoBehaviour
             PlayerPrefs.SetInt("PEOPLE", 0);
             PlayerPrefs.SetInt(FIRST_TiME, 1);
         }
+
         //PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
         _countNPCAccrodingLevel = _IssuesPeopleAccordingScene.getCountNPC(SceneManager.GetActiveScene().name);
         countNPC = 0;
         //PlayerPrefs.SetInt("pass_1_skl", 1);
         setAdditonalShoot();
         //PlayerPrefs.SetInt(_ResourceKeys.HealCity, 2);
-        
+
         //_DropProgress.DropSkills();
         _passingPeople = GameObject.Find("Yes").GetComponent<Button>();
         _passingPeople.onClick.AddListener(() => Passing());
 
         _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
         _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
-        
+
         _expel = GameObject.Find("No").GetComponent<Button>();
         _expel.onClick.AddListener(() => Expel());
 
         _camera = GameObject.FindWithTag("MainCamera");
-        
+
         if (PlayerPrefs.GetInt("GCBesiariiCome") != 1)
         {
             /*PlayerPrefs.SetInt("PEOPLE", 0);
@@ -120,7 +125,7 @@ public class _GameController : MonoBehaviour
             countNPC = PlayerPrefs.GetInt("PEOPLE");
             _queue.adaptation(countNPC);
         }
-        
+
         alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
         infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
 
@@ -132,6 +137,7 @@ public class _GameController : MonoBehaviour
         {
             b_killHim.GetComponent<Button>().interactable = true;
         }
+
         b_killHim.GetComponent<Button>().onClick.AddListener(() =>
         {
             if (_additionalShoot != 0)
@@ -140,9 +146,9 @@ public class _GameController : MonoBehaviour
                 {
                     pistolAnim.Play();
                     SekiraInam.Play();
-                    
+
                     //Invoke(nameof(osvist), 0.3f);
-                    
+
                     Invoke(nameof(swordStrike), 1f);
                     Destroy(_NPC);
                     Invoke(nameof(InitNPC), 3);
@@ -152,6 +158,7 @@ public class _GameController : MonoBehaviour
                     {
                         PlayerPrefs.SetInt(_ResourceKeys.Геноцид, 1);
                     }
+
                     PlayerPrefs.SetInt(_ResourceKeys.Count_Killed, count);
 
                     if (_additionalShoot == 0)
@@ -161,9 +168,9 @@ public class _GameController : MonoBehaviour
                 }
             }
         });
-        
+
         InitNPC();
-        
+
         _PeopleIssues issuesScript = _NPC.GetComponent<_PeopleIssues>();
         _issues = issuesScript.getSymptoms();
 
@@ -174,7 +181,7 @@ public class _GameController : MonoBehaviour
             SceneManager.LoadScene("_introMenu");
             LevelClearedHelper();
         });
-        
+
         endNextLevel.onClick.AddListener(() =>
         {
             SaveStateToNextLevel();
@@ -189,7 +196,11 @@ public class _GameController : MonoBehaviour
         {
             Part.SetActive(false);
         }
+
+        oldPopulation = Population.ToString();
     }
+
+   
 
     private void swordStrike()
     {
@@ -225,6 +236,8 @@ public class _GameController : MonoBehaviour
     {
         _passingPeople.interactable = true;
     }
+    
+    
 
     private void Passing()
     {
@@ -265,10 +278,24 @@ public class _GameController : MonoBehaviour
                 infection = (int) (issues.getInfection() * changeInfection);
                 Debug.Log("After changes: " + infection);
 
-                _infectedAndDeadCounter.setFatality(issues.getFatality());
-                _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
-                infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
-                alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
+                
+               // int PreInfected = Population;
+               int preinfected = _infectedAndDeadCounter.getInfected();
+               
+               _infectedAndDeadCounter.setFatality(issues.getFatality());
+               _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
+
+               if (preinfected < _infectedAndDeadCounter.getInfected())
+               {
+                   changeTextInfetced(preinfected, _infectedAndDeadCounter.getInfected(), true);
+               }
+               else
+               {
+                   changeTextInfetced(preinfected, _infectedAndDeadCounter.getInfected(), false);
+               }
+
+               //infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
+                //alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
 
                 if (_infectedAndDeadCounter.getInfected() == 0 && Population == 0)
                 {
@@ -604,5 +631,14 @@ public class _GameController : MonoBehaviour
             case 8: PlayerPrefs.SetInt("clrd_lvl_6", 1); break;
             case 9: PlayerPrefs.SetInt("clrd_lvl_7", 1); break;
         }
+    }
+
+    public void changeTextPopulation(int current, int to, bool operation)
+    {
+        AT.ANIMATEDTEXT(alivePeople.GetComponent<TextMeshProUGUI>(), current, to, operation);
+    }
+    private void changeTextInfetced(int current, int to, bool operation)
+    {
+        AT.ANIMATEDTEXT(infectedPeople.GetComponent<TextMeshProUGUI>(), current, to, operation);
     }
 }

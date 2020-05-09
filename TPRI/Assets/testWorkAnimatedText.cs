@@ -6,12 +6,9 @@ using UnityEngine;
 public class testWorkAnimatedText : MonoBehaviour
 {
     [SerializeField] private AnimatedText AT;
-    private TextMeshProUGUI test;
     void Start()
     {
-        test = GetComponent<TextMeshProUGUI>();
-        
-        AT.ANIMATEDTEXT(test, 999, 666, false);
+        AT.ANIMATEDTEXT(GetComponent<TextMeshProUGUI>(), 999, 666, false);
     }
     
     void Update()

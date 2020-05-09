@@ -21,6 +21,7 @@ public class _storeController : MonoBehaviour
     [SerializeField] private Button x25;
     
     [SerializeField] private AudioSource moenyGet;
+    [SerializeField] private AnimatedText AT;
     
     private int multiplicator = 0;
 
@@ -94,6 +95,9 @@ public class _storeController : MonoBehaviour
             }
             else
             {
+                int preMoney = PlayerPrefs.GetInt(_ResourceKeys.Money);
+                UpdateMoney(preMoney, preMoney - multiplicator * info.GetPrice(), false);
+                
                 PlayerPrefs.SetInt(_ResourceKeys.Money, PlayerPrefs.GetInt(_ResourceKeys.Money) - multiplicator * info.GetPrice());
                 PlayerPrefs.SetInt("Key_" + info.getKey(), PlayerPrefs.GetInt("Key_" + info.getKey()) + multiplicator);
             
@@ -112,8 +116,8 @@ public class _storeController : MonoBehaviour
         Return.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });
     }
 
-    private void Update()
+    private void UpdateMoney(int pre, int to, bool operation)
     {
-        moneyCounter.text = PlayerPrefs.GetInt(_ResourceKeys.Money).ToString();
+        AT.ANIMATEDTEXT(moneyCounter, pre, to, operation);
     }
 }

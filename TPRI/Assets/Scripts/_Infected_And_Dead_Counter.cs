@@ -8,7 +8,7 @@ public class _Infected_And_Dead_Counter
     private int countDead, countInfected, _currentIllInfected;
     private int fatality;
     private int LivePeople;
-
+    _GameController gc = GameObject.FindWithTag("MainCamera").GetComponent<_GameController>();
     private _Infected_And_Dead_Counter()
     {
         countDead = countInfected = 0;
@@ -45,6 +45,8 @@ public class _Infected_And_Dead_Counter
 
             CountDead(fatality, infected);
             countInfected += infected;
+            int pop = _GameController.Population;
+            gc.changeTextPopulation(pop, pop - infected, false);
             _GameController.Population -= infected;
         }
         else
