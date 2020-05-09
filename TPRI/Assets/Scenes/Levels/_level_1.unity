@@ -37623,7 +37623,7 @@ MonoBehaviour:
   _cityImmunity: 0
   panelDefeat: {fileID: 6063871324068892387, guid: cc1df338618d1454689c35aa8bcc4e20,
     type: 3}
-  panelDefeat1: {fileID: 0}
+  panelDefeat1: {fileID: 659879112}
   endMenu: {fileID: 2116581154}
   endNextLevel: {fileID: 462219336}
   _queue: {fileID: 1770505}

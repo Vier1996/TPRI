@@ -3818,7 +3818,7 @@ MonoBehaviour:
   _cityImmunity: 0
   panelDefeat: {fileID: 6063871324068892387, guid: cc1df338618d1454689c35aa8bcc4e20,
     type: 3}
-  panelDefeat1: {fileID: 1827137458}
+  panelDefeat1: {fileID: 1827137457}
   endMenu: {fileID: 692137584}
   endNextLevel: {fileID: 1557891835}
   _queue: {fileID: 975832717}
