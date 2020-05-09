@@ -37,13 +37,22 @@ public class _CommonSkillsController : MonoBehaviour
     private void Awake()
     {
         _amount.text = PlayerPrefs.GetInt(_ResourceKeys.skills).ToString();
-        _DropProgress.DropSkills();
+        //_DropProgress.DropSkills();
+        //PlayerPrefs.SetInt(_ResourceKeys.CharacterLevel, 15);
     }
 
     private void Start() {
         _passiveBack.SetActive(false);
         _active.interactable = false;
-        _passive.interactable = true;
+        if (PlayerPrefs.GetInt(_ResourceKeys.CharacterLevel) >= 15)
+        {
+            _passive.interactable = true;
+        }
+        else
+        {
+            _passive.interactable = false;
+        }
+       
 
         _active.onClick.AddListener(SetupActiveSkillsMenu);
         _passive.onClick.AddListener(SetupPassiveSkillsMenu);

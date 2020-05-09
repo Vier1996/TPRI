@@ -38,7 +38,7 @@ public class _GameController : MonoBehaviour
     private _Infected_And_Dead_Counter _infectedAndDeadCounter;
     [SerializeField] private int _cityImmunity = 0;
     [SerializeField] private GameObject panelDefeat;
-    [SerializeField] private Transform panelDefeat1;
+    [SerializeField] private GameObject panelDefeat1;
     private int _additionalShoot;
     private float patientX = -11f, patientY = -14f, patientZ = 86f;
     private float patientSecX = -11, patientSecY = -5, patientSecZ = 86f;
@@ -67,6 +67,8 @@ public class _GameController : MonoBehaviour
     [SerializeField] private AudioSource WARNING;
     [SerializeField] private AudioSource backGround;
     private bool isWarning = false;
+
+    [SerializeField] private GameObject warningAffectPanel;
 
     /// <summary>
     
@@ -98,6 +100,10 @@ public class _GameController : MonoBehaviour
 
         _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
         _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
+        _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
+        var col = warningAffectPanel.GetComponent<Image>().color;
+        col = new Color(col.r, col.g, col.b, 0);
+        warningAffectPanel.GetComponent<Image>().color = col;
         
         _expel = GameObject.Find("No").GetComponent<Button>();
         _expel.onClick.AddListener(() => Expel());
@@ -270,20 +276,6 @@ public class _GameController : MonoBehaviour
                 infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
                 alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
 
-                if (_infectedAndDeadCounter.getInfected() == 0 && Population == 0)
-                {
-                    Particles[0].SetActive(false);
-                    Particles[1].SetActive(false);
-                    Particles[2].SetActive(false);
-                    PlayerPrefs.SetInt(FIRST_TiME, 0);
-                    PlayerPrefs.SetInt("AlivePeople", 348);
-                    PlayerPrefs.SetInt("InfectedPeople", 0);
-                    PlayerPrefs.SetInt("PEOPLE", 0);
-                    Instantiate(panelDefeat, panelDefeat1);
-                    backGround.Stop();
-                    endGame.Play();
-                }
-
                 if (Population <= 75 && !isWarning)
                 {
                     backGround.volume = backGround.volume - 0.5f;
@@ -311,7 +303,41 @@ public class _GameController : MonoBehaviour
                 PlayerPrefs.SetInt(_ResourceKeys.Count_healed_People, count);
             }
         }
-
+        
+        if (_infectedAndDeadCounter.getInfected() == 0 && Population == 0)
+        {
+            Particles[0].SetActive(false);
+            Particles[1].SetActive(false);
+            Particles[2].SetActive(false);
+            PlayerPrefs.SetInt(FIRST_TiME, 0);
+            PlayerPrefs.SetInt("AlivePeople", 348);
+            PlayerPrefs.SetInt("InfectedPeople", 0);
+            PlayerPrefs.SetInt("PEOPLE", 0);
+            panelDefeat1.SetActive(true);
+            Instantiate(panelDefeat, panelDefeat1.transform);
+            backGround.Stop();
+            endGame.Play();
+        }
+        
+        var col = warningAffectPanel.GetComponent<Image>().color;
+        if (Population + _infectedAndDeadCounter.getInfected() <= 250)
+        {
+            col = new Color(col.r, col.g, col.b, 0.1058824f);
+        }
+        else if (Population + _infectedAndDeadCounter.getInfected() <= 150)
+        {
+            col = new Color(col.r, col.g, col.b, 0.1686275f);
+        }
+        else if (Population + _infectedAndDeadCounter.getInfected() <= 75)
+        {
+            col = new Color(col.r, col.g, col.b, 0.3568628f);
+        }
+        else
+        {
+            col = new Color(col.r, col.g, col.b, 0f);
+        }
+        warningAffectPanel.GetComponent<Image>().color = col;
+        
         Destroy(_NPC);
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");

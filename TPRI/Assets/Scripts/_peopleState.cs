@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class _peopleState : _dialogContainer
 {
     [SerializeField] string theDialog;
-    [SerializeField] private string[] analysis;
+    //[SerializeField] private string[] analysis;
 
     public string nameOfPatient;
     
@@ -27,7 +27,7 @@ public class _peopleState : _dialogContainer
         toSpeak = GameObject.FindWithTag("dialogPanel").GetComponent<TextMeshProUGUI>();
         toSpeak.text = BaseDialogs[issue] + nameOfPatient;
         _whereD = _problemsD = _visitD = false;
-        _analisys = new Analisys(analysis);
+        //_analisys = new Analisys(analysis);
         // 
     }
 
