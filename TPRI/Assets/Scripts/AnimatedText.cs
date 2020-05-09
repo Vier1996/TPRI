@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AnimatedText : MonoBehaviour
 {
-    private const float time = 0.5f; 
+    private const float time = 0.005f; 
     public int outInt = 0;
     private bool _finish = false;
 
@@ -14,12 +14,6 @@ public class AnimatedText : MonoBehaviour
         outInt = current;
 
         StartCoroutine(changeText(text, outInt, to, adding));
-        
-        while (!_finish)
-        {
-            
-        }
-        
         Drop();
         //StopCoroutine(changeText(0, 0, true));
     }
@@ -44,9 +38,6 @@ public class AnimatedText : MonoBehaviour
                 text.text = current.ToString();
             }
         }
-
-        if (current == to)
-            _finish = true;
     }
 
     private void Drop()

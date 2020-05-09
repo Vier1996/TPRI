@@ -4263,6 +4263,7 @@ GameObject:
   - component: {fileID: 1522172016}
   - component: {fileID: 1522172015}
   - component: {fileID: 1522172019}
+  - component: {fileID: 1522172020}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4378,6 +4379,20 @@ MonoBehaviour:
   x10: {fileID: 745143910}
   x25: {fileID: 1016148317}
   moenyGet: {fileID: 899047875}
+  AT: {fileID: 1522172020}
+--- !u!114 &1522172020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522172014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5075b118988d9714f84438367ac72154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outInt: 0
 --- !u!1 &1523272923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,7 +5257,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 86891681}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.40964717
+  m_Size: 0.40964723
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

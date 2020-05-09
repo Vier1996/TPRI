@@ -12,6 +12,7 @@ using Random = UnityEngine.Random;
 
 public class _GameController : MonoBehaviour
 {
+    [SerializeField] private AnimatedText AT;
     public _skillsActivator _SkillsActivator;
     [SerializeField] private int CountPuppets;
     [SerializeField] private Transform spawnPlace;
@@ -68,6 +69,9 @@ public class _GameController : MonoBehaviour
     [SerializeField] private AudioSource backGround;
     private bool isWarning = false;
 
+
+    private string oldPopulation;
+
     [SerializeField] private GameObject warningAffectPanel;
 
     /// <summary>
@@ -105,6 +109,7 @@ public class _GameController : MonoBehaviour
         col = new Color(col.r, col.g, col.b, 0);
         warningAffectPanel.GetComponent<Image>().color = col;
         
+
         _expel = GameObject.Find("No").GetComponent<Button>();
         _expel.onClick.AddListener(() => Expel());
 
@@ -195,6 +200,8 @@ public class _GameController : MonoBehaviour
         {
             Part.SetActive(false);
         }
+
+        oldPopulation = Population.ToString();
     }
 
     private void swordStrike()
@@ -271,10 +278,24 @@ public class _GameController : MonoBehaviour
                 infection = (int) (issues.getInfection() * changeInfection);
                 Debug.Log("After changes: " + infection);
 
-                _infectedAndDeadCounter.setFatality(issues.getFatality());
-                _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
-                infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
-                alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
+                
+               // int PreInfected = Population;
+               int preinfected = _infectedAndDeadCounter.getInfected();
+               
+               _infectedAndDeadCounter.setFatality(issues.getFatality());
+               _infectedAndDeadCounter.countInfectedPeople(infection, Population, _cityImmunity);
+
+               if (preinfected < _infectedAndDeadCounter.getInfected())
+               {
+                   changeTextInfetced(preinfected, _infectedAndDeadCounter.getInfected(), true);
+               }
+               else
+               {
+                   changeTextInfetced(preinfected, _infectedAndDeadCounter.getInfected(), false);
+               }
+
+               //infectedPeople.GetComponent<TextMeshProUGUI>().text = _infectedAndDeadCounter.getInfected().ToString();
+                //alivePeople.GetComponent<TextMeshProUGUI>().text = Population.ToString();
 
                 if (Population <= 75 && !isWarning)
                 {
@@ -630,5 +651,14 @@ public class _GameController : MonoBehaviour
             case 8: PlayerPrefs.SetInt("clrd_lvl_6", 1); break;
             case 9: PlayerPrefs.SetInt("clrd_lvl_7", 1); break;
         }
+    }
+
+    public void changeTextPopulation(int current, int to, bool operation)
+    {
+        AT.ANIMATEDTEXT(alivePeople.GetComponent<TextMeshProUGUI>(), current, to, operation);
+    }
+    private void changeTextInfetced(int current, int to, bool operation)
+    {
+        AT.ANIMATEDTEXT(infectedPeople.GetComponent<TextMeshProUGUI>(), current, to, operation);
     }
 }

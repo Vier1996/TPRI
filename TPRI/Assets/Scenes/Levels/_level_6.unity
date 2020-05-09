@@ -10215,6 +10215,7 @@ GameObject:
   - component: {fileID: 433136269}
   - component: {fileID: 433136271}
   - component: {fileID: 433136270}
+  - component: {fileID: 433136274}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10277,6 +10278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc629693f0f5e448a32ac6dfd6f3db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AT: {fileID: 433136274}
   _SkillsActivator: {fileID: 2107255614}
   CountPuppets: 0
   spawnPlace: {fileID: 1241487516}
@@ -10358,6 +10360,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433136274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433136267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5075b118988d9714f84438367ac72154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outInt: 0
 --- !u!1 &439708599
 GameObject:
   m_ObjectHideFlags: 0
