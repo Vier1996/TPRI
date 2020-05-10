@@ -105,8 +105,7 @@ public class _miniBestiarii : MonoBehaviour
         
     }
     
-    // Update is called once per frame
-    private void Update()
+    void Update()
     {
         if (_modelVirus != null)
         {

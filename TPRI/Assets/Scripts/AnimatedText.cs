@@ -40,27 +40,6 @@ public class AnimatedText : MonoBehaviour
         }
     }
     
-    /*IEnumerator changeText(GameObject text, int current, int to, bool adding)
-    {
-        if (!adding)
-        {
-            while (current != to)
-            {
-                yield return new WaitForSeconds(time);
-                current--;
-                text.GetComponent<TextMeshProUGUI>().text = current.ToString();
-            }
-        }
-        else
-        {
-            while (current != to)
-            {
-                yield return new WaitForSeconds(time);
-                current++;
-                text.GetComponent<TextMeshProUGUI>().text = current.ToString();
-            }
-        }
-    }*/
 
     private void Drop()
     {

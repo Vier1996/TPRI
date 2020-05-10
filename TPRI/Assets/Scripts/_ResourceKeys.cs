@@ -36,14 +36,13 @@ public class _ResourceKeys : MonoBehaviour
     public const string LifeCity_2 = "Key_LifeCity_2";
     public const string SupremeEye = "Key_SupremeEye";
     public const string FullHealing = "Key_FullHealing";
-
-    // Олег, еще твои 5 нужны.
+    
     public const string Mixture = "Key_Mixture";
     public const string Tincture = "Key_Tincture";
     public const string Healing_salve = "Key_Healing_salve";
     public const string Candy = "Key_Candy";
     public const string Panacea = "Key_Panacea";
-
+    
     public const string Bunch_of_rosemary = "Key_Lotus";
     public const string Orchid_Leaf = "Key_Orchid_Leaf";
     public const string Gargoyle_saliva = "Key_Snake_blood";
@@ -56,47 +55,45 @@ public class _ResourceKeys : MonoBehaviour
     public const string Maple_leaves = "Key_Maple_leaves";
     public const string Onion = "Key_Onion";
 
-    // Достижения
-
     public const string Начинающий = "Начинающий";
     public const string _Начинающий = "Начинающий_buyed";
-
+    
     public const string Первые_шаги = "Первые шаги";
     public const string _Первые_шаги = "Первые шаги_buyed";
-
+    
     public const string Первопроходец = "Первопроходец";
     public const string _Первопроходец = "Первопроходец_buyed";
-
+    
     public const string Неудачник = "Неудачник";
     public const string _Неудачник = "Неудачник_buyed";
-
-    public const string Врач_от_бога = "Врач от бога";
+    
+    public const string  Врач_от_бога = "Врач от бога";
     public const string _Врач_от_бога = "Врач от бога_buyed";
-
+    
     public const string Продовольствие = "Продовольствие";
     public const string _Продовольствие = "Продовольствие_buyed";
-
+    
     public const string Крепкий_имунитет = "Крепкий имунитет";
     public const string _Крепкий_имунитет = "Крепкий имунитет_buyed";
-
+    
     public const string Геноцид = "Геноцид";
     public const string _Геноцид = "Геноцид_buyed";
-
+    
     public const string Всезнайка = "Всезнайка";
     public const string _Всезнайка = "Всезнайка_buyed";
-
+    
     public const string Золотые_руки = "Золотые руки";
     public const string _Золотые_руки = "Золотые руки_buyed";
-
+    
     public const string Телепат = "Телепат";
     public const string _Телепат = "Телепат_buyed";
-
+    
     public const string Лучший_гардероб = "Лучший гардероб";
     public const string _Лучший_гардероб = "Лучший гардероб_buyed";
-
+    
     public const string Решимость = "Решимость";
     public const string _Решимость = "Решимость_buyed";
-
+    
     public const string Подгончик = "Подгончик";
     public const string _Подгончик = "Подгончик_buyed";
 
@@ -104,7 +101,7 @@ public class _ResourceKeys : MonoBehaviour
     public const string Buyed_items_count = "Buyed_items_count";
     public const string Count_healed_People = "Count_healed_people";
     public const string Count_Killed = "Killed";
-
+    
     private void Awake()
     {
         PlayerPrefs.SetInt(CharacterLevel, 1);
