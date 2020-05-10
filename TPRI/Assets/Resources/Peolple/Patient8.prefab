@@ -93,7 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialog: 
-  analysis: []
   nameOfPatient: 
 --- !u!114 &2615394223112103139
 MonoBehaviour:

@@ -332,6 +332,11 @@ public class _GameController : MonoBehaviour
         Invoke(nameof(InitNPC), 3);
     }
 
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
+    }
+
     private void stopToBeContinue()
     {
         backGround.volume = backGround.volume + 0.5f;
@@ -473,7 +478,7 @@ public class _GameController : MonoBehaviour
             }
             else if (countNPC == 0)
             {
-                _NPC.transform.position = new Vector3(-11, -16, 86);
+                _NPC.transform.position = new Vector3(-11, -3.55f, 86);
             }
             else
             {
