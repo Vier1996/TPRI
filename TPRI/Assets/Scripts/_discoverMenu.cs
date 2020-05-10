@@ -27,7 +27,7 @@ public class _discoverMenu : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI money;
     [SerializeField] private TextMeshProUGUI defense;
-    
+    [SerializeField] private GameObject coin, coin1, coin2;
     private int showedMenu = 0;
     
     /*
@@ -155,6 +155,10 @@ public class _discoverMenu : MonoBehaviour
         {
             PlayerPrefs.SetInt(_ResourceKeys.Крепкий_имунитет, 1);
         }
+        
+        coin.transform.Rotate(0, 0, -60*Time.deltaTime);
+        coin1.transform.Rotate(0, 0, -60*Time.deltaTime);
+        coin2.transform.Rotate(0, 0, -60*Time.deltaTime);
     }
 
     private void Deact()
@@ -170,4 +174,5 @@ public class _discoverMenu : MonoBehaviour
             default: break;
         }
     }
+    
 }

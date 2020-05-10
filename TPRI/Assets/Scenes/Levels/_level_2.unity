@@ -40736,6 +40736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: {fileID: 1798835618}
   text: {fileID: 65420375}
+  death: {fileID: 6063871324068892387, guid: cc1df338618d1454689c35aa8bcc4e20, type: 3}
+  place: {fileID: 1798835618}
 --- !u!81 &1993553668
 AudioListener:
   m_ObjectHideFlags: 0

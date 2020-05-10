@@ -12,6 +12,7 @@ public class _storeController : MonoBehaviour
     [SerializeField] private Button Get;
     [SerializeField] private Button Return;
     [SerializeField] private TextMeshProUGUI moneyCounter;
+    
     [SerializeField] private TextMeshProUGUI item;
 
     [SerializeField] private Button x1;
@@ -22,6 +23,7 @@ public class _storeController : MonoBehaviour
     
     [SerializeField] private AudioSource moenyGet;
     [SerializeField] private AnimatedText AT;
+    [SerializeField] private GameObject coin, coin1, coin2;
     
     private int multiplicator = 0;
 
@@ -119,5 +121,12 @@ public class _storeController : MonoBehaviour
     private void UpdateMoney(int pre, int to, bool operation)
     {
         AT.ANIMATEDTEXT(moneyCounter, pre, to, operation);
+    }
+
+    private void Update()
+    {
+        coin.transform.Rotate(0, 0, -60*Time.deltaTime);
+        coin1.transform.Rotate(0, 0, -60*Time.deltaTime);
+        coin2.transform.Rotate(0, 0, -60*Time.deltaTime);
     }
 }

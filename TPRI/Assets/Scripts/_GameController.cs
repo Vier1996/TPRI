@@ -353,6 +353,10 @@ public class _GameController : MonoBehaviour
         {
             col = new Color(col.r, col.g, col.b, 0.3568628f);
         }
+        else if (Population + _infectedAndDeadCounter.getInfected() <= 50)
+        {
+            col = new Color(col.r, col.g, col.b, 0.6f);
+        }
         else
         {
             col = new Color(col.r, col.g, col.b, 0f);
