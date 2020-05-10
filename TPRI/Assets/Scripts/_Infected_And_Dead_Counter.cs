@@ -8,7 +8,7 @@ public class _Infected_And_Dead_Counter
     private int countDead, countInfected, _currentIllInfected;
     private int fatality;
     private int LivePeople;
-    _GameController gc = GameObject.FindWithTag("MainCamera").GetComponent<_GameController>();
+    
     private _Infected_And_Dead_Counter()
     {
         countDead = countInfected = 0;
@@ -46,7 +46,10 @@ public class _Infected_And_Dead_Counter
             CountDead(fatality, infected);
             countInfected += infected;
             int pop = _GameController.Population;
+            
+            _GameController gc = GameObject.FindWithTag("MainCamera").GetComponent<_GameController>();
             gc.changeTextPopulation(pop, pop - infected, false);
+            
             _GameController.Population -= infected;
         }
         else
@@ -56,27 +59,6 @@ public class _Infected_And_Dead_Counter
             fatality += 50;
             CountDead(fatality, people);
         }
-
-        /*for (int i = 0; i < people; i++)
-        {
-            rate = Random.Range(0, 101);
-            if (rate <= infection)
-            {
-                infected++;
-            }
-        }
-
-        if (population != 0)
-        {
-            double percentOfInfected = infected * (immuntiy / 100);
-            infected = infected - (int) (percentOfInfected);
-
-            CountDead(fatality, infected);
-            countInfected += infected;
-            _GameController.Population -= infected;
-        }
-        */
-
     }
 
     public void CountDead(int fatal, int infected)
@@ -93,14 +75,6 @@ public class _Infected_And_Dead_Counter
 
         countInfected -= dead;
         countDead += dead;
-        /*countInfected -= dead;
-        countDead += dead;
-        //_GameController.Population -= dead;
-        if (_GameController.Population != 0)
-        {
-            _GameController.Population -= dead;
-            countDead += dead;
-        }*/
     }
 
     public int getInfected()
