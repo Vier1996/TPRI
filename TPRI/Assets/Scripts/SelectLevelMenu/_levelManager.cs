@@ -46,10 +46,11 @@ public class _levelManager : MonoBehaviour
 
     private void ChooseLevel(Button _choosenLevel)
     {
-        _audioController audioController = _audioController.getInstance();
-        audioController.stop();
+        //_audioController audioController = _audioController.getInstance();
+      //  audioController.stop();
         String levelName = _choosenLevel.name;
         SceneManager.LoadScene("_level_" + levelName);
+         PlayerPrefs.SetInt("FIRST_START", 1);
     }
 
     private void OpenSettings()

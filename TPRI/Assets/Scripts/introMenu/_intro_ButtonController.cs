@@ -33,6 +33,16 @@ public class _intro_ButtonController : MonoBehaviour
     _Start.onClick.AddListener(() => { SceneManager.LoadScene("_selectLevelMenu"); });
     _Contitue.onClick.AddListener(() => ContinueGame());
     _Home.onClick.AddListener(() => { SceneManager.LoadScene("_home"); });
+    
+    if (PlayerPrefs.GetInt("FIRST_START") == 0)
+    {
+      _Contitue.interactable = false;
+    }
+    else
+    {
+      _Contitue.onClick.AddListener(() => ContinueGame());
+    }
+
     _Settings.onClick.AddListener(() => { _settingsMenu.SetActive(true); });
     
   }

@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 
 public class _GameController : MonoBehaviour
 {
-    [SerializeField] private AnimatedText AT;
+    public AnimatedText AT;
     public _skillsActivator _SkillsActivator;
     [SerializeField] private int CountPuppets;
     [SerializeField] private Transform spawnPlace;
