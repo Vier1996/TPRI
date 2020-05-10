@@ -473,13 +473,17 @@ public class _GameController : MonoBehaviour
             GameObject npc = Resources.Load<GameObject>("Peolple/Patient" + countNPC);
             Debug.Log("           " + countNPC);
             _NPC = Instantiate(npc);
-            if (countNPC == 5 || countNPC == 10 || countNPC>=18)
+            if (countNPC == 5  || countNPC>=18)
             {
                 _NPC.transform.position = new Vector3(patientX, patientY, patientZ);
             }
             else if (countNPC == 0)
             {
                 _NPC.transform.position = new Vector3(-11, -3.55f, 86);
+            }
+            else if (countNPC == 10)
+            {
+                _NPC.transform.position = new Vector3(patientX, -3.4f, patientZ);
             }
             else
             {

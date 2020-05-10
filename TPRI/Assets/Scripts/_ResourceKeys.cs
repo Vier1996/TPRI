@@ -104,9 +104,9 @@ public class _ResourceKeys : MonoBehaviour
     
     private void Awake()
     {
-        PlayerPrefs.SetInt(CharacterLevel, 1);
-        PlayerPrefs.SetInt(NeddedScore, 10);
-        PlayerPrefs.SetInt(CurrentScore, 0);
+        //PlayerPrefs.SetInt(CharacterLevel, 1);
+        //PlayerPrefs.SetInt(NeddedScore, 20);
+        //PlayerPrefs.SetInt(CurrentScore, 0);
         if (instance != null)
         {
             Destroy(gameObject);
