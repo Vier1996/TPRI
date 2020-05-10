@@ -52,7 +52,3 @@ public class _intro_ButtonController : MonoBehaviour
     SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
   }
 }
-
-internal class SeriliazeFieldAttribute : Attribute
-{
-}
