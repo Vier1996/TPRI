@@ -324,7 +324,7 @@ MonoBehaviour:
   key: Key_Cross
   get: {fileID: 10054634}
   curableSymptoms: []
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &18284009
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,7 +5610,7 @@ MonoBehaviour:
   - "\u0425\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0430\u044F \u0441\u044B\u043F\u044C"
   - "\u041D\u0430\u0441\u043C\u043E\u0440\u043A"
   - "\u0412\u044B\u043F\u0430\u0434\u0435\u043D\u0438\u0435 \u0437\u0443\u0431\u043E\u0432"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &87754916
 GameObject:
   m_ObjectHideFlags: 0
@@ -9814,7 +9814,7 @@ MonoBehaviour:
   - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
   - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1001 &380015636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11854,7 +11854,7 @@ MonoBehaviour:
   key: Key_Saint_water
   get: {fileID: 575167094}
   curableSymptoms: []
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &585780156
 GameObject:
   m_ObjectHideFlags: 0
@@ -13510,7 +13510,7 @@ MonoBehaviour:
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
   - "\u0420\u0432\u043E\u0442\u0430"
   - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0430\u043F\u043F\u0435\u0442\u0438\u0442\u0430"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &713930773
 GameObject:
   m_ObjectHideFlags: 0
@@ -15756,7 +15756,7 @@ MonoBehaviour:
   - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
   - "\u0423\u0442\u043E\u043C\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C"
   - "\u041F\u043E\u0442\u0435\u0440\u044F \u0432\u0435\u0441\u0430"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &905301644
 GameObject:
   m_ObjectHideFlags: 0
@@ -16492,7 +16492,7 @@ MonoBehaviour:
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
   - "\u0411\u043E\u043B\u044C \u0432 \u0433\u043E\u0440\u043B\u0435"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1001 &964296729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16789,7 +16789,7 @@ MonoBehaviour:
   - "\u0411\u043E\u043B\u0438 \u0432 \u0433\u043E\u0440\u043B\u0435"
   - "\u041A\u0430\u0448\u0435\u043B\u044C"
   - "\u0411\u043E\u043B\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &1028517303
 GameObject:
   m_ObjectHideFlags: 0
@@ -24460,7 +24460,7 @@ MonoBehaviour:
   - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &1250329812
 GameObject:
   m_ObjectHideFlags: 0
@@ -24533,6 +24533,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250329812}
   m_CullTransparentMesh: 0
+--- !u!82 &1253142997 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8684742642275771580, guid: 0445ecec025b32e4080083777ecde02b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8684742641029059945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273507035
 GameObject:
   m_ObjectHideFlags: 0
@@ -24673,7 +24679,7 @@ MonoBehaviour:
   - "\u0411\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435"
   - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
   - "\u0414\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &1273851920
 GameObject:
   m_ObjectHideFlags: 0
@@ -27999,7 +28005,7 @@ MonoBehaviour:
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F
     \u0431\u043E\u043B\u044C"
   - "\u0420\u0432\u043E\u0442\u0430"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &1529314955
 GameObject:
   m_ObjectHideFlags: 0
@@ -31568,7 +31574,7 @@ MonoBehaviour:
   - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
   - "\u0413\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443"
   - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &1849160773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8385369970896699895, guid: 13136f9d5c73e354db38bfa1c5b65236,
@@ -31894,7 +31900,7 @@ MonoBehaviour:
   - "\u041A\u0440\u043E\u0432\u043E\u0442\u043E\u0447\u0438\u0432\u043E\u0441\u0442\u044C
     \u0434\u0435\u0441\u0435\u043D"
   - "\u0418\u0437\u0436\u043E\u0433\u0430"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &1856880889
 GameObject:
   m_ObjectHideFlags: 0
@@ -32070,7 +32076,7 @@ MonoBehaviour:
   - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u043E\u0431\u043E\u043D\u044F\u043D\u0438\u044F"
   - "\u0411\u043E\u043B\u044C \u0432 \u0443\u0448\u0430\u0445"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!1 &1884844027
 GameObject:
   m_ObjectHideFlags: 0
@@ -39913,7 +39919,7 @@ MonoBehaviour:
   - "\u041F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435"
   - "\u0418\u0437\u0436\u043E\u0433\u0430"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
-  sanya: {fileID: 2129296749}
+  sanya: {fileID: 1253142997}
 --- !u!82 &2129296749
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42606,3 +42612,72 @@ RectTransform:
   m_AnchoredPosition: {x: 146.4, y: 239.3}
   m_SizeDelta: {x: 79.755, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &8684742641029059945
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8684742642275771581, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthPick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.91783404
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.72344494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.8203125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0445ecec025b32e4080083777ecde02b, type: 3}

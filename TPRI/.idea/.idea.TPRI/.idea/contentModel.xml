@@ -20,6 +20,7 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="GODMODE.cs" t="Include" />
         <e p="Prefabs" t="Include">
           <e p="Test.cs" t="Include" />
         </e>
