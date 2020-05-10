@@ -21,9 +21,9 @@ public class _WorldController : MonoBehaviour
         //PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
         endDays = PlayerPrefs.GetInt("DEATHDAYS");
 
-        Dialogs[0] = "Шот хуево...";
-        Dialogs[1] = "Чуствую что скоро сдохну";
-        Dialogs[2] = "ОТЪЕБИТЕСЬ! Я В ПОРЯДКЕ";
+        Dialogs[0] = "Чуствую себя не в порядке...";
+        Dialogs[1] = "У меня очень плохое самочуствие.";
+        Dialogs[2] = "Кажется осталось недолго...";
 
         if (PlayerPrefs.GetInt(_ResourceKeys.OurDeath) == 1)
         {
@@ -36,7 +36,6 @@ public class _WorldController : MonoBehaviour
                 if (endDays == 0)
                 {
                     Instantiate(death, place.transform);
-                    Debug.Log("пизда");
                     PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
                     PlayerPrefs.SetInt("DEATHDAYS", endDays);
                 }

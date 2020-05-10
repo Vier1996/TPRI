@@ -39,7 +39,7 @@ public class Dialogs : MonoBehaviour
             if (_equipmentScript._showDialogs)
             {
                 GameObject.FindGameObjectWithTag("ProblemsD").GetComponent<TextMeshProUGUI>().text = "Как самочуствие?";
-                GameObject.FindGameObjectWithTag("ProblemsD").GetComponent<TextMeshProUGUI>().color = Color.green;
+                GameObject.FindGameObjectWithTag("ProblemsD").GetComponent<TextMeshProUGUI>().color = Color.red;
             }
             else
             {
@@ -52,7 +52,7 @@ public class Dialogs : MonoBehaviour
             if (_equipmentScript._showDialogs)
             {
                 GameObject.FindGameObjectWithTag("VisitD").GetComponent<TextMeshProUGUI>().text = "Цель визита?";
-                GameObject.FindGameObjectWithTag("VisitD").GetComponent<TextMeshProUGUI>().color = Color.cyan;
+                GameObject.FindGameObjectWithTag("VisitD").GetComponent<TextMeshProUGUI>().color = Color.red;
             }
             else
             {
