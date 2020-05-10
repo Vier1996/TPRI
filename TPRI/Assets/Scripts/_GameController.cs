@@ -105,9 +105,7 @@ public class _GameController : MonoBehaviour
         _levelEndController = panelWin.transform.GetChild(0).GetComponent<_LevelEndController>();
         _infectedAndDeadCounter = _Infected_And_Dead_Counter.getInstance();
         _infectedAndDeadCounter.SetInfected(PlayerPrefs.GetInt("InfectedPeople"));
-        var col = warningAffectPanel.GetComponent<Image>().color;
-        col = new Color(col.r, col.g, col.b, 0);
-        warningAffectPanel.GetComponent<Image>().color = col;
+        AddAffectRedScreen();
         
 
         _expel = GameObject.Find("No").GetComponent<Button>();
@@ -340,28 +338,7 @@ public class _GameController : MonoBehaviour
             endGame.Play();
         }
         
-        var col = warningAffectPanel.GetComponent<Image>().color;
-        if (Population + _infectedAndDeadCounter.getInfected() <= 250)
-        {
-            col = new Color(col.r, col.g, col.b, 0.1058824f);
-        }
-        else if (Population + _infectedAndDeadCounter.getInfected() <= 150)
-        {
-            col = new Color(col.r, col.g, col.b, 0.1686275f);
-        }
-        else if (Population + _infectedAndDeadCounter.getInfected() <= 75)
-        {
-            col = new Color(col.r, col.g, col.b, 0.3568628f);
-        }
-        else if (Population + _infectedAndDeadCounter.getInfected() <= 50)
-        {
-            col = new Color(col.r, col.g, col.b, 0.6f);
-        }
-        else
-        {
-            col = new Color(col.r, col.g, col.b, 0f);
-        }
-        warningAffectPanel.GetComponent<Image>().color = col;
+       AddAffectRedScreen();
         
         Destroy(_NPC);
         if(countNPC != 0)
@@ -390,6 +367,32 @@ public class _GameController : MonoBehaviour
         _DoorSound.Stop();
     }
 
+    private void AddAffectRedScreen()
+    {
+        var col = warningAffectPanel.GetComponent<Image>().color;
+        if (Population + _infectedAndDeadCounter.getInfected() <= 250)
+        {
+            col = new Color(col.r, col.g, col.b, 0.1058824f);
+        }
+        else if (Population + _infectedAndDeadCounter.getInfected() <= 150)
+        {
+            col = new Color(col.r, col.g, col.b, 0.1686275f);
+        }
+        else if (Population + _infectedAndDeadCounter.getInfected() <= 75)
+        {
+            col = new Color(col.r, col.g, col.b, 0.3568628f);
+        }
+        else if (Population + _infectedAndDeadCounter.getInfected() <= 50)
+        {
+            col = new Color(col.r, col.g, col.b, 0.6f);
+        }
+        else
+        {
+            col = new Color(col.r, col.g, col.b, 0f);
+        }
+        warningAffectPanel.GetComponent<Image>().color = col;
+    }
+    
     private void Warnings()
     {
         int range, percent = 0;
