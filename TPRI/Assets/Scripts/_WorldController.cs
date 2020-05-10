@@ -12,6 +12,8 @@ public class _WorldController : MonoBehaviour
 
     [SerializeField] private GameObject scene;
     [SerializeField] private GameObject text;
+    [SerializeField] private GameObject death;
+    [SerializeField] private GameObject place;
     private string[] Dialogs = new string[3];
 
     private void Awake()
@@ -33,6 +35,7 @@ public class _WorldController : MonoBehaviour
             {
                 if (endDays == 0)
                 {
+                    Instantiate(death, place.transform);
                     Debug.Log("пизда");
                     PlayerPrefs.SetInt(_ResourceKeys.OurDeath, 0);
                     PlayerPrefs.SetInt("DEATHDAYS", endDays);

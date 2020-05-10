@@ -98,6 +98,11 @@ public class _miniBestiarii : MonoBehaviour
         {
             _modelVirus.GetComponent<_scaler>()._Scale = 1.3f;
         }
+        /*else
+        {
+            _modelVirus.GetComponent<_scaler>()._Scale = 1.5f;
+        }*/
+        
     }
     
     void Update()

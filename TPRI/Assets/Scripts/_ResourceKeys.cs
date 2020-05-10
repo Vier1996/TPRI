@@ -5,11 +5,11 @@ using UnityEngine;
 public class _ResourceKeys : MonoBehaviour
 {
     private static _ResourceKeys instance;
-    
+
     public const string CharacterLevel = "CharacterLevel";
     public const string NeddedScore = "NeddedScore";
     public const string CurrentScore = "CurrentScore";
-    
+
     public const string TheFirstLevel = "TheFirstLevel";
 
     public const string Money = "Key_Money";

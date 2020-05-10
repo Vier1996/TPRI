@@ -8,7 +8,7 @@ public class testWorkAnimatedText : MonoBehaviour
     [SerializeField] private AnimatedText AT;
     void Start()
     {
-        AT.ANIMATEDTEXT(GetComponent<TextMeshProUGUI>(), 999, 666, false);
+        //AT.ANIMATEDTEXT(GetComponent<TextMeshProUGUI>(), 999, 666, false);
     }
     
     void Update()

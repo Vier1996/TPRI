@@ -27757,8 +27757,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550.6, y: 219}
-  m_SizeDelta: {x: 100.1, y: 51.32}
+  m_AnchoredPosition: {x: -550.6, y: 222.33}
+  m_SizeDelta: {x: 100.1, y: 44.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516123530
 MonoBehaviour:
@@ -37656,6 +37656,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: {fileID: 659879112}
   text: {fileID: 466914344}
+  death: {fileID: 6063871324068892387, guid: cc1df338618d1454689c35aa8bcc4e20, type: 3}
+  place: {fileID: 659879112}
 --- !u!114 &1927639124
 MonoBehaviour:
   m_ObjectHideFlags: 0

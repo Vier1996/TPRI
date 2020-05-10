@@ -12,7 +12,7 @@ public class AnimatedText : MonoBehaviour
     public void ANIMATEDTEXT(TextMeshProUGUI text, int current, int to, bool adding)
     {
         outInt = current;
-
+        
         StartCoroutine(changeText(text, outInt, to, adding));
         Drop();
         //StopCoroutine(changeText(0, 0, true));
@@ -39,6 +39,28 @@ public class AnimatedText : MonoBehaviour
             }
         }
     }
+    
+    /*IEnumerator changeText(GameObject text, int current, int to, bool adding)
+    {
+        if (!adding)
+        {
+            while (current != to)
+            {
+                yield return new WaitForSeconds(time);
+                current--;
+                text.GetComponent<TextMeshProUGUI>().text = current.ToString();
+            }
+        }
+        else
+        {
+            while (current != to)
+            {
+                yield return new WaitForSeconds(time);
+                current++;
+                text.GetComponent<TextMeshProUGUI>().text = current.ToString();
+            }
+        }
+    }*/
 
     private void Drop()
     {
