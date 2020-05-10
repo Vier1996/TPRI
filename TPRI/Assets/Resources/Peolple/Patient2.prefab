@@ -93,13 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theDialog: 
-  analysis:
-  - negative
-  - positive
-  - negative
-  - negative
-  - negative
-  - positive
   nameOfPatient: "\u0412\u0430\u0441\u044C\u043A\u0430"
 --- !u!114 &-8283892510028000904
 MonoBehaviour:
