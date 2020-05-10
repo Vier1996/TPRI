@@ -180,7 +180,7 @@ MonoBehaviour:
   - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1476501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6931,7 +6931,7 @@ MonoBehaviour:
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
   - "\u0420\u0432\u043E\u0442\u0430"
   - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0430\u043F\u043F\u0435\u0442\u0438\u0442\u0430"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &500242625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17668,7 +17668,7 @@ MonoBehaviour:
   - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
   - "\u0413\u043E\u0440\u0435\u0447\u044C \u0432\u043E \u0440\u0442\u0443"
   - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &657875286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22882,7 +22882,7 @@ MonoBehaviour:
   - "\u041F\u0435\u0440\u0448\u0435\u043D\u0438\u0435 \u0432 \u0433\u043E\u0440\u043B\u0435"
   - "\u0418\u0437\u0436\u043E\u0433\u0430"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &994866293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23866,7 +23866,7 @@ MonoBehaviour:
   key: Key_Saint_water
   get: {fileID: 1051786301}
   curableSymptoms: []
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1051786301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24152,7 +24152,7 @@ MonoBehaviour:
   - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0431\u043E\u043B\u044C \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
   - "\u0421\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1072370949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27516,7 +27516,7 @@ MonoBehaviour:
   - "\u0425\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0430\u044F \u0441\u044B\u043F\u044C"
   - "\u041D\u0430\u0441\u043C\u043E\u0440\u043A"
   - "\u0412\u044B\u043F\u0430\u0434\u0435\u043D\u0438\u0435 \u0437\u0443\u0431\u043E\u0432"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1326159776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28248,6 +28248,81 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 1585681486743752922, guid: 94e51eaa0057e544282543ad67c69acd,
     type: 3}
+--- !u!1001 &1357728127
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8684742642275771581, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthPick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.91783404
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.72344494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.8203125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684742642275771583, guid: 0445ecec025b32e4080083777ecde02b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0445ecec025b32e4080083777ecde02b, type: 3}
+--- !u!82 &1357728128 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8684742642275771580, guid: 0445ecec025b32e4080083777ecde02b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1357728127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1360020382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28649,7 +28724,7 @@ MonoBehaviour:
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0433\u043E\u043B\u043E\u0432\u043D\u0430\u044F
     \u0431\u043E\u043B\u044C"
   - "\u0420\u0432\u043E\u0442\u0430"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1392144704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29466,7 +29541,7 @@ MonoBehaviour:
   - "\u0411\u043E\u043B\u044C \u0432 \u0442\u0435\u043B\u0435"
   - "\u0413\u043E\u043B\u043E\u0432\u043D\u0430\u044F \u0431\u043E\u043B\u044C"
   - "\u0414\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043A\u0430\u0448\u0435\u043B\u044C"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1466828919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29606,7 +29681,7 @@ MonoBehaviour:
   - "\u0411\u043E\u043B\u0438 \u0432 \u0433\u043E\u0440\u043B\u0435"
   - "\u041A\u0430\u0448\u0435\u043B\u044C"
   - "\u0411\u043E\u043B\u0438 \u0432 \u0436\u0438\u0432\u043E\u0442\u0435"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1470400548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29748,7 +29823,7 @@ MonoBehaviour:
   - "\u041A\u0440\u043E\u0432\u043E\u0442\u043E\u0447\u0438\u0432\u043E\u0441\u0442\u044C
     \u0434\u0435\u0441\u0435\u043D"
   - "\u0418\u0437\u0436\u043E\u0433\u0430"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1471642827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35974,7 +36049,7 @@ MonoBehaviour:
   key: Key_Cross
   get: {fileID: 1560433607}
   curableSymptoms: []
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1560433607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40496,7 +40571,7 @@ MonoBehaviour:
   - "\u041E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u043E\u0431\u043E\u043D\u044F\u043D\u0438\u044F"
   - "\u0411\u043E\u043B\u044C \u0432 \u0443\u0448\u0430\u0445"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &1913530684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41827,7 +41902,7 @@ MonoBehaviour:
   - "\u0421\u0438\u043B\u044C\u043D\u0430\u044F \u0441\u043B\u0430\u0431\u043E\u0441\u0442\u044C"
   - "\u0422\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u0430"
   - "\u0411\u043E\u043B\u044C \u0432 \u0433\u043E\u0440\u043B\u0435"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &2052498938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41967,7 +42042,7 @@ MonoBehaviour:
   - "\u0422\u043E\u0448\u043D\u043E\u0442\u0430"
   - "\u0423\u0442\u043E\u043C\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C"
   - "\u041F\u043E\u0442\u0435\u0440\u044F \u0432\u0435\u0441\u0430"
-  sanya: {fileID: 994866291}
+  sanya: {fileID: 1357728128}
 --- !u!114 &2065777241
 MonoBehaviour:
   m_ObjectHideFlags: 0

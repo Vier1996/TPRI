@@ -194,5 +194,14 @@ public class _DropProgress
         PlayerPrefs.SetInt(_ISSUESKEY.рак, 1);
         PlayerPrefs.SetInt(_ISSUESKEY.цинга, 1);
     }
+    
+    public static void GodMode()
+    {
+        PlayerPrefs.SetInt(_ResourceKeys.Money, 900);
+        PlayerPrefs.SetInt(_ResourceKeys.skills, 50);
+        
+        DropSymptomys(1);
+        DporBestiarii(1);
+    }
 }
 
