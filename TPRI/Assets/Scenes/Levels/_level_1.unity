@@ -8916,10 +8916,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 23.58223
       objectReference: {fileID: 0}
+    - target: {fileID: 2492295530877591096, guid: ecb59c799f217284c8a935edb4fa0ff6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3176893850674919701, guid: ecb59c799f217284c8a935edb4fa0ff6,
         type: 3}
       propertyPath: m_Name
       value: "\u0422\u043E\u043F\u043E\u0440"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4321279005436143773, guid: ecb59c799f217284c8a935edb4fa0ff6,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4321279005436143773, guid: ecb59c799f217284c8a935edb4fa0ff6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887255790838222370, guid: ecb59c799f217284c8a935edb4fa0ff6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecb59c799f217284c8a935edb4fa0ff6, type: 3}

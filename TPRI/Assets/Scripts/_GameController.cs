@@ -319,6 +319,7 @@ public class _GameController : MonoBehaviour
             Instantiate(panelDefeat, panelDefeat1.transform);
             backGround.Stop();
             endGame.Play();
+            PlayerPrefs.SetInt("CurrentLevel", 3);
         }
         
        AddAffectRedScreen();
