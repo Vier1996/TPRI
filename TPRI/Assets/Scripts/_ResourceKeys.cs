@@ -36,8 +36,7 @@ public class _ResourceKeys : MonoBehaviour
     public const string LifeCity_2 = "Key_LifeCity_2";
     public const string SupremeEye = "Key_SupremeEye";
     public const string FullHealing = "Key_FullHealing";
-
-    // Олег, еще твои 5 нужны.
+    
     public const string Mixture = "Key_Mixture";
     public const string Tincture = "Key_Tincture";
     public const string Healing_salve = "Key_Healing_salve";
@@ -55,8 +54,6 @@ public class _ResourceKeys : MonoBehaviour
     public const string Durian = "Key_Durian";
     public const string Maple_leaves = "Key_Maple_leaves";
     public const string Onion = "Key_Onion";
-    
-    // Достижения
 
     public const string Начинающий = "Начинающий";
     public const string _Начинающий = "Начинающий_buyed";
