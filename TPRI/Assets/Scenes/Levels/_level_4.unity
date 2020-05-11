@@ -1826,6 +1826,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient8(Clone)
 --- !u!1001 &139265645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2290,6 +2291,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient4(Clone)
 --- !u!1 &164505508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,6 +3601,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient11(Clone)
 --- !u!1 &257411390
 GameObject:
   m_ObjectHideFlags: 0
@@ -18759,6 +18762,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8025170958799417588, guid: f607657fecb103047b8298caed1b538d,
     type: 3}
+  nameGameObjectPatient: Patient2(Clone)
 --- !u!1 &731780039
 GameObject:
   m_ObjectHideFlags: 0
@@ -24380,6 +24384,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient7(Clone)
 --- !u!1 &1109569857
 GameObject:
   m_ObjectHideFlags: 0
@@ -24600,6 +24605,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient9(Clone)
 --- !u!1 &1139766242
 GameObject:
   m_ObjectHideFlags: 0
@@ -25132,6 +25138,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 6344343761290671402, guid: cabd8ac4c608e954ab6ba6ecaeea6b89,
     type: 3}
+  nameGameObjectPatient: Patient1(Clone)
 --- !u!1 &1166556196
 GameObject:
   m_ObjectHideFlags: 0
@@ -28248,6 +28255,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 1585681486743752922, guid: 94e51eaa0057e544282543ad67c69acd,
     type: 3}
+  nameGameObjectPatient: Patient0(Clone)
 --- !u!1001 &1357728127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37582,6 +37590,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 5821705187280216048, guid: 24cec688e0b3fe8419b5b1dad0092e6f,
     type: 3}
+  nameGameObjectPatient: Patient3(Clone)
 --- !u!1 &1640137034
 GameObject:
   m_ObjectHideFlags: 0
@@ -39489,6 +39498,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient6(Clone)
 --- !u!1001 &1821009263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39637,6 +39647,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient5(Clone)
 --- !u!1 &1840624217
 GameObject:
   m_ObjectHideFlags: 0
@@ -42270,6 +42281,7 @@ MonoBehaviour:
   door: {fileID: 443154422}
   ourPeople: {fileID: 8664301591064163673, guid: c6b690ae1c3d9d248850e6eaf64818b8,
     type: 3}
+  nameGameObjectPatient: Patient10(Clone)
 --- !u!1 &2095511558
 GameObject:
   m_ObjectHideFlags: 0

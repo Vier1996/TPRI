@@ -42,9 +42,6 @@ public class _bestiaryController : MonoBehaviour
         _nameVirus = GameObject.Find("NameVirus");
         
         _info = new InfoAboutIlnesses();
-        /*_listViruses = _info.getViruses();
-        _listSymptoms = _info.getSymptoms();
-        _valueOfInfection = _info.getValueInfection();*/
         for (int i = 0; i < _contentContainerForViruses.transform.childCount; i++)
         {
             _viruses.Add(GameObject.Find("Virus" + (i + 1)));
@@ -72,6 +69,7 @@ public class _bestiaryController : MonoBehaviour
             if (PlayerPrefs.GetInt("Key_" + name) == 1)
             {
                 checkOpenIssues(i);
+                check = false;
             }
             else
             {
