@@ -10,6 +10,7 @@ using Random = UnityEngine.Random;
 public class _levelItemController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI counter;
+    [SerializeField] private _GameController gc;
     [SerializeField] private string key;
     [SerializeField] private Button get;
     [SerializeField] private List<string> curableSymptoms;
@@ -111,6 +112,13 @@ public class _levelItemController : MonoBehaviour
                     }
                 }
             }
+
+            foreach (var VARIABLE in _NPC.GetComponent<_PeopleIssues>().getSymptoms())
+            {
+                Debug.Log(VARIABLE);
+            }
+           
+            gc.ParticleHelper(_NPC.GetComponent<_PeopleIssues>().getSymptoms());
         }
     }
 

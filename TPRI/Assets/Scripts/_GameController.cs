@@ -73,6 +73,8 @@ public class _GameController : MonoBehaviour
     private string oldPopulation;
 
     [SerializeField] private GameObject warningAffectPanel;
+    
+    private List<string> UPPERSymptoms;
 
     /// <summary>
     
@@ -80,6 +82,7 @@ public class _GameController : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt(_ResourceKeys.CharacterLevel, 20);
         isWarning = false;
         backGround.Play();
        
@@ -229,6 +232,7 @@ public class _GameController : MonoBehaviour
     {
         _queue.PsholVon(true);
         _passingPeople.interactable = false;
+        TurnOffParticles();
         Invoke(nameof(stopper), 5f);
         
         
@@ -453,6 +457,8 @@ public class _GameController : MonoBehaviour
         Destroy(_NPC);
         resetDialog();
         
+        TurnOffParticles();
+        
         if(countNPC != 0)
             BIGDOOR.Play("BIGDOOR");
         _DoorSound.Play();
@@ -465,7 +471,7 @@ public class _GameController : MonoBehaviour
         Invoke(nameof(InitNPC), 3);
         _levelEndController.incrementExpelPeople();
     }
-
+    
     private void InitNPC()
     {
         if (countNPC < _countNPCAccrodingLevel)
@@ -498,6 +504,7 @@ public class _GameController : MonoBehaviour
             if (issues.getSymptoms() != null && issues.getSymptoms().Count != 0)
             {
                 List<string> randomSymptoms = issues.getSymptoms();
+                UPPERSymptoms = randomSymptoms;
                 
                 ParticleHelper(randomSymptoms);
                 
@@ -528,6 +535,12 @@ public class _GameController : MonoBehaviour
 
             LevelClearedHelper();
         }
+    }
+
+    public void RESETSYMPTOMES()
+    {
+        UPPERSymptoms = _NPC.GetComponent<_PeopleIssues>().getSymptoms();
+        ParticleHelper(UPPERSymptoms);
     }
 
     private void resetDialog()
@@ -587,19 +600,25 @@ public class _GameController : MonoBehaviour
         }
     }
 
-    private void ParticleHelper(List<string> sympt)
+    public void ParticleHelper(List<string> sympt)
     {
-        foreach (var s in sympt)
+        if (sympt.Count <= 0 || sympt == null)
         {
-            if (s.Equals("Рвота") || s.Equals("Тошнота"))
+            Particles[0].SetActive(false);
+            Particles[1].SetActive(false);
+            Particles[2].SetActive(false);
+        }
+        else
+        {
+            foreach (var s in sympt)
             {
-                Particles[0].SetActive(false);
-                Particles[1].SetActive(true);
-                Particles[2].SetActive(false);
-                break;
-            }
-            else
-            {
+                if (s.Equals("Рвота") || s.Equals("Тошнота"))
+                {
+                    Particles[0].SetActive(false);
+                    Particles[1].SetActive(true);
+                    Particles[2].SetActive(false);
+                    break;
+                }
 
                 if (s.Equals("Кашель") || s.Equals("Длительный кашель") || s.Equals("Лающий кашель"))
                 {
@@ -608,25 +627,27 @@ public class _GameController : MonoBehaviour
                     Particles[2].SetActive(false);
                     break;
                 }
-                else
+
+                if (s.Equals("Температура"))
                 {
-                    if (s.Equals("Температура"))
-                    {
-                        Particles[0].SetActive(false);
-                        Particles[1].SetActive(false);
-                        Particles[2].SetActive(true);
-                        break;
-                    }
-                    else
-                    {
-                        Particles[0].SetActive(false);
-                        Particles[1].SetActive(false);
-                        Particles[2].SetActive(false);
-                    }
+                    Particles[0].SetActive(false);
+                    Particles[1].SetActive(false);
+                    Particles[2].SetActive(true);
+                    break;
                 }
+
+                Particles[0].SetActive(false);
+                Particles[1].SetActive(false);
+                Particles[2].SetActive(false);
             }
         }
+    }
 
+    private void TurnOffParticles()
+    {
+        Particles[0].SetActive(false);
+        Particles[1].SetActive(false);
+        Particles[2].SetActive(false);
     }
 
     private void LevelClearedHelper()
