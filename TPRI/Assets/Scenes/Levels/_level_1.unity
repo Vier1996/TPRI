@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1897966585}
+  gc: {fileID: 1927639122}
   key: Key_Cross
   get: {fileID: 10054634}
   curableSymptoms: []
@@ -5602,6 +5603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 18284011}
+  gc: {fileID: 1927639122}
   key: Key_Healing_salve
   get: {fileID: 84506588}
   curableSymptoms:
@@ -9808,6 +9810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 807238215}
+  gc: {fileID: 1927639122}
   key: Key_Maple_leaves
   get: {fileID: 378251671}
   curableSymptoms:
@@ -10003,7 +10006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 46, y: -84.5}
+  m_AnchoredPosition: {x: 46, y: -84.499985}
   m_SizeDelta: {x: -1100, y: -500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407425287
@@ -11852,6 +11855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1672417220}
+  gc: {fileID: 1927639122}
   key: Key_Saint_water
   get: {fileID: 575167094}
   curableSymptoms: []
@@ -13505,6 +13509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 645004930}
+  gc: {fileID: 1927639122}
   key: Key_Lotus
   get: {fileID: 699890822}
   curableSymptoms:
@@ -15752,6 +15757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 468371564}
+  gc: {fileID: 1927639122}
   key: Key_Nuts
   get: {fileID: 904276830}
   curableSymptoms:
@@ -16486,6 +16492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1276954428}
+  gc: {fileID: 1927639122}
   key: Key_Panacea
   get: {fileID: 959945812}
   curableSymptoms:
@@ -16785,6 +16792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 596023426}
+  gc: {fileID: 1927639122}
   key: Key_Candy
   get: {fileID: 1005203445}
   curableSymptoms:
@@ -24456,6 +24464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1082441010}
+  gc: {fileID: 1927639122}
   key: Key_Chamomile_and_mint
   get: {fileID: 1241581505}
   curableSymptoms:
@@ -24674,6 +24683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 102018175}
+  gc: {fileID: 1927639122}
   key: Key_Onion
   get: {fileID: 1273507037}
   curableSymptoms:
@@ -28001,6 +28011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 698515559}
+  gc: {fileID: 1927639122}
   key: Key_Orchid_Leaf
   get: {fileID: 1529092209}
   curableSymptoms:
@@ -31571,6 +31582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 147624324}
+  gc: {fileID: 1927639122}
   key: Key_Tincture
   get: {fileID: 1837675215}
   curableSymptoms:
@@ -31895,6 +31907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1918361260}
+  gc: {fileID: 1927639122}
   key: Key_Snake_blood
   get: {fileID: 1853575593}
   curableSymptoms:
@@ -32073,6 +32086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1062199413}
+  gc: {fileID: 1927639122}
   key: Key_Durian
   get: {fileID: 1863530489}
   curableSymptoms:
@@ -39916,6 +39930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1803476445}
+  gc: {fileID: 1927639122}
   key: Key_Mixture
   get: {fileID: 2129296745}
   curableSymptoms:

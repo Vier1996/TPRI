@@ -226,12 +226,14 @@ public class _GameController : MonoBehaviour
     private void stopper()
     {
         _passingPeople.interactable = true;
+        _expel.interactable = true;
     }
 
     private void Passing()
     {
         _queue.PsholVon(true);
         _passingPeople.interactable = false;
+        _expel.interactable = false;
         TurnOffParticles();
         Invoke(nameof(stopper), 5f);
         
