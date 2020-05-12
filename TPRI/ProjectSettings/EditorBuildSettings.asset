@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/_storyIntro.unity
+    path: Assets/Scenes/Levels/_storyIntro.unity
     guid: 699fdbc14124a734d99c8fe4a1259459
   - enabled: 1
     path: Assets/Scenes/_introMenu.unity
@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/_level_7.unity
     guid: 8b6c1e290769c1a498c4d9ea537e6406
   - enabled: 1
-    path: Assets/Scenes/DiscoverMenu.unity
+    path: Assets/Scenes/Levels/DiscoverMenu.unity
     guid: 66c215289d0c2bd49a9aba1c5fdcb6a3
   - enabled: 1
     path: Assets/Scenes/Levels/_bestiariy.unity
@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/Scenes/_store.unity
     guid: 7169ae2a96f38aa498fbf1d6aaecc6a1
   - enabled: 1
-    path: Assets/Scenes/_skills.unity
+    path: Assets/Scenes/Levels/_skills.unity
     guid: 79f2ee65fdee48049a81d4a7516b4c43
   - enabled: 1
     path: Assets/Scenes/_achivements.unity
