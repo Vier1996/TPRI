@@ -20,7 +20,7 @@ public class _miniBestiarii : MonoBehaviour
     private int CurrentPage = 0;
     private GameObject _modelVirus;
     private GameObject _modelForLoadVirus;
-    private const float ModelX = 12.5f, ModelY = 2.48f, ModelZ = 80.75f;
+    private const float ModelX = 13.25f, ModelY = 2.48f, ModelZ = 80.75f;
 
     void Start()
     {

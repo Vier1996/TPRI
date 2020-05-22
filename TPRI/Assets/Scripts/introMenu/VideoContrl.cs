@@ -12,16 +12,17 @@ public class VideoContrl : MonoBehaviour
 
     private void Awake()
     {
-        music.Play();
-        _videoPlayer.Play();
+        SceneManager.LoadScene("_introMenu");
+        //music.Play();
+        //_videoPlayer.Play();
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (!_videoPlayer.isPlaying)
         {
             music.Stop();
             SceneManager.LoadScene("_introMenu");
         }
-    }
+    }*/
 }

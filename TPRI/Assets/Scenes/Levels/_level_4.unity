@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1274343660}
+  gc: {fileID: 0}
   key: Key_Chamomile_and_mint
   get: {fileID: 1476501}
   curableSymptoms:
@@ -2775,7 +2776,7 @@ PrefabInstance:
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 911.1
+      value: 935.1
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -6024,7 +6025,7 @@ PrefabInstance:
     - target: {fileID: 6350051190877381322, guid: 20f5daf5872d2f6499f441fa331900a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.31
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6350051190877381322, guid: 20f5daf5872d2f6499f441fa331900a8,
         type: 3}
@@ -6928,6 +6929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 2129285027}
+  gc: {fileID: 0}
   key: Key_Lotus
   get: {fileID: 500242625}
   curableSymptoms:
@@ -17281,8 +17283,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 451.43, y: -41.8}
-  m_SizeDelta: {x: 300.7, y: 516.5}
+  m_AnchoredPosition: {x: 475.53995, y: -41.8}
+  m_SizeDelta: {x: 348.92, y: 516.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598534195
 MonoBehaviour:
@@ -17583,8 +17585,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404, y: -266}
-  m_SizeDelta: {x: 395.58, y: 68}
+  m_AnchoredPosition: {x: -428.1, y: -266}
+  m_SizeDelta: {x: 443.79, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637669872
 MonoBehaviour:
@@ -17665,6 +17667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1240397351}
+  gc: {fileID: 0}
   key: Key_Tincture
   get: {fileID: 657875286}
   curableSymptoms:
@@ -20311,7 +20314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550.6, y: 219}
+  m_AnchoredPosition: {x: -253, y: 194}
   m_SizeDelta: {x: 100.1, y: 51.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850854581
@@ -22463,8 +22466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 48.5, y: 571.5}
-  m_SizeDelta: {x: 100.1, y: 45.3}
+  m_AnchoredPosition: {x: 77.4, y: 556.9}
+  m_SizeDelta: {x: 157.8, y: 74.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985232716
 MonoBehaviour:
@@ -22879,6 +22882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 511133528}
+  gc: {fileID: 0}
   key: Key_Mixture
   get: {fileID: 994866293}
   curableSymptoms:
@@ -23867,6 +23871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 25861809}
+  gc: {fileID: 0}
   key: Key_Saint_water
   get: {fileID: 1051786301}
   curableSymptoms: []
@@ -24150,6 +24155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 914023538}
+  gc: {fileID: 0}
   key: Key_Maple_leaves
   get: {fileID: 1072370949}
   curableSymptoms:
@@ -27515,6 +27521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 2035467099}
+  gc: {fileID: 0}
   key: Key_Healing_salve
   get: {fileID: 1326159776}
   curableSymptoms:
@@ -28725,6 +28732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 812393029}
+  gc: {fileID: 0}
   key: Key_Orchid_Leaf
   get: {fileID: 1392144704}
   curableSymptoms:
@@ -29542,6 +29550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 221600859}
+  gc: {fileID: 0}
   key: Key_Onion
   get: {fileID: 1466828919}
   curableSymptoms:
@@ -29683,6 +29692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1613752617}
+  gc: {fileID: 0}
   key: Key_Candy
   get: {fileID: 1470400548}
   curableSymptoms:
@@ -29823,6 +29833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1216426489}
+  gc: {fileID: 0}
   key: Key_Snake_blood
   get: {fileID: 1471642827}
   curableSymptoms:
@@ -36054,6 +36065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 2048868230}
+  gc: {fileID: 0}
   key: Key_Cross
   get: {fileID: 1560433607}
   curableSymptoms: []
@@ -37205,7 +37217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.15, y: 228.7}
+  m_AnchoredPosition: {x: -132, y: 228.7}
   m_SizeDelta: {x: 82.61, y: 38.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1631706925
@@ -38571,7 +38583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -114.6, y: 100}
+  m_AnchoredPosition: {x: -133, y: 100}
   m_SizeDelta: {x: 66.7, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710710220
@@ -40576,6 +40588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 907904329}
+  gc: {fileID: 0}
   key: Key_Durian
   get: {fileID: 1913530684}
   curableSymptoms:
@@ -41222,7 +41235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.6, y: 100}
+  m_AnchoredPosition: {x: 135, y: 100}
   m_SizeDelta: {x: 66.7, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2017380499
@@ -41905,6 +41918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1874740139}
+  gc: {fileID: 0}
   key: Key_Panacea
   get: {fileID: 2052498938}
   curableSymptoms:
@@ -42047,6 +42061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 473372207}
+  gc: {fileID: 0}
   key: Key_Nuts
   get: {fileID: 2065777241}
   curableSymptoms:
@@ -43221,7 +43236,7 @@ PrefabInstance:
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 766.8
+      value: 831.4
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}

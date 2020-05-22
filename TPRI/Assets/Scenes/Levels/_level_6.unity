@@ -402,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1102221234}
+  gc: {fileID: 0}
   key: Key_Chamomile_and_mint
   get: {fileID: 70741661}
   curableSymptoms:
@@ -6566,6 +6567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1117189078}
+  gc: {fileID: 0}
   key: Key_Mixture
   get: {fileID: 234416822}
   curableSymptoms:
@@ -7253,6 +7255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 532731612}
+  gc: {fileID: 0}
   key: Key_Panacea
   get: {fileID: 253671826}
   curableSymptoms:
@@ -7608,7 +7611,7 @@ PrefabInstance:
     - target: {fileID: 6350051190877381322, guid: 20f5daf5872d2f6499f441fa331900a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.31
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6350051190877381322, guid: 20f5daf5872d2f6499f441fa331900a8,
         type: 3}
@@ -11383,6 +11386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 990354968}
+  gc: {fileID: 0}
   key: Key_Lotus
   get: {fileID: 510239223}
   curableSymptoms:
@@ -13891,6 +13895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1564283110}
+  gc: {fileID: 0}
   key: Key_Tincture
   get: {fileID: 724365964}
   curableSymptoms:
@@ -14805,7 +14810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -114.6, y: 100}
+  m_AnchoredPosition: {x: -138.3, y: 100}
   m_SizeDelta: {x: 66.7, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777141614
@@ -14941,6 +14946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1156150864}
+  gc: {fileID: 0}
   key: Key_Maple_leaves
   get: {fileID: 801085658}
   curableSymptoms:
@@ -15081,6 +15087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 946736116}
+  gc: {fileID: 0}
   key: Key_Orchid_Leaf
   get: {fileID: 803768408}
   curableSymptoms:
@@ -15663,7 +15670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550.6, y: 219}
+  m_AnchoredPosition: {x: -255, y: 195}
   m_SizeDelta: {x: 100.1, y: 51.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841599938
@@ -16360,6 +16367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 2005030861}
+  gc: {fileID: 0}
   key: Key_Candy
   get: {fileID: 926218422}
   curableSymptoms:
@@ -16969,8 +16977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 451.43, y: -41.8}
-  m_SizeDelta: {x: 300.7, y: 516.5}
+  m_AnchoredPosition: {x: 475.53995, y: -41.8}
+  m_SizeDelta: {x: 348.92, y: 516.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983787464
 MonoBehaviour:
@@ -17198,7 +17206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.15, y: 228.7}
+  m_AnchoredPosition: {x: -133.3, y: 228.7}
   m_SizeDelta: {x: 82.61, y: 38.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010697637
@@ -17370,7 +17378,7 @@ PrefabInstance:
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 911.1
+      value: 930.2
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -17709,6 +17717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 568984223}
+  gc: {fileID: 0}
   key: Key_Healing_salve
   get: {fileID: 1038839849}
   curableSymptoms:
@@ -17851,6 +17860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 501131189}
+  gc: {fileID: 0}
   key: Key_Snake_blood
   get: {fileID: 1038927822}
   curableSymptoms:
@@ -19601,8 +19611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404, y: -266}
-  m_SizeDelta: {x: 395.58, y: 68}
+  m_AnchoredPosition: {x: -428.1, y: -266}
+  m_SizeDelta: {x: 443.79, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140326802
 MonoBehaviour:
@@ -20112,7 +20122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.6, y: 100}
+  m_AnchoredPosition: {x: 138.8, y: 100}
   m_SizeDelta: {x: 66.7, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164450721
@@ -22101,6 +22111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1233914812}
+  gc: {fileID: 0}
   key: Key_Saint_water
   get: {fileID: 1314996837}
   curableSymptoms: []
@@ -35769,6 +35780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1477560471}
+  gc: {fileID: 0}
   key: Key_Onion
   get: {fileID: 1538166657}
   curableSymptoms:
@@ -35910,6 +35922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 762129022}
+  gc: {fileID: 0}
   key: Key_Durian
   get: {fileID: 1541947003}
   curableSymptoms:
@@ -36973,8 +36986,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 48.5, y: 571.5}
-  m_SizeDelta: {x: 100.1, y: 45.3}
+  m_AnchoredPosition: {x: 76.4, y: 557.41}
+  m_SizeDelta: {x: 156, y: 73.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577946974
 MonoBehaviour:
@@ -39413,6 +39426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1897477208}
+  gc: {fileID: 0}
   key: Key_Cross
   get: {fileID: 1806715329}
   curableSymptoms: []
@@ -40022,7 +40036,7 @@ PrefabInstance:
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 765
+      value: 837.2
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -43659,6 +43673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 306171464}
+  gc: {fileID: 0}
   key: Key_Nuts
   get: {fileID: 2090563334}
   curableSymptoms:

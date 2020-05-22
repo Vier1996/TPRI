@@ -613,7 +613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.15, y: 228.7}
+  m_AnchoredPosition: {x: -131, y: 228.7}
   m_SizeDelta: {x: 82.61, y: 38.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66646968
@@ -2069,8 +2069,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 451.43, y: -41.8}
-  m_SizeDelta: {x: 300.7, y: 516.5}
+  m_AnchoredPosition: {x: 475.53995, y: -41.8}
+  m_SizeDelta: {x: 348.92, y: 516.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176825467
 MonoBehaviour:
@@ -2447,7 +2447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -114.6, y: 100}
+  m_AnchoredPosition: {x: -138.4, y: 100}
   m_SizeDelta: {x: 66.7, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &192055264
@@ -3467,6 +3467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 104243252}
+  gc: {fileID: 0}
   key: Key_Lotus
   get: {fileID: 248041545}
   curableSymptoms:
@@ -4306,6 +4307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 2093284539}
+  gc: {fileID: 0}
   key: Key_Saint_water
   get: {fileID: 355355166}
   curableSymptoms: []
@@ -8470,6 +8472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1264050769}
+  gc: {fileID: 0}
   key: Key_Onion
   get: {fileID: 559704274}
   curableSymptoms:
@@ -8841,6 +8844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 497915024}
+  gc: {fileID: 0}
   key: Key_Panacea
   get: {fileID: 591368880}
   curableSymptoms:
@@ -10352,7 +10356,7 @@ PrefabInstance:
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 911.1
+      value: 951.1
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -10481,8 +10485,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404, y: -266}
-  m_SizeDelta: {x: 395.58, y: 68}
+  m_AnchoredPosition: {x: -428.1, y: -266}
+  m_SizeDelta: {x: 443.79, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681363483
 MonoBehaviour:
@@ -15501,6 +15505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 643709844}
+  gc: {fileID: 0}
   key: Key_Orchid_Leaf
   get: {fileID: 719541721}
   curableSymptoms:
@@ -17938,6 +17943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 974668839}
+  gc: {fileID: 0}
   key: Key_Tincture
   get: {fileID: 928157334}
   curableSymptoms:
@@ -18078,6 +18084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 628079749}
+  gc: {fileID: 0}
   key: Key_Chamomile_and_mint
   get: {fileID: 935808806}
   curableSymptoms:
@@ -24039,6 +24046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 495532385}
+  gc: {fileID: 0}
   key: Key_Durian
   get: {fileID: 1028203935}
   curableSymptoms:
@@ -25643,7 +25651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -550.6, y: 219}
+  m_AnchoredPosition: {x: -255, y: 191}
   m_SizeDelta: {x: 100.1, y: 51.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131929392
@@ -26101,8 +26109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 48.5, y: 571.5}
-  m_SizeDelta: {x: 100.1, y: 45.3}
+  m_AnchoredPosition: {x: 76.9, y: 558.7}
+  m_SizeDelta: {x: 156.8, y: 71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177608292
 MonoBehaviour:
@@ -27791,6 +27799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 911232954}
+  gc: {fileID: 0}
   key: Key_Mixture
   get: {fileID: 1286621014}
   curableSymptoms:
@@ -28773,6 +28782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1797342451}
+  gc: {fileID: 0}
   key: Key_Snake_blood
   get: {fileID: 1377407446}
   curableSymptoms:
@@ -29064,6 +29074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1104071954}
+  gc: {fileID: 0}
   key: Key_Nuts
   get: {fileID: 1392615267}
   curableSymptoms:
@@ -29306,7 +29317,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 20f5daf5872d2f6499f441fa331900a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.6
+      value: 17.91
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 20f5daf5872d2f6499f441fa331900a8,
         type: 3}
@@ -29501,6 +29512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 2122714061}
+  gc: {fileID: 0}
   key: Key_Candy
   get: {fileID: 1435672299}
   curableSymptoms:
@@ -30941,6 +30953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 534461061}
+  gc: {fileID: 0}
   key: Key_Cross
   get: {fileID: 1548146479}
   curableSymptoms: []
@@ -32562,6 +32575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1894593842}
+  gc: {fileID: 0}
   key: Key_Maple_leaves
   get: {fileID: 1696606131}
   curableSymptoms:
@@ -34236,7 +34250,7 @@ PrefabInstance:
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 766.8
+      value: 836.4
       objectReference: {fileID: 0}
     - target: {fileID: 5271270500032725597, guid: 480c034b6a7608745aee3f7c2a3cf849,
         type: 3}
@@ -34481,7 +34495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.6, y: 100}
+  m_AnchoredPosition: {x: 136.7, y: 100}
   m_SizeDelta: {x: 66.7, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829257474
@@ -35500,6 +35514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 1521224930}
+  gc: {fileID: 0}
   key: Key_Healing_salve
   get: {fileID: 1916096610}
   curableSymptoms:

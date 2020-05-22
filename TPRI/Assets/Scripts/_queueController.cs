@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Bestiary;
 using UnityEngine;
 using DG.Tweening;
-using UnityEditorInternal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
